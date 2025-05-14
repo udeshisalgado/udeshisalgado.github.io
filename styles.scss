@@ -1,0 +1,48 @@
+/*-- scss:rules --*/
+
+/* Global body and font */
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #003366;
+}
+
+/* Links */
+a {
+  color: #0055aa;
+}
+
+a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #003366 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #cce0ff !important;
+}
+
+/* Profile image on homepage */
+img[alt="Udeshi Salgado"] {
+  width: 160px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem auto;
+}

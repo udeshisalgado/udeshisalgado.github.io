@@ -1,0 +1,66 @@
+---
+title: ""
+format: html
+---
+
+<img src="images/profile.jpg" alt="Udeshi Salgado"
+     style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+
+
+
+
+<div style="text-align: center;">
+
+# Udeshi Salgado
+
+</div>
+
+I’m a PhD researcher at Cardiff University. My research focuses on hybrid intelligence and vaccine demand forecasting in low- and middle-income countries (LMICs). I'm particularly interested in combining domain knowledge with probabilistic models to improve public health supply chains.
+
+<div style="text-align: center; font-size: 1.8rem; margin-top: 1rem;">
+
+  <a href="https://github.com/udeshisalgado" target="_blank" style="display: inline-block; margin: 0 12px;">
+    <i class="bi bi-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/udeshi-salgado/" target="_blank" style="display: inline-block; margin: 0 12px;">
+    <i class="bi bi-linkedin"></i>
+  </a>
+  <a href="mailto:SalgadoMU@cardiff.ac.uk" style="display: inline-block; margin: 0 12px;">
+    <i class="bi bi-envelope-fill"></i>
+  </a>
+  <a href="https://profiles.cardiff.ac.uk/research-staff/salgadomu" target="_blank" style="display: inline-block; margin: 0 12px;">
+    <i class="bi bi-mortarboard-fill"></i>
+  </a>
+
+</div>
+
+
+---
+
+## 🎓 Education
+
+**PhD in Business Management**, *Cardiff University, UK*  
+*Oct 2024 – Present*  
+- Cardiff Business School (CARBS) EPSRC Studentship Award  
+- Research on global immunisation supply chains with hybrid AI  
+- Supervisors: Prof. Bahman Rostami‑Tabar, Dr. Thanos E Goltsos, Dr. Geraint Palmer, Dr. Xun Wang
+
+**BSc (Hons) in Statistics**, *University of Sri Jayewardenepura, Sri Lanka*  
+*Jan 2019 – Aug 2023*  
+- Second Class Upper Division, GPA: 3.64 / 4.00  
+- Dissertation: Detection of Tooth Anomalies Using AI (Grade: A+)
+
+**Diploma in Software Engineering**, *Esoft Metro Campus, Sri Lanka*  
+*Jan 2015 – Jul 2015*  
+- Covered OOP, C#, Java, App Development
+
+---
+
+## 🔍 Research Interests
+
+- Vaccine supply chain forecasting  
+- Hybrid intelligence (human + machine forecasting)  
+- Time series analysis & probabilistic forecasting  
+- Health data science and informatics  
+- Inventory management in LMICs  
+- Ethical AI and equity in global health systems  

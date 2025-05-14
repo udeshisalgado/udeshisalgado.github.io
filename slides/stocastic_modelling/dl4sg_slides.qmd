@@ -1,0 +1,710 @@
+
+---
+format: 
+    revealjs:
+        toc: false
+        slideNumber: "c/t"
+        width: 1280
+        height: 720
+        controls: true
+        progress: true
+        transition: slide
+        plugins: [notes, print-pdf]
+        title-slide-attributes:
+            data-background-image: none
+            data-background-size: cover
+        theme: [default, custom.scss]
+        logo: images/cardiff_dl4sg_logo.png
+        footer: "© 2025 Udeshi Salgado – DL4SG, Cardiff University"
+---
+
+:::{.slide .title-slide data-background-image="images/background.png" data-background-size="cover"}
+
+
+
+## Introduction to Continuous <br>Markov Chains & Queueing Theory <br>in Healthcare Supply Chains
+
+<br><br><br>
+
+**Udeshi Salgado**  
+_Data Lab for Social Good,_ <br>
+_Cardiff University, UK_  
+2025-05-15
+
+:::
+
+
+## Assumptions
+
+- You should be familiar with basic probability and random variables.
+- You are expected to be comfortable with R (or Python) for basic simulation and matrix operations.
+- This is not a theory-heavy workshop—we will use simple examples to build intuition, not derive
+theorems.
+
+## What We Will Cover
+
+- Key concepts and steady-state analysis of Continuous-Time Markov Chains (CTMCs)  
+- Modeling a vaccine observation room using CTMCs
+- Introduction to Queueing Theory
+- Introduction to M/M/1 queueing systems and performance metrics
+
+
+## What We Will *Not* Cover
+
+- Theoretical proofs (e.g., Chapman-Kolmogorov, Little's Law)  
+- Networks of queues
+- Multiclass queues and priority scheduling  
+- Non-stationary arrivals and general service times
+- Non-exponential queues
+- Time-dependent queueing models
+
+## Materials
+
+- You can find the workshop materials at here.
+- Note: These materials are based on my learnings at [NATCOR Taught Course Centre: Stochastic Modelling Course](https://www.natcor.ac.uk/courses/)
+
+#  <span style="color: black;">Outline</span>
+
+1. <span style="color: red;">Recap</span>
+2. Continuous Time Markov Chains (CTMC)
+3. Queueing Theory
+4. Lab Activity: Vaccine Clinic Operations
+
+## Recap: Assumptions
+
+- The Markov chain is in exactly one state at any particular time step.
+- The probability distribution for the next state only depends on the current state  (Markov property).
+- The transition probabilities are the same on every time step.
+
+## Recap: Discrete MC Vs Continuous MC
+![](images/discretevscontinuous.png)
+
+# <span style="color: black;">Outline</span>
+
+1. Recap
+2. <span style="color: red;">Continuous Time Markov Chains (CTMC)</span>
+3. Queueing Theory
+4. Lab Activity: Vaccine Clinic Operations
+
+## Continuous Time Markov Chains (CTMC)
+
+- In a continuous-time Markov chain (CTMC), the system state can change at any point on the continuous time axis.
+
+![](images/ctmc.png)
+
+## Exponential Timing in CTMCs
+
+- **Assumption**: Time until the next transition follows an **Exponential(λ)** distribution, where **λ is the transition rate** (higher λ → shorter expected time between transitions) 
+- **Memoryless Property**:  
+    $$ 
+    \Pr(X > t + u \mid X > u) = \Pr(X > t) $$
+- Past time in a state doesn’t affect future transitions
+- Transition probability depends only on the **current state** → **Markov property**
+
+## CTMCs: Definition
+
+> **A continuous-time Markov chain** is a stochastic process  
+>  
+> $$
+> \{X(t) \mid t \geq 0\}
+> $$
+>
+> in which the probability of some future event (say \( A \)) depends **only** on the **current state**, not on past states.
+>
+> Formally:
+>
+> $$
+> \Pr(A \mid X(t),\, 0 \leq t \leq T) = \Pr(A \mid X(T))
+> $$
+
+
+As in the discrete-time case, the key idea is:  **future behavior depends only on the current state**.
+
+## CTMC Example: Managing a Tiny Shop's Flow
+
+Imagine a **small neighborhood pharmacy** with space for **maximum of two customers at a time**. As the shop owner, you're analyzing foot traffic to optimize customer experience without overcrowding or turning people away.
+
+
+![](images/ctmc_example.png){height=200%, fig-align="center"}
+
+
+## CTMC Example: Managing a Tiny Shop's Flow Cont.
+
+- **Arrivals** follow an exponential distribution with **λ = 1 per minute**
+- **Departures** depend on how many customers are in the shop:
+    - **1 customer** → exponential(λ = 0.25)
+    - **2 customers** → exponential(λ = 0.5)
+- If a new customer arrives:
+    - And there are **0 or 1 customers**, they enter the shop
+    - If **2 customers** are already inside, they **leave without entering** (no queueing!)
+
+
+## CTMC Example: Transition Rate Diagram
+
+- We can model this scenario as a **Continuous-Time Markov Chain (CTMC)**, where the **state** represents the **number of customers in the shop**.
+- Thus, the possible states are: `0`, `1`, and `2`.
+- We can visualize the **transition rates** between these states:
+
+![](images/ctmc_transition_diagram.png){width=70%, fig-align="center"}
+
+## Time Until Next Transition
+
+Let $T_i$ be the time until the next transition from state $i \in \{0, 1, 2\}$
+
+- $T_0 \sim \text{Exp}(1)$  *(arrival triggers transition)*
+
+- $T_2 \sim \text{Exp}(0.5)$ *(departure triggers transition)*
+
+- $T_1 = \min(A, D)$, where:
+    - $A \sim \text{Exp}(1)$ *(a new customer arrives)*
+    - $D \sim \text{Exp}(0.25)$ *(a customer leaves the shop)*
+
+## Exponential Minimum Property
+
+Suppose  $T_1$, $T_2$ are independent and
+$$
+T_1 \sim \text{Exp}(\lambda_1),\quad T_2 \sim \text{Exp}(\lambda_2)
+$$
+
+Then:  
+$$
+\min(T_1, T_2) \sim \text{Exp}(\lambda_1 + \lambda_2)
+$$
+
+## Exponential Minimum Property Cont.
+
+**Application to our example:**
+
+- For state 1:  
+$$
+T_1 = \min(A, D); \quad A \sim \text{Exp}(1),\ D \sim \text{Exp}(0.25)
+$$ 
+- So:  
+$$
+T_1 \sim \text{Exp}(1 + 0.25) = \text{Exp}(1.25)
+$$
+
+## Generator Matrix for a CTMC
+
+The **generator matrix (Q)** summarizes the transition rates between states in a CTMC.
+
+- Each element $q_{ij}$ gives the **rate of moving from state $i$ to state $j$**
+- **Diagonal elements** are negative and equal to the **negative of the row sum**
+- **Non-diagonal elements** are $\geq 0$ and indicate direct transitions
+
+## Interpreting Key Entries in Generator Matrix
+
+![](images/generator_matrix.png){width=100%}
+
+## Steady-State Probabilities
+
+**Steady-state probabilities** represent the long-run behavior of the system.  
+They tell us:
+
+- The **proportion of time** the CTMC spends in each state in the long run.
+- The **limiting probability** that the system is in a given state after a long time.
+
+To find them, we solve:
+$$
+\boldsymbol{\pi} \mathbf{Q} = \mathbf{0}, \quad \text{with} \quad \sum \pi_i = 1
+$$
+
+---
+
+## Solving the System
+
+From:
+
+- $-\pi_0 + 0.25\pi_1 = 0 \Rightarrow \pi_1 = 4\pi_0$
+- $\pi_1 - 0.5\pi_2 = 0 \Rightarrow \pi_2 = 2\pi_1 = 8\pi_0$
+- $\pi_0 + 4\pi_0 + 8\pi_0 = 13\pi_0 = 1 \Rightarrow \pi_0 = \frac{1}{13}$
+
+Thus:
+$$
+\pi_0 = \frac{1}{13},\quad \pi_1 = \frac{4}{13},\quad \pi_2 = \frac{8}{13}
+$$
+
+---
+
+## Long-run Average Number of Customers
+
+We calculate:
+
+$$
+0 \cdot \frac{1}{13} + 1 \cdot \frac{4}{13} + 2 \cdot \frac{8}{13} = \frac{20}{13} \approx 1.54
+$$
+
+This is the expected number of customers in the shop in the long run.
+
+---
+
+## Summary of CTMCs
+
+- Transition times are exponentially distributed.
+- The **generator matrix $\mathbf{Q}$** defines transition rates.
+- Steady-state $\boldsymbol{\pi}$ solves:  
+    $$
+    \boldsymbol{\pi} \mathbf{Q} = 0, \quad \sum \pi_i = 1
+    $$
+- $\pi_i$ gives long-run proportions of time spent in each state.
+
+## Queueing Systems as CTMCs
+
+A queueing system (e.g., customer service desk, call center, clinic) can often be modeled as a **continuous-time Markov chain**, under assumptions like:
+
+- Exponentially-distributed inter-arrival times
+- Exponentially-distributed service times
+- Finite waiting area, single server, and one-at-a-time processing
+
+![](images/queueing_ctmc.png){width=80%}
+
+# <span style="color: black;">Outline</span>
+
+  1. Recap
+  2. Continuous Time Markov Chains (CTMC)
+  3. <span style="color: red;">Queueing Theory</span>
+  4. Lab Activity: Vaccine Clinic Operations
+
+## Queueing Theory
+<br>
+<br>
+Welcome to Queueing Theory!  
+We'll explore how to model and analyze systems where "waiting" happens — like hospitals, call centers, and shops.
+
+
+## What is a Queueing System?
+
+A system with:
+
+- **Arrivals** (e.g., customers, calls)
+- **A queue** (optional)
+- **Service process** (1 or more servers)
+- **Departures**
+
+![](images/queing_basic.png){width=100%, fig-align="center"}
+
+## Real-World Applications
+
+- ATM and supermarket checkout lines
+- Call centers and helpdesks
+- Hospital patient flow
+- Computer servers and networks
+
+
+## Kendall’s Standard Notation
+
+Queueing systems are described using: **A/B/S/d/e**  
+
+- **A** – Arrival distribution (e.g., M = Exponential)
+- **B** – Service distribution (e.g., M, D = Deterministic, G = General)
+- **S** – Number of servers
+- **d** – System capacity (buffer size)
+- **e** – Queue discipline (e.g., FIFO, LIFO)
+
+
+**Example: M/M/2/5/FIFO**  
+
+→ Exponential arrivals, exponential service, 2 servers,  
+→ Max 5 customers in system, served in order of arrival
+
+## Poisson Process 
+
+- Many queueing systems assume **Poisson arrivals**, a key foundation for M/M/1 and related models.
+- This process is simple but powerful and forms the basis for most queueing models.
+
+**Definition:**  
+A Poisson process with rate $\lambda$ models **random arrivals over time**, where:
+
+![](images/poisson_process.png){width=100%, fig-align="center"}
+
+
+## Poisson Process Cont.
+
+- The number of arrivals in time $t$ follows:  
+  $$
+  P(N(t) = k) = \frac{(\lambda t)^k e^{-\lambda t}}{k!}
+  $$
+- **Interarrival times** are exponentially distributed:  
+  $$
+  T \sim \text{Exp}(\lambda)
+  $$
+- **Memoryless**: the probability of arrival doesn't depend on the past
+
+## The M/M/1 Queue
+
+![](images/mm1.png){width=100%, fig-align="center"}
+
+- A single-server queue with:
+    - **Exponential interarrival times** (rate $\lambda$)
+    - **Exponential service times** (rate $\mu$)
+- The number of customers in the system defines the **state**
+- The queue has **infinite capacity**
+
+## The M/M/1 Queue Cont.
+
+**Traffic intensity:**  
+$$
+\rho = \frac{\lambda}{\mu}
+$$
+
+- If $\rho < 1$, the system reaches a **steady-state**
+- If $\rho \geq 1$, the queue grows indefinitely
+- $\lambda$ = arrival rate, $\mu$ = service rate
+
+💡 Think of $\rho$ as the **load** on the server.  
+If arrivals outpace service, the system can't cope.
+
+## M/M/1 as a CTMC
+
+- The M/M/1 queue can be modeled as a **Continuous-Time Markov Chain (CTMC)** with **states** representing the number of customers in the system.
+
+- It forms a **birth-death process**:
+    - **Arrivals (births)** at rate $\lambda$
+    - **Departures (deaths)** at rate $\mu$
+
+## M/M/1 as a CTMC Cont.
+
+**Generator matrix (Q):**
+
+$$
+\mathbf{Q} =
+\begin{pmatrix}
+ -\lambda & \lambda & 0 & 0 & \cdots \\
+ \mu & -(\lambda + \mu) & \lambda & 0 & \cdots \\
+ 0 & \mu & -(\lambda + \mu) & \lambda & \cdots \\
+ \vdots & \vdots & \ddots & \ddots & \ddots
+\end{pmatrix}
+$$
+
+- This structure defines the dynamics of the queue over time.
+
+
+## M/M/1: Stationary Distribution & Performance
+
+With steady-state probabilities $\{p_n,\ n \geq 0\}$:
+
+- Probability the system is **empty**
+    $$
+    p_0 = 1 - \rho
+    $$
+- Probability the **server is busy**
+    $$
+    1 - p_0 = \rho
+    $$
+- Probability of **$n$ customers** in the system
+    $$
+    p_n = \rho^n (1 - \rho)
+    $$
+
+## M/M/1: Stationary Distribution & Performance Cont.
+
+**Mean number of customers in the system (L):**
+
+$$
+L = \sum_{n=0}^\infty n p_n 
+= (1 - \rho) \sum_{n=0}^\infty n \rho^n 
+= \frac{\rho}{1 - \rho}
+$$
+
+This is one of the key performance metrics in queueing theory.
+
+## Performance Measures in Queueing
+
+Four key summary performance measures:
+
+- **$L$**: Mean number of customers **in the system**
+- **$L_q$**: Mean number of customers **in the queue**
+- **$W$**: Mean time a customer spends **in the system**
+- **$W_q$**: Mean time a customer spends **waiting in the queue**
+
+
+## Little’s Law
+
+A fundamental relationship linking **arrival rate**, **waiting time**, and **number in the system**.
+
+Relates these measures:
+
+$$
+L = \lambda W,\quad L_q = \lambda W_q
+$$
+
+Also:
+
+$$
+W = W_q + \frac{1}{\mu},\quad L = L_q + \frac{\lambda}{\mu}
+$$
+
+
+## M/M/1 Queue: Performance Formulas
+
+Using $\rho = \frac{\lambda}{\mu}$ and Little’s Law:
+
+- Mean number in the system:
+  $$
+  L = \frac{\rho}{1 - \rho}
+  $$
+
+- Mean number in queue:
+  $$
+  L_q = \frac{\rho^2}{1 - \rho}
+  $$
+
+
+## M/M/1 Queue: Performance Formulas Cont. 
+
+- Mean time in the system:
+  $$
+  W = \frac{1}{\mu(1 - \rho)}
+  $$
+
+- Mean waiting time in queue:
+  $$
+  W_q = \frac{\rho}{\mu(1 - \rho)}
+  $$
+
+
+## Comparing M/M/1, M/M/s, and M/M/s/b
+
+<style>
+table {
+  font-size: 65%;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+th {
+  background-color: #dbeafe; /* light blue */
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+tr:last-child td {
+  border-bottom: 2px solid #000; /* darker line after last row */
+}
+</style>
+
+
+
+| Feature             | M/M/1                     | M/M/s                         | M/M/s/b                          |
+|---------------------|---------------------------|--------------------------------|----------------------------------|
+| Servers             | 1                         | $s$                           | $s$                              |
+| System Capacity     | Infinite                  | Infinite                      | $b$ (finite)                     |
+| Arrival Rate ($\lambda$) | Poisson                  | Poisson                        | Poisson                          |
+| Service Time        | Exponential               | Exponential                   | Exponential                      |
+| Queue Capacity      | Infinite                  | Infinite                      | $b - s$                          |
+| Blocking?           | No                        | No                             | Yes (if system full)             |
+| Common Use          | Basic single-server queue | Multi-server (e.g., call center) | Limited capacity (e.g., hospital beds) |
+
+## Let's Practice: Model Matching
+
+You’ll see 3 real-world situations.  
+For each one, pick the **most suitable queueing model**:
+
+- M/M/1
+- M/M/s
+- M/M/s/b
+
+You’ll have **30 seconds** to discuss or decide for each!
+
+<script>
+let timerIntervals = {};
+
+function startTimer(buttonId, seconds = 60) {
+  const btn = document.getElementById(buttonId);
+  if (!btn || isNaN(seconds)) return;
+
+  clearInterval(timerIntervals[buttonId]); // clear any existing timer
+
+  let count = parseInt(seconds, 10); // ensure it's a number
+  const tick = () => {
+    if (count < 0) {
+      clearInterval(timerIntervals[buttonId]);
+      btn.innerHTML = "⏰";
+      return;
+    }
+    const mins = String(Math.floor(count / 60)).padStart(2, '0');
+    const secs = String(count % 60).padStart(2, '0');
+    btn.innerHTML = `⏳ ${mins}:${secs}`;
+    count--;
+  };
+
+  tick(); // show first value immediately
+  timerIntervals[buttonId] = setInterval(tick, 1000);
+}
+</script>
+
+
+
+## Scenario 1
+
+An emergency care unit in a district hospital has five treatment beds. Once all beds are occupied, incoming patients must be transferred to a different facility, as there is no space for waiting or holding.
+
+Which queueing model applies?
+
+- M/M/1  
+- M/M/s  
+- M/M/s/b  
+
+<button id="timer-btn-1" onclick="startTimer('timer-btn-1', 30)" style="
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: monospace;
+">
+⏳ 00:30
+</button>
+
+
+## Scenario 1 – Answer
+<br><br>
+<span style="color: red;">**M/M/s/b Queueing Model** </span>  
+<br>
+- Multiple beds = multiple servers  
+- No waiting space = limited capacity  
+- Incoming patients are blocked if full  
+
+
+## Scenario 2
+
+A mobile vaccination clinic is staffed by a single nurse. Patients from a rural community arrive randomly and are vaccinated one at a time. If the nurse is busy, others wait in line without any restrictions on queue length.
+
+Which model applies?
+
+- M/M/1  
+- M/M/s  
+- M/M/s/b  
+
+<button id="timer-btn-2" onclick="startTimer('timer-btn-2', 30)" style="
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: monospace;
+">
+⏳ 00:30
+</button>
+
+
+
+## Scenario 2 – Answer
+
+<br><br>
+<span style="color: red;">**M/M/1 Queueing Model**</span>  
+<br>
+
+- One nurse = one server  
+- Unlimited queue = no blocking  
+- Standard basic queueing setup  
+
+
+## Scenario 3
+
+A city hospital’s diagnostic laboratory operates with four technicians. Incoming test samples are processed as soon as a technician is free. If all are busy, samples wait in a queue with no limit.
+
+Which model applies?
+
+- M/M/1  
+- M/M/s  
+- M/M/s/b  
+
+<button id="timer-btn-3" onclick="startTimer('timer-btn-3', 30)" style="
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: monospace;
+">
+⏳ 00:30
+</button>
+
+## Scenario 3 – Answer
+
+<br><br>
+<span style="color: red;">**M/M/s Queueing Model**</span>  
+
+- Four technicians = multiple servers  
+- Queue allowed = no blocking  
+- Standard multi-server queue  
+
+#  <span style="color: black;">Outline</span>
+
+1. Recap
+2. Continuous Time Markov Chains (CTMC)
+3. Queueing Theory
+4. <span style="color: red;">Lab Activity: Vaccine Clinic Operations</span>
+
+## Lab Activity: Vaccine Clinic Operations
+
+In this hands-on session, you’ll use R code to explore how Continuous-Time Markov Chains (CTMCs) and Queueing Theory help us understand operations at a rural vaccine clinic.
+
+We'll work through:
+
+- A **CTMC** model for an observation room with limited space
+- An **M/M/1 queue** for a check-in desk staffed by one nurse
+- Scenario analysis and steady-state evaluation
+
+> Make sure R and the necessary libraries are ready (e.g., `Matrix`, `expm`).
+
+You’ll be guided with real-world tasks followed by code. Let's begin!
+
+---
+
+![](images/yourturn.png)
+
+<button id="timer-btn-4" onclick="startTimer('timer-btn-4', 900)" style="
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: monospace;
+">
+⏳ 15:00
+</button>
+
+---
+
+![](images/thankyou.png){width=100%, fig-align="center"}
+
+
+---
+
+![](images/dl4sg_qr.png){fig-align="center"}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,464 @@
+[
+  {
+    "objectID": "slides/stocastic_modelling/course_description.html",
+    "href": "slides/stocastic_modelling/course_description.html",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "",
+    "text": "This workshop is designed for healthcare operations researchers, supply chain analysts, and graduate students interested in modeling system dynamics under uncertainty. Participants will learn how Continuous-Time Markov Chains (CTMCs) and basic queueing models can be applied to real-world healthcare logistics. The course assumes basic familiarity with probability and matrix operations in R (or Python)."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/course_description.html#section-1-recap",
+    "href": "slides/stocastic_modelling/course_description.html#section-1-recap",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "Section 1: Recap",
+    "text": "Section 1: Recap\n\nDiscrete-time vs. continuous-time Markov chains\nMarkov property and memorylessness"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/course_description.html#section-2-foundations-of-continuous-time-markov-chains-ctmcs",
+    "href": "slides/stocastic_modelling/course_description.html#section-2-foundations-of-continuous-time-markov-chains-ctmcs",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "Section 2: Foundations of Continuous-Time Markov Chains (CTMCs)",
+    "text": "Section 2: Foundations of Continuous-Time Markov Chains (CTMCs)\n\nExponential timing and transition rates\nThe generator matrix and its interpretation\nCTMC transition diagrams and modeling examples\nSteady-state analysis and long-run behavior\nSolving for steady-state probabilities\nApplications to customer flow and occupancy in small systems"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/course_description.html#section-3-queueing-theory-essentials",
+    "href": "slides/stocastic_modelling/course_description.html#section-3-queueing-theory-essentials",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "Section 3: Queueing Theory Essentials",
+    "text": "Section 3: Queueing Theory Essentials\n\nWhat is a queueing system? Components and notation (A/B/S/d/e)\nThe Poisson process and M/M/1 queue\nBirth-death process interpretation\nGenerator matrices for queues\nTraffic intensity, stability conditions\nKey performance metrics\nLittle’s Law and system design"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/course_description.html#section-4-vaccine-clinic-case-study",
+    "href": "slides/stocastic_modelling/course_description.html#section-4-vaccine-clinic-case-study",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "Section 4: Vaccine Clinic Case Study",
+    "text": "Section 4: Vaccine Clinic Case Study\n\nCTMC model for an observation room\nScenario-based analysis and service optimization\nR-based lab activity: matrix methods, simulation, and performance metrics\nTranslating modeling results to logistics planning"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "I’m a PhD researcher at Cardiff University. My research focuses on hybrid intelligence and vaccine demand forecasting in low- and middle-income countries (LMICs). I’m particularly interested in combining domain knowledge with probabilistic models to improve public health supply chains."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Udeshi Salgado",
+    "section": "🎓 Education",
+    "text": "🎓 Education\nPhD in Business Management, Cardiff University, UK\nOct 2024 – Present\n- Cardiff Business School (CARBS) EPSRC Studentship Award\n- Research on global immunisation supply chains with hybrid AI\n- Supervisors: Prof. Bahman Rostami‑Tabar, Dr. Thanos E Goltsos, Dr. Geraint Palmer, Dr. Xun Wang\nBSc (Hons) in Statistics, University of Sri Jayewardenepura, Sri Lanka\nJan 2019 – Aug 2023\n- Second Class Upper Division, GPA: 3.64 / 4.00\n- Dissertation: Detection of Tooth Anomalies Using AI (Grade: A+)\nDiploma in Software Engineering, Esoft Metro Campus, Sri Lanka\nJan 2015 – Jul 2015\n- Covered OOP, C#, Java, App Development"
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Udeshi Salgado",
+    "section": "🔍 Research Interests",
+    "text": "🔍 Research Interests\n\nVaccine supply chain forecasting\n\nHybrid intelligence (human + machine forecasting)\n\nTime series analysis & probabilistic forecasting\n\nHealth data science and informatics\n\nInventory management in LMICs\n\nEthical AI and equity in global health systems"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 15, 2025\n⏰ Time: 10:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n🔗 View Slides"
+  },
+  {
+    "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
+    "href": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 15, 2025\n⏰ Time: 10:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n🔗 View Slides"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#introduction-to-continuous-markov-chains-queueing-theory-in-healthcare-supply-chains",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#introduction-to-continuous-markov-chains-queueing-theory-in-healthcare-supply-chains",
+    "title": "Udeshi Salgado",
+    "section": "Introduction to Continuous Markov Chains & Queueing Theory in Healthcare Supply Chains",
+    "text": "Introduction to Continuous Markov Chains & Queueing Theory in Healthcare Supply Chains\n\nUdeshi Salgado\nData Lab for Social Good,  Cardiff University, UK\n2025-05-15"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#assumptions",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#assumptions",
+    "title": "Udeshi Salgado",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nYou should be familiar with basic probability and random variables.\nYou are expected to be comfortable with R (or Python) for basic simulation and matrix operations.\nThis is not a theory-heavy workshop—we will use simple examples to build intuition, not derive theorems."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#what-we-will-cover",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#what-we-will-cover",
+    "title": "Udeshi Salgado",
+    "section": "What We Will Cover",
+    "text": "What We Will Cover\n\nKey concepts and steady-state analysis of Continuous-Time Markov Chains (CTMCs)\n\nModeling a vaccine observation room using CTMCs\nIntroduction to Queueing Theory\nIntroduction to M/M/1 queueing systems and performance metrics"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#what-we-will-not-cover",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#what-we-will-not-cover",
+    "title": "Udeshi Salgado",
+    "section": "What We Will Not Cover",
+    "text": "What We Will Not Cover\n\nTheoretical proofs (e.g., Chapman-Kolmogorov, Little’s Law)\n\nNetworks of queues\nMulticlass queues and priority scheduling\n\nNon-stationary arrivals and general service times\nNon-exponential queues\nTime-dependent queueing models"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#materials",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#materials",
+    "title": "Udeshi Salgado",
+    "section": "Materials",
+    "text": "Materials\n\nYou can find the workshop materials at here.\nNote: These materials are based on my learnings at NATCOR Taught Course Centre: Stochastic Modelling Course"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#recap-assumptions",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#recap-assumptions",
+    "title": "Udeshi Salgado",
+    "section": "Recap: Assumptions",
+    "text": "Recap: Assumptions\n\nThe Markov chain is in exactly one state at any particular time step.\nThe probability distribution for the next state only depends on the current state (Markov property).\nThe transition probabilities are the same on every time step."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#recap-discrete-mc-vs-continuous-mc",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#recap-discrete-mc-vs-continuous-mc",
+    "title": "Udeshi Salgado",
+    "section": "Recap: Discrete MC Vs Continuous MC",
+    "text": "Recap: Discrete MC Vs Continuous MC"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#continuous-time-markov-chains-ctmc",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#continuous-time-markov-chains-ctmc",
+    "title": "Udeshi Salgado",
+    "section": "Continuous Time Markov Chains (CTMC)",
+    "text": "Continuous Time Markov Chains (CTMC)\n\nIn a continuous-time Markov chain (CTMC), the system state can change at any point on the continuous time axis."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#exponential-timing-in-ctmcs",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#exponential-timing-in-ctmcs",
+    "title": "Udeshi Salgado",
+    "section": "Exponential Timing in CTMCs",
+    "text": "Exponential Timing in CTMCs\n\nAssumption: Time until the next transition follows an Exponential(λ) distribution, where λ is the transition rate (higher λ → shorter expected time between transitions)\nMemoryless Property:\n\\[\n  \\Pr(X &gt; t + u \\mid X &gt; u) = \\Pr(X &gt; t) \\]\nPast time in a state doesn’t affect future transitions\nTransition probability depends only on the current state → Markov property"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#ctmcs-definition",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#ctmcs-definition",
+    "title": "Udeshi Salgado",
+    "section": "CTMCs: Definition",
+    "text": "CTMCs: Definition\n\nA continuous-time Markov chain is a stochastic process\n\\[\n\\{X(t) \\mid t \\geq 0\\}\n\\]\nin which the probability of some future event (say ( A )) depends only on the current state, not on past states.\nFormally:\n\\[\n\\Pr(A \\mid X(t),\\, 0 \\leq t \\leq T) = \\Pr(A \\mid X(T))\n\\]\n\nAs in the discrete-time case, the key idea is: future behavior depends only on the current state."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#ctmc-example-managing-a-tiny-shops-flow",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#ctmc-example-managing-a-tiny-shops-flow",
+    "title": "Udeshi Salgado",
+    "section": "CTMC Example: Managing a Tiny Shop’s Flow",
+    "text": "CTMC Example: Managing a Tiny Shop’s Flow\nImagine a small neighborhood pharmacy with space for maximum of two customers at a time. As the shop owner, you’re analyzing foot traffic to optimize customer experience without overcrowding or turning people away."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#ctmc-example-managing-a-tiny-shops-flow-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#ctmc-example-managing-a-tiny-shops-flow-cont.",
+    "title": "Udeshi Salgado",
+    "section": "CTMC Example: Managing a Tiny Shop’s Flow Cont.",
+    "text": "CTMC Example: Managing a Tiny Shop’s Flow Cont.\n\nArrivals follow an exponential distribution with λ = 1 per minute\nDepartures depend on how many customers are in the shop:\n\n1 customer → exponential(λ = 0.25)\n2 customers → exponential(λ = 0.5)\n\nIf a new customer arrives:\n\nAnd there are 0 or 1 customers, they enter the shop\nIf 2 customers are already inside, they leave without entering (no queueing!)"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#ctmc-example-transition-rate-diagram",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#ctmc-example-transition-rate-diagram",
+    "title": "Udeshi Salgado",
+    "section": "CTMC Example: Transition Rate Diagram",
+    "text": "CTMC Example: Transition Rate Diagram\n\nWe can model this scenario as a Continuous-Time Markov Chain (CTMC), where the state represents the number of customers in the shop.\nThus, the possible states are: 0, 1, and 2.\nWe can visualize the transition rates between these states:"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#time-until-next-transition",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#time-until-next-transition",
+    "title": "Udeshi Salgado",
+    "section": "Time Until Next Transition",
+    "text": "Time Until Next Transition\nLet \\(T_i\\) be the time until the next transition from state \\(i \\in \\{0, 1, 2\\}\\)\n\n\\(T_0 \\sim \\text{Exp}(1)\\) (arrival triggers transition)\n\\(T_2 \\sim \\text{Exp}(0.5)\\) (departure triggers transition)\n\\(T_1 = \\min(A, D)\\), where:\n\n\\(A \\sim \\text{Exp}(1)\\) (a new customer arrives)\n\\(D \\sim \\text{Exp}(0.25)\\) (a customer leaves the shop)"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#exponential-minimum-property",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#exponential-minimum-property",
+    "title": "Udeshi Salgado",
+    "section": "Exponential Minimum Property",
+    "text": "Exponential Minimum Property\nSuppose \\(T_1\\), \\(T_2\\) are independent and \\[\nT_1 \\sim \\text{Exp}(\\lambda_1),\\quad T_2 \\sim \\text{Exp}(\\lambda_2)\n\\]\nThen:\n\\[\n\\min(T_1, T_2) \\sim \\text{Exp}(\\lambda_1 + \\lambda_2)\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#exponential-minimum-property-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#exponential-minimum-property-cont.",
+    "title": "Udeshi Salgado",
+    "section": "Exponential Minimum Property Cont.",
+    "text": "Exponential Minimum Property Cont.\nApplication to our example:\n\nFor state 1:\n\\[\nT_1 = \\min(A, D); \\quad A \\sim \\text{Exp}(1),\\ D \\sim \\text{Exp}(0.25)\n\\]\nSo:\n\\[\nT_1 \\sim \\text{Exp}(1 + 0.25) = \\text{Exp}(1.25)\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#generator-matrix-for-a-ctmc",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#generator-matrix-for-a-ctmc",
+    "title": "Udeshi Salgado",
+    "section": "Generator Matrix for a CTMC",
+    "text": "Generator Matrix for a CTMC\nThe generator matrix (Q) summarizes the transition rates between states in a CTMC.\n\nEach element \\(q_{ij}\\) gives the rate of moving from state \\(i\\) to state \\(j\\)\nDiagonal elements are negative and equal to the negative of the row sum\nNon-diagonal elements are \\(\\geq 0\\) and indicate direct transitions"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#interpreting-key-entries-in-generator-matrix",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#interpreting-key-entries-in-generator-matrix",
+    "title": "Udeshi Salgado",
+    "section": "Interpreting Key Entries in Generator Matrix",
+    "text": "Interpreting Key Entries in Generator Matrix"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#steady-state-probabilities",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#steady-state-probabilities",
+    "title": "Udeshi Salgado",
+    "section": "Steady-State Probabilities",
+    "text": "Steady-State Probabilities\nSteady-state probabilities represent the long-run behavior of the system.\nThey tell us:\n\nThe proportion of time the CTMC spends in each state in the long run.\nThe limiting probability that the system is in a given state after a long time.\n\nTo find them, we solve: \\[\n\\boldsymbol{\\pi} \\mathbf{Q} = \\mathbf{0}, \\quad \\text{with} \\quad \\sum \\pi_i = 1\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#solving-the-system",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#solving-the-system",
+    "title": "Udeshi Salgado",
+    "section": "Solving the System",
+    "text": "Solving the System\nFrom:\n\n\\(-\\pi_0 + 0.25\\pi_1 = 0 \\Rightarrow \\pi_1 = 4\\pi_0\\)\n\\(\\pi_1 - 0.5\\pi_2 = 0 \\Rightarrow \\pi_2 = 2\\pi_1 = 8\\pi_0\\)\n\\(\\pi_0 + 4\\pi_0 + 8\\pi_0 = 13\\pi_0 = 1 \\Rightarrow \\pi_0 = \\frac{1}{13}\\)\n\nThus: \\[\n\\pi_0 = \\frac{1}{13},\\quad \\pi_1 = \\frac{4}{13},\\quad \\pi_2 = \\frac{8}{13}\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#long-run-average-number-of-customers",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#long-run-average-number-of-customers",
+    "title": "Udeshi Salgado",
+    "section": "Long-run Average Number of Customers",
+    "text": "Long-run Average Number of Customers\nWe calculate:\n\\[\n0 \\cdot \\frac{1}{13} + 1 \\cdot \\frac{4}{13} + 2 \\cdot \\frac{8}{13} = \\frac{20}{13} \\approx 1.54\n\\]\nThis is the expected number of customers in the shop in the long run."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#summary-of-ctmcs",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#summary-of-ctmcs",
+    "title": "Udeshi Salgado",
+    "section": "Summary of CTMCs",
+    "text": "Summary of CTMCs\n\nTransition times are exponentially distributed.\nThe generator matrix \\(\\mathbf{Q}\\) defines transition rates.\nSteady-state \\(\\boldsymbol{\\pi}\\) solves:\n\\[\n  \\boldsymbol{\\pi} \\mathbf{Q} = 0, \\quad \\sum \\pi_i = 1\n  \\]\n\\(\\pi_i\\) gives long-run proportions of time spent in each state."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#queueing-systems-as-ctmcs",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#queueing-systems-as-ctmcs",
+    "title": "Udeshi Salgado",
+    "section": "Queueing Systems as CTMCs",
+    "text": "Queueing Systems as CTMCs\nA queueing system (e.g., customer service desk, call center, clinic) can often be modeled as a continuous-time Markov chain, under assumptions like:\n\nExponentially-distributed inter-arrival times\nExponentially-distributed service times\nFinite waiting area, single server, and one-at-a-time processing"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#queueing-theory",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#queueing-theory",
+    "title": "Udeshi Salgado",
+    "section": "Queueing Theory",
+    "text": "Queueing Theory\n  Welcome to Queueing Theory!\nWe’ll explore how to model and analyze systems where “waiting” happens — like hospitals, call centers, and shops."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#what-is-a-queueing-system",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#what-is-a-queueing-system",
+    "title": "Udeshi Salgado",
+    "section": "What is a Queueing System?",
+    "text": "What is a Queueing System?\nA system with:\n\nArrivals (e.g., customers, calls)\nA queue (optional)\nService process (1 or more servers)\nDepartures"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#real-world-applications",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#real-world-applications",
+    "title": "Udeshi Salgado",
+    "section": "Real-World Applications",
+    "text": "Real-World Applications\n\nATM and supermarket checkout lines\nCall centers and helpdesks\nHospital patient flow\nComputer servers and networks"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#kendalls-standard-notation",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#kendalls-standard-notation",
+    "title": "Udeshi Salgado",
+    "section": "Kendall’s Standard Notation",
+    "text": "Kendall’s Standard Notation\nQueueing systems are described using: A/B/S/d/e\n\nA – Arrival distribution (e.g., M = Exponential)\nB – Service distribution (e.g., M, D = Deterministic, G = General)\nS – Number of servers\nd – System capacity (buffer size)\ne – Queue discipline (e.g., FIFO, LIFO)\n\nExample: M/M/2/5/FIFO\n→ Exponential arrivals, exponential service, 2 servers,\n→ Max 5 customers in system, served in order of arrival"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#poisson-process",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#poisson-process",
+    "title": "Udeshi Salgado",
+    "section": "Poisson Process",
+    "text": "Poisson Process\n\nMany queueing systems assume Poisson arrivals, a key foundation for M/M/1 and related models.\nThis process is simple but powerful and forms the basis for most queueing models.\n\nDefinition:\nA Poisson process with rate \\(\\lambda\\) models random arrivals over time, where:"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#poisson-process-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#poisson-process-cont.",
+    "title": "Udeshi Salgado",
+    "section": "Poisson Process Cont.",
+    "text": "Poisson Process Cont.\n\nThe number of arrivals in time \\(t\\) follows:\n\\[\nP(N(t) = k) = \\frac{(\\lambda t)^k e^{-\\lambda t}}{k!}\n\\]\nInterarrival times are exponentially distributed:\n\\[\nT \\sim \\text{Exp}(\\lambda)\n\\]\nMemoryless: the probability of arrival doesn’t depend on the past"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#the-mm1-queue",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#the-mm1-queue",
+    "title": "Udeshi Salgado",
+    "section": "The M/M/1 Queue",
+    "text": "The M/M/1 Queue\n\n\nA single-server queue with:\n\nExponential interarrival times (rate \\(\\lambda\\))\nExponential service times (rate \\(\\mu\\))\n\nThe number of customers in the system defines the state\nThe queue has infinite capacity"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#the-mm1-queue-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#the-mm1-queue-cont.",
+    "title": "Udeshi Salgado",
+    "section": "The M/M/1 Queue Cont.",
+    "text": "The M/M/1 Queue Cont.\nTraffic intensity:\n\\[\n\\rho = \\frac{\\lambda}{\\mu}\n\\]\n\nIf \\(\\rho &lt; 1\\), the system reaches a steady-state\nIf \\(\\rho \\geq 1\\), the queue grows indefinitely\n\\(\\lambda\\) = arrival rate, \\(\\mu\\) = service rate\n\n💡 Think of \\(\\rho\\) as the load on the server.\nIf arrivals outpace service, the system can’t cope."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#mm1-as-a-ctmc",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#mm1-as-a-ctmc",
+    "title": "Udeshi Salgado",
+    "section": "M/M/1 as a CTMC",
+    "text": "M/M/1 as a CTMC\n\nThe M/M/1 queue can be modeled as a Continuous-Time Markov Chain (CTMC) with states representing the number of customers in the system.\nIt forms a birth-death process:\n\nArrivals (births) at rate \\(\\lambda\\)\nDepartures (deaths) at rate \\(\\mu\\)"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#mm1-as-a-ctmc-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#mm1-as-a-ctmc-cont.",
+    "title": "Udeshi Salgado",
+    "section": "M/M/1 as a CTMC Cont.",
+    "text": "M/M/1 as a CTMC Cont.\nGenerator matrix (Q):\n\\[\n\\mathbf{Q} =\n\\begin{pmatrix}\n-\\lambda & \\lambda & 0 & 0 & \\cdots \\\\\n\\mu & -(\\lambda + \\mu) & \\lambda & 0 & \\cdots \\\\\n0 & \\mu & -(\\lambda + \\mu) & \\lambda & \\cdots \\\\\n\\vdots & \\vdots & \\ddots & \\ddots & \\ddots\n\\end{pmatrix}\n\\]\n\nThis structure defines the dynamics of the queue over time."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#mm1-stationary-distribution-performance",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#mm1-stationary-distribution-performance",
+    "title": "Udeshi Salgado",
+    "section": "M/M/1: Stationary Distribution & Performance",
+    "text": "M/M/1: Stationary Distribution & Performance\nWith steady-state probabilities \\(\\{p_n,\\ n \\geq 0\\}\\):\n\nProbability the system is empty \\[\n  p_0 = 1 - \\rho\n  \\]\nProbability the server is busy \\[\n  1 - p_0 = \\rho\n  \\]\nProbability of \\(n\\) customers in the system \\[\n  p_n = \\rho^n (1 - \\rho)\n  \\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#mm1-stationary-distribution-performance-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#mm1-stationary-distribution-performance-cont.",
+    "title": "Udeshi Salgado",
+    "section": "M/M/1: Stationary Distribution & Performance Cont.",
+    "text": "M/M/1: Stationary Distribution & Performance Cont.\nMean number of customers in the system (L):\n\\[\nL = \\sum_{n=0}^\\infty n p_n\n= (1 - \\rho) \\sum_{n=0}^\\infty n \\rho^n\n= \\frac{\\rho}{1 - \\rho}\n\\]\nThis is one of the key performance metrics in queueing theory."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#performance-measures-in-queueing",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#performance-measures-in-queueing",
+    "title": "Udeshi Salgado",
+    "section": "Performance Measures in Queueing",
+    "text": "Performance Measures in Queueing\nFour key summary performance measures:\n\n\\(L\\): Mean number of customers in the system\n\\(L_q\\): Mean number of customers in the queue\n\\(W\\): Mean time a customer spends in the system\n\\(W_q\\): Mean time a customer spends waiting in the queue"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#littles-law",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#littles-law",
+    "title": "Udeshi Salgado",
+    "section": "Little’s Law",
+    "text": "Little’s Law\nA fundamental relationship linking arrival rate, waiting time, and number in the system.\nRelates these measures:\n\\[\nL = \\lambda W,\\quad L_q = \\lambda W_q\n\\]\nAlso:\n\\[\nW = W_q + \\frac{1}{\\mu},\\quad L = L_q + \\frac{\\lambda}{\\mu}\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#mm1-queue-performance-formulas",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#mm1-queue-performance-formulas",
+    "title": "Udeshi Salgado",
+    "section": "M/M/1 Queue: Performance Formulas",
+    "text": "M/M/1 Queue: Performance Formulas\nUsing \\(\\rho = \\frac{\\lambda}{\\mu}\\) and Little’s Law:\n\nMean number in the system: \\[\nL = \\frac{\\rho}{1 - \\rho}\n\\]\nMean number in queue: \\[\nL_q = \\frac{\\rho^2}{1 - \\rho}\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#mm1-queue-performance-formulas-cont.",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#mm1-queue-performance-formulas-cont.",
+    "title": "Udeshi Salgado",
+    "section": "M/M/1 Queue: Performance Formulas Cont.",
+    "text": "M/M/1 Queue: Performance Formulas Cont.\n\nMean time in the system: \\[\nW = \\frac{1}{\\mu(1 - \\rho)}\n\\]\nMean waiting time in queue: \\[\nW_q = \\frac{\\rho}{\\mu(1 - \\rho)}\n\\]"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#comparing-mm1-mms-and-mmsb",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#comparing-mm1-mms-and-mmsb",
+    "title": "Udeshi Salgado",
+    "section": "Comparing M/M/1, M/M/s, and M/M/s/b",
+    "text": "Comparing M/M/1, M/M/s, and M/M/s/b\n\n\n\n\n\n\n\n\n\n\nFeature\nM/M/1\nM/M/s\nM/M/s/b\n\n\n\n\nServers\n1\n\\(s\\)\n\\(s\\)\n\n\nSystem Capacity\nInfinite\nInfinite\n\\(b\\) (finite)\n\n\nArrival Rate (\\(\\lambda\\))\nPoisson\nPoisson\nPoisson\n\n\nService Time\nExponential\nExponential\nExponential\n\n\nQueue Capacity\nInfinite\nInfinite\n\\(b - s\\)\n\n\nBlocking?\nNo\nNo\nYes (if system full)\n\n\nCommon Use\nBasic single-server queue\nMulti-server (e.g., call center)\nLimited capacity (e.g., hospital beds)"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#lets-practice-model-matching",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#lets-practice-model-matching",
+    "title": "Udeshi Salgado",
+    "section": "Let’s Practice: Model Matching",
+    "text": "Let’s Practice: Model Matching\nYou’ll see 3 real-world situations.\nFor each one, pick the most suitable queueing model:\n\nM/M/1\nM/M/s\nM/M/s/b\n\nYou’ll have 30 seconds to discuss or decide for each!"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#scenario-1",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#scenario-1",
+    "title": "Udeshi Salgado",
+    "section": "Scenario 1",
+    "text": "Scenario 1\nAn emergency care unit in a district hospital has five treatment beds. Once all beds are occupied, incoming patients must be transferred to a different facility, as there is no space for waiting or holding.\nWhich queueing model applies?\n\nM/M/1\n\nM/M/s\n\nM/M/s/b\n\n\n⏳ 00:30"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#scenario-1-answer",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#scenario-1-answer",
+    "title": "Udeshi Salgado",
+    "section": "Scenario 1 – Answer",
+    "text": "Scenario 1 – Answer\n M/M/s/b Queueing Model \n - Multiple beds = multiple servers\n- No waiting space = limited capacity\n- Incoming patients are blocked if full"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#scenario-2",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#scenario-2",
+    "title": "Udeshi Salgado",
+    "section": "Scenario 2",
+    "text": "Scenario 2\nA mobile vaccination clinic is staffed by a single nurse. Patients from a rural community arrive randomly and are vaccinated one at a time. If the nurse is busy, others wait in line without any restrictions on queue length.\nWhich model applies?\n\nM/M/1\n\nM/M/s\n\nM/M/s/b\n\n\n⏳ 00:30"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#scenario-2-answer",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#scenario-2-answer",
+    "title": "Udeshi Salgado",
+    "section": "Scenario 2 – Answer",
+    "text": "Scenario 2 – Answer\n M/M/1 Queueing Model\n\n\nOne nurse = one server\n\nUnlimited queue = no blocking\n\nStandard basic queueing setup"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#scenario-3",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#scenario-3",
+    "title": "Udeshi Salgado",
+    "section": "Scenario 3",
+    "text": "Scenario 3\nA city hospital’s diagnostic laboratory operates with four technicians. Incoming test samples are processed as soon as a technician is free. If all are busy, samples wait in a queue with no limit.\nWhich model applies?\n\nM/M/1\n\nM/M/s\n\nM/M/s/b\n\n\n⏳ 00:30"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#scenario-3-answer",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#scenario-3-answer",
+    "title": "Udeshi Salgado",
+    "section": "Scenario 3 – Answer",
+    "text": "Scenario 3 – Answer\n M/M/s Queueing Model\n\nFour technicians = multiple servers\n\nQueue allowed = no blocking\n\nStandard multi-server queue"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/dl4sg_slides.html#lab-activity-vaccine-clinic-operations",
+    "href": "slides/stocastic_modelling/dl4sg_slides.html#lab-activity-vaccine-clinic-operations",
+    "title": "Udeshi Salgado",
+    "section": "Lab Activity: Vaccine Clinic Operations",
+    "text": "Lab Activity: Vaccine Clinic Operations\nIn this hands-on session, you’ll use R code to explore how Continuous-Time Markov Chains (CTMCs) and Queueing Theory help us understand operations at a rural vaccine clinic.\nWe’ll work through:\n\nA CTMC model for an observation room with limited space\nAn M/M/1 queue for a check-in desk staffed by one nurse\nScenario analysis and steady-state evaluation\n\n\nMake sure R and the necessary libraries are ready (e.g., Matrix, expm).\n\nYou’ll be guided with real-world tasks followed by code. Let’s begin!"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "",
+    "text": "In this short lab, we’ll explore how Continuous-Time Markov Chains (CTMCs) and Queueing Theory apply to healthcare settings using realistic examples. The goal is to build intuition and hands-on familiarity through code you can run and interpret.\nWe’ll use the example of a vaccine clinic with limited observation space, followed by a queueing system involving patients waiting for service."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-1.-construct-the-ctmc-generator-matrix",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-1.-construct-the-ctmc-generator-matrix",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "2.1 Task 1. Construct the CTMC Generator Matrix",
+    "text": "2.1 Task 1. Construct the CTMC Generator Matrix\nCan you build a model of the possible occupancy changes in this small clinic? Think about transitions between 0, 1, or 2 patients and how often they happen.\n\nQ &lt;- matrix(c(\n  -1.0,  1.0,  0.0,\n   1/10, -1.1, 1.0,\n   0.0,  1/8, -1/8\n), nrow = 3, byrow = TRUE)\nQ\n\n     [,1]   [,2]   [,3]\n[1,] -1.0  1.000  0.000\n[2,]  0.1 -1.100  1.000\n[3,]  0.0  0.125 -0.125"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-2.-how-much-time-does-the-clinic-spend-in-each-state",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-2.-how-much-time-does-the-clinic-spend-in-each-state",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "2.2 Task 2. How much time does the clinic spend in each state?",
+    "text": "2.2 Task 2. How much time does the clinic spend in each state?\nOver a long day, how much time does the clinic spend in each state — 0, 1, or 2 patients in the observation room?\n\nlibrary(Matrix)\n\nsteady_state &lt;- function(Q) {\n  A &lt;- t(Q)\n  A[nrow(A), ] &lt;- rep(1, ncol(Q))  # normalisation\n  b &lt;- c(0, 0, 1)\n  solve(A, b)\n}\n\npi &lt;- steady_state(Q)\nnames(pi) &lt;- paste0(\"State \", 0:2)\npi\n\n   State 0    State 1    State 2 \n0.01098901 0.10989011 0.87912088"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-3-how-does-the-system-converge-to-steady-state",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-3-how-does-the-system-converge-to-steady-state",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "2.3 Task 3: How Does the System Converge to Steady State?",
+    "text": "2.3 Task 3: How Does the System Converge to Steady State?\nLet’s visualize the convergence to the steady-state distribution by tracking the probability of each state over time.\n\n#install.packages(\"expm\")\n\nlibrary(expm)  # for matrix exponential\n\n# Time points66\ntimes &lt;- seq(0, 100, by = 1)\n\n# Initial state (start empty)\np0 &lt;- c(1, 0, 0)\n\n# Compute evolution over time\nprobs_over_time &lt;- t(sapply(times, function(t) p0 %*% expm(Q * t)))\n\nmatplot(times, probs_over_time, type = \"l\", lty = 1, lwd = 2,\n        col = c(\"blue\", \"orange\", \"red\"),\n        ylab = \"Probability\", xlab = \"Time\",\n        main = \"Convergence to Steady State\")\nlegend(\"right\", legend = c(\"State 0\", \"State 1\", \"State 2\"),\n       col = c(\"blue\", \"orange\", \"red\"), lty = 1, lwd = 2)\n\n\n\n\n\n\n\n\nExplain: How long does it take for the system to reach equilibrium? Which state dominates during the transient phase?\nAnswer:\nBased on the convergence plot, the system reaches its equilibrium (steady-state) approximately within 15 to 20 minutes. This is evident from the point at which the probabilities for all three states stabilize and no longer change significantly over time.\nDuring the initial transient phase, the system starts from an empty state (State 0), so the probability of being in State 0 is initially 1. As time progresses, patients begin arriving, and the probability of being in State 1 (one patient in the room) increases briefly. However, this is quickly overtaken by State 2 (two patients in the room), whose probability rises rapidly and becomes the dominant state.\nOnce equilibrium is reached, State 2 clearly dominates, maintaining a high steady-state probability (approximately 88%). This indicates that under the current arrival and observation rates, the clinic operates at or near full capacity for most of the time."
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-4.-how-many-people-are-typically-in-the-room",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-4.-how-many-people-are-typically-in-the-room",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "2.4 Task 4. How many people are typically in the room?",
+    "text": "2.4 Task 4. How many people are typically in the room?\nOn average, how many people are being observed in the room at any given time? This gives a sense of how often the room is full or idle.\n\nsum(0:2 * pi)\n\n[1] 1.868132"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-5.-what-if-more-patients-start-coming-in",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-5.-what-if-more-patients-start-coming-in",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "2.5 Task 5. What if more patients start coming in?",
+    "text": "2.5 Task 5. What if more patients start coming in?\nDue to a new outreach campaign and the arrival of a donor-funded vaccine shipment, community interest in rubella vaccination has surged. As a result, patients are now arriving every 30 seconds, doubling the previous arrival rate. Observation lasts 20 minutes*when one person is present. If two patients are present, they both stay for 17 minutes.\nHow does this change the expected number of patients inside the room?\n\nQ2 &lt;- matrix(c(\n  -2, 2, 0.0,\n   1/20, -2.0588, 2,\n   0.0, 1/17, -1/17\n), nrow = 3, byrow = TRUE)\n\npi2 &lt;- steady_state(Q2)\nround(pi2, 4)\n\n[1] 0.0007 0.0284 0.9709\n\nsum(0:2 * pi2)  # new expected number\n\n[1] 1.970149"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-6.-how-busy-is-the-nurse-and-how-long-do-patients-wait",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-6.-how-busy-is-the-nurse-and-how-long-do-patients-wait",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "3.1 Task 6. How busy is the nurse, and how long do patients wait?",
+    "text": "3.1 Task 6. How busy is the nurse, and how long do patients wait?\nThe clinic administrator wants to know: How busy is the nurse? How long does each patient spend waiting and checking in? And how many people are typically in the system?\n\nlambda &lt;- 1/2  # arrivals per minute\nmu &lt;- 2/3      # service rate per minute (1/1.5)\n\nrho &lt;- lambda / mu\nL &lt;- rho / (1 - rho)\nLq &lt;- rho^2 / (1 - rho)\nW &lt;- 1 / (mu * (1 - rho))\nWq &lt;- rho / (mu * (1 - rho))\n\nlist(\n  Utilization = round(rho, 2),\n  \"Avg in System (L)\" = round(L, 2),\n  \"Avg in Queue (Lq)\" = round(Lq, 2),\n  \"Time in System (W)\" = round(W, 2),\n  \"Time in Queue (Wq)\" = round(Wq, 2)\n)\n\n$Utilization\n[1] 0.75\n\n$`Avg in System (L)`\n[1] 3\n\n$`Avg in Queue (Lq)`\n[1] 2.25\n\n$`Time in System (W)`\n[1] 6\n\n$`Time in Queue (Wq)`\n[1] 4.5"
+  },
+  {
+    "objectID": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-7.-what-happens-when-more-patients-keep-coming",
+    "href": "slides/stocastic_modelling/ctmc_queueing_theory_lab.html#task-7.-what-happens-when-more-patients-keep-coming",
+    "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
+    "section": "3.2 Task 7. What happens when more patients keep coming?",
+    "text": "3.2 Task 7. What happens when more patients keep coming?\nImagine the clinic gets busier over time — more patients show up without any increase in staff. Let’s see how the average number of patients and the uncertainty around that number change.\n\nrho_vals &lt;- seq(0.01, 0.99, by = 0.01)\nL_vals &lt;- rho_vals / (1 - rho_vals)\nVar_vals &lt;- rho_vals * (1 + rho_vals - rho_vals^2) / (1 - rho_vals)^2\n\nplot(rho_vals, L_vals, type = \"l\", col = \"red\", lwd = 2,\n     ylim = c(0, 40), ylab = \"Mean & Variance in System\", xlab = \"Traffic Intensity (ρ)\")\nlines(rho_vals, Var_vals, col = \"blue\", lwd = 2, lty = 2)\nlegend(\"topleft\", legend = c(\"Mean\", \"Variance\"), col = c(\"red\", \"blue\"), lty = c(1, 2), lwd = 2)\n\n\n\n\n\n\n\n\nExplain: What does the graph suggest about the workload and predictability of the check-in desk as it gets busier?\nAnswer\nAs traffic intensity (\\(\\rho\\)) increases, both the mean and variance of the number of patients in the system grow rapidly. The red curve in the plot shows the average number of patients in the system, while the dashed blue curve represents the variance (i.e., how much the system fluctuates).\nWhen the system is lightly loaded (e.g., \\(\\rho &lt; 0.5\\)), both mean and variance remain low. However, as \\(\\rho\\) approaches 1 — meaning patient arrivals nearly match or exceed the nurse’s capacity to serve them — the average number of people waiting increases sharply, and the system becomes unpredictable.\nThis pattern suggests that if the clinic continues to get busier without adding more staff, queues will grow longer and waiting times will become highly variable, making it hard to manage patient flow effectively. Clinic managers should aim to keep traffic intensity well below 1 to ensure smooth and stable operations."
+  }
+]

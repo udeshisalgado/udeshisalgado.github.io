@@ -1,0 +1,15 @@
+---
+title: "Talks & Presentations"
+format: html
+---
+
+## Stochastic Modelling: CTMC and Queuing Theory 
+*DL4SG Research Seminar, Cardiff University*  
+
+![](slides/stocastic_modelling/preview.png)
+
+📅 **Date:** May 15, 2025  
+⏰ **Time:** 10:00 AM – 1:00 PM  
+📍 **Location:** Cardiff, UK  
+
+[🔗 View Slides](slides/stocastic_modelling/dl4sg_slides.html#1)
