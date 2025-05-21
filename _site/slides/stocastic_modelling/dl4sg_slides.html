@@ -133,7 +133,7 @@
 <p><br><br><br></p>
 <p><strong>Udeshi Salgado</strong><br>
 <em>Data Lab for Social Good,</em> <br> <em>Cardiff University, UK</em><br>
-2025-05-15</p>
+2025-05-22</p>
 </section>
 <section id="assumptions" class="slide level2">
 <h2>Assumptions</h2>
@@ -169,7 +169,7 @@
 <section id="materials" class="slide level2">
 <h2>Materials</h2>
 <ul>
-<li>You can find the workshop materials at here.</li>
+<li>You can find the workshop materials at <a href="https://udeshisalgado.github.io/talks.html">here</a>.</li>
 <li>Note: These materials are based on my learnings at <a href="https://www.natcor.ac.uk/courses/">NATCOR Taught Course Centre: Stochastic Modelling Course</a></li>
 </ul>
 </section>
@@ -177,20 +177,30 @@
 <section id="outline" class="title-slide slide level1 center">
 <h1><span style="color: black;">Outline</span></h1>
 <ol type="1">
-<li><span style="color: red;">Recap</span></li>
+<li><code>Recap</code></li>
 <li>Continuous Time Markov Chains (CTMC)</li>
+<li>Lab Activity: Part 1 – CTMC (Vaccine Observation Room)</li>
 <li>Queueing Theory</li>
-<li>Lab Activity: Vaccine Clinic Operations</li>
+<li>Lab Activity: Part 2 – Queueing Theory (Check-In Desk)</li>
 </ol>
 </section>
-<section id="recap-assumptions" class="slide level2">
-<h2>Recap: Assumptions</h2>
+<section id="recap-quiz-time" class="slide level2">
+<h2>Recap: Quiz Time!</h2>
+
+<img data-src="images/quiz.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="recap-discrete-time-markov-chain-dtmc-assumptions" class="slide level2">
+<h2>Recap: Discrete-Time Markov Chain (DTMC) Assumptions</h2>
 <ul>
-<li>The Markov chain is in exactly one state at any particular time step.</li>
-<li>The probability distribution for the next state only depends on the current state (Markov property).</li>
-<li>The transition probabilities are the same on every time step.</li>
+<li>The system is always in exactly one state at any given time step.</li>
+<li>The next state depends only on the current state, not on the past (Markov property).</li>
+<li>Transitions happen at fixed, regular time steps.</li>
+<li>Transition probabilities stay the same over time.</li>
 </ul>
 </section>
+<section id="recap-state-space-and-parameter-space" class="slide level2">
+<h2>Recap: State Space and Parameter Space</h2>
+
+<img data-src="images/parameter_and_state_space.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="recap-discrete-mc-vs-continuous-mc" class="slide level2">
 <h2>Recap: Discrete MC Vs Continuous MC</h2>
 
@@ -200,9 +210,10 @@
 <h1><span style="color: black;">Outline</span></h1>
 <ol type="1">
 <li>Recap</li>
-<li><span style="color: red;">Continuous Time Markov Chains (CTMC)</span></li>
+<li><code>Continuous Time Markov Chains</code></li>
+<li>Lab Activity: Part 1 – CTMC (Vaccine Observation Room)</li>
 <li>Queueing Theory</li>
-<li>Lab Activity: Vaccine Clinic Operations</li>
+<li>Lab Activity: Part 2 – Queueing Theory (Check-In Desk)</li>
 </ol>
 </section>
 <section id="continuous-time-markov-chains-ctmc" class="slide level2">
@@ -215,28 +226,73 @@
 <section id="exponential-timing-in-ctmcs" class="slide level2">
 <h2>Exponential Timing in CTMCs</h2>
 <ul>
-<li><strong>Assumption</strong>: Time until the next transition follows an <strong>Exponential(λ)</strong> distribution, where <strong>λ is the transition rate</strong> (higher λ → shorter expected time between transitions)</li>
-<li><strong>Memoryless Property</strong>:<br>
+<li><strong>Assumption:</strong> In a <strong>Continuous-Time Markov Chain (CTMC)</strong>, the time until the next state transition is modeled as a random variable<br>
 <span class="math display">\[
-  \Pr(X &gt; t + u \mid X &gt; u) = \Pr(X &gt; t) \]</span></li>
-<li>Past time in a state doesn’t affect future transitions</li>
-<li>Transition probability depends only on the <strong>current state</strong> → <strong>Markov property</strong></li>
+  T \sim \text{Exponential}(\lambda)
+\]</span><br>
+where:
+<ul>
+<li><span class="math inline">\(T\)</span> = time until next transition<br>
+</li>
+<li><span class="math inline">\(\lambda &gt; 0\)</span> = <strong>transition rate</strong> (higher <span class="math inline">\(\lambda\)</span> → faster transitions)</li>
+</ul></li>
+</ul>
+</section>
+<section id="exponential-timing-in-ctmcs-cont." class="slide level2">
+<h2>Exponential Timing in CTMCs Cont.</h2>
+<ul>
+<li><p>The <strong>memoryless property</strong> of the exponential distribution:<br>
+<span class="math display">\[
+\Pr(T &gt; t + u \mid T &gt; u) = \Pr(T &gt; t) \quad \text{for all } t, u &gt; 0
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/memoryless.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div></li>
+<li><p><strong>Interpretation:</strong> Time already spent in the current state does <strong>not</strong> influence the probability of future transitions.</p></li>
+<li><p>This is consistent with the <strong>Markov property</strong>: <code>The future depends only on the current state, not the past.</code></p></li>
+</ul>
+</section>
+<section id="key-concepts-stochastic-process-time-state-spaces" class="slide level2">
+<h2>Key Concepts: Stochastic Process, Time &amp; State Spaces</h2>
+<ul>
+<li><p>A <strong>stochastic process</strong> is a collection of random variables <span class="math inline">\(\{X(t)\}\)</span> indexed by time <span class="math inline">\(t\)</span>.</p></li>
+<li><p>The <strong>parameter space</strong> defines the set of time points:</p>
+<ul>
+<li>For continuous-time processes: <span class="math inline">\(t \in [0, \infty)\)</span>.</li>
+</ul></li>
+<li><p>The <strong>state space</strong> <span class="math inline">\(S\)</span> is the set of all possible values <span class="math inline">\(X(t)\)</span> can take:</p>
+<ul>
+<li>Typically finite or countably infinite, e.g., <span class="math inline">\(S = \{0, 1, 2, \dots\}\)</span>.</li>
+</ul></li>
+<li><p><span class="math inline">\(X(t)\)</span> represents the <strong>state of the system at time <span class="math inline">\(t\)</span></strong>.</p></li>
 </ul>
 </section>
 <section id="ctmcs-definition" class="slide level2">
 <h2>CTMCs: Definition</h2>
-<blockquote>
-<p><strong>A continuous-time Markov chain</strong> is a stochastic process</p>
+<p>A <strong>continuous-time Markov chain (CTMC)</strong> is a stochastic process:</p>
 <p><span class="math display">\[
 \{X(t) \mid t \geq 0\}
 \]</span></p>
-<p>in which the probability of some future event (say ( A )) depends <strong>only</strong> on the <strong>current state</strong>, not on past states.</p>
-<p>Formally:</p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(X(t)\)</span> is a <strong>random variable</strong> representing the system’s <strong>state at time <span class="math inline">\(t\)</span></strong>.</li>
+<li><span class="math inline">\(t\)</span> belongs to the <strong>parameter space</strong> <span class="math inline">\([0, \infty)\)</span>.</li>
+<li>The values of <span class="math inline">\(X(t)\)</span> come from a <strong>state space</strong> <span class="math inline">\(S\)</span>, usually finite or countable.</li>
+</ul>
+</section>
+<section id="ctmcs-definition-cont." class="slide level2">
+<h2>CTMCs: Definition Cont.</h2>
+<p>The process satisfies the <strong>Markov property</strong>:</p>
 <p><span class="math display">\[
 \Pr(A \mid X(t),\, 0 \leq t \leq T) = \Pr(A \mid X(T))
 \]</span></p>
-</blockquote>
-<p>As in the discrete-time case, the key idea is: <strong>future behavior depends only on the current state</strong>.</p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(A\)</span> is any <strong>future event</strong>.</li>
+<li>The future depends <strong>only on the current state</strong> <span class="math inline">\(X(T)\)</span>, not on the history.</li>
+</ul>
 </section>
 <section id="ctmc-example-managing-a-tiny-shops-flow" class="slide level2">
 <h2>CTMC Example: Managing a Tiny Shop’s Flow</h2>
@@ -329,15 +385,19 @@ They tell us:</p>
 <p>To find them, we solve: <span class="math display">\[
 \boldsymbol{\pi} \mathbf{Q} = \mathbf{0}, \quad \text{with} \quad \sum \pi_i = 1
 \]</span></p>
+<p>Where: <span class="math inline">\(Q\)</span> is the <strong>generator matrix</strong> of the CTMC, <span class="math inline">\(\boldsymbol{\pi}\)</span> is a <strong>row vector</strong> of steady-state probabilities.</p>
 </section>
 <section id="solving-the-system" class="slide level2">
 <h2>Solving the System</h2>
 <p>From:</p>
-<ul>
-<li><span class="math inline">\(-\pi_0 + 0.25\pi_1 = 0 \Rightarrow \pi_1 = 4\pi_0\)</span></li>
-<li><span class="math inline">\(\pi_1 - 0.5\pi_2 = 0 \Rightarrow \pi_2 = 2\pi_1 = 8\pi_0\)</span></li>
-<li><span class="math inline">\(\pi_0 + 4\pi_0 + 8\pi_0 = 13\pi_0 = 1 \Rightarrow \pi_0 = \frac{1}{13}\)</span></li>
-</ul>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;-\pi_0 + 0.25\pi_1 = 0 \\
+&amp;\pi_0 - 1.25\pi_1 + 0.5\pi_2 = 0 \\
+&amp;\pi_1 - 0.5\pi_2 = 0 \\
+&amp;\pi_0 + \pi_1 + \pi_2 = 1
+\end{aligned}
+\]</span></p>
 <p>Thus: <span class="math display">\[
 \pi_0 = \frac{1}{13},\quad \pi_1 = \frac{4}{13},\quad \pi_2 = \frac{8}{13}
 \]</span></p>
@@ -378,8 +438,50 @@ They tell us:</p>
 <ol type="1">
 <li>Recap</li>
 <li>Continuous Time Markov Chains (CTMC)</li>
-<li><span style="color: red;">Queueing Theory</span></li>
-<li>Lab Activity: Vaccine Clinic Operations</li>
+<li><code>Lab Activity: Part 1 – CTMC (Vaccine Observation Room)</code></li>
+<li>Queueing Theory</li>
+<li>Lab Activity: Part 2 – Queueing Theory (Check-In Desk)</li>
+</ol>
+</section>
+<section id="lab-activity-part-1-ctmc-vaccine-observation-room" class="slide level2">
+<h2>Lab Activity: Part 1 – CTMC (Vaccine Observation Room)</h2>
+<p>In this section, you’ll model an <strong>observation room</strong> where recently vaccinated patients are monitored for adverse events. The room has limited capacity (e.g., 2 beds).</p>
+<p>We will use a <strong>Continuous-Time Markov Chain (CTMC)</strong> to:</p>
+<ul>
+<li>Construct the <strong>generator matrix</strong> (<span class="math inline">\(Q\)</span>)</li>
+<li>Write and solve the <strong>steady-state equations</strong></li>
+<li>Interpret the <strong>long-run distribution</strong> across states</li>
+</ul>
+<p>Make sure you load the required R packages: <code>Matrix</code>, <code>expm</code></p>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/yourturn.png" class="r-stretch"><button id="timer-btn-4" onclick="startTimer('timer-btn-4', 900)" style="
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: monospace;
+">
+⏳ 15:00
+</button>
+</section></section>
+<section>
+<section id="outline-3" class="title-slide slide level1 center">
+<h1><span style="color: black;">Outline</span></h1>
+<ol type="1">
+<li>Recap</li>
+<li>Continuous Time Markov Chains (CTMC)</li>
+<li>Lab Activity: Part 1 – CTMC (Vaccine Observation Room)</li>
+<li><code>Queueing Theory</code></li>
+<li>Lab Activity: Part 2 – Queueing Theory (Check-In Desk)</li>
 </ol>
 </section>
 <section id="queueing-theory" class="slide level2">
@@ -460,8 +562,7 @@ T \sim \text{Exp}(\lambda)
 </section>
 <section id="the-mm1-queue-cont." class="slide level2">
 <h2>The M/M/1 Queue Cont.</h2>
-<p><strong>Traffic intensity:</strong><br>
-<span class="math display">\[
+<p><strong>Traffic intensity:</strong> <code>How busy the system is?</code> <span class="math display">\[
 \rho = \frac{\lambda}{\mu}
 \]</span></p>
 <ul>
@@ -475,14 +576,16 @@ If arrivals outpace service, the system can’t cope.</p>
 <section id="mm1-as-a-ctmc" class="slide level2">
 <h2>M/M/1 as a CTMC</h2>
 <ul>
-<li><p>The M/M/1 queue can be modeled as a <strong>Continuous-Time Markov Chain (CTMC)</strong> with <strong>states</strong> representing the number of customers in the system.</p></li>
-<li><p>It forms a <strong>birth-death process</strong>:</p>
+<li>The <strong>M/M/1 queue</strong> can be modeled as a <strong>Continuous-Time Markov Chain (CTMC)</strong>.</li>
+<li><strong>States</strong> represent the number of customers in the system: 0, 1, 2, …</li>
+<li>The process is a <strong>birth–death process</strong>:
 <ul>
-<li><strong>Arrivals (births)</strong> at rate <span class="math inline">\(\lambda\)</span></li>
-<li><strong>Departures (deaths)</strong> at rate <span class="math inline">\(\mu\)</span></li>
+<li><strong>Births (arrivals)</strong> occur at rate <span class="math inline">\(\lambda\)</span></li>
+<li><strong>Deaths (departures)</strong> occur at rate <span class="math inline">\(\mu\)</span></li>
 </ul></li>
 </ul>
-</section>
+
+<img data-src="images/mm1_state.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="mm1-as-a-ctmc-cont." class="slide level2">
 <h2>M/M/1 as a CTMC Cont.</h2>
 <p><strong>Generator matrix (Q):</strong></p>
@@ -501,28 +604,55 @@ If arrivals outpace service, the system can’t cope.</p>
 </section>
 <section id="mm1-stationary-distribution-performance" class="slide level2">
 <h2>M/M/1: Stationary Distribution &amp; Performance</h2>
-<p>With steady-state probabilities <span class="math inline">\(\{p_n,\ n \geq 0\}\)</span>:</p>
-<ul>
-<li>Probability the system is <strong>empty</strong> <span class="math display">\[
-  p_0 = 1 - \rho
-  \]</span></li>
-<li>Probability the <strong>server is busy</strong> <span class="math display">\[
-  1 - p_0 = \rho
-  \]</span></li>
-<li>Probability of <strong><span class="math inline">\(n\)</span> customers</strong> in the system <span class="math display">\[
-  p_n = \rho^n (1 - \rho)
-  \]</span></li>
-</ul>
-</section>
-<section id="mm1-stationary-distribution-performance-cont." class="slide level2">
-<h2>M/M/1: Stationary Distribution &amp; Performance Cont.</h2>
-<p><strong>Mean number of customers in the system (L):</strong></p>
+<p>Assume the system reaches <strong>steady state</strong> (<span class="math inline">\(\rho &lt; 1\)</span>), with probabilities <span class="math inline">\(\{p_n,\ n \geq 0\}\)</span>.</p>
+<p>These come from solving the <strong>balance equations</strong> of the CTMC:</p>
+<p><strong>State 0 balance:</strong></p>
 <p><span class="math display">\[
-L = \sum_{n=0}^\infty n p_n
-= (1 - \rho) \sum_{n=0}^\infty n \rho^n
+\lambda p_0 = \mu p_1
+\]</span></p>
+<p><strong>For <span class="math inline">\(n \geq 1\)</span>:</strong></p>
+<p><span class="math display">\[
+(\lambda + \mu)p_n = \lambda p_{n-1} + \mu p_{n+1}
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<p>Solving recursively gives:</p>
+<p><span class="math display">\[
+p_n = \rho^n p_0 \quad \text{where} \quad \rho = \frac{\lambda}{\mu}
+\]</span></p>
+<p>Then apply the <strong>normalization condition</strong>:</p>
+<p><span class="math display">\[
+\sum_{n=0}^\infty p_n = 1 \quad \Rightarrow \quad p_0 = 1 - \rho
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<p>So we get:</p>
+<ul>
+<li><p>Probability the system is <strong>empty</strong>:<br>
+<span class="math display">\[p_0 = 1 - \rho\]</span></p></li>
+<li><p>Probability the <strong>server is busy</strong>:<br>
+<span class="math display">\[1 - p_0 = \rho\]</span></p></li>
+<li><p>Probability of <strong><span class="math inline">\(n\)</span> customers</strong> in the system:<br>
+<span class="math display">\[p_n = \rho^n (1 - \rho)\]</span></p></li>
+</ul>
+<p>🧠 These describe the <strong>stationary distribution</strong> of the M/M/1 queue.</p>
+</section>
+<section id="mm1-mean-number-in-system-l" class="slide level2">
+<h2>M/M/1: Mean Number in System (<span class="math inline">\(L\)</span>)</h2>
+<p><strong>Expected number of customers in the system</strong>:</p>
+<p><span class="math display">\[
+L = \sum_{n=0}^{\infty} n p_n
+= \sum_{n=0}^{\infty} n \rho^n (1 - \rho)
+= \rho \sum_{n=1}^{\infty} n \rho^{n-1} (1 - \rho)
 = \frac{\rho}{1 - \rho}
 \]</span></p>
-<p>This is one of the key performance metrics in queueing theory.</p>
+<ul>
+<li>This is one of the <strong>key performance metrics</strong> in queueing analysis.</li>
+<li><span class="math inline">\(L\)</span> increases sharply as <span class="math inline">\(\rho \to 1\)</span>, showing how queues explode near capacity.</li>
+</ul>
+<p>💡 Use this to inform decisions on service rates (<span class="math inline">\(\mu\)</span>) to keep queues manageable.</p>
 </section>
 <section id="performance-measures-in-queueing" class="slide level2">
 <h2>Performance Measures in Queueing</h2>
@@ -537,13 +667,24 @@ L = \sum_{n=0}^\infty n p_n
 <section id="littles-law" class="slide level2">
 <h2>Little’s Law</h2>
 <p>A fundamental relationship linking <strong>arrival rate</strong>, <strong>waiting time</strong>, and <strong>number in the system</strong>.</p>
-<p>Relates these measures:</p>
+<h3 id="mean-number-of-customers-in-the-system">Mean number of customers <strong>in the system</strong>:</h3>
 <p><span class="math display">\[
-L = \lambda W,\quad L_q = \lambda W_q
+L = \lambda W \qquad \text{($\lambda$ = arrival rate, $W$ = mean time in system)}
 \]</span></p>
 <p>Also:</p>
 <p><span class="math display">\[
-W = W_q + \frac{1}{\mu},\quad L = L_q + \frac{\lambda}{\mu}
+L = L_q + \frac{\lambda}{\mu} \qquad \text{(total in system = queue + in service)}
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<h3 id="mean-waiting-time">Mean <strong>waiting time</strong>:</h3>
+<p><span class="math display">\[
+W = W_q + \frac{1}{\mu} \qquad \text{($W_q$ = time in queue, $\frac{1}{\mu}$ = service time)}
+\]</span></p>
+<h3 id="mean-number-of-customers-in-the-queue">Mean number of customers <strong>in the queue</strong>:</h3>
+<p><span class="math display">\[
+L_q = \lambda W_q \qquad \text{($\lambda$ = arrival rate, $W_q$ = mean time in queue)}
 \]</span></p>
 </section>
 <section id="mm1-queue-performance-formulas" class="slide level2">
@@ -803,27 +944,29 @@ function startTimer(buttonId, seconds = 60) {
 </ul>
 </section></section>
 <section>
-<section id="outline-3" class="title-slide slide level1 center">
+<section id="outline-4" class="title-slide slide level1 center">
 <h1><span style="color: black;">Outline</span></h1>
 <ol type="1">
 <li>Recap</li>
 <li>Continuous Time Markov Chains (CTMC)</li>
+<li>Lab Activity: Part 1 – CTMC (Vaccine Observation Room)</li>
 <li>Queueing Theory</li>
-<li><span style="color: red;">Lab Activity: Vaccine Clinic Operations</span></li>
+<li><code>Lab Activity: Part 2 – Queueing Theory (Check-In Desk)</code></li>
 </ol>
 </section>
-<section id="lab-activity-vaccine-clinic-operations" class="slide level2">
-<h2>Lab Activity: Vaccine Clinic Operations</h2>
-<p>In this hands-on session, you’ll use R code to explore how Continuous-Time Markov Chains (CTMCs) and Queueing Theory help us understand operations at a rural vaccine clinic.</p>
-<p>We’ll work through:</p>
+<section id="lab-activity-part-2-queueing-theory-check-in-desk" class="slide level2">
+<h2>Lab Activity: Part 2 – Queueing Theory (Check-In Desk)</h2>
+<p>In this section, you’ll model the <strong>check-in desk</strong> where patients arrive and wait to be registered by a nurse.</p>
+<p>We will use an <strong>M/M/1 queue</strong> to:</p>
 <ul>
-<li>A <strong>CTMC</strong> model for an observation room with limited space</li>
-<li>An <strong>M/M/1 queue</strong> for a check-in desk staffed by one nurse</li>
-<li>Scenario analysis and steady-state evaluation</li>
+<li>Calculate <strong>traffic intensity</strong> (<span class="math inline">\(\rho = \lambda / \mu\)</span>)</li>
+<li>Compute steady-state metrics:
+<ul>
+<li>Average number in system (<span class="math inline">\(L\)</span>) and queue (<span class="math inline">\(L_q\)</span>)</li>
+<li>Waiting times (<span class="math inline">\(W\)</span>, <span class="math inline">\(W_q\)</span>)</li>
+</ul></li>
+<li>Reflect on how arrival/service rates affect congestion</li>
 </ul>
-<blockquote>
-<p>Make sure R and the necessary libraries are ready (e.g., <code>Matrix</code>, <code>expm</code>).</p>
-</blockquote>
 <p>You’ll be guided with real-world tasks followed by code. Let’s begin!</p>
 </section>
 <section class="slide level2">
