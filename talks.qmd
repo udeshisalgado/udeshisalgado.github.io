@@ -8,8 +8,19 @@ format: html
 
 ![](slides/stocastic_modelling/preview.png)
 
-📅 **Date:** May 15, 2025  
-⏰ **Time:** 10:00 AM – 1:00 PM  
+📅 **Date:** May 22, 2025  
+⏰ **Time:** 11:00 AM – 1:00 PM  
 📍 **Location:** Cardiff, UK  
 
-[🔗 View Slides](slides/stocastic_modelling/dl4sg_slides.html#1)
+<p>
+  <a href="slides/stocastic_modelling/dl4sg_slides.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+  <a href="https://github.com/udeshisalgado/DL4SG_trainings/tree/main/stocastic_modelling" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">GitHub Repo</button>
+  </a>
+  <a href="https://github.com/udeshisalgado/DL4SG_trainings/tree/main/stocastic_modelling/lab_r" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">Lab Activity</button>
+  </a>
+</p>
+

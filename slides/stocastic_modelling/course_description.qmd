@@ -1,0 +1,81 @@
+---
+title: "CTMC and Queueing Lab: Vaccine Clinic Operations"
+subtitle: "Course Desorption"
+format: 
+    pdf:
+        toc: false
+        number-sections: false
+        keep-tex: true  # optional, useful for debugging LaTeX
+        documentclass: article
+    html:
+        toc: false
+        toc-depth: 2
+        number-sections: false
+        self-contained: true
+execute:
+    echo: true
+    warning: false
+---
+
+# Who is the course for?
+
+This workshop is designed for healthcare operations researchers, supply chain analysts, and graduate students interested in modeling system dynamics under uncertainty. Participants will learn how Continuous-Time Markov Chains (CTMCs) and basic queueing models can be applied to real-world healthcare logistics. The course assumes basic familiarity with probability and matrix operations in R (or Python).
+
+
+
+# Learning Objectives
+
+By the end of this session, participants will be able to:
+
+- Understand the key components and assumptions of Continuous-Time Markov Chains (CTMCs)
+- Construct and analyze generator matrices for small-scale CTMC models
+- Calculate steady-state probabilities for CTMCs using linear algebra
+- Apply queueing theory to model service systems like clinics and pharmacies
+- Distinguish between M/M/1, M/M/s, and M/M/s/b systems and assess their implications
+- Simulate and interpret Markovian queueing systems in R
+- Connect model insights to operational decisions in healthcare delivery (e.g., capacity planning, congestion, patient flow)
+
+
+
+# Prerequisites
+
+- Familiarity with random variables and basic probability concepts
+- Experience with R or Python for numerical computations and plotting
+- No prior knowledge of CTMCs or queueing theory is required
+
+
+# Course Topics
+
+## Section 1: Recap
+
+- Discrete-time vs. continuous-time Markov chains
+- Markov property and memorylessness
+
+
+## Section 2: Foundations of Continuous-Time Markov Chains (CTMCs)
+
+- Exponential timing and transition rates
+- The generator matrix  and its interpretation
+- CTMC transition diagrams and modeling examples
+- Steady-state analysis and long-run behavior
+- Solving for steady-state probabilities
+- Applications to customer flow and occupancy in small systems
+
+
+## Section 3: Queueing Theory Essentials
+
+- What is a queueing system? Components and notation (A/B/S/d/e)
+- The Poisson process and M/M/1 queue
+- Birth-death process interpretation
+- Generator matrices for queues
+- Traffic intensity, stability conditions
+- Key performance metrics 
+- Little’s Law and system design
+
+
+## Section 4: Vaccine Clinic Case Study
+
+- CTMC model for an observation room
+- Scenario-based analysis and service optimization
+- R-based lab activity: matrix methods, simulation, and performance metrics
+- Translating modeling results to logistics planning
