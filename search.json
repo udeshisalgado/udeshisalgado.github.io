@@ -490,20 +490,6 @@
     "text": "3.2 Task 7. What happens when more patients keep coming?\nImagine the clinic gets busier over time — more patients show up without any increase in staff. Let’s see how the average number of patients and the uncertainty around that number change.\n\nrho_vals &lt;- seq(0.01, 0.99, by = 0.01)\nL_vals &lt;- rho_vals / (1 - rho_vals)\nVar_vals &lt;- rho_vals * (1 + rho_vals - rho_vals^2) / (1 - rho_vals)^2\n\nplot(rho_vals, L_vals, type = \"l\", col = \"red\", lwd = 2,\n     ylim = c(0, 40), ylab = \"Mean & Variance in System\", xlab = \"Traffic Intensity (ρ)\")\nlines(rho_vals, Var_vals, col = \"blue\", lwd = 2, lty = 2)\nlegend(\"topleft\", legend = c(\"Mean\", \"Variance\"), col = c(\"red\", \"blue\"), lty = c(1, 2), lwd = 2)\n\n\n\n\n\n\n\n\nExplain: What does the graph suggest about the workload and predictability of the check-in desk as it gets busier?\nAnswer\nAs traffic intensity (\\(\\rho\\)) increases, both the mean and variance of the number of patients in the system grow rapidly. The red curve in the plot shows the average number of patients in the system, while the dashed blue curve represents the variance (i.e., how much the system fluctuates).\nWhen the system is lightly loaded (e.g., \\(\\rho &lt; 0.5\\)), both mean and variance remain low. However, as \\(\\rho\\) approaches 1 — meaning patient arrivals nearly match or exceed the nurse’s capacity to serve them — the average number of people waiting increases sharply, and the system becomes unpredictable.\nThis pattern suggests that if the clinic continues to get busier without adding more staff, queues will grow longer and waiting times will become highly variable, making it hard to manage patient flow effectively. Clinic managers should aim to keep traffic intensity well below 1 to ensure smooth and stable operations."
   },
   {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 22, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides   GitHub Repo   Lab Activity"
-  },
-  {
-    "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
-    "href": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 22, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides   GitHub Repo   Lab Activity"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Udeshi Salgado",
@@ -523,6 +509,209 @@
     "title": "Udeshi Salgado",
     "section": "🔍 Research Interests",
     "text": "🔍 Research Interests\n\nVaccine supply chain forecasting\n\nHybrid intelligence (human + machine forecasting)\n\nTime series analysis & probabilistic forecasting\n\nHealth data science and informatics\n\nInventory management in LMICs\n\nEthical AI and equity in global health systems"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Quantifying Demand Gaps in Vaccine Supply Chains DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 27, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides"
+  },
+  {
+    "objectID": "talks.html#missed-in-numbers",
+    "href": "talks.html#missed-in-numbers",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Quantifying Demand Gaps in Vaccine Supply Chains DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 27, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides"
+  },
+  {
+    "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
+    "href": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
+    "title": "Talks & Presentations",
+    "section": "Stochastic Modelling: CTMC and Queuing Theory",
+    "text": "Stochastic Modelling: CTMC and Queuing Theory\nDL4SG Research Seminar, Cardiff University\n\n📅 Date: May 22, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides   GitHub Repo   Lab Activity"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#missed-in-the-numbers",
+    "href": "slides/euro_presentation/euro_slides.html#missed-in-the-numbers",
+    "title": "Udeshi Salgado",
+    "section": "Missed in the Numbers:",
+    "text": "Missed in the Numbers:\nQuantifying Demand Gaps in Vaccine Supply Chains\n\nUdeshi Salgado\nData Lab for Social Good, Cardiff University, UK\n\nLead Supervisor: Professor Bahman Rostami-Tabar Co-supervisors: Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang\n\n\n2025-05-27"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#section",
+    "href": "slides/euro_presentation/euro_slides.html#section",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "Background\n\n1 in 5 children worldwide lack access to lifesaving vaccines.\nGlobally, in 2023, 14.5 million children were zero-dose.\nAn additional 6.5 million children are partially vaccinated.\nAnnually, 1.5 million children under five die from vaccine-preventable diseases.\n\nsource: WHO"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#section-1",
+    "href": "slides/euro_presentation/euro_slides.html#section-1",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "What is Routine Immunisation?\n\nRegular administration of vaccines for infants, children, and adults\n\nBuilds population immunity and prevents disease\n\nImmunisation at birth is critical\n\nNewborns are highly vulnerable to severe infections\n\nDelays can lead to serious illness or death"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#most-countries-recommended-vaccine-schedule",
+    "href": "slides/euro_presentation/euro_slides.html#most-countries-recommended-vaccine-schedule",
+    "title": "Udeshi Salgado",
+    "section": "Most Countries Recommended Vaccine Schedule",
+    "text": "Most Countries Recommended Vaccine Schedule"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#vaccines",
+    "href": "slides/euro_presentation/euro_slides.html#vaccines",
+    "title": "Udeshi Salgado",
+    "section": "Vaccines",
+    "text": "Vaccines\n\n\n\n\n\nVial\n\n\n\n\n\nDose\n\n\n\n\n\nAdministered"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#wastage",
+    "href": "slides/euro_presentation/euro_slides.html#wastage",
+    "title": "Udeshi Salgado",
+    "section": "Wastage",
+    "text": "Wastage\n\n\n\n\n\nOpen Vial\n\n\n\n\n\nClosed Vial"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#the-immunisation-supply-chain",
+    "href": "slides/euro_presentation/euro_slides.html#the-immunisation-supply-chain",
+    "title": "Udeshi Salgado",
+    "section": "The Immunisation Supply Chain",
+    "text": "The Immunisation Supply Chain"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#what-we-want-to-achieve",
+    "href": "slides/euro_presentation/euro_slides.html#what-we-want-to-achieve",
+    "title": "Udeshi Salgado",
+    "section": "What we want to achieve?",
+    "text": "What we want to achieve?\n\n\nHigh Coverage\n\nsource: Allan etal.(2021)\n\n✅ Reduce missed opportunities (stock out)\n\n✅ Accurate wastage rate\n\n✅ Lower inventory costs\n\n✅ Lower societal costs\n\n✅ and better coordination"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#classical-approaches-in-practice",
+    "href": "slides/euro_presentation/euro_slides.html#classical-approaches-in-practice",
+    "title": "Udeshi Salgado",
+    "section": "Classical Approaches in Practice",
+    "text": "Classical Approaches in Practice\n\n\n\n\n\n\nVariable\nEPI_Log\nGavi_Tool\nFSP_Tool\n\n\n\n\nPurpose\nFor national immunisation schedules\nFor funding allocations\nFor national immunisation schedules\n\n\nVaccines Targeted\nBCG, Penta, OPV, Measles, PCV, Rotavirus\nPenta, Measles, PCV, Rotavirus\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nMethod\nDemographic Forecasting\nDemographic Forecasting\nWeighted Demographic + Consumption + Session-based Forecasting\n\n\nInput Variables\nPopulation growth rate, birth cohort rate, surviving infants rate, wastage rate.\nSurviving infants, coverage rates, wastage rates, buffer stock.\nPopulation growth, coverage, dropout rate, historical consumption, stockouts, session frequency.\n\n\nOutput Variables\nNational vaccine demand\nNational vaccine demand\nNational vaccine demand\n\n\nInput Data Frequency\nYearly\nYearly\nMonthly\n\n\nForecast Horizon\n1 year\n5 years\n5 years\n\n\nTime Granularity\nYearly\nYearly\nYearly"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#forecasting-policies-in-practice",
+    "href": "slides/euro_presentation/euro_slides.html#forecasting-policies-in-practice",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Policies in Practice",
+    "text": "Forecasting Policies in Practice\n\n\n\n\n\nFeature\nEPI_Log\nGavi Tool\nFSP Tool\n\n\n\n\nVariable Wastage Rate\n✓\n✓\n✓\n\n\nStockouts considered\n✗\n✗\n✓\n\n\nBuffer Stock (25% of demand)\n✓\n✓\n✓\n\n\nVariable vaccine coverage per dose\n✗\n✓\n✓\n\n\n\n\n\n\n\n\nForecasts are annual and at the national level"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#whats-missing-from-current-approaches-in-practice",
+    "href": "slides/euro_presentation/euro_slides.html#whats-missing-from-current-approaches-in-practice",
+    "title": "Udeshi Salgado",
+    "section": "What’s Missing from Current Approaches in Practice?",
+    "text": "What’s Missing from Current Approaches in Practice?\n\n\n✗ Relies heavily on demographic estimates\n\n\n✗ Wastage rate is fixed, not based on historical data\n\n\n✗ Only adjusts for stockout days\n\n\n✗ Captures observed demand, ignores missed vaccinations\n\n\n✗ Uses generic buffer stock rates\n\n\n✗ Includes buffer and wastage in forecasts, increasing uncertainty\n\n\n✗ Lacks integration between forecasting and inventory management"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#how-can-we-do-better",
+    "href": "slides/euro_presentation/euro_slides.html#how-can-we-do-better",
+    "title": "Udeshi Salgado",
+    "section": "How Can We Do Better?",
+    "text": "How Can We Do Better?\n\nActual vaccine demand calculated as:\n\n\\[\n\\text{Actual Demand} = \\text{Doses Administered} + \\text{Missed Opportunities}\n\\]\n\nDemand forecasted using quantile regression to produce prediction intervals.\nForecast integrated with a Newsvendor model to determine order quantities under uncertainty."
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#data",
+    "href": "slides/euro_presentation/euro_slides.html#data",
+    "title": "Udeshi Salgado",
+    "section": "Data",
+    "text": "Data\n\nVaccine consumption data from an African country (Jan 2013 – Dec 2021)\nFour vaccines:\n\nMeasles~rubella\nBCG – for tuberculosis\nPenta – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib\nOPV – oral polio vaccine\n\n306 sub-counties, 47 counties & 9 regions\nTotal: 1,452 time series"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#doses-administrated-national-regions",
+    "href": "slides/euro_presentation/euro_slides.html#doses-administrated-national-regions",
+    "title": "Udeshi Salgado",
+    "section": "Doses administrated: National & Regions",
+    "text": "Doses administrated: National & Regions"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#missed-vaccination-opportunities",
+    "href": "slides/euro_presentation/euro_slides.html#missed-vaccination-opportunities",
+    "title": "Udeshi Salgado",
+    "section": "Missed Vaccination Opportunities",
+    "text": "Missed Vaccination Opportunities\n\n\n\nAt 6 weeks, infants receive Penta 1, OPV 1, PCV 1, and RV 1 in a single session\n\nIn this dataset, only Penta 1 and OPV 1 are available\n\nDifferences in counts reveal missed vaccination opportunities\n\n\n\n\n\n\n\n\nHence,\nActual Demand = Doses Administrated + Missed Opportunities"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#actual-demand-national-regions",
+    "href": "slides/euro_presentation/euro_slides.html#actual-demand-national-regions",
+    "title": "Udeshi Salgado",
+    "section": "Actual Demand: National & Regions",
+    "text": "Actual Demand: National & Regions"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#forecasting-setup",
+    "href": "slides/euro_presentation/euro_slides.html#forecasting-setup",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Setup",
+    "text": "Forecasting Setup\n\nForecasting method: Quantile Regression using LightGBM\nForecast horizon: 12 months\nFeatures: seasonality (sin/cos), month, year, lag-12, vaccine type\nTarget: actual demand (administered + missed opportunities)\nProbabilistic output: 90% prediction interval (10th, 50th, 90th quantiles)\nCross-sectional training across vaccines with national monthly data"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#vaccine-demand-forecasts-2019",
+    "href": "slides/euro_presentation/euro_slides.html#vaccine-demand-forecasts-2019",
+    "title": "Udeshi Salgado",
+    "section": "Vaccine Demand Forecasts (2019)",
+    "text": "Vaccine Demand Forecasts (2019)"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#inventory-integration",
+    "href": "slides/euro_presentation/euro_slides.html#inventory-integration",
+    "title": "Udeshi Salgado",
+    "section": "Inventory Integration",
+    "text": "Inventory Integration\n\nInventory planning is based on a Newsvendor-style model\nBalances risk of under-ordering (missed vaccinations) and over-ordering (wastage)\nAdapted to incorporate forecast uncertainty and vaccine-specific wastage\nUses probabilistic forecasts instead of fixed demand distributions"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#baseline-forecasting-models",
+    "href": "slides/euro_presentation/euro_slides.html#baseline-forecasting-models",
+    "title": "Udeshi Salgado",
+    "section": "Baseline Forecasting Models",
+    "text": "Baseline Forecasting Models\n\n\n\nEPI_Log\n\\[\n\\hat{D}_{t,v} = \\left\\lceil \\hat{SI}_t \\times d_v \\times (1 + w_v) \\times c \\times \\left(1 + \\frac{b_v}{12} \\right) \\right\\rceil\n\\]\nGavi Tool\n\\[\n\\hat{D}_{t,v} = \\left\\lceil \\hat{SI}_t \\times (d_v - 1) \\times c_1 \\times (1 + w_v) + \\newline \\hat{SI}_t \\times c_2 \\times (1 + w_v) \\times \\left(1 + \\frac{b_v}{12} \\right) + \\text{Adj} \\right\\rceil\n\\]\nFSP Tool\n\\[\nD_{final} = w_1 \\times D_{demographic} + w_2 \\times D_{consumption} + w_3 \\times D_{session}\n\\]\n\n\n\nVariable Definitions\n\n\\(\\hat{D}_{t,v}\\): Forecasted demand for vaccine v at time t\n\n\\(\\hat{SI}_t\\): Surviving infants at time t\n\n\\(d_v\\): Doses per child for vaccine v\n\n\\(c\\): Immunisation coverage\n\n\\(c_1\\), \\(c_2\\): First- and last-dose coverage\n\n\\(w_v\\): Wastage rate\n\n\\(b_v\\): Buffer stock (months)\n\nAdj: Programmatic/top-level adjustment\n\n\\(w_1\\), \\(w_2\\), \\(w_3\\): Weights for hybrid model inputs"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#performance-evaluation-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#performance-evaluation-metrics",
+    "title": "Udeshi Salgado",
+    "section": "Performance Evaluation Metrics",
+    "text": "Performance Evaluation Metrics\n\n\nMAPE\n\\[\n\\scriptsize\n\\text{MAPE} = \\frac{1}{n} \\sum_{i=1}^{n} \\left| \\frac{\\text{Forecast}_i - \\text{Actual}_i}{\\text{Actual}_i} \\right|\n\\]\n\nService Level\n\\[\n\\scriptsize\n\\text{Service Level} = \\frac{\\min(\\text{Forecast},\\ \\text{Actual})}{\\text{Actual}}\n\\]\n\nOverstock Rate\n\\[\n\\scriptsize\n\\text{Overstock} = \\frac{\\max(0,\\ \\text{Forecast} - \\text{Actual})}{\\text{Actual}}\n\\]\n\nUnderstock Rate\n\\[\n\\scriptsize\n\\text{Understock} = \\frac{\\max(0,\\ \\text{Actual} - \\text{Forecast})}{\\text{Actual}}\n\\]"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#bcg-performance-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#bcg-performance-metrics",
+    "title": "Udeshi Salgado",
+    "section": "BCG – Performance Metrics",
+    "text": "BCG – Performance Metrics\n\n\n\n\n\n\n\nMetric\nQuantile.Regression\nFSP.Tool\nEPI.Log\n\n\n\n\nMAPE\n0.181\n0.09\n0.978\n\n\nOverstock\n0.181\n0.00\n0.978\n\n\nUnderstock\n0.000\n0.09\n0.000\n\n\nService Level\n1.000\n0.91\n1.000"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#measlesrubella-performance-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#measlesrubella-performance-metrics",
+    "title": "Udeshi Salgado",
+    "section": "Measles~Rubella – Performance Metrics",
+    "text": "Measles~Rubella – Performance Metrics\n\n\n\n\n\n\nMetric\nQuantile.Regression\nFSP.Tool\nEPI.Log\nGAVI\n\n\n\n\nMAPE\n0.205\n0.066\n0.746\n635.715\n\n\nOverstock\n0.205\n0.000\n0.746\n635.715\n\n\nUnderstock\n0.000\n0.066\n0.000\n0.000\n\n\nService Level\n1.000\n0.934\n1.000\n1.000"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#opv-performance-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#opv-performance-metrics",
+    "title": "Udeshi Salgado",
+    "section": "OPV – Performance Metrics",
+    "text": "OPV – Performance Metrics\n\n\n\n\n\n\nMetric\nQuantile.Regression\nFSP.Tool\nEPI.Log\nGAVI\n\n\n\n\nMAPE\n0.114\n0.629\n0.261\n257.414\n\n\nOverstock\n0.114\n0.000\n0.000\n257.414\n\n\nUnderstock\n0.000\n0.629\n0.261\n0.000\n\n\nService Level\n1.000\n0.371\n0.739\n1.000"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#penta-performance-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#penta-performance-metrics",
+    "title": "Udeshi Salgado",
+    "section": "Penta – Performance Metrics",
+    "text": "Penta – Performance Metrics\n\n\n\n\n\n\nMetric\nQuantile.Regression\nFSP.Tool\nEPI.Log\nGAVI\n\n\n\n\nMAPE\n0.15\n0.704\n0.257\n262.466\n\n\nOverstock\n0.15\n0.000\n0.000\n262.466\n\n\nUnderstock\n0.00\n0.704\n0.257\n0.000\n\n\nService Level\n1.00\n0.296\n0.743\n1.000"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#next-steps",
+    "href": "slides/euro_presentation/euro_slides.html#next-steps",
+    "title": "Udeshi Salgado",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nExpand analysis to subnational (county / sub-county) levels\nInclude missed opportunities explicitly in demand estimates\nExplore other inventory policies linked to demand variability"
   },
   {
     "objectID": "slides/stocastic_modelling/lab_r/ctmc_queueing_theory_lab.html",
@@ -670,5 +859,12 @@
     "title": "CTMC and Queueing Lab: Vaccine Clinic Operations",
     "section": "Section 4: Vaccine Clinic Case Study",
     "text": "Section 4: Vaccine Clinic Case Study\n\nCTMC model for an observation room\nScenario-based analysis and service optimization\nR-based lab activity: matrix methods, simulation, and performance metrics\nTranslating modeling results to logistics planning"
+  },
+  {
+    "objectID": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
+    "href": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: May 27, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides"
   }
 ]
