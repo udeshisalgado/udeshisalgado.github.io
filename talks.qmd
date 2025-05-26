@@ -3,6 +3,21 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains
+*DL4SG Research Seminar, Cardiff University*  
+
+![](slides/euro_presentation/preview.png)
+
+📅 **Date:** May 27, 2025  
+⏰ **Time:** 11:00 AM – 1:00 PM  
+📍 **Location:** Cardiff, UK  
+
+<p>
+  <a href="slides/euro_presentation/euro_slides.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
 ## Stochastic Modelling: CTMC and Queuing Theory 
 *DL4SG Research Seminar, Cardiff University*  
 

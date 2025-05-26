@@ -1,0 +1,770 @@
+
+---
+format: 
+    revealjs:
+        toc: false
+        slideNumber: "c/t"
+        width: 1280
+        height: 720
+        controls: true
+        progress: true
+        transition: slide
+        plugins: [notes, print-pdf]
+        title-slide-attributes:
+            data-background-image: none
+            data-background-size: cover
+        theme: [default, custom.scss]
+        logo: images/cardiff_dl4sg_logo.png
+        footer: "© 2025 Udeshi Salgado – DL4SG, Cardiff University"
+---
+
+:::{.slide .title-slide data-background-image="images/background.png" data-background-size="cover"}
+
+
+
+## Missed in the Numbers:
+### Quantifying Demand Gaps in Vaccine Supply Chains
+<br><br><br>
+
+**Udeshi Salgado**  
+_Data Lab for Social Good, Cardiff University, UK_  
+
+<div style="font-size: 50%; line-height: 0.1;">
+<strong>Lead Supervisor:</strong> Professor Bahman Rostami-Tabar<br>
+<strong>Co-supervisors:</strong> Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang
+</div>
+
+<br>
+
+2025-05-27
+
+:::
+
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/outline.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### <span style="color: black;">Outline</span>
+
+1. <span style="color: blue;">Immunisation Supply Chain</span>   
+2. Forecasting Problem 
+3. Data & Methodology  
+4. Model Performance Evaluation 
+5. Way Forward  
+
+:::
+
+:::
+
+## 
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/intro.png){width=100%}
+:::
+
+::: {.column width="60%"}
+
+### Background
+
+- <span style="color: blue;">1 in 5 children</span>  worldwide lack access to lifesaving vaccines.
+- Globally, in 2023, <span style="color: blue;">14.5 million children were zero-dose.</span> 
+- An additional <span style="color: blue;">6.5 million children are partially vaccinated.</span> 
+- Annually, <span style="color: blue;">1.5 million children under five die</span>  from vaccine-preventable diseases.
+
+*source: [WHO](https://www.who.int/news-room/fact-sheets/detail/immunization-coverage)*
+
+:::
+
+:::
+
+## 
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/routine_intro.png){width=100%}
+:::
+
+::: {.column width="60%"}
+
+
+### What is Routine Immunisation?
+
+- <span style="color: blue;">Regular administration of vaccines</span>  for infants, children, and adults  
+- Builds population immunity and prevents disease  
+- <span style="color: blue;">Immunisation at birth is critical</span> 
+  - Newborns are highly vulnerable to severe infections  
+  - Delays can lead to serious illness or death
+
+
+
+:::
+
+:::
+
+## Most Countries Recommended Vaccine Schedule
+
+![](images/routine_immunisation_schedule.png){width=100%}
+
+## Vaccines
+
+::: {.columns}
+
+::: {.column width="33%" }
+![](images/vial.jpg){width=100%}  
+<div style="text-align: center;"><strong>Vial</strong></div>
+:::
+
+::: {.column width="33%" .fragment}
+![](images/dose.png){width=100%}  
+<div style="text-align: center;"><strong>Dose</strong></div>
+:::
+
+::: {.column width="33%" .fragment}
+![](images/administrated.png){width=100%}  
+<div style="text-align: center;"><strong>Administered</strong></div>
+:::
+
+:::
+
+## Wastage
+
+::: {.columns}
+
+::: {.column width="50%" }
+![](images/open_vial.jpg){width=100%}  
+<div style="text-align: center;"><strong>Open Vial</strong></div>
+:::
+
+::: {.column width="50%"}
+![](images/closed_vial.jpg){width=100%}  
+<div style="text-align: center;"><strong>Closed Vial</strong></div>
+:::
+
+:::
+
+
+## 
+<br> <br> <br> <br>
+
+![](images/vaccine_equation.png){height=100%}
+
+## The Immunisation Supply Chain
+
+![](images/immunisation_supply_chain.png){width=120% fig-align="right"}
+
+
+## What we want to achieve?
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+**High Coverage**
+
+![](images/kenya_coverage.jpg){width=100%}
+
+*source: [Allan etal.(2021)](https://www.medrxiv.org/content/10.1101/2021.02.14.21251721v1.full)*
+
+:::
+
+::: {.column width="60%"}
+
+✅ Reduce missed opportunities (stock out)
+
+<br>
+
+✅ Accurate wastage rate
+
+<br>
+
+✅ Lower inventory costs
+
+<br>
+
+✅ Lower societal costs
+
+<br>
+
+✅ and better coordination
+
+:::
+
+:::
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/outline.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### <span style="color: black;">Outline</span>
+
+1. Immunisation Supply Chain  
+2. <span style="color: blue;">Forecasting Problem</span>  
+3. Data & Methodology  
+4. Model Performance Evaluation 
+5. Way Forward  
+
+:::
+
+:::
+
+---
+
+
+## Classical Approaches in Practice
+
+<style>
+table { font-size: 65%; width: 100%; }
+th, td { padding: 8px; text-align: center; }
+</style>
+
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+# Create the main comparison data
+forecast_comparison <- data.frame(
+  Variable = c(
+    "Purpose",
+    "Vaccines Targeted",
+    "Method",
+    "Input Variables",
+    "Output Variables",
+    "Input Data Frequency",
+    "Forecast Horizon",
+    "Time Granularity"
+  ),
+  EPI_Log = c(
+    "For national immunisation schedules",
+    "BCG, Penta, OPV, Measles, PCV, Rotavirus",
+    "Demographic Forecasting",
+    "Population growth rate, birth cohort rate, surviving infants rate, wastage rate.",
+    "National vaccine demand",
+    "Yearly", "1 year", "Yearly"
+  ),
+  Gavi_Tool = c(
+    "For funding allocations",
+    "Penta, Measles, PCV, Rotavirus",
+    "Demographic Forecasting",
+    "Surviving infants, coverage rates, wastage rates, buffer stock.",
+    "National vaccine demand",
+    "Yearly", "5 years", "Yearly"
+  ),
+  FSP_Tool = c(
+    "For national immunisation schedules",
+    "BCG, Penta, OPV, Measles, PCV, Rotavirus",
+    "Weighted Demographic + Consumption + Session-based Forecasting",
+    "Population growth, coverage, dropout rate, historical consumption, stockouts, session frequency.",
+    "National vaccine demand",
+    "Monthly", "5 years", "Yearly"
+  )
+)
+
+# Render the styled table
+kable(forecast_comparison, format = "html", table.attr = "style='width:100%; font-size: 60%; text-align:center;'") %>%
+  kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#003366", color = "white")  # Dark blue header
+
+
+```
+
+## Forecasting Policies in Practice
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+# Define styled tick and cross
+tick <- "<span style='color:green;'>&#10003;</span>"   # ✓
+cross <- "<span style='color:red;'>&#10007;</span>"    # ✗
+
+# Create the table
+comparison <- data.frame(
+  `Feature` = c(
+    "Variable Wastage Rate",
+    "Stockouts considered",
+    "Buffer Stock (25% of demand)",
+    "Variable vaccine coverage per dose"
+  ),
+  `EPI_Log` = c(tick, cross, tick, cross),
+  `Gavi Tool` = c(tick, cross, tick, tick),
+  `FSP Tool` = c(tick, tick, tick, tick),
+  check.names = FALSE
+)
+
+# Render the table with dark blue header
+kable(comparison, format = "html", escape = FALSE, table.attr = "style='width:100%; font-size: 80%; text-align:center;'") %>%
+  kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#003366", color = "white")
+
+
+```
+
+<br>
+
+<span style='color:blue;'>Forecasts are annual and at the national level</span>
+
+
+## What’s Missing from Current Approaches in Practice?
+
+<div style="list-style: none; padding-left: 0; font-size: 90%;">
+
+<p><span style="color:red;">&#10007;</span> Relies heavily on demographic estimates</p>
+<p><span style="color:red;">&#10007;</span> Wastage rate is fixed, not based on historical data</p>
+<p><span style="color:red;">&#10007;</span> Only adjusts for stockout days</p>
+<p><span style="color:red;">&#10007;</span> Captures observed demand, ignores missed vaccinations</p>
+<p><span style="color:red;">&#10007;</span> Uses generic buffer stock rates</p>
+<p><span style="color:red;">&#10007;</span> Includes buffer and wastage in forecasts, increasing uncertainty</p>
+<p><span style="color:red;">&#10007;</span> Lacks integration between forecasting and inventory management</p>
+
+</div>
+
+## How Can We Do Better?
+
+1. Actual vaccine demand calculated as:
+
+$$
+\text{Actual Demand} = \text{Doses Administered} + \text{Missed Opportunities}
+$$
+
+2. Demand forecasted using quantile regression to produce prediction intervals.
+
+3. Forecast integrated with a Newsvendor model to determine order quantities under uncertainty.
+
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/outline.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### <span style="color: black;">Outline</span>
+
+1. Immunisation Supply Chain  
+2. Forecasting Problem
+3. <span style="color: blue;">Data & Methodology</span>    
+4. Model Performance Evaluation 
+5. Way Forward  
+:::
+
+:::
+
+## Data
+
+- Vaccine consumption data from an African country (Jan 2013 – Dec 2021)
+- Four vaccines:
+  - **Measles~rubella**
+  - **BCG** – for tuberculosis
+  - **Penta** – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib
+  - **OPV** – oral polio vaccine
+- 306 sub-counties, 47 counties & 9 regions
+- Total: **1,452 time series**
+
+## Doses administrated: National & Regions
+![](images/doses_admin_regional.png){width=150% fig-align="center"}
+
+## Missed Vaccination Opportunities
+
+::: {.columns}
+
+::: {.column width="60%"}
+- At 6 weeks, infants receive **Penta 1**, **OPV 1**, **PCV 1**, and **RV 1** in a single session  
+- In this dataset, only **Penta 1** and **OPV 1** are available  
+- Differences in counts reveal **missed vaccination opportunities**
+
+:::
+
+::: {.column width="40%"} 
+![](images/missed_opportunities.png){width=100% fig-align="center"}
+:::
+- Hence,  
+    <span style="color: blue;">Actual Demand = Doses Administrated + Missed Opportunities </span>
+:::
+
+
+
+## Actual Demand: National & Regions
+
+![](images/actual_vaccine_regional.png){width=150% fig-align="center"}
+
+## Forecasting Setup
+
+- Forecasting method:  <span style="color: blue;">Quantile Regression using LightGBM</span>
+- Forecast horizon:  <span style="color: blue;">12 months</span>
+- Features: seasonality (sin/cos), month, year, lag-12, vaccine type
+- Target: actual demand (administered + missed opportunities)
+- Probabilistic output:  <span style="color: blue;">90% prediction interval (10th, 50th, 90th quantiles)</span>
+- Cross-sectional training across vaccines with national monthly data
+
+## Vaccine Demand Forecasts (2019)
+
+![](images/forecast_output.png){width=150% fig-align="center"}
+
+## Inventory Integration
+
+- Inventory planning is based on a <span style="color: blue;">Newsvendor-style model</span>
+- Balances risk of <span style="color: blue;">under-ordering</span> (missed vaccinations) and <span style="color: blue;">over-ordering</span> (wastage)
+- Adapted to incorporate <span style="color: blue;">forecast uncertainty</span> and <span style="color: blue;">vaccine-specific wastage</span>
+- Uses <span style="color: blue;">probabilistic forecasts</span> instead of fixed demand distributions
+
+---
+
+<br>
+1. **Probabilistic Forecasts**  
+
+  - Uses 50th and 90th percentile forecasts from quantile regression
+
+<br>
+
+2. **Wastage Adjustment**  
+    - Adjusts median forecast using vaccine-specific wastage rates calculated from historical data
+   $$
+   \text{Adjusted Demand} = \text{Forecast} \times (1 + \text{Wastage Rate})
+   $$
+
+
+---
+
+3. **Uncertainty Buffer**  
+    - Adds safety stock using the forecast spread.  
+    - **1.28** is the z-score for an **90% service level**  
+
+   $$
+   \text{Uncertainty Buffer} = 1.28 \times (\text{Forecast}_{90} - \text{Forecast})
+   $$
+
+4. **Final Order Quantity**  
+   $$
+   \begin{align}
+   \text{Order Quantity} &= \text{Adjusted Demand} + \text{Uncertainty Buffer} \\\\
+                         &= \text{Forecast} \times (1 + \text{Wastage Rate}) \\\\
+                         &\quad + 1.28 \times (\text{Forecast}_{90} - \text{Forecast})
+   \end{align}
+   $$
+
+
+
+## Baseline Forecasting Models
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+<div style="font-size: 80%">
+
+**EPI_Log**  
+$$
+\hat{D}_{t,v} = \left\lceil \hat{SI}_t \times d_v \times (1 + w_v) \times c \times \left(1 + \frac{b_v}{12} \right) \right\rceil
+$$
+
+**Gavi Tool**  
+$$
+\hat{D}_{t,v} = \left\lceil \hat{SI}_t \times (d_v - 1) \times c_1 \times (1 + w_v) + \newline \hat{SI}_t \times c_2 \times (1 + w_v) \times \left(1 + \frac{b_v}{12} \right) + \text{Adj} \right\rceil
+$$
+
+**FSP Tool**  
+$$
+D_{final} = w_1 \times D_{demographic} + w_2 \times D_{consumption} + w_3 \times D_{session}
+$$
+
+</div>
+
+:::
+
+::: {.column width="30%"}
+
+<div style="font-size: 65%; line-height: 1.2;">
+
+**Variable Definitions**
+
+- $\hat{D}_{t,v}$: Forecasted demand for vaccine *v* at time *t*  
+- $\hat{SI}_t$: Surviving infants at time *t*  
+- $d_v$: Doses per child for vaccine *v*  
+- $c$: Immunisation coverage  
+- $c_1$, $c_2$: First- and last-dose coverage  
+- $w_v$: Wastage rate  
+- $b_v$: Buffer stock (months)  
+- Adj: Programmatic/top-level adjustment  
+- $w_1$, $w_2$, $w_3$: Weights for hybrid model inputs  
+
+</div>
+
+:::
+
+:::
+
+## Performance Evaluation Metrics
+
+::: columns
+::: {.column width="50%"}
+
+**MAPE**  
+
+$$
+\scriptsize
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{\text{Forecast}_i - \text{Actual}_i}{\text{Actual}_i} \right|
+$$
+
+<br>
+
+**Service Level**  
+
+$$
+\scriptsize
+\text{Service Level} = \frac{\min(\text{Forecast},\ \text{Actual})}{\text{Actual}}
+$$
+
+:::
+
+::: {.column width="50%"}
+
+**Overstock Rate**  
+
+$$
+\scriptsize
+\text{Overstock} = \frac{\max(0,\ \text{Forecast} - \text{Actual})}{\text{Actual}}
+$$
+
+<br>
+
+
+**Understock Rate**  
+$$
+\scriptsize
+\text{Understock} = \frac{\max(0,\ \text{Actual} - \text{Forecast})}{\text{Actual}}
+$$
+
+
+
+:::
+:::
+
+
+
+
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/outline.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### <span style="color: black;">Outline</span>
+
+1. Immunisation Supply Chain  
+2. Forecasting Problem
+3. Data & Methodology    
+4. <span style="color: blue;">Model Performance Evaluation</span> 
+5. Way Forward  
+:::
+
+:::
+
+## BCG – Performance Metrics
+
+<style>
+table { font-size: 100%; width: 100%; }
+th, td { padding: 16px; text-align: center; }
+</style>
+
+<br>
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+bcg_table <- data.frame(
+  Metric = c("MAPE", "Overstock", "Understock", "Service Level"),
+  `Quantile Regression` = c(0.181, 0.181, 0.000, 1.000),
+  `FSP Tool` = c(0.090, 0.000, 0.090, 0.910),
+  `EPI Log` = c(0.978, 0.978, 0.000, 1.000)
+)
+
+kable(bcg_table, format = "html") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#00274D", color = "white")
+
+```
+
+## Measles~Rubella – Performance Metrics
+
+<br>
+
+```{r}
+mr_table <- data.frame(
+  Metric = c("MAPE", "Overstock", "Understock", "Service Level"),
+  `Quantile Regression` = c(0.205, 0.205, 0.000, 1.000),
+  `FSP Tool` = c(0.066, 0.000, 0.066, 0.934),
+  `EPI Log` = c(0.746, 0.746, 0.000, 1.000),
+  `GAVI` = c(635.715, 635.715, 0.000, 1.000)
+)
+
+kable(mr_table, format = "html") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#00274D", color = "white")
+
+```
+
+
+## OPV – Performance Metrics
+
+<br>
+
+```{r}
+opv_table <- data.frame(
+  Metric = c("MAPE", "Overstock", "Understock", "Service Level"),
+  `Quantile Regression` = c(0.114, 0.114, 0.000, 1.000),
+  `FSP Tool` = c(0.629, 0.000, 0.629, 0.371),
+  `EPI Log` = c(0.261, 0.000, 0.261, 0.739),
+  `GAVI` = c(257.414, 257.414, 0.000, 1.000)
+)
+
+kable(opv_table, format = "html") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#00274D", color = "white")
+
+
+```
+
+## Penta – Performance Metrics
+
+<br>
+
+```{r}
+penta_table <- data.frame(
+  Metric = c("MAPE", "Overstock", "Understock", "Service Level"),
+  `Quantile Regression` = c(0.150, 0.150, 0.000, 1.000),
+  `FSP Tool` = c(0.704, 0.000, 0.704, 0.296),
+  `EPI Log` = c(0.257, 0.000, 0.257, 0.743),
+  `GAVI` = c(262.466, 262.466, 0.000, 1.000)
+)
+
+kable(penta_table, format = "html") %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#00274D", color = "white")
+
+
+```
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/outline.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### <span style="color: black;">Outline</span>
+
+1. Immunisation Supply Chain  
+2. Forecasting Problem
+3. Data & Methodology  
+4. Model Performance Evaluation 
+5. <span style="color: blue;">Way Forward</span>    
+:::
+
+:::
+
+## Next Steps
+
+- Expand analysis to subnational (county / sub-county) levels
+
+- Include missed opportunities explicitly in demand estimates
+
+- Explore other inventory policies linked to demand variability
+
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/acknowledgement.png){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### <span style="color: black;">Acknowledgement</span>
+
+-  John and Snow Inc (JSI) team
+    - Dr. Laila Akhlaghi
+    - Wendy Prosser
+
+
+:::
+
+:::
+
+
+---
+
+::: {.columns}
+
+::: {.column width="50%"}
+### About me
+
+<br>
+
+Udeshi Salgado
+
+1st year PhD Student
+
+DL4SG, Cardiff University, UK
+
+<br>
+
+LinkedIn: [udeshi-salgado](https://www.linkedin.com/in/udeshi-salgado/)  
+
+Slides: [udeshisalgado.github.io/talks](https://udeshisalgado.github.io/talks.html)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+### Outline of my talk
+<br>
+
+1. Immunisation Supply Chain  
+2. Forecasting Problem
+3. Data & Methodology  
+4. Model Performance Evaluation 
+5. Way Forward  
+
+:::
+
+:::
+
