@@ -3,6 +3,21 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## 9-Month Review
+*DL4SG Research Seminar, Cardiff University*  
+
+![](slides/9months_review/preview.png)
+
+📅 **Date:** June 11, 2025  
+⏰ **Time:** 11:00 AM – 12:00 PM  
+📍 **Location:** Cardiff, UK  
+
+<p>
+  <a href="slides/9months_review/9month_review.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
 ## Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains
 *DL4SG Research Seminar, Cardiff University*  
 
