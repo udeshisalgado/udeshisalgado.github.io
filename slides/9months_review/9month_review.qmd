@@ -1,0 +1,512 @@
+---
+title: "9-Month Review"
+subtitle: "11th June 2025"
+author: "(Merennage) Udeshi Salgado <br> <br> _DL4SG Research Group, Cardiff Business School, Cardiff University, UK_"
+format: 
+    revealjs:
+        toc: false
+        slideNumber: "c/t"
+        width: 1280
+        height: 720
+        controls: true
+        progress: true
+        transition: "slide"
+        logo: images/cardiff_dl4sg_logo.png
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/out_new.png){height=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### Outline
+
+1. <span style="color:  #20808D;;">Research Background</span>
+2. Progress & Key Achievements
+3. Future Work Plan
+
+:::
+
+:::
+ 
+
+## The team
+ 
+- Student: Merennage Udeshi Prasangika Salgado
+- Supervisor 1: Prof. Bahman Rostami-Tabar 
+- Supervisor 2: Dr. Thanos E Goltsos
+- Supervisor 3: Dr. Xun Wang
+- Supervisor 4: Dr. Geraint Palmer 
+- Review Panel Convenor: Dr. Danni Zhang
+
+## Thesis title
+<br> <br>
+
+<span style="text-align: center; display: block;">Enhancing Global Immunisation Supply Chain: Integrating Hybrid Intelligence Models into Inventory Optimisation Considering Non-Monetary Welfare Metrics</span> 
+
+## Research Problem
+
+### The Problem
+
+In many low- and middle-income countries, **not every child has access to life-saving vaccines**.
+
+This lack of access can be attributed to several factors:
+
+- Vaccine hesitancy and misinformation  
+- Geographic inaccessibility and conflict zones  
+- Weak health infrastructure and limited cold-chain capacity  
+- <span style="color: #20808D;"><strong>Supply chain inefficiencies </strong></span>
+
+
+## Research Problem 
+
+### Our Focus
+
+Addressing inefficiencies in <span style="color: #20808D;">childhood routine vaccine supply chains</span>, which includes:
+
+- inaccurate forecasting
+- standard wastage rates and buffer stock adjustments
+- frequent stockouts / missed vaccination opportunities
+- poor integration of inventory optimisation
+- the exclusion of societal well-being metrics
+
+
+## Research Problem 
+
+### Why?
+
+- <span style="color: #20808D;">1 in 5 children</span>  worldwide lack access to lifesaving vaccines.
+- Annually, <span style="color: #20808D;">1.5 million children under five die</span>  from vaccine-preventable diseases. 
+- Although, <span style="color: #20808D;"><strong>Each dollar spent on immunization saves $52</strong></span> in low- and middle-income countries  
+  - *Source:* [CDC Global Immunization Fast Facts](https://www.cdc.gov/global-immunization/fast-facts/index.html)  
+- By focusing on **childhood routine vaccines** and trying to enhance the supply chain, we contribute save child lives, reduce healthcare inequalities, and enhance the quality of life.
+
+
+## Research Problem 
+
+### Who?
+
+- The research benefits public health systems, humanitarian organizations (e.g., UNICEF, GAVI), and vulnerable populations in low middle income countries (LMIC)
+- It also provides tools and insights for policymakers, researchers, and global health initiatives.
+
+## Research Objectives
+1. Review the literature on vaccine forecasting and supply chain management to identify key gaps, challenges, and opportunities for innovation in LMIC contexts.
+2. Develop a hybrid intelligence framework that enhances vaccine demand forecasting by integrating probabilistic methods, machine learning, and domain-specific knowledge.
+
+## Research Objectives Cont. 
+
+3. Link forecasting outputs to inventory optimisation by incorporating both monetary and non-monetary welfare metrics into the decision-making process.
+4. Investigate how AI-driven predictive models can accurately estimate open vial wastage at the health facility level in low- and middle-income countries (LMICs).
+
+
+
+
+## Research Questions
+
+1. How can a hybrid intelligence framework combining domain-specific knowledge and consumption-based probabilistic forecasting be leveraged to improve vaccine demand forecasting across the entire supply chain in low- and middle-income countries (LMICs)?
+
+2. How can an objective/loss function incorporating both monetary and non-monetary welfare metrics (Disability-Adjusted Life Years (DALYs), Quality-Adjusted Life Years (QALYs)) optimize vaccine inventory management to maximize fully immunized children in low- and middle-income countries (LMICs)?
+
+## Research Questions Cont.
+<br> 
+
+3. How can AI-driven predictive models accurately estimate open vial wastage at the health facility level in low- and middle-income countries (LMICs)?
+
+
+
+## Research Plan
+
+![](images/research_plan.png){width=150% fig-align="center"}
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/out_new.png){height=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### Outline
+
+1. Research Background
+2. <span style="color:  #20808D;;">Progress & Key Achievements</span>
+3. Future Work Plan
+
+:::
+
+:::
+
+## Data Access
+
+- Secured data agreement with our collaborator, John, Snow Inc (JSI), to obtain secondary data.
+- The ethical approval has been submitted for secondary data collection and it is under review.
+- Documents created for data requirement and project proposal
+
+## Writing Progress
+
+- Completed introduction chapter
+- Started working on paper one targeting work package 1. Following are completed:
+    - Introductory Section
+    - Literature Review for work package 1
+- Writings on current forecasting approaches in practice and python automation 
+- An abstract submission for EURO
+
+
+
+## Literature Review
+
+<div style="max-height: 500px; overflow-y: auto; font-size: 48%;">
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+forecast_table <- data.frame(
+  Reference = c("Chiu et al. (2008)", "Kotagiri et al. (2011)", "Mueller et al. (2016)", "Azadi et al. (2018)", 
+                "Cernuschi et al. (2018)", "Alegado & Tumibay (2020)", "Colrain et al. (2020)", "Hariharan et al. (2020)", 
+                "Sahisnu et al. (2020)", "Vinitha et al. (2024)"),
+  Method = c("ARIMA, BPNN, ARIMAT", "Birth pop.-based model", "Pop.-based model", "Regression models", 
+             "Pop.-based model", "ARIMA, MLPNN", "Stat./Probabilistic (Binomial)", "RFR", 
+             "ARIMA", "LR, RF, GBM, SVR, LSTM, ANN"),
+  Variable = c("Total annual vaccine demand", "Births", "Quantity of vaccines needed", "Childhood immunization demand",
+               "BCG vaccine demand", "BCG vaccine demand", "Expected doses used/wastage", "Vaccine utilization",
+               "Vaccine stock levels", "Infant vaccination demand"),
+  Inputs = c("Historical births, doses, wastage, CDC rules", "Early birth info", "Scaled census cohort data",
+             "Population size, poverty, literacy, clinics", 
+             "UNPD forecast, EPI schedule, WHO coverage/wastage", 
+             "Monthly vaccination data", 
+             "Birth cohort, sessions, vials, discard time", 
+             "Health facility data, date parts, rolling avg.", 
+             "Stock history data", 
+             "Vaccine name, district, intake date"),
+  Time = c("Annual", "NA", "Monthly", "Monthly", "Annual", "Monthly", "Annual", "Biweekly", "Monthly", "Monthly"),
+  Horizon = c("1 year", "NA", "12 months", "NA", "14 years", "12 months", "1 year", "NA", "10 months", "NA"),
+  Hierarchical = c("Yes", "No", "Yes", "No", "No", "No", "Yes", "No", "No", "No"),
+  Level = c("Regional", "Local", "Local", "Regional", "National", "Local", "Local", "Local", "Local", "Local"),
+  Probabilistic = c("No", "No", "No", "No", "No", "No", "Yes", "No", "No", "No"),
+  Metric = c("Average error rate", 
+             "Impact on vaccine inventory levels", 
+             "Vaccine availability, Missed Vaccination Opportunities (MVO)", 
+             "Not available", 
+             "Comparison with historical procurement", 
+             "RMSE, MAE", 
+             "Wastage rate comparison, sensitivity analysis", 
+             "Forecasting error (FE), RMSE", 
+             "MAPE", 
+             "RMSE, R-Square")
+)
+
+kable(forecast_table, format = "html", escape = FALSE) %>%
+  kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover", "condensed")) %>%
+  row_spec(0, background = "#003366", color = "white") 
+
+
+```
+
+</div>
+
+
+## Literature Review Cont.
+
+<div style="max-height: 500px; overflow-y: auto; font-size: 48%;">
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+forecast_table <- data.frame(
+  Reference = c("Alegado & Tumibay (2020)", "Colrain et al. (2020)", "Hariharan et al. (2020)", 
+                "Sahisnu et al. (2020)", "Vinitha et al. (2024)"),
+  Method = c("ARIMA, MLPNN", "Stat./Probabilistic (Binomial)", "RFR", 
+             "ARIMA", "LR, RF, GBM, SVR, LSTM, ANN"),
+  Variable = c("BCG vaccine demand", "Expected doses used/wastage", "Vaccine utilization",
+               "Vaccine stock levels", "Infant vaccination demand"),
+  Inputs = c("Monthly vaccination data", 
+             "Birth cohort, sessions, vials, discard time", 
+             "Health facility data, date parts, rolling avg.", 
+             "Stock history data", 
+             "Vaccine name, district, intake date"),
+  Time = c("Monthly", "Annual", "Biweekly", "Monthly", "Monthly"),
+  Horizon = c("12 months", "1 year", "NA", "10 months", "NA"),
+  Hierarchical = c("No", "Yes", "No", "No", "No"),
+  Level = c("Local", "Local", "Local", "Local", "Local"),
+  Probabilistic = c( "No", "Yes", "No", "No", "No"),
+  Metric = c("RMSE, MAE", 
+             "Wastage rate comparison, sensitivity analysis", 
+             "Forecasting error (FE), RMSE", 
+             "MAPE", 
+             "RMSE, R-Square")
+)
+
+kable(forecast_table, format = "html", escape = FALSE) %>%
+  kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover", "condensed")) %>%
+  row_spec(0, background = "#003366", color = "white") 
+
+
+```
+
+</div>
+
+## Current Forecasting Tools in Practice 
+
+<div style="max-height: 500px; overflow-y: auto; font-size: 45%;">
+
+```{r, results='asis', echo=FALSE}
+library(knitr)
+library(kableExtra)
+
+forecast_comparison <- data.frame(
+  Tool = c(
+    "Expanded Programme on Immunisation (EPI) Log Tool ",
+    "FSP Tool – Demographic Method",
+    "FSP Tool – Consumption-Based Method",
+    "FSP Tool – Session-Based Method",
+    "Gavi Allocation and Renewal Tool"
+  ),
+  
+  `Output Variables` = c(
+    "Annual forecasted vaccine doses used",
+    "Forecasted vaccine doses based on population targets",
+    "Forecasted vaccine doses based on historical usage adjusted for stockouts",
+    "Forecasted vaccine doses based on planned session activity",
+    "Annual forecasted vaccine doses used"
+  ),
+  
+  `Input Variables` = c(
+    "Population growth, birth cohort, surviving infants, wastage rate, doses per schedule, buffer stock",
+    "Population growth, birth cohort, surviving infants, wastage rate, doses per schedule",
+    "Average monthly consumption, stockout days, wastage",
+    "Session frequency, population per session, attendance rate",
+    "Surviving infants, coverage (1st/last dose), wastage, buffer stock"
+  ),
+  
+  `Forecast Horizon` = rep("3–5 years", 4) %>%
+    append("5 years", after = 4),
+  `Time Granularity` = rep("Yearly", 5),
+  `Forecasting Method` = c(
+    "Demographic",
+    "Demographic",
+    "Consumption-based",
+    "Session-based",
+    "Demographic"
+  ),
+  `Vaccines Targeted` = rep("BCG, Penta, OPV, Measles, PCV, Rotavirus", 4) %>%
+    append("Penta, Measles, PCV, Rotavirus", after = 4)
+)
+
+kable(forecast_comparison, format = "html", escape = FALSE,
+      table.attr = "style='width:100%; text-align:center;'") %>%
+  kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#003366", color = "white") %>%
+  group_rows("Forecasting and Supply Planning (FSP) Tool", 2, 4)
+```
+
+</div>
+
+
+## Modeling Framework for Work Package 1
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+framework <- data.frame(
+  Stage = c(
+    "I. DATA PREPARATION",
+    "II. EXPLORATORY DATA ANALYSIS",
+    "III. FORECASTING COMPETITION"
+  ),
+  Description = c(
+    "Clean the vaccine consumption dataset with hierarchical structure (region, county, sub-county). Standardize vaccine names and reporting periods. Derive `doses used` and `wastage` using two methods.",
+    
+    "Analyze seasonality, temporal continuity, and spatial variation in stock, doses administered, and wastage. Visualize patterns by vaccine type and region. Detect anomalies such as stockouts or overstocking.",
+    
+    paste0(
+      "Compare two forecasting approaches:<br>",
+      "- <b>Approach A</b>: Forecast `doses_used = stock_beginning + quantity_received - stock_end`, capturing total consumption.<br>",
+      "- <b>Approach B</b>: Forecast `doses_administered` and `wastage` separately, then sum.<br>",
+      "Run forecast competition including probabilistic and ML models with prediction intervals."
+    )
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Create styled table
+kbl(framework, format = "html", escape = FALSE) %>%
+  kable_styling(full_width = FALSE, font_size = 24) %>%
+  row_spec(seq(1, nrow(framework), 2), background = "white") %>%
+  row_spec(seq(2, nrow(framework), 2), background = "#e6f2ff")%>%
+  row_spec(0, background = "#003366", color = "white", bold = TRUE)
+
+
+```
+
+
+## Modeling Framework for Work Package 1 Cont.
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+framework <- data.frame(
+  Stage = c(
+    "IV. ERROR METRICS AND EVALUATION",
+    "V. HYBRIDIZATION WITH DOMAIN KNOWLEDGE",
+    "VI. FORECAST-TO-INVENTORY INTEGRATION"
+  ),
+  Description = c(
+    "Evaluate models using point metrics (MAE, RMSE, MASE) and probabilistic metrics (Pinball loss, WIS, coverage). ",
+    
+    paste0(
+      "<b>Incorporate Domain-Specific Features</b>: Use attributes from current tools in practice as model features.<br>",
+      "<b>Human-in-the-Loop Adjustments</b>: Allow expert overrides and feedback loops for continuous learning."
+    ),
+    
+    "Translate forecasts into actionable inventory decisions using inventory policies ((s, S), min-max). Simulate effects of stockouts, overstocking, and missed vaccinations. Improve allocation strategies under uncertainty."
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Create styled table
+kbl(framework, format = "html", escape = FALSE) %>%
+  kable_styling(full_width = FALSE, font_size = 24) %>%
+  row_spec(seq(1, nrow(framework), 2), background = "white") %>%
+  row_spec(seq(2, nrow(framework), 2), background = "#e6f2ff")%>%
+  row_spec(0, background = "#003366", color = "white", bold = TRUE)
+
+
+```
+
+
+
+
+## Trainings Attended and Developments
+
+<div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
+
+```{r}
+library(knitr)
+library(kableExtra)
+
+event_table <- data.frame(
+  Event = c(
+    "Lessons in Logistics Management for Health Commodities course",
+    "SWORDS Autumn Meeting: Discover New Research",
+    "Guidance on preparing for the academic job market by Doctoral Academy",
+    "Postgraduate Funding: Considering the Alternatives (Training by the Doctoral Academy)",
+    "“What challenges do AI Practitioners face and how can we solve them?” (webinar) organized by the OR Society",
+    "Critical Appraisal and How to Appraise Systematic Reviews and Intervention Studies: An Introduction by Doctoral Academy",
+    "Writers' Retreat by Doctoral Academy",
+    "Seven Secrets of Highly Successful Researchers by Doctoral Academy",
+    "QFT UK Chapter: Bath",
+    "Stochastic Modelling (NATCOR Workshop)",
+    "Seminars and trainings conducted by the DL4SG Research Group"
+  ),
+  Date = c(
+    "12/10/2024",
+    "15/10/2024",
+    "13/11/2024",
+    "20/11/2024",
+    "11/12/2024",
+    "12/12/2024",
+    "19/12/2024",
+    "13/01/2025",
+    "14/02/2025",
+    "31/03/2025 to 04/04/2025",
+    "within the year"
+  )
+)
+
+kable(event_table, format = "html", escape = FALSE, col.names = c("Event", "Date")) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, background = "#003366", color = "white")
+
+
+```
+
+</div>
+
+
+## Trainings Delivered
+
+Conducted the following training sessions for members of the Data Lab for Social Good (DL4SG) research group:
+
+- Introduction to Python - March 3, 2025
+- Introduction to Continuous Time Markov Chains & Queueing Theory in Healthcare Supply Chains - May 22, 2025
+
+## Key Achievements
+
+- Presented at DL4SG on "Optimising Sustainable, Equitable, and Efficient Routine Immunisation Supply Chains in Low- and Middle-Income Countries."
+- Abstract accepted for EURO 2025: "Enhancing Routine Immunisation Demand Forecasting: A Hybrid Probabilistic and Domain-Specific Approach."
+- Received NATCOR bursary to attend the Stochastic Modelling course in Lancaster.
+- Won the NATCOR coding challenge during the Stochastic Modelling course.
+
+## Key Achievements Cont.
+
+- Delivered a Student Spotlight talk on "Using RTSG to Support Training and Conference Participation" at the EPSRC Progress and Planning event organised by the Doctoral Academy.
+- Created my own website using Quarto
+
+
+---
+
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/out_new.png){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+### Outline
+
+1. Research Background
+2. Progress & Key Achievements
+3. <span style="color:  #20808D;;">Future Work Plan</span>
+
+:::
+
+:::
+
+## Future Work Plan
+
+### Research Activities
+
+- Finalize EURO 2025 presentation and attend conference (May–June)
+- Complete WP1: data analysis, draft and submit paper (May–Nov)
+- Obtain and incorporate secondary vaccination data (by June)
+- Initiate WP2: literature review, gap analysis, and introductory chapter (Nov–Dec)
+
+### Writing Milestones
+
+- Submit WP1 journal paper (by 30 Nov)
+
+- Draft WP2 introduction and literature review chapters (by mid-Dec)
+
+---
+###  Academic Engagement
+
+- Plan to engage with forecasting module as graduate tutor in the upcoming term
+
+
+### Training & Development
+
+- Attend and present at the EURO conference
+- Attend 9+ training sessions (Doctoral Academy, OR Society)
+- Topics: machine learning, responsible AI/ML, legal compliance, research impact
+
+### Planned Leave
+
+- Annual leave: 10 Aug – 10 Sep
+
+
+# <span style="text-align: center; display: block;">Thank You!</span>
