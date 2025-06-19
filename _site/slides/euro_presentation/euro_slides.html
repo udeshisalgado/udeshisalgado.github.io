@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="euro_slides_files/libs/clipboard/clipboard.min.js"></script>
-<script src="euro_slides_files/libs/quarto-html/tabby.min.js"></script>
-<script src="euro_slides_files/libs/quarto-html/popper.min.js"></script>
-<script src="euro_slides_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="euro_slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="euro_slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="euro_slides_files/libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.36">
 
-  <title>euro_slides</title>
+  <title>Udeshi Salgado – euro_slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="euro_slides_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="euro_slides_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,11 +28,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="euro_slides_files/libs/revealjs/dist/theme/quarto-fc50a1660a49e0b365f3020b91fa9cc4.css">
-  <link href="euro_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="euro_slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="euro_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="euro_slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-fc50a1660a49e0b365f3020b91fa9cc4.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -120,8 +120,10 @@
       margin-right: 0; 
     }
   </style>
-  <script src="euro_slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="euro_slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<meta property="og:title" content="Udeshi Salgado">
+<meta property="og:site_name" content="Udeshi Salgado">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -130,15 +132,15 @@
 
 <section id="missed-in-the-numbers" class="slide level2 title-slide center" data-background-image="images/background.png" data-background-size="cover">
 <h2>Missed in the Numbers:</h2>
-<h3 id="quantifying-demand-gaps-in-vaccine-supply-chains">Quantifying Demand Gaps in Vaccine Supply Chains</h3>
+<h3 id="quantifying-demand-gaps-in-routine-immunisation">Quantifying Demand Gaps in Routine Immunisation</h3>
 <p><br><br><br></p>
 <p><strong>Udeshi Salgado</strong><br>
-<em>Data Lab for Social Good, Cardiff University, UK</em></p>
+<em>Data Lab for Social Good Research Group</em> <br> <em>Cardiff Business School, Cardiff University, UK</em></p>
 <div style="font-size: 50%; line-height: 0.1;">
 <p><strong>Lead Supervisor:</strong> Professor Bahman Rostami-Tabar<br> <strong>Co-supervisors:</strong> Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang</p>
 </div>
 <p><br></p>
-<p>2025-05-27</p>
+<p>2025-06-24</p>
 </section>
 <section class="slide level2">
 
@@ -151,8 +153,8 @@
 <ol type="1">
 <li><span style="color: blue;">Immunisation Supply Chain</span><br>
 </li>
-<li>Forecasting Problem</li>
-<li>Data &amp; Methodology<br>
+<li>(Forecasting) Problem</li>
+<li>Methodology<br>
 </li>
 <li>Model Performance Evaluation</li>
 <li>Way Forward</li>
@@ -199,7 +201,70 @@
 <section id="most-countries-recommended-vaccine-schedule" class="slide level2">
 <h2>Most Countries Recommended Vaccine Schedule</h2>
 
-<img data-src="images/routine_immunisation_schedule.png" style="width:100.0%" class="r-stretch"></section>
+<img data-src="images/routine_immunisation_schedule.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><em>source: <a href="https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-age.html">CDC</a></em></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/whyroutine.png" style="height:100.0%"></p>
+</div><div class="column" style="width:60%;">
+<h3 id="why-routine-immunisation">Why Routine Immunisation</h3>
+<ul>
+<li>Solving the problem at the start:
+<ul>
+<li>Fewer vaccine-preventable deaths.</li>
+<li>Lower immediate and long-term costs from illness and complications.</li>
+<li>Reduces future social and economic burden.</li>
+</ul></li>
+<li><span style="color: blue;">Each dollar spent on immunization saves $52</span> in low- and middle-income countries (source: <a href="https://www.cdc.gov/global-immunization/fast-facts/index.html">CDC</a>)</li>
+</ul>
+</div></div>
+</section>
+<section id="potential-causes" class="slide level2">
+<h2>Potential Causes</h2>
+<ul>
+<li>Vaccine hesitancy and misinformation</li>
+<li>Geographic inaccessibility and conflict zones</li>
+<li>Weak health infrastructure and limited cold-chain capacity</li>
+<li><span style="color: blue;">Supply chain inefficiencies</span></li>
+</ul>
+</section>
+<section id="the-routine-immunisation-supply-chain" class="slide level2">
+<h2>The Routine Immunisation Supply Chain</h2>
+
+<img data-src="images/immunisation_supply_chain.png" class="quarto-figure quarto-figure-right r-stretch" style="width:120.0%"></section>
+<section id="routine-supply-chain-inefficiencies" class="slide level2">
+<h2>Routine Supply Chain Inefficiencies</h2>
+<ul>
+<li>Inadequate infrastructure</li>
+<li>Weak distribution systems</li>
+<li>Poor data management</li>
+<li>Insufficient funding</li>
+<li>Lack of trained personnel</li>
+<li><span style="color: blue;">Inaccurate/outdated forecasting</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/outline.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:60%;">
+<p><br></p>
+<h3 id="outline-1"><span style="color: black;">Outline</span></h3>
+<ol type="1">
+<li>Immunisation Supply Chain<br>
+</li>
+<li><span style="color: blue;">(Forecasting) Problem</span><br>
+</li>
+<li>Methodology<br>
+</li>
+<li>Model Performance Evaluation</li>
+<li>Way Forward</li>
+</ol>
+</div></div>
+</section>
 <section id="vaccines" class="slide level2">
 <h2>Vaccines</h2>
 <div class="columns">
@@ -240,15 +305,474 @@
 </div>
 </div></div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<p><br> <br> <br> <br></p>
-<p><img data-src="images/vaccine_equation.png" style="height:100.0%"></p>
-</section>
-<section id="the-immunisation-supply-chain" class="slide level2">
-<h2>The Immunisation Supply Chain</h2>
+<section id="what-we-want-to-forecast" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What we want to forecast?</h2>
+<div style="margin-top: 10px;font-size: 0.1em;">
 
-<img data-src="images/immunisation_supply_chain.png" class="quarto-figure quarto-figure-right r-stretch" style="width:120.0%"></section>
+</div>
+</section>
+<section id="what-we-want-to-forecast-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What we want to forecast?</h2>
+<div style="margin-top: 200px; font-size: 1.2em; color: blue;">
+<p><span class="math display">\[
+\text{Doses Need} \quad = \quad \text{Doses administered} \quad + \quad \text{Wastage}
+\]</span></p>
+</div>
+</section>
+<section id="current-approaches-in-practice" class="slide level2">
+<h2>Current Approaches in Practice</h2>
+<ul>
+<li>Countries use a range of forecasting tools to <span style="color: blue;">support national immunisation planning and funding requests.</span></li>
+<li>These tools are developed by global partners including <span style="color: blue;">UNICEF, Gavi, the Vaccine Alliance, and John Snow, Inc.&nbsp;(JSI).</span></li>
+<li>The most common tools include:
+<ol type="1">
+<li>Expanded Programme on Immunisation (EPI) Log Tool (Incorporated in the FSP Tool)</li>
+<li>Forecasting and Supply Planning (FSP) Tool</li>
+<li>Gavi Vaccine Renewal Allocation Tool</li>
+</ol></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="fsp-tool-forecasting-and-supply-planning">FSP Tool: Forecasting and Supply Planning</h3>
+<ul>
+<li>Developed by <span style="color: blue;">UNICEF</span> to enhance national capacity in vaccine forecasting and supply planning</li>
+<li>Designed for <span style="color: blue;">use by national immunisation programme managers</span> to support multi-year vaccine planning, particularly in <span style="color: blue;">low- and middle-income countries</span></li>
+<li><span style="color: blue;">Incorporates the older EPI Log Tool,</span> which relied solely on demographic methods</li>
+<li>Used during <span style="color: blue;">annual forecasting exercises and for multi-year planning to align supply with projected needs</span></li>
+</ul>
+</section>
+<section id="forecasting-methods-in-the-fsp-tool" class="slide level2">
+<h2>Forecasting Methods in the FSP Tool</h2>
+<p>The FSP Tool combines three estimation methods for each vaccine <span class="math inline">\(i\)</span>:</p>
+<p><strong>1. Demographic Method</strong><br>
+<span class="math display">\[
+\hat{D}_{\text{demographic},i,t} = \frac{P_t \cdot \text{Coverage}_{i,t} \cdot \text{DosesPerChild}_i}{1 - \text{WastageRate}_{i,t}}
+\]</span></p>
+<div style="font-size: 70%; line-height: 1.2;">
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\hat{D}_{\text{demographic},i,t}\)</span>: Forecasted annual vaccine doses used demand for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span> using demographic approach<br>
+</li>
+<li><span class="math inline">\(P_t\)</span>: Target population (e.g., surviving infants) in year <span class="math inline">\(t\)</span><br>
+</li>
+<li><span class="math inline">\(\text{Coverage}_{i,t}\)</span>: Coverage rate for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span><br>
+</li>
+<li><span class="math inline">\(\text{DosesPerChild}_i\)</span>: Number of doses required per child for vaccine <span class="math inline">\(i\)</span><br>
+</li>
+<li><span class="math inline">\(\text{WastageRate}_{i,t}\)</span>: Expected wastage rate for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>2. Consumption-Based Method</strong><br>
+<span class="math display">\[
+\hat{D}_{\text{consumption},i,t} = \text{AvgYearlyIssues}_{i,t} \cdot \frac{1}{\text{StockAvailability}_{i,t}}
+\]</span></p>
+<div style="font-size: 80%; line-height: 1.2;">
+<p>where</p>
+<ul>
+<li><span class="math inline">\(\hat{D}_{\text{consumption},i,t}\)</span>: Forecasted annual vaccine doses used demand for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span> based on consumption<br>
+</li>
+<li><span class="math inline">\(\text{AvgYearlyIssues}_{i,t}\)</span>: Historical average monthly vaccine issues for vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span><br>
+</li>
+<li><span class="math inline">\(\text{StockAvailability}_{i,t}\)</span>: Proportion of the year <span class="math inline">\(t\)</span> vaccine <span class="math inline">\(i\)</span> was available (i.e., no stockout)</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>3. Session-Based Method</strong><br>
+<span class="math display">\[
+\hat{D}_{\text{session},i,t} = \frac{\text{Sessions}_{i,t} \cdot \text{ChildrenPerSession}_{i,t} \cdot \text{DosesPerChild}_i}{1 - \text{WastageRate}_{i,t}}
+\]</span></p>
+<div style="font-size: 80%; line-height: 1.2;">
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\hat{D}_{\text{session},i,t}\)</span>: Forecasted annual vaccine doses used demand for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span> using session planning<br>
+</li>
+<li><span class="math inline">\(\text{Sessions}_{i,t}\)</span>: Number of planned vaccination sessions for vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(\text{ChildrenPerSession}_{i,t}\)</span>: Children vaccinated per session for vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(\text{DosesPerChild}_i\)</span>: Number of doses per child for vaccine <span class="math inline">\(i\)</span><br>
+</li>
+<li><span class="math inline">\(\text{WastageRate}_{i,t}\)</span>: Expected wastage rate for vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="final-forecast-combination-hybrid-approach">Final Forecast Combination (Hybrid Approach)</h3>
+<p>The FSP Tool combines all three forecast methods using weighted averaging:</p>
+<p><span class="math display">\[
+\hat{D}_{\text{final},i,t} = w_1 \cdot \hat{D}_{\text{demographic},i,t} + w_2 \cdot \hat{D}_{\text{consumption},i,t} + w_3 \cdot \hat{D}_{\text{session},i,t}
+\]</span></p>
+<div style="font-size: 80%; line-height: 1.2;">
+<p>where</p>
+<ul>
+<li><span class="math inline">\(\hat{D}_{\text{final},i,t}\)</span>: Final forecasted annual vaccine doses used demand for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span><br>
+</li>
+<li><span class="math inline">\(w_1, w_2, w_3\)</span>: Assigned weights for the demographic, consumption-based, and session-based</li>
+</ul>
+</div>
+</section>
+<section id="gavi-vaccine-allocation-and-renewal-tool" class="slide level2">
+<h2>Gavi Vaccine Allocation and Renewal Tool</h2>
+<ul>
+<li>Developed by <span style="color: blue;">Gavi, the Vaccine Alliance</span> to guide financial support for country immunisation programmes</li>
+<li>Used by <span style="color: blue;">national governments and Gavi</span> to estimate routine vaccine needs and determine <span style="color: blue;">multi-year funding allocations</span></li>
+<li>Applied during <span style="color: blue;">multi-year approval (MYA) and annual renewal processes</span> for Gavi-supported vaccines</li>
+<li>Focused on <span style="color: blue;">routine immunisation only</span>, using demographic forecasting to inform co-financing responsibilities and procurement planning</li>
+</ul>
+</section>
+<section id="forecasting-equation-used-in-the-tool" class="slide level2">
+<h2>Forecasting Equation Used in the Tool</h2>
+<p>For multi-dose vaccine <span class="math inline">\(i\)</span>:</p>
+<p><span class="math display">\[
+\hat{D}_{i,t} = \lceil \hat{SI}_t \times (d_i - 1) \times c_{i,t,1} \times (1 + w_i) + \hat{SI}_t \times c_{i,t,2} \times (1 + w_{i,t}) \times \left(1 + \frac{b_{i,t}}{12}\right) \rceil
+\]</span></p>
+<div style="font-size: 70%; line-height: 1.2;">
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\hat{D}_{i,t}\)</span>: Forecasted annual vaccine doses used demand for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(\hat{SI}_t\)</span>: Estimated surviving infants in year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(d_i\)</span>: Total doses required per child for vaccine <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(c_{i,t,1}\)</span>: Coverage of the first dose of vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(c_{i,t,2}\)</span>: Coverage of the last dose of vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(w_{i,t}\)</span>: Vaccine wastage rate of vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(b_{i,t}\)</span>: Buffer stock duration in months for vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span></li>
+</ul>
+</div>
+</section>
+<section id="comparison-of-forecasting-tools" class="slide level2">
+<h2>Comparison of Forecasting Tools</h2>
+<div style="max-height: 500px; overflow-y: auto; font-size: 48%;">
+<table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width:100%; text-align:center; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Tool</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Output.Variables</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Input.Variables</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Forecast.Horizon</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Time.Granularity</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Forecasting.Method</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Vaccines.Targeted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" data-grouplength="3">
+<td colspan="7" style="border-bottom: 1px solid"><strong>FSP (Forecasting and Supply Planning) Tool</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">FSP Tool – Demographic Method</td>
+<td style="text-align: left;">Forecasted vaccine doses based on population targets</td>
+<td style="text-align: left;">Population growth, birth cohort, surviving infants, wastage rate, doses per schedule</td>
+<td style="text-align: left;">3–5 years</td>
+<td style="text-align: left;">Yearly</td>
+<td style="text-align: left;">Demographic</td>
+<td style="text-align: left;">BCG, Penta, OPV, Measles, PCV, Rotavirus</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">FSP Tool – Consumption-Based Method</td>
+<td style="text-align: left;">Forecasted vaccine doses based on historical usage adjusted for stockouts</td>
+<td style="text-align: left;">Average yearly consumption, stockout days, wastage</td>
+<td style="text-align: left;">3–5 years</td>
+<td style="text-align: left;">Yearly</td>
+<td style="text-align: left;">Consumption-based</td>
+<td style="text-align: left;">BCG, Penta, OPV, Measles, PCV, Rotavirus</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">FSP Tool – Session-Based Method</td>
+<td style="text-align: left;">Forecasted vaccine doses based on planned session activity</td>
+<td style="text-align: left;">Session frequency, population per session, attendance rate</td>
+<td style="text-align: left;">3–5 years</td>
+<td style="text-align: left;">Yearly</td>
+<td style="text-align: left;">Session-based</td>
+<td style="text-align: left;">BCG, Penta, OPV, Measles, PCV, Rotavirus</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gavi Allocation and Renewal Tool</td>
+<td style="text-align: left;">Annual forecasted vaccine doses used for funding allocation</td>
+<td style="text-align: left;">Surviving infants, coverage (1st/last dose), wastage, buffer stock</td>
+<td style="text-align: left;">5 years</td>
+<td style="text-align: left;">Yearly</td>
+<td style="text-align: left;">Demographic</td>
+<td style="text-align: left;">Penta, Measles, PCV, Rotavirus</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</section>
+<section id="strengths-of-current-forecasting-tools" class="slide level2">
+<h2>Strengths of Current Forecasting Tools</h2>
+<ul>
+<li><span style="color: blue;">Fit for national planning</span>: supports budgeting and procurement.</li>
+<li><span style="color: blue;">Simple and transparent</span>: easy to use, low technical barrier.</li>
+<li><span style="color: blue;">Globally backed</span>: aligned with funders and reporting.</li>
+<li><span style="color: blue;">Standardised assumptions</span>: enables cross-country comparison.</li>
+<li><span style="color: blue;">Evolving tools</span>: FSP integration improves accuracy.</li>
+</ul>
+</section>
+<section id="limitations-of-current-forecasting-tools" class="slide level2">
+<h2>Limitations of Current Forecasting Tools</h2>
+<ul>
+<li><span style="color: blue;">Assume perfect data</span>: not realistic in low-resource settings.</li>
+<li><span style="color: blue;">Ignore uncertainty</span> in demand and supply.</li>
+<li><span style="color: blue;">National focus</span>: misses facility-level variation.</li>
+<li><span style="color: blue;">Slow updates</span>: not responsive to rapid changes.</li>
+<li><span style="color: blue;">Fixed weights</span>: not adaptive to data quality.</li>
+</ul>
+</section>
+<section id="literature-review" class="slide level2">
+<h2>Literature Review</h2>
+<div style="max-height: 500px; overflow-y: auto; font-size: 47%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Reference</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Method</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Variable</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Inputs</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Time</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Horizon</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Hierarchical</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Level</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Probabilistic</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Chiu et al. (2008)</td>
+<td style="text-align: left;">ARIMA, BPNN, ARIMAT</td>
+<td style="text-align: left;">Total annual vaccine demand</td>
+<td style="text-align: left;">Historical births, doses, wastage, CDC rules</td>
+<td style="text-align: left;">Annual</td>
+<td style="text-align: left;">1 year</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Regional</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Average error rate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kotagiri et al. (2011)</td>
+<td style="text-align: left;">Birth pop.-based model</td>
+<td style="text-align: left;">Births</td>
+<td style="text-align: left;">Early birth info</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Impact on vaccine inventory levels</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mueller et al. (2016)</td>
+<td style="text-align: left;">Pop.-based model</td>
+<td style="text-align: left;">Quantity of vaccines needed</td>
+<td style="text-align: left;">Scaled census cohort data</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">12 months</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Vaccine availability, Missed Vaccination Opportunities (MVO)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Azadi et al. (2018)</td>
+<td style="text-align: left;">Regression models</td>
+<td style="text-align: left;">Childhood immunization demand</td>
+<td style="text-align: left;">Population size, poverty, literacy, clinics</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Regional</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Not available</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cernuschi et al. (2018)</td>
+<td style="text-align: left;">Pop.-based model</td>
+<td style="text-align: left;">BCG vaccine demand</td>
+<td style="text-align: left;">UNPD forecast, EPI schedule, WHO coverage/wastage</td>
+<td style="text-align: left;">Annual</td>
+<td style="text-align: left;">14 years</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">National</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Comparison with historical procurement</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Alegado &amp; Tumibay (2020)</td>
+<td style="text-align: left;">ARIMA, MLPNN</td>
+<td style="text-align: left;">BCG vaccine demand</td>
+<td style="text-align: left;">Monthly vaccination data</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">12 months</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">RMSE, MAE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Colrain et al. (2020)</td>
+<td style="text-align: left;">Stat./Probabilistic (Binomial)</td>
+<td style="text-align: left;">Expected doses used/wastage</td>
+<td style="text-align: left;">Birth cohort, sessions, vials, discard time</td>
+<td style="text-align: left;">Annual</td>
+<td style="text-align: left;">1 year</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Wastage rate comparison, sensitivity analysis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hariharan et al. (2020)</td>
+<td style="text-align: left;">RFR</td>
+<td style="text-align: left;">Vaccine utilization</td>
+<td style="text-align: left;">Health facility data, date parts, rolling avg.</td>
+<td style="text-align: left;">Biweekly</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Forecasting error (FE), RMSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sahisnu et al. (2020)</td>
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: left;">Vaccine stock levels</td>
+<td style="text-align: left;">Stock history data</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">10 months</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">MAPE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Vinitha et al. (2024)</td>
+<td style="text-align: left;">LR, RF, GBM, SVR, LSTM, ANN</td>
+<td style="text-align: left;">Infant vaccination demand</td>
+<td style="text-align: left;">Vaccine name, district, intake date</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">RMSE, R-Square</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</section>
+<section id="literature-review-cont." class="slide level2">
+<h2>Literature Review Cont.</h2>
+<div style="max-height: 500px; overflow-y: auto; font-size: 48%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Reference</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Method</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Variable</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Inputs</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Time</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Horizon</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Hierarchical</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Level</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Probabilistic</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Alegado &amp; Tumibay (2020)</td>
+<td style="text-align: left;">ARIMA, MLPNN</td>
+<td style="text-align: left;">BCG vaccine demand</td>
+<td style="text-align: left;">Monthly vaccination data</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">12 months</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">RMSE, MAE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Colrain et al. (2020)</td>
+<td style="text-align: left;">Stat./Probabilistic (Binomial)</td>
+<td style="text-align: left;">Expected doses used/wastage</td>
+<td style="text-align: left;">Birth cohort, sessions, vials, discard time</td>
+<td style="text-align: left;">Annual</td>
+<td style="text-align: left;">1 year</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Wastage rate comparison, sensitivity analysis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hariharan et al. (2020)</td>
+<td style="text-align: left;">RFR</td>
+<td style="text-align: left;">Vaccine utilization</td>
+<td style="text-align: left;">Health facility data, date parts, rolling avg.</td>
+<td style="text-align: left;">Biweekly</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Forecasting error (FE), RMSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sahisnu et al. (2020)</td>
+<td style="text-align: left;">ARIMA</td>
+<td style="text-align: left;">Vaccine stock levels</td>
+<td style="text-align: left;">Stock history data</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">10 months</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">MAPE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vinitha et al. (2024)</td>
+<td style="text-align: left;">LR, RF, GBM, SVR, LSTM, ANN</td>
+<td style="text-align: left;">Infant vaccination demand</td>
+<td style="text-align: left;">Vaccine name, district, intake date</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">RMSE, R-Square</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-missing" class="slide level2">
+<h2>What is Missing?</h2>
+<ul>
+<li>Tools in practice mainly use <span style="color: blue;">population-based</span> forecasting.</li>
+<li>FSP tool combines methods, but <span style="color: blue;">weighting is subjective</span>.</li>
+<li>Academic models: mostly population or consumption-based, <span style="color: blue;">rarely both</span>.</li>
+<li><span style="color: blue;">No unified model</span> combining population and consumption data.</li>
+<li><span style="color: blue;">Forecasts rarely inform inventory decisions</span> in practice.</li>
+</ul>
+</section>
 <section id="what-we-want-to-achieve" class="slide level2">
 <h2>What we want to achieve?</h2>
 <div class="columns">
@@ -256,192 +780,30 @@
 <p><img data-src="images/what_is_immunisation.png" style="width:80.0%"></p>
 </div><div class="column" style="width:60%;">
 <p><br></p>
-<h3 id="high-coverage"><strong>High Coverage</strong></h3>
-<p><br></p>
+<h3 id="high-coverage-of-the-doses-administrated"><strong>High Coverage of the Doses Administrated</strong></h3>
 <p>✅ Reduce missed opportunities</p>
 <p>✅ Accounting for accurate wastage rate</p>
 <p>✅ Data-driven buffer stock</p>
 <p>✅ Forecasting + inventory integration</p>
 </div></div>
 </section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="images/outline.jpg" style="width:100.0%"></p>
-</div><div class="column" style="width:60%;">
-<p><br></p>
-<h3 id="outline-1"><span style="color: black;">Outline</span></h3>
+<section id="research-questions" class="slide level2">
+<h2>Research Questions</h2>
+<div class="fragment highlight-blue">
 <ol type="1">
-<li>Immunisation Supply Chain<br>
-</li>
-<li><span style="color: blue;">Forecasting Problem</span><br>
-</li>
-<li>Data &amp; Methodology<br>
-</li>
-<li>Model Performance Evaluation</li>
-<li>Way Forward</li>
+<li>What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting?</li>
 </ol>
-</div></div>
-</section>
-<section id="classical-approaches-in-practice" class="slide level2">
-<h2>Classical Approaches in Practice</h2>
-<style>
-table { font-size: 65%; width: 100%; }
-th, td { padding: 8px; text-align: center; }
-</style>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width:100%; font-size: 60%; text-align:center; margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Variable</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">EPI_Log</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Gavi_Tool</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">FSP_Tool</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Purpose</td>
-<td style="text-align: left;">For national immunisation schedules</td>
-<td style="text-align: left;">For funding allocations</td>
-<td style="text-align: left;">For national immunisation schedules</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Vaccines Targeted</td>
-<td style="text-align: left;">BCG, Penta, OPV, Measles, PCV, Rotavirus</td>
-<td style="text-align: left;">Penta, Measles, PCV, Rotavirus</td>
-<td style="text-align: left;">BCG, Penta, OPV, Measles, PCV, Rotavirus</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Method</td>
-<td style="text-align: left;">Demographic Forecasting</td>
-<td style="text-align: left;">Demographic Forecasting</td>
-<td style="text-align: left;">Weighted Demographic + Consumption + Session-based Forecasting</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Input Variables</td>
-<td style="text-align: left;">Population growth rate, birth cohort rate, surviving infants rate, wastage rate.</td>
-<td style="text-align: left;">Surviving infants, coverage rates, wastage rates, buffer stock.</td>
-<td style="text-align: left;">Population growth, coverage, dropout rate, historical consumption, stockouts, session frequency.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Output Variables</td>
-<td style="text-align: left;">National vaccine demand</td>
-<td style="text-align: left;">National vaccine demand</td>
-<td style="text-align: left;">National vaccine demand</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Input Data Frequency</td>
-<td style="text-align: left;">Yearly</td>
-<td style="text-align: left;">Yearly</td>
-<td style="text-align: left;">Monthly</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Forecast Horizon</td>
-<td style="text-align: left;">1 year</td>
-<td style="text-align: left;">5 years</td>
-<td style="text-align: left;">5 years</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Time Granularity</td>
-<td style="text-align: left;">Yearly</td>
-<td style="text-align: left;">Yearly</td>
-<td style="text-align: left;">Yearly</td>
-</tr>
-</tbody>
-</table>
-
-
 </div>
-</div>
-</section>
-<section id="forecasting-policies-in-practice" class="slide level2">
-<h2>Forecasting Policies in Practice</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width:100%; font-size: 80%; text-align:center; margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Feature</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">EPI_Log</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">Gavi Tool</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 51, 102, 255) !important;">FSP Tool</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Variable Wastage Rate</td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Stockouts considered</td>
-<td style="text-align: left;"><span style="color:red;">✗</span></td>
-<td style="text-align: left;"><span style="color:red;">✗</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Buffer Stock (25% of demand)</td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Variable vaccine coverage per dose</td>
-<td style="text-align: left;"><span style="color:red;">✗</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-<td style="text-align: left;"><span style="color:green;">✓</span></td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p><br></p>
-<p><span style="color:blue;">Forecasts are annual and at the national level</span></p>
-</section>
-<section id="whats-missing-from-current-approaches-in-practice" class="slide level2">
-<h2>What’s Missing from Current Approaches in Practice?</h2>
-<div style="list-style: none; padding-left: 0; font-size: 90%;">
-<p>
-<span style="color:red;">✗</span> Relies heavily on demographic estimates
-</p>
-<p>
-<span style="color:red;">✗</span> Wastage rate is fixed, not based on historical data
-</p>
-<p>
-<span style="color:red;">✗</span> Only adjusts for stockout days
-</p>
-<p>
-<span style="color:red;">✗</span> Captures observed demand, ignores missed vaccinations
-</p>
-<p>
-<span style="color:red;">✗</span> Uses generic buffer stock rates
-</p>
-<p>
-<span style="color:red;">✗</span> Includes buffer and wastage in forecasts, increasing uncertainty
-</p>
-<p>
-<span style="color:red;">✗</span> Lacks integration between forecasting and inventory management
-</p>
-</div>
-</section>
-<section id="how-can-we-do-better" class="slide level2">
-<h2>How Can We Do Better?</h2>
-<ol type="1">
-<li>Actual vaccine demand calculated as:</li>
-</ol>
-<p><span class="math display">\[
-\text{Actual Demand} = \text{Doses Administered} + \text{Missed Opportunities}
-\]</span></p>
+<div class="fragment highlight-blue">
 <ol start="2" type="1">
-<li><p>Demand forecasted using quantile regression to produce prediction intervals.</p></li>
-<li><p>Forecast integrated with a Newsvendor model to determine order quantities under uncertainty.</p></li>
+<li>How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?</li>
 </ol>
+</div>
+<div class="fragment highlight-blue">
+<ol start="3" type="1">
+<li>How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?</li>
+</ol>
+</div>
 </section>
 <section class="slide level2">
 
@@ -454,8 +816,8 @@ th, td { padding: 8px; text-align: center; }
 <ol type="1">
 <li>Immunisation Supply Chain<br>
 </li>
-<li>Forecasting Problem</li>
-<li><span style="color: blue;">Data &amp; Methodology</span><br>
+<li>(Forecasting) Problem</li>
+<li><span style="color: blue;">Methodology</span><br>
 </li>
 <li>Model Performance Evaluation</li>
 <li>Way Forward<br>
@@ -474,171 +836,41 @@ th, td { padding: 8px; text-align: center; }
 <li><strong>Penta</strong> – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib</li>
 <li><strong>OPV</strong> – oral polio vaccine</li>
 </ul></li>
-<li>306 sub-counties, 47 counties &amp; 9 regions</li>
-<li>Total: <strong>1,452 time series</strong></li>
 </ul>
 </section>
-<section id="doses-administrated-national-regions" class="slide level2">
-<h2>Doses administrated: National &amp; Regions</h2>
+<section id="doses-administrated-national" class="slide level2">
+<h2>Doses administrated: National</h2>
 
-<img data-src="images/doses_admin_regional.png" class="quarto-figure quarto-figure-center r-stretch" style="width:150.0%"></section>
-<section id="missed-vaccination-opportunities" class="slide level2">
-<h2>Missed Vaccination Opportunities</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li>At 6 weeks, infants receive <strong>Penta 1</strong>, <strong>OPV 1</strong>, <strong>PCV 1</strong>, and <strong>RV 1</strong> in a single session<br>
-</li>
-<li>In this dataset, only <strong>Penta 1</strong> and <strong>OPV 1</strong> are available<br>
-</li>
-<li>Differences in counts reveal <strong>missed vaccination opportunities</strong></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/missed_opportunities.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div><ul>
-<li>Hence,<br>
-<span style="color: blue;">Actual Demand = Doses Administrated + Missed Opportunities </span></li>
-</ul>
-</div>
-</section>
-<section id="actual-demand-national-regions" class="slide level2">
-<h2>Actual Demand: National &amp; Regions</h2>
-
-<img data-src="images/actual_vaccine_regional.png" class="quarto-figure quarto-figure-center r-stretch" style="width:150.0%"></section>
+<img data-src="images/national_doses_admin.png" class="quarto-figure quarto-figure-center r-stretch" style="width:150.0%"></section>
 <section id="forecasting-setup" class="slide level2">
 <h2>Forecasting Setup</h2>
 <ul>
-<li>Forecasting method: <span style="color: blue;">Quantile Regression using LightGBM</span></li>
+<li>Forecasting methods: <span style="color: blue;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span></li>
 <li>Forecast horizon: <span style="color: blue;">12 months</span></li>
-<li>Target: actual demand (administered + missed opportunities)</li>
-<li>Probabilistic output: <span style="color: blue;">90% prediction interval (10th, 50th, 90th quantiles)</span></li>
+<li>Target: Doses Administered</li>
 <li>Cross-sectional training across vaccines with monthly data</li>
 </ul>
-</section>
-<section id="vaccine-demand-forecasts-2019" class="slide level2">
-<h2>Vaccine Demand Forecasts (2019)</h2>
-
-<img data-src="images/forecast_output.png" class="quarto-figure quarto-figure-center r-stretch" style="width:150.0%"></section>
-<section id="inventory-integration" class="slide level2">
-<h2>Inventory Integration</h2>
-<ul>
-<li>Inventory planning is based on a <span style="color: blue;">News vendor-style model</span></li>
-<li>Balances risk of <span style="color: blue;">under-ordering</span> (missed vaccinations) and <span style="color: blue;">over-ordering</span> (wastage)</li>
-<li>Adapted to incorporate <span style="color: blue;">forecast uncertainty</span> and <span style="color: blue;">vaccine-specific wastage</span></li>
-<li>Uses <span style="color: blue;">probabilistic forecasts</span> instead of fixed demand distributions</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><br> 1. <strong>Probabilistic Forecasts</strong></p>
-<ul>
-<li>Uses 50th and 90th percentile forecasts from quantile regression</li>
-</ul>
-<p><br></p>
-<ol start="2" type="1">
-<li><strong>Wastage Adjustment</strong>
-<ul>
-<li>Adjusts median forecast using vaccine-specific wastage rates calculated from historical data <span class="math display">\[
-\text{Adjusted Demand} = \text{Forecast} \times (1 + \text{Wastage Rate})
-\]</span></li>
-</ul></li>
-</ol>
-</section>
-<section class="slide level2">
-
-<ol start="3" type="1">
-<li><p><strong>Uncertainty Buffer</strong></p>
-<ul>
-<li>Adds safety stock using the forecast spread.<br>
-</li>
-<li><strong>1.28</strong> is the z-score for an <strong>90% service level</strong></li>
-</ul>
-<p><span class="math display">\[
-\text{Uncertainty Buffer} = 1.28 \times (\text{Forecast}_{90} - \text{Forecast})
-\]</span></p></li>
-<li><p><strong>Final Order Quantity</strong><br>
-<span class="math display">\[
-\begin{align}
-\text{Order Quantity} &amp;= \text{Adjusted Demand} + \text{Uncertainty Buffer} \\\\
-                      &amp;= \text{Forecast} \times (1 + \text{Wastage Rate}) \\\\
-                      &amp;\quad + 1.28 \times (\text{Forecast}_{90} - \text{Forecast})
-\end{align}
-\]</span></p></li>
-</ol>
-</section>
-<section id="baseline-forecasting-models" class="slide level2">
-<h2>Baseline Forecasting Models</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div style="font-size: 80%">
-<p><strong>EPI_Log</strong><br>
-<span class="math display">\[
-\hat{D}_{t,v} = \left\lceil \hat{SI}_t \times d_v \times (1 + w_v) \times c \times \left(1 + \frac{b_v}{12} \right) \right\rceil
-\]</span></p>
-<p><strong>Gavi Tool</strong><br>
-<span class="math display">\[
-\hat{D}_{t,v} = \left\lceil \hat{SI}_t \times (d_v - 1) \times c_1 \times (1 + w_v) + \newline \hat{SI}_t \times c_2 \times (1 + w_v) \times \left(1 + \frac{b_v}{12} \right) + \text{Adj} \right\rceil
-\]</span></p>
-<p><strong>FSP Tool</strong><br>
-<span class="math display">\[
-D_{final} = w_1 \times D_{demographic} + w_2 \times D_{consumption} + w_3 \times D_{session}
-\]</span></p>
-</div>
-</div><div class="column" style="width:30%;">
-<div style="font-size: 65%; line-height: 1.2;">
-<p><strong>Variable Definitions</strong></p>
-<ul>
-<li><span class="math inline">\(\hat{D}_{t,v}\)</span>: Forecasted demand for vaccine <em>v</em> at time <em>t</em><br>
-</li>
-<li><span class="math inline">\(\hat{SI}_t\)</span>: Surviving infants at time <em>t</em><br>
-</li>
-<li><span class="math inline">\(d_v\)</span>: Doses per child for vaccine <em>v</em><br>
-</li>
-<li><span class="math inline">\(c\)</span>: Immunisation coverage<br>
-</li>
-<li><span class="math inline">\(c_1\)</span>, <span class="math inline">\(c_2\)</span>: First- and last-dose coverage<br>
-</li>
-<li><span class="math inline">\(w_v\)</span>: Wastage rate<br>
-</li>
-<li><span class="math inline">\(b_v\)</span>: Buffer stock (months)<br>
-</li>
-<li>Adj: Programmatic/top-level adjustment<br>
-</li>
-<li><span class="math inline">\(w_1\)</span>, <span class="math inline">\(w_2\)</span>, <span class="math inline">\(w_3\)</span>: Weights for hybrid model inputs</li>
-</ul>
-</div>
-</div></div>
 </section>
 <section id="performance-evaluation-metrics" class="slide level2">
 <h2>Performance Evaluation Metrics</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>MAPE</strong></p>
+<p><strong>Root Mean Squared Scaled Error (RMSSE):</strong></p>
 <p><span class="math display">\[
-\scriptsize
-\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{\text{Forecast}_i - \text{Actual}_i}{\text{Actual}_i} \right|
+\text{RMSSE} = \sqrt{ \text{mean}(q_j^2) }
 \]</span></p>
-<p><br></p>
-<p><strong>Service Level</strong></p>
+<p>where</p>
 <p><span class="math display">\[
-\scriptsize
-\text{Service Level} = \frac{\min(\text{Forecast},\ \text{Actual})}{\text{Actual}}
+q_j^2 = \frac{e_j^2}{\frac{1}{T-m} \sum_{t=m+1}^{T} (y_t - y_{t-m})^2}
 \]</span></p>
 </div><div class="column" style="width:50%;">
-<p><strong>Overstock Rate</strong></p>
+<p><strong>Mean Absolute Scaled Error (MASE):</strong></p>
 <p><span class="math display">\[
-\scriptsize
-\text{Overstock} = \frac{\max(0,\ \text{Forecast} - \text{Actual})}{\text{Actual}}
+\text{MASE} = \text{mean}(|q_j|)
 \]</span></p>
-<p><br></p>
-<p><strong>Understock Rate</strong><br>
-<span class="math display">\[
-\scriptsize
-\text{Understock} = \frac{\max(0,\ \text{Actual} - \text{Forecast})}{\text{Actual}}
+<p>where</p>
+<p><span class="math display">\[
+q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 \]</span></p>
 </div></div>
 </section>
@@ -653,8 +885,8 @@ D_{final} = w_1 \times D_{demographic} + w_2 \times D_{consumption} + w_3 \times
 <ol type="1">
 <li>Immunisation Supply Chain<br>
 </li>
-<li>Forecasting Problem</li>
-<li>Data &amp; Methodology<br>
+<li>(Forecasting) Problem</li>
+<li>Methodology<br>
 </li>
 <li><span style="color: blue;">Model Performance Evaluation</span></li>
 <li>Way Forward<br>
@@ -662,48 +894,52 @@ D_{final} = w_1 \times D_{demographic} + w_2 \times D_{consumption} + w_3 \times
 </ol>
 </div></div>
 </section>
-<section id="bcg-performance-metrics" class="slide level2">
-<h2>BCG – Performance Metrics</h2>
-<style>
-table { font-size: 100%; width: 100%; }
-th, td { padding: 16px; text-align: center; }
-</style>
-<p><br></p>
+<section id="performance-metrics" class="slide level2">
+<h2>Performance Metrics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="bcg">BCG</h4>
+<div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Metric</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Quantile.Regression</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">FSP.Tool</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">EPI.Log</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Model</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">MASE</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">RMSSE</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">MAPE</td>
-<td style="text-align: right;">0.181</td>
-<td style="text-align: right;">0.09</td>
-<td style="text-align: right;">0.978</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: right;">0.796465</td>
+<td style="text-align: right;">0.689527</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Overstock</td>
-<td style="text-align: right;">0.181</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.978</td>
+<td style="text-align: left;">LinearRegression</td>
+<td style="text-align: right;">0.852819</td>
+<td style="text-align: right;">0.774822</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Understock</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.09</td>
-<td style="text-align: right;">0.000</td>
+<td style="text-align: left;">SeasonalNaive</td>
+<td style="text-align: right;">0.856192</td>
+<td style="text-align: right;">0.792913</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Service Level</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">0.91</td>
-<td style="text-align: right;">1.000</td>
+<td style="text-align: left;">GBM</td>
+<td style="text-align: right;">0.866310</td>
+<td style="text-align: right;">0.751394</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AutoETS</td>
+<td style="text-align: right;">0.906216</td>
+<td style="text-align: right;">0.809989</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">2.506803</td>
+<td style="text-align: right;">1.964830</td>
 </tr>
 </tbody>
 </table>
@@ -711,50 +947,49 @@ th, td { padding: 16px; text-align: center; }
 
 </div>
 </div>
-</section>
-<section id="measlesrubella-performance-metrics" class="slide level2">
-<h2>Measles~Rubella – Performance Metrics</h2>
-<p><br></p>
+</div>
+<h4 id="penta">Penta</h4>
+<div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Metric</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Quantile.Regression</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">FSP.Tool</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">EPI.Log</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">GAVI</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Model</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">MASE</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">RMSSE</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">MAPE</td>
-<td style="text-align: right;">0.205</td>
-<td style="text-align: right;">0.066</td>
-<td style="text-align: right;">0.746</td>
-<td style="text-align: right;">635.715</td>
+<td style="text-align: left;">GBM</td>
+<td style="text-align: right;">0.671291</td>
+<td style="text-align: right;">0.603837</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Overstock</td>
-<td style="text-align: right;">0.205</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.746</td>
-<td style="text-align: right;">635.715</td>
+<td style="text-align: left;">SeasonalNaive</td>
+<td style="text-align: right;">1.212922</td>
+<td style="text-align: right;">0.957851</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Understock</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.066</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: right;">1.565548</td>
+<td style="text-align: right;">1.120036</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Service Level</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">0.934</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">1.000</td>
+<td style="text-align: left;">AutoETS</td>
+<td style="text-align: right;">1.894074</td>
+<td style="text-align: right;">1.351566</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">3.602789</td>
+<td style="text-align: right;">2.473502</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LinearRegression</td>
+<td style="text-align: right;">3.890683</td>
+<td style="text-align: right;">2.718183</td>
 </tr>
 </tbody>
 </table>
@@ -762,50 +997,50 @@ th, td { padding: 16px; text-align: center; }
 
 </div>
 </div>
-</section>
-<section id="opv-performance-metrics" class="slide level2">
-<h2>OPV – Performance Metrics</h2>
-<p><br></p>
+</div>
+</div><div class="column" style="width:50%;">
+<h4 id="measlesrubella">Measles~Rubella</h4>
+<div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Metric</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Quantile.Regression</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">FSP.Tool</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">EPI.Log</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">GAVI</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Model</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">MASE</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">RMSSE</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">MAPE</td>
-<td style="text-align: right;">0.114</td>
-<td style="text-align: right;">0.629</td>
-<td style="text-align: right;">0.261</td>
-<td style="text-align: right;">257.414</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: right;">0.676176</td>
+<td style="text-align: right;">0.630862</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Overstock</td>
-<td style="text-align: right;">0.114</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">257.414</td>
+<td style="text-align: left;">AutoETS</td>
+<td style="text-align: right;">0.743397</td>
+<td style="text-align: right;">0.742965</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Understock</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.629</td>
-<td style="text-align: right;">0.261</td>
-<td style="text-align: right;">0.000</td>
+<td style="text-align: left;">GBM</td>
+<td style="text-align: right;">0.777096</td>
+<td style="text-align: right;">0.532561</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Service Level</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">0.371</td>
-<td style="text-align: right;">0.739</td>
-<td style="text-align: right;">1.000</td>
+<td style="text-align: left;">SeasonalNaive</td>
+<td style="text-align: right;">1.127701</td>
+<td style="text-align: right;">1.204783</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LinearRegression</td>
+<td style="text-align: right;">2.799991</td>
+<td style="text-align: right;">2.391404</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">2.852494</td>
+<td style="text-align: right;">2.303965</td>
 </tr>
 </tbody>
 </table>
@@ -813,50 +1048,49 @@ th, td { padding: 16px; text-align: center; }
 
 </div>
 </div>
-</section>
-<section id="penta-performance-metrics" class="slide level2">
-<h2>Penta – Performance Metrics</h2>
-<p><br></p>
+</div>
+<h4 id="opv">OPV</h4>
+<div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Metric</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Quantile.Regression</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">FSP.Tool</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">EPI.Log</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">GAVI</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">Model</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">MASE</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: rgba(0, 39, 77, 255) !important;">RMSSE</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">MAPE</td>
-<td style="text-align: right;">0.15</td>
-<td style="text-align: right;">0.704</td>
-<td style="text-align: right;">0.257</td>
-<td style="text-align: right;">262.466</td>
+<td style="text-align: left;">GBM</td>
+<td style="text-align: right;">0.744075</td>
+<td style="text-align: right;">0.670003</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Overstock</td>
-<td style="text-align: right;">0.15</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">262.466</td>
+<td style="text-align: left;">LinearRegression</td>
+<td style="text-align: right;">0.858765</td>
+<td style="text-align: right;">0.721325</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Understock</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.704</td>
-<td style="text-align: right;">0.257</td>
-<td style="text-align: right;">0.000</td>
+<td style="text-align: left;">SeasonalNaive</td>
+<td style="text-align: right;">0.926087</td>
+<td style="text-align: right;">0.841312</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Service Level</td>
-<td style="text-align: right;">1.00</td>
-<td style="text-align: right;">0.296</td>
-<td style="text-align: right;">0.743</td>
-<td style="text-align: right;">1.000</td>
+<td style="text-align: left;">AutoARIMA</td>
+<td style="text-align: right;">1.350139</td>
+<td style="text-align: right;">1.047141</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AutoETS</td>
+<td style="text-align: right;">1.533141</td>
+<td style="text-align: right;">1.199226</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Naive</td>
+<td style="text-align: right;">2.691505</td>
+<td style="text-align: right;">2.047815</td>
 </tr>
 </tbody>
 </table>
@@ -864,6 +1098,8 @@ th, td { padding: 16px; text-align: center; }
 
 </div>
 </div>
+</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -876,8 +1112,8 @@ th, td { padding: 16px; text-align: center; }
 <ol type="1">
 <li>Immunisation Supply Chain<br>
 </li>
-<li>Forecasting Problem</li>
-<li>Data &amp; Methodology<br>
+<li>(Forecasting) Problem</li>
+<li>Methodology<br>
 </li>
 <li>Model Performance Evaluation</li>
 <li><span style="color: blue;">Way Forward</span><br>
@@ -888,9 +1124,9 @@ th, td { padding: 16px; text-align: center; }
 <section id="next-steps" class="slide level2">
 <h2>Next Steps</h2>
 <ul>
-<li><p>Expand analysis to subnational (county / sub-county) levels</p></li>
-<li><p>Include missed opportunities explicitly in demand estimates</p></li>
-<li><p>Explore other inventory policies linked to demand variability</p></li>
+<li><p>Check and address data quality issues for doses used.</p></li>
+<li><p>Combine consumption-based probabilistic forecasting with demographic features to improve vaccine demand forecasts and report evaluation results.</p></li>
+<li><p>Incorporate forecasting outputs into actionable inventory decisions.</p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -928,37 +1164,38 @@ th, td { padding: 16px; text-align: center; }
 <ol type="1">
 <li>Immunisation Supply Chain<br>
 </li>
-<li>Forecasting Problem</li>
-<li>Data &amp; Methodology<br>
+<li>(Forecasting) Problem</li>
+<li>Methodology<br>
 </li>
 <li>Model Performance Evaluation</li>
 <li>Way Forward</li>
 </ol>
 </div></div>
 
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cardiff_dl4sg_logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>© 2025 Udeshi Salgado – DL4SG, Cardiff University</p>
+<p>© 2025 Udeshi Salgado – EURO, Leeds</p>
 </div>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="euro_slides_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="euro_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="euro_slides_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="euro_slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1278,7 +1515,7 @@ th, td { padding: 16px; text-align: center; }
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/udeshisalgado\.github\.io");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

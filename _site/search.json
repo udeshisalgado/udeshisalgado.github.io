@@ -25,21 +25,14 @@
     "href": "talks.html",
     "title": "Talks & Presentations",
     "section": "",
-    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: June 11, 2025\n⏰ Time: 11:00 AM – 12:00 PM\n📍 Location: Cardiff, UK\n\n View Slides"
-  },
-  {
-    "objectID": "talks.html#month-review",
-    "href": "talks.html#month-review",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "DL4SG Research Seminar, Cardiff University\n\n📅 Date: June 11, 2025\n⏰ Time: 11:00 AM – 12:00 PM\n📍 Location: Cardiff, UK\n\n View Slides"
+    "text": "EURO Conference, Leeds\n\n📅 Date: June 24, 2025\n📍 Location: Leeds, UK\n\n View Slides"
   },
   {
     "objectID": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
     "href": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
     "title": "Talks & Presentations",
-    "section": "Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains",
-    "text": "Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains\nDL4SG Research Seminar, Cardiff University\n\n📅 Date: May 27, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides"
+    "section": "",
+    "text": "EURO Conference, Leeds\n\n📅 Date: June 24, 2025\n📍 Location: Leeds, UK\n\n View Slides"
   },
   {
     "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
@@ -49,143 +42,213 @@
     "text": "Stochastic Modelling: CTMC and Queuing Theory\nDL4SG Research Seminar, Cardiff University\n\n📅 Date: May 22, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides   GitHub Repo   Lab Activity"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#the-team",
-    "href": "slides/9months_review/9month_review.html#the-team",
-    "title": "9-Month Review",
-    "section": "The team",
-    "text": "The team\n\nStudent: Merennage Udeshi Prasangika Salgado\nSupervisor 1: Prof. Bahman Rostami-Tabar\nSupervisor 2: Dr. Thanos E Goltsos\nSupervisor 3: Dr. Xun Wang\nSupervisor 4: Dr. Geraint Palmer\nReview Panel Convenor: Danni Zhang"
+    "objectID": "slides/euro_presentation/euro_slides.html#missed-in-the-numbers",
+    "href": "slides/euro_presentation/euro_slides.html#missed-in-the-numbers",
+    "title": "Udeshi Salgado",
+    "section": "Missed in the Numbers:",
+    "text": "Missed in the Numbers:\nQuantifying Demand Gaps in Routine Immunisation\n\nUdeshi Salgado\nData Lab for Social Good Research Group  Cardiff Business School, Cardiff University, UK\n\nLead Supervisor: Professor Bahman Rostami-Tabar Co-supervisors: Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang\n\n\n2025-06-24"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#thesis-title",
-    "href": "slides/9months_review/9month_review.html#thesis-title",
-    "title": "9-Month Review",
-    "section": "Thesis title",
-    "text": "Thesis title\n \nEnhancing Global Immunisation Supply Chain: Integrating Hybrid Intelligence Models into Inventory Optimisation Considering Non-Monetary Welfare Metrics"
+    "objectID": "slides/euro_presentation/euro_slides.html#section",
+    "href": "slides/euro_presentation/euro_slides.html#section",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "Background\n\n1 in 5 children worldwide lack access to lifesaving vaccines.\nGlobally, in 2023, 14.5 million children were zero-dose.\nAn additional 6.5 million children are partially vaccinated.\nAnnually, 1.5 million children under five die from vaccine-preventable diseases.\n\nsource: WHO"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#research-problem",
-    "href": "slides/9months_review/9month_review.html#research-problem",
-    "title": "9-Month Review",
-    "section": "Research Problem",
-    "text": "Research Problem\nOur Focus\nAddressing inefficiencies in infant routine vaccine supply chains, which includes:\n\ninaccurate forecasting\nstandard wastage rates and buffer stock adjustments\nfrequent stockouts / missed vaccination opportunities\npoor integration of inventory optimisation\nthe exclusion of societal well-being metrics like DALYs and QALYs."
+    "objectID": "slides/euro_presentation/euro_slides.html#section-1",
+    "href": "slides/euro_presentation/euro_slides.html#section-1",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "What is Routine Immunisation?\n\nRegular administration of vaccines for infants, children, and adults\n\nBuilds population immunity and prevents disease\n\nImmunisation at birth is critical\n\nNewborns are highly vulnerable to severe infections\n\nDelays can lead to serious illness or death"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#research-problem-1",
-    "href": "slides/9months_review/9month_review.html#research-problem-1",
-    "title": "9-Month Review",
-    "section": "Research Problem",
-    "text": "Research Problem\nWhy?\n\nThese inefficiencies result in stockouts, wastage, and missed vaccination opportunities, contributing to the preventable deaths\n\n1 in 5 children worldwide lack access to lifesaving vaccines.\nGlobally, in 2023, 14.5 million children were zero-dose.\nAn additional 6.5 million children are partially vaccinated.\nAnnually, 1.5 million children under five die from vaccine-preventable diseases.\n\nSolving this problem can save lives, reduce healthcare inequalities, and improve the efficiency of vaccine distribution."
+    "objectID": "slides/euro_presentation/euro_slides.html#most-countries-recommended-vaccine-schedule",
+    "href": "slides/euro_presentation/euro_slides.html#most-countries-recommended-vaccine-schedule",
+    "title": "Udeshi Salgado",
+    "section": "Most Countries Recommended Vaccine Schedule",
+    "text": "Most Countries Recommended Vaccine Schedule\n\nsource: CDC"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#research-problem-2",
-    "href": "slides/9months_review/9month_review.html#research-problem-2",
-    "title": "9-Month Review",
-    "section": "Research Problem",
-    "text": "Research Problem\nWho?\n\nThe research benefits public health systems, humanitarian organizations (e.g., UNICEF, GAVI), and vulnerable populations in developing countries\nIt also provides tools and insights for policymakers, researchers, and global health initiatives."
+    "objectID": "slides/euro_presentation/euro_slides.html#section-2",
+    "href": "slides/euro_presentation/euro_slides.html#section-2",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "Why Routine Immunisation\n\nSolving the problem at the start:\n\nFewer vaccine-preventable deaths.\nLower immediate and long-term costs from illness and complications.\nReduces future social and economic burden.\n\nEach dollar spent on immunization saves $52 in low- and middle-income countries (source: CDC)"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#research-questions",
-    "href": "slides/9months_review/9month_review.html#research-questions",
-    "title": "9-Month Review",
-    "section": "Research Questions",
-    "text": "Research Questions\n\nHow can a hybrid intelligence framework combining domain-specific knowledge and consumption-based probabilistic forecasting be leveraged to improve vaccine demand forecasting across the entire supply chain in low- and middle-income countries (LMICs)?\nHow can an objective/loss function incorporating both monetary and non-monetary welfare metrics (Disability-Adjusted Life Years (DALYs), Quality-Adjusted Life Years (QALYs)) optimize vaccine inventory management to maximize fully immunized children in low- and middle-income countries (LMICs)?"
+    "objectID": "slides/euro_presentation/euro_slides.html#potential-causes",
+    "href": "slides/euro_presentation/euro_slides.html#potential-causes",
+    "title": "Udeshi Salgado",
+    "section": "Potential Causes",
+    "text": "Potential Causes\n\nVaccine hesitancy and misinformation\nGeographic inaccessibility and conflict zones\nWeak health infrastructure and limited cold-chain capacity\nSupply chain inefficiencies"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#research-questions-cont.",
-    "href": "slides/9months_review/9month_review.html#research-questions-cont.",
-    "title": "9-Month Review",
-    "section": "Research Questions Cont.",
-    "text": "Research Questions Cont.\n\n\nHow can AI-driven predictive models accurately estimate open vial wastage at the health facility level in low- and middle-income countries (LMICs)?"
+    "objectID": "slides/euro_presentation/euro_slides.html#the-routine-immunisation-supply-chain",
+    "href": "slides/euro_presentation/euro_slides.html#the-routine-immunisation-supply-chain",
+    "title": "Udeshi Salgado",
+    "section": "The Routine Immunisation Supply Chain",
+    "text": "The Routine Immunisation Supply Chain"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#research-plan",
-    "href": "slides/9months_review/9month_review.html#research-plan",
-    "title": "9-Month Review",
-    "section": "Research Plan",
-    "text": "Research Plan"
+    "objectID": "slides/euro_presentation/euro_slides.html#routine-supply-chain-inefficiencies",
+    "href": "slides/euro_presentation/euro_slides.html#routine-supply-chain-inefficiencies",
+    "title": "Udeshi Salgado",
+    "section": "Routine Supply Chain Inefficiencies",
+    "text": "Routine Supply Chain Inefficiencies\n\nInadequate infrastructure\nWeak distribution systems\nPoor data management\nInsufficient funding\nLack of trained personnel\nInaccurate/outdated forecasting"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#data-access",
-    "href": "slides/9months_review/9month_review.html#data-access",
-    "title": "9-Month Review",
-    "section": "Data Access",
-    "text": "Data Access\n\nSecured data agreement with our collaborator, John, Snow Inc (JSI), to obtain secondary data.\nThe ethical approval has been submitted for secondary data collection and it is under review.\nDocuments created for data requirement and project proposal"
+    "objectID": "slides/euro_presentation/euro_slides.html#vaccines",
+    "href": "slides/euro_presentation/euro_slides.html#vaccines",
+    "title": "Udeshi Salgado",
+    "section": "Vaccines",
+    "text": "Vaccines\n\n\n\n\n\nVial\n\n\n\n\n\nDose\n\n\n\n\n\nAdministered"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#writing-progress",
-    "href": "slides/9months_review/9month_review.html#writing-progress",
-    "title": "9-Month Review",
-    "section": "Writing Progress",
-    "text": "Writing Progress\n\nCompleted introduction chapter\nStarted working on paper one targeting work package 1. Following are completed:\n\nIntroductory Section\nLiterature Review for work package 1\n\nWritings on current forecasting approaches in practice and python automation\nAn abstract submission for EURO"
+    "objectID": "slides/euro_presentation/euro_slides.html#wastage",
+    "href": "slides/euro_presentation/euro_slides.html#wastage",
+    "title": "Udeshi Salgado",
+    "section": "Wastage",
+    "text": "Wastage\n\n\n\n\n\nOpen Vial\n\n\n\n\n\nClosed Vial"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#literature-review",
-    "href": "slides/9months_review/9month_review.html#literature-review",
-    "title": "9-Month Review",
+    "objectID": "slides/euro_presentation/euro_slides.html#what-we-want-to-forecast",
+    "href": "slides/euro_presentation/euro_slides.html#what-we-want-to-forecast",
+    "title": "Udeshi Salgado",
+    "section": "What we want to forecast?",
+    "text": "What we want to forecast?"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#what-we-want-to-forecast-1",
+    "href": "slides/euro_presentation/euro_slides.html#what-we-want-to-forecast-1",
+    "title": "Udeshi Salgado",
+    "section": "What we want to forecast?",
+    "text": "What we want to forecast?\n\n\\[\n\\text{Doses Need} \\quad = \\quad \\text{Doses administered} \\quad + \\quad \\text{Wastage}\n\\]"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#current-approaches-in-practice",
+    "href": "slides/euro_presentation/euro_slides.html#current-approaches-in-practice",
+    "title": "Udeshi Salgado",
+    "section": "Current Approaches in Practice",
+    "text": "Current Approaches in Practice\n\nCountries use a range of forecasting tools to support national immunisation planning and funding requests.\nThese tools are developed by global partners including UNICEF, Gavi, the Vaccine Alliance, and John Snow, Inc. (JSI).\nThe most common tools include:\n\nExpanded Programme on Immunisation (EPI) Log Tool (Incorporated in the FSP Tool)\nForecasting and Supply Planning (FSP) Tool\nGavi Vaccine Renewal Allocation Tool"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#forecasting-methods-in-the-fsp-tool",
+    "href": "slides/euro_presentation/euro_slides.html#forecasting-methods-in-the-fsp-tool",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Methods in the FSP Tool",
+    "text": "Forecasting Methods in the FSP Tool\nThe FSP Tool combines three estimation methods for each vaccine \\(i\\):\n1. Demographic Method\n\\[\n\\hat{D}_{\\text{demographic},i,t} = \\frac{P_t \\cdot \\text{Coverage}_{i,t} \\cdot \\text{DosesPerChild}_i}{1 - \\text{WastageRate}_{i,t}}\n\\]\n\nwhere:\n\n\\(\\hat{D}_{\\text{demographic},i,t}\\): Forecasted annual vaccine doses used demand for vaccine \\(i\\) in year \\(t\\) using demographic approach\n\n\\(P_t\\): Target population (e.g., surviving infants) in year \\(t\\)\n\n\\(\\text{Coverage}_{i,t}\\): Coverage rate for vaccine \\(i\\) in year \\(t\\)\n\n\\(\\text{DosesPerChild}_i\\): Number of doses required per child for vaccine \\(i\\)\n\n\\(\\text{WastageRate}_{i,t}\\): Expected wastage rate for vaccine \\(i\\) in year \\(t\\)"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#gavi-vaccine-allocation-and-renewal-tool",
+    "href": "slides/euro_presentation/euro_slides.html#gavi-vaccine-allocation-and-renewal-tool",
+    "title": "Udeshi Salgado",
+    "section": "Gavi Vaccine Allocation and Renewal Tool",
+    "text": "Gavi Vaccine Allocation and Renewal Tool\n\nDeveloped by Gavi, the Vaccine Alliance to guide financial support for country immunisation programmes\nUsed by national governments and Gavi to estimate routine vaccine needs and determine multi-year funding allocations\nApplied during multi-year approval (MYA) and annual renewal processes for Gavi-supported vaccines\nFocused on routine immunisation only, using demographic forecasting to inform co-financing responsibilities and procurement planning"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#forecasting-equation-used-in-the-tool",
+    "href": "slides/euro_presentation/euro_slides.html#forecasting-equation-used-in-the-tool",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Equation Used in the Tool",
+    "text": "Forecasting Equation Used in the Tool\nFor multi-dose vaccine \\(i\\):\n\\[\n\\hat{D}_{i,t} = \\lceil \\hat{SI}_t \\times (d_i - 1) \\times c_{i,t,1} \\times (1 + w_i) + \\hat{SI}_t \\times c_{i,t,2} \\times (1 + w_{i,t}) \\times \\left(1 + \\frac{b_{i,t}}{12}\\right) \\rceil\n\\]\n\nWhere:\n\n\\(\\hat{D}_{i,t}\\): Forecasted annual vaccine doses used demand for vaccine \\(i\\) in year \\(t\\)\n\\(\\hat{SI}_t\\): Estimated surviving infants in year \\(t\\)\n\\(d_i\\): Total doses required per child for vaccine \\(i\\)\n\\(c_{i,t,1}\\): Coverage of the first dose of vaccine \\(i\\) at year \\(t\\)\n\\(c_{i,t,2}\\): Coverage of the last dose of vaccine \\(i\\) at year \\(t\\)\n\\(w_{i,t}\\): Vaccine wastage rate of vaccine \\(i\\) at year \\(t\\)\n\\(b_{i,t}\\): Buffer stock duration in months for vaccine \\(i\\) at year \\(t\\)"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#comparison-of-forecasting-tools",
+    "href": "slides/euro_presentation/euro_slides.html#comparison-of-forecasting-tools",
+    "title": "Udeshi Salgado",
+    "section": "Comparison of Forecasting Tools",
+    "text": "Comparison of Forecasting Tools\n\n\n\n\nTool\nOutput.Variables\nInput.Variables\nForecast.Horizon\nTime.Granularity\nForecasting.Method\nVaccines.Targeted\n\n\n\n\nFSP (Forecasting and Supply Planning) Tool\n\n\nFSP Tool – Demographic Method\nForecasted vaccine doses based on population targets\nPopulation growth, birth cohort, surviving infants, wastage rate, doses per schedule\n3–5 years\nYearly\nDemographic\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nFSP Tool – Consumption-Based Method\nForecasted vaccine doses based on historical usage adjusted for stockouts\nAverage yearly consumption, stockout days, wastage\n3–5 years\nYearly\nConsumption-based\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nFSP Tool – Session-Based Method\nForecasted vaccine doses based on planned session activity\nSession frequency, population per session, attendance rate\n3–5 years\nYearly\nSession-based\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nGavi Allocation and Renewal Tool\nAnnual forecasted vaccine doses used for funding allocation\nSurviving infants, coverage (1st/last dose), wastage, buffer stock\n5 years\nYearly\nDemographic\nPenta, Measles, PCV, Rotavirus"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#strengths-of-current-forecasting-tools",
+    "href": "slides/euro_presentation/euro_slides.html#strengths-of-current-forecasting-tools",
+    "title": "Udeshi Salgado",
+    "section": "Strengths of Current Forecasting Tools",
+    "text": "Strengths of Current Forecasting Tools\n\nFit for national planning: supports budgeting and procurement.\nSimple and transparent: easy to use, low technical barrier.\nGlobally backed: aligned with funders and reporting.\nStandardised assumptions: enables cross-country comparison.\nEvolving tools: FSP integration improves accuracy."
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#limitations-of-current-forecasting-tools",
+    "href": "slides/euro_presentation/euro_slides.html#limitations-of-current-forecasting-tools",
+    "title": "Udeshi Salgado",
+    "section": "Limitations of Current Forecasting Tools",
+    "text": "Limitations of Current Forecasting Tools\n\nAssume perfect data: not realistic in low-resource settings.\nIgnore uncertainty in demand and supply.\nNational focus: misses facility-level variation.\nSlow updates: not responsive to rapid changes.\nFixed weights: not adaptive to data quality."
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#literature-review",
+    "href": "slides/euro_presentation/euro_slides.html#literature-review",
+    "title": "Udeshi Salgado",
     "section": "Literature Review",
     "text": "Literature Review\n\n\n\n\n\n\nReference\nMethod\nVariable\nInputs\nTime\nHorizon\nHierarchical\nLevel\nProbabilistic\nMetric\n\n\n\n\nChiu et al. (2008)\nARIMA, BPNN, ARIMAT\nTotal annual vaccine demand\nHistorical births, doses, wastage, CDC rules\nAnnual\n1 year\nYes\nRegional\nNo\nAverage error rate\n\n\nKotagiri et al. (2011)\nBirth pop.-based model\nBirths\nEarly birth info\nNA\nNA\nNo\nLocal\nNo\nImpact on vaccine inventory levels\n\n\nMueller et al. (2016)\nPop.-based model\nQuantity of vaccines needed\nScaled census cohort data\nMonthly\n12 months\nYes\nLocal\nNo\nVaccine availability, Missed Vaccination Opportunities (MVO)\n\n\nAzadi et al. (2018)\nRegression models\nChildhood immunization demand\nPopulation size, poverty, literacy, clinics\nMonthly\nNA\nNo\nRegional\nNo\nNot available\n\n\nCernuschi et al. (2018)\nPop.-based model\nBCG vaccine demand\nUNPD forecast, EPI schedule, WHO coverage/wastage\nAnnual\n14 years\nNo\nNational\nNo\nComparison with historical procurement\n\n\nAlegado & Tumibay (2020)\nARIMA, MLPNN\nBCG vaccine demand\nMonthly vaccination data\nMonthly\n12 months\nNo\nLocal\nNo\nRMSE, MAE\n\n\nColrain et al. (2020)\nStat./Probabilistic (Binomial)\nExpected doses used/wastage\nBirth cohort, sessions, vials, discard time\nAnnual\n1 year\nYes\nLocal\nYes\nWastage rate comparison, sensitivity analysis\n\n\nHariharan et al. (2020)\nRFR\nVaccine utilization\nHealth facility data, date parts, rolling avg.\nBiweekly\nNA\nNo\nLocal\nNo\nForecasting error (FE), RMSE\n\n\nSahisnu et al. (2020)\nARIMA\nVaccine stock levels\nStock history data\nMonthly\n10 months\nNo\nLocal\nNo\nMAPE\n\n\nVinitha et al. (2024)\nLR, RF, GBM, SVR, LSTM, ANN\nInfant vaccination demand\nVaccine name, district, intake date\nMonthly\nNA\nNo\nLocal\nNo\nRMSE, R-Square"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#literature-review-cont.",
-    "href": "slides/9months_review/9month_review.html#literature-review-cont.",
-    "title": "9-Month Review",
+    "objectID": "slides/euro_presentation/euro_slides.html#literature-review-cont.",
+    "href": "slides/euro_presentation/euro_slides.html#literature-review-cont.",
+    "title": "Udeshi Salgado",
     "section": "Literature Review Cont.",
     "text": "Literature Review Cont.\n\n\n\n\n\n\nReference\nMethod\nVariable\nInputs\nTime\nHorizon\nHierarchical\nLevel\nProbabilistic\nMetric\n\n\n\n\nAlegado & Tumibay (2020)\nARIMA, MLPNN\nBCG vaccine demand\nMonthly vaccination data\nMonthly\n12 months\nNo\nLocal\nNo\nRMSE, MAE\n\n\nColrain et al. (2020)\nStat./Probabilistic (Binomial)\nExpected doses used/wastage\nBirth cohort, sessions, vials, discard time\nAnnual\n1 year\nYes\nLocal\nYes\nWastage rate comparison, sensitivity analysis\n\n\nHariharan et al. (2020)\nRFR\nVaccine utilization\nHealth facility data, date parts, rolling avg.\nBiweekly\nNA\nNo\nLocal\nNo\nForecasting error (FE), RMSE\n\n\nSahisnu et al. (2020)\nARIMA\nVaccine stock levels\nStock history data\nMonthly\n10 months\nNo\nLocal\nNo\nMAPE\n\n\nVinitha et al. (2024)\nLR, RF, GBM, SVR, LSTM, ANN\nInfant vaccination demand\nVaccine name, district, intake date\nMonthly\nNA\nNo\nLocal\nNo\nRMSE, R-Square"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#current-forecasting-tools-in-practice",
-    "href": "slides/9months_review/9month_review.html#current-forecasting-tools-in-practice",
-    "title": "9-Month Review",
-    "section": "Current Forecasting Tools in Practice",
-    "text": "Current Forecasting Tools in Practice\n\n\n\n\nTool\nOutput.Variables\nInput.Variables\nForecast.Horizon\nTime.Granularity\nForecasting.Method\nVaccines.Targeted\n\n\n\n\nExpanded Programme on Immunisation (EPI) Log Tool\nAnnual forecasted vaccine doses used\nPopulation growth, birth cohort, surviving infants, wastage rate, doses per schedule, buffer stock\n3–5 years\nYearly\nDemographic\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nForecasting and Supply Planning (FSP) Tool\n\n\nFSP Tool – Demographic Method\nForecasted vaccine doses based on population targets\nPopulation growth, birth cohort, surviving infants, wastage rate, doses per schedule\n3–5 years\nYearly\nDemographic\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nFSP Tool – Consumption-Based Method\nForecasted vaccine doses based on historical usage adjusted for stockouts\nAverage monthly consumption, stockout days, wastage\n3–5 years\nYearly\nConsumption-based\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nFSP Tool – Session-Based Method\nForecasted vaccine doses based on planned session activity\nSession frequency, population per session, attendance rate\n5 years\nYearly\nSession-based\nPenta, Measles, PCV, Rotavirus\n\n\nGavi Allocation and Renewal Tool\nAnnual forecasted vaccine doses used\nSurviving infants, coverage (1st/last dose), wastage, buffer stock\n3–5 years\nYearly\nDemographic\nBCG, Penta, OPV, Measles, PCV, Rotavirus"
+    "objectID": "slides/euro_presentation/euro_slides.html#what-is-missing",
+    "href": "slides/euro_presentation/euro_slides.html#what-is-missing",
+    "title": "Udeshi Salgado",
+    "section": "What is Missing?",
+    "text": "What is Missing?\n\nTools in practice mainly use population-based forecasting.\nFSP tool combines methods, but weighting is subjective.\nAcademic models: mostly population or consumption-based, rarely both.\nNo unified model combining population and consumption data.\nForecasts rarely inform inventory decisions in practice."
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#modeling-framework-for-work-package-1",
-    "href": "slides/9months_review/9month_review.html#modeling-framework-for-work-package-1",
-    "title": "9-Month Review",
-    "section": "Modeling Framework for Work Package 1",
-    "text": "Modeling Framework for Work Package 1\n\n\n\n\n\n\n\n\n\nStage\nDescription\n\n\n\n\nI. DATA PREPARATION\nClean the vaccine consumption dataset with hierarchical structure (region, county, sub-county). Standardize vaccine names and reporting periods. Derive `doses used` and `wastage` using two methods.\n\n\nII. EXPLORATORY DATA ANALYSIS\nAnalyze seasonality, temporal continuity, and spatial variation in stock, doses administered, and wastage. Visualize patterns by vaccine type and region. Detect anomalies such as stockouts or overstocking.\n\n\nIII. FORECASTING COMPETITION\nCompare two forecasting approaches:\n- Approach A: Forecast `doses_used = stock_beginning + quantity_received - stock_end`, capturing total consumption.\n- Approach B: Forecast `doses_administered` and `wastage` separately, then sum.\nRun forecast competition including probabilistic and ML models with prediction intervals."
+    "objectID": "slides/euro_presentation/euro_slides.html#what-we-want-to-achieve",
+    "href": "slides/euro_presentation/euro_slides.html#what-we-want-to-achieve",
+    "title": "Udeshi Salgado",
+    "section": "What we want to achieve?",
+    "text": "What we want to achieve?\n\n\n\n\n\nHigh Coverage of the Doses Administrated\n✅ Reduce missed opportunities\n✅ Accounting for accurate wastage rate\n✅ Data-driven buffer stock\n✅ Forecasting + inventory integration"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#modeling-framework-for-work-package-1-cont.",
-    "href": "slides/9months_review/9month_review.html#modeling-framework-for-work-package-1-cont.",
-    "title": "9-Month Review",
-    "section": "Modeling Framework for Work Package 1 Cont.",
-    "text": "Modeling Framework for Work Package 1 Cont.\n\n\n\n\n\n\n\n\n\nStage\nDescription\n\n\n\n\nIV. ERROR METRICS AND EVALUATION\nEvaluate models using point metrics (MAE, RMSE, MASE) and probabilistic metrics (Pinball loss, WIS, coverage).\n\n\nV. HYBRIDIZATION WITH DOMAIN KNOWLEDGE\nIncorporate Domain-Specific Features: Use attributes from current tools in practice as model features.\nHuman-in-the-Loop Adjustments: Allow expert overrides and feedback loops for continuous learning.\n\n\nVI. FORECAST-TO-INVENTORY INTEGRATION\nTranslate forecasts into actionable inventory decisions using inventory policies ((s, S), min-max). Simulate effects of stockouts, overstocking, and missed vaccinations. Improve allocation strategies under uncertainty."
+    "objectID": "slides/euro_presentation/euro_slides.html#research-questions",
+    "href": "slides/euro_presentation/euro_slides.html#research-questions",
+    "title": "Udeshi Salgado",
+    "section": "Research Questions",
+    "text": "Research Questions\n\n\nWhat is the most suitable consumption-based forecasting model for routine vaccine demand forecasting?\n\n\n\n\nHow can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\n\n\nHow can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#trainings-attended-and-developments",
-    "href": "slides/9months_review/9month_review.html#trainings-attended-and-developments",
-    "title": "9-Month Review",
-    "section": "Trainings Attended and Developments",
-    "text": "Trainings Attended and Developments\n\n\n\n\n\n\nEvent\nDate\n\n\n\n\nLessons in Logistics Management for Health Commodities course\n12/10/2024\n\n\nSWORDS Autumn Meeting: Discover New Research\n15/10/2024\n\n\nGuidance on preparing for the academic job market by Doctoral Academy\n13/11/2024\n\n\nPostgraduate Funding: Considering the Alternatives (Training by the Doctoral Academy)\n20/11/2024\n\n\n“What challenges do AI Practitioners face and how can we solve them?” (webinar) organized by the OR Society\n11/12/2024\n\n\nCritical Appraisal and How to Appraise Systematic Reviews and Intervention Studies: An Introduction by Doctoral Academy\n12/12/2024\n\n\nWriters' Retreat by Doctoral Academy\n19/12/2024\n\n\nSeven Secrets of Highly Successful Researchers by Doctoral Academy\n13/01/2025\n\n\nQFT UK Chapter: Bath\n14/02/2025\n\n\nStochastic Modelling (NATCOR Workshop)\n31/03/2025 to 04/04/2025\n\n\nSeminars and trainings conducted by the DL4SG Research Group\nwithin the year"
+    "objectID": "slides/euro_presentation/euro_slides.html#data",
+    "href": "slides/euro_presentation/euro_slides.html#data",
+    "title": "Udeshi Salgado",
+    "section": "Data",
+    "text": "Data\n\nVaccine consumption data from an African country (Jan 2013 – Dec 2021)\nFour vaccines:\n\nMeasles~rubella\nBCG – for tuberculosis\nPenta – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib\nOPV – oral polio vaccine"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#trainings-delivered",
-    "href": "slides/9months_review/9month_review.html#trainings-delivered",
-    "title": "9-Month Review",
-    "section": "Trainings Delivered",
-    "text": "Trainings Delivered\nConducted the following training sessions for members of the Data Lab for Social Good (DLSG) research group:\n\nIntroduction to Python - March 3, 2025\nIntroduction to Continuous Markov Chains & Queueing Theory in Healthcare Supply Chains - May 22, 2025"
+    "objectID": "slides/euro_presentation/euro_slides.html#doses-administrated-national",
+    "href": "slides/euro_presentation/euro_slides.html#doses-administrated-national",
+    "title": "Udeshi Salgado",
+    "section": "Doses administrated: National",
+    "text": "Doses administrated: National"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#key-achievements",
-    "href": "slides/9months_review/9month_review.html#key-achievements",
-    "title": "9-Month Review",
-    "section": "Key Achievements",
-    "text": "Key Achievements\n\nPresented at DL4SG on “Optimising Sustainable, Equitable, and Efficient Routine Immunisation Supply Chains in Low- and Middle-Income Countries.”\nAbstract accepted for EURO 2025: “Enhancing Routine Immunisation Demand Forecasting: A Hybrid Probabilistic and Domain-Specific Approach.”\nReceived NATCOR bursary to attend the Stochastic Modelling course in Lancaster.\nWon the NATCOR coding challenge during the Stochastic Modelling course."
+    "objectID": "slides/euro_presentation/euro_slides.html#forecasting-setup",
+    "href": "slides/euro_presentation/euro_slides.html#forecasting-setup",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Setup",
+    "text": "Forecasting Setup\n\nForecasting methods: Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) \nForecast horizon: 12 months\nTarget: Doses Administered\nCross-sectional training across vaccines with monthly data"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#key-achievements-cont.",
-    "href": "slides/9months_review/9month_review.html#key-achievements-cont.",
-    "title": "9-Month Review",
-    "section": "Key Achievements Cont.",
-    "text": "Key Achievements Cont.\n\nDelivered a Student Spotlight talk on “Using RTSG to Support Training and Conference Participation” at the EPSRC Progress and Planning event organised by the Doctoral Academy.\nCreated my own website using Quarto"
+    "objectID": "slides/euro_presentation/euro_slides.html#performance-evaluation-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#performance-evaluation-metrics",
+    "title": "Udeshi Salgado",
+    "section": "Performance Evaluation Metrics",
+    "text": "Performance Evaluation Metrics\n\n\nRoot Mean Squared Scaled Error (RMSSE):\n\\[\n\\text{RMSSE} = \\sqrt{ \\text{mean}(q_j^2) }\n\\]\nwhere\n\\[\nq_j^2 = \\frac{e_j^2}{\\frac{1}{T-m} \\sum_{t=m+1}^{T} (y_t - y_{t-m})^2}\n\\]\n\nMean Absolute Scaled Error (MASE):\n\\[\n\\text{MASE} = \\text{mean}(|q_j|)\n\\]\nwhere\n\\[\nq_j = \\frac{e_j}{\\frac{1}{T-m} \\sum_{t=m+1}^{T} |y_t - y_{t-m}|}\n\\]"
   },
   {
-    "objectID": "slides/9months_review/9month_review.html#future-work-plan",
-    "href": "slides/9months_review/9month_review.html#future-work-plan",
-    "title": "9-Month Review",
-    "section": "Future Work Plan",
-    "text": "Future Work Plan\nResearch Activities\n\nFinalize EURO 2025 presentation and attend conference (May–June)\nComplete WP1: data analysis, draft and submit paper (May–Nov)\nObtain and incorporate secondary vaccination data (by June)\nInitiate WP2: literature review, gap analysis, and introductory chapter (Nov–Dec)\n\nWriting Milestones\n\nSubmit WP1 journal paper (by 30 Nov)\nDraft WP2 introduction and literature review chapters (by mid-Dec)"
+    "objectID": "slides/euro_presentation/euro_slides.html#performance-metrics",
+    "href": "slides/euro_presentation/euro_slides.html#performance-metrics",
+    "title": "Udeshi Salgado",
+    "section": "Performance Metrics",
+    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.796465\n0.689527\n\n\nLinearRegression\n0.852819\n0.774822\n\n\nSeasonalNaive\n0.856192\n0.792913\n\n\nGBM\n0.866310\n0.751394\n\n\nAutoETS\n0.906216\n0.809989\n\n\nNaive\n2.506803\n1.964830\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.671291\n0.603837\n\n\nSeasonalNaive\n1.212922\n0.957851\n\n\nAutoARIMA\n1.565548\n1.120036\n\n\nAutoETS\n1.894074\n1.351566\n\n\nNaive\n3.602789\n2.473502\n\n\nLinearRegression\n3.890683\n2.718183\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.676176\n0.630862\n\n\nAutoETS\n0.743397\n0.742965\n\n\nGBM\n0.777096\n0.532561\n\n\nSeasonalNaive\n1.127701\n1.204783\n\n\nLinearRegression\n2.799991\n2.391404\n\n\nNaive\n2.852494\n2.303965\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.744075\n0.670003\n\n\nLinearRegression\n0.858765\n0.721325\n\n\nSeasonalNaive\n0.926087\n0.841312\n\n\nAutoARIMA\n1.350139\n1.047141\n\n\nAutoETS\n1.533141\n1.199226\n\n\nNaive\n2.691505\n2.047815"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#next-steps",
+    "href": "slides/euro_presentation/euro_slides.html#next-steps",
+    "title": "Udeshi Salgado",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nCheck and address data quality issues for doses used.\nCombine consumption-based probabilistic forecasting with demographic features to improve vaccine demand forecasts and report evaluation results.\nIncorporate forecasting outputs into actionable inventory decisions."
   }
 ]
