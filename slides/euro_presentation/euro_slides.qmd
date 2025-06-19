@@ -721,9 +721,9 @@ $$
 library(knitr)
 library(kableExtra)
 bcg_table <- data.frame(
-  Model = c("AutoARIMA", "LinearRegression", "SeasonalNaive", "GBM", "AutoETS", "Naive"),
-  MASE = c(0.796465, 0.852819, 0.856192, 0.866310, 0.906216, 2.506803),
-  RMSSE = c(0.689527, 0.774822, 0.792913, 0.751394, 0.809989, 1.964830)
+  Model = c("GBM", "LinearRegression", "AutoARIMA", "SeasonalNaive", "AutoETS", "Naive"),
+  MASE = c(0.788761, 0.791638, 0.796465, 0.856192, 0.906216, 2.506803),
+  RMSSE = c(0.737327, 0.725550, 0.689527, 0.792913, 0.809989, 1.964830)
 )
 kable(bcg_table, format = "html", digits = 6) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
@@ -737,9 +737,9 @@ kable(bcg_table, format = "html", digits = 6) %>%
 <div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
 ```{r}
 penta_table <- data.frame(
-  Model = c("GBM", "SeasonalNaive", "AutoARIMA", "AutoETS", "Naive", "LinearRegression"),
-  MASE = c(0.671291, 1.212922, 1.565548, 1.894074, 3.602789, 3.890683),
-  RMSSE = c(0.603837, 0.957851, 1.120036, 1.351566, 2.473502, 2.718183)
+  Model = c("GBM", "SeasonalNaive", "AutoARIMA", "AutoETS", "LinearRegression", "Naive"),
+  MASE = c(0.667200, 1.212922, 1.565548, 1.894074, 3.308408, 3.602789),
+  RMSSE = c(0.600996, 0.957851, 1.120036, 1.351566, 2.299248, 2.473502)
 )
 kable(penta_table, format = "html", digits = 6) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
@@ -759,8 +759,8 @@ kable(penta_table, format = "html", digits = 6) %>%
 ```{r}
 mr_table <- data.frame(
   Model = c("AutoARIMA", "AutoETS", "GBM", "SeasonalNaive", "LinearRegression", "Naive"),
-  MASE = c(0.676176, 0.743397, 0.777096, 1.127701, 2.799991, 2.852494),
-  RMSSE = c(0.630862, 0.742965, 0.532561, 1.204783, 2.391404, 2.303965)
+  MASE = c(0.676176, 0.743397, 0.758435, 1.127701, 2.058642, 2.852494),
+  RMSSE = c(0.630862, 0.742965, 0.515121, 1.204783, 1.786717, 2.303965)
 )
 kable(mr_table, format = "html", digits = 6) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
@@ -776,8 +776,8 @@ kable(mr_table, format = "html", digits = 6) %>%
 ```{r}
 opv_table <- data.frame(
   Model = c("GBM", "LinearRegression", "SeasonalNaive", "AutoARIMA", "AutoETS", "Naive"),
-  MASE = c(0.744075, 0.858765, 0.926087, 1.350139, 1.533141, 2.691505),
-  RMSSE = c(0.670003, 0.721325, 0.841312, 1.047141, 1.199226, 2.047815)
+  MASE = c(0.775939, 0.839672, 0.926087, 1.350139, 1.533141, 2.691505),
+  RMSSE = c(0.695059, 0.711860, 0.841312, 1.047141, 1.199226, 2.047815)
 )
 kable(opv_table, format = "html", digits = 6) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
