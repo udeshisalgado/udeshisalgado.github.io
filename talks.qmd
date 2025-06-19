@@ -9,6 +9,7 @@ format: html
 ![](slides/euro_presentation/preview.png)
 
 📅 **Date:** June 24, 2025   
+⏰ **Time:** 08:30 AM – 10:00 AM  
 📍 **Location:** Leeds, UK  
 
 <p>

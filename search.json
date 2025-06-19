@@ -25,14 +25,14 @@
     "href": "talks.html",
     "title": "Talks & Presentations",
     "section": "",
-    "text": "EURO Conference, Leeds\n\n📅 Date: June 24, 2025\n📍 Location: Leeds, UK\n\n View Slides"
+    "text": "EURO Conference, Leeds\n\n📅 Date: June 24, 2025\n⏰ Time: 08:30 AM – 10:00 AM\n📍 Location: Leeds, UK\n\n View Slides"
   },
   {
     "objectID": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
     "href": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
     "title": "Talks & Presentations",
     "section": "",
-    "text": "EURO Conference, Leeds\n\n📅 Date: June 24, 2025\n📍 Location: Leeds, UK\n\n View Slides"
+    "text": "EURO Conference, Leeds\n\n📅 Date: June 24, 2025\n⏰ Time: 08:30 AM – 10:00 AM\n📍 Location: Leeds, UK\n\n View Slides"
   },
   {
     "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
@@ -242,7 +242,7 @@
     "href": "slides/euro_presentation/euro_slides.html#performance-metrics",
     "title": "Udeshi Salgado",
     "section": "Performance Metrics",
-    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.796465\n0.689527\n\n\nLinearRegression\n0.852819\n0.774822\n\n\nSeasonalNaive\n0.856192\n0.792913\n\n\nGBM\n0.866310\n0.751394\n\n\nAutoETS\n0.906216\n0.809989\n\n\nNaive\n2.506803\n1.964830\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.671291\n0.603837\n\n\nSeasonalNaive\n1.212922\n0.957851\n\n\nAutoARIMA\n1.565548\n1.120036\n\n\nAutoETS\n1.894074\n1.351566\n\n\nNaive\n3.602789\n2.473502\n\n\nLinearRegression\n3.890683\n2.718183\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.676176\n0.630862\n\n\nAutoETS\n0.743397\n0.742965\n\n\nGBM\n0.777096\n0.532561\n\n\nSeasonalNaive\n1.127701\n1.204783\n\n\nLinearRegression\n2.799991\n2.391404\n\n\nNaive\n2.852494\n2.303965\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.744075\n0.670003\n\n\nLinearRegression\n0.858765\n0.721325\n\n\nSeasonalNaive\n0.926087\n0.841312\n\n\nAutoARIMA\n1.350139\n1.047141\n\n\nAutoETS\n1.533141\n1.199226\n\n\nNaive\n2.691505\n2.047815"
+    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.788761\n0.737327\n\n\nLinearRegression\n0.791638\n0.725550\n\n\nAutoARIMA\n0.796465\n0.689527\n\n\nSeasonalNaive\n0.856192\n0.792913\n\n\nAutoETS\n0.906216\n0.809989\n\n\nNaive\n2.506803\n1.964830\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.667200\n0.600996\n\n\nSeasonalNaive\n1.212922\n0.957851\n\n\nAutoARIMA\n1.565548\n1.120036\n\n\nAutoETS\n1.894074\n1.351566\n\n\nLinearRegression\n3.308408\n2.299248\n\n\nNaive\n3.602789\n2.473502\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.676176\n0.630862\n\n\nAutoETS\n0.743397\n0.742965\n\n\nGBM\n0.758435\n0.515121\n\n\nSeasonalNaive\n1.127701\n1.204783\n\n\nLinearRegression\n2.058642\n1.786717\n\n\nNaive\n2.852494\n2.303965\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.775939\n0.695059\n\n\nLinearRegression\n0.839672\n0.711860\n\n\nSeasonalNaive\n0.926087\n0.841312\n\n\nAutoARIMA\n1.350139\n1.047141\n\n\nAutoETS\n1.533141\n1.199226\n\n\nNaive\n2.691505\n2.047815"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#next-steps",
