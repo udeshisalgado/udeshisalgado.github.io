@@ -848,7 +848,7 @@
 <li>Forecasting methods: <span style="color: blue;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span></li>
 <li>Forecast horizon: <span style="color: blue;">12 months</span></li>
 <li>Target: Doses Administered</li>
-<li>Cross-sectional training across vaccines with monthly data</li>
+<li>Cross-sectional training across vaccines with monthly data, using an <span style="color: blue;">expanding window approach</span></li>
 </ul>
 </section>
 <section id="performance-evaluation-metrics" class="slide level2">
@@ -913,33 +913,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.788761</td>
-<td style="text-align: right;">0.737327</td>
+<td style="text-align: right;">0.7888</td>
+<td style="text-align: right;">0.7373</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">0.791638</td>
-<td style="text-align: right;">0.725550</td>
+<td style="text-align: right;">0.7916</td>
+<td style="text-align: right;">0.7256</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">0.796465</td>
-<td style="text-align: right;">0.689527</td>
+<td style="text-align: right;">0.7965</td>
+<td style="text-align: right;">0.6895</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">0.856192</td>
-<td style="text-align: right;">0.792913</td>
+<td style="text-align: right;">0.8562</td>
+<td style="text-align: right;">0.7929</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">0.906216</td>
-<td style="text-align: right;">0.809989</td>
+<td style="text-align: right;">0.9062</td>
+<td style="text-align: right;">0.8100</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">2.506803</td>
-<td style="text-align: right;">1.964830</td>
+<td style="text-align: right;">2.5068</td>
+<td style="text-align: right;">1.9648</td>
 </tr>
 </tbody>
 </table>
@@ -963,33 +963,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.667200</td>
-<td style="text-align: right;">0.600996</td>
+<td style="text-align: right;">0.6672</td>
+<td style="text-align: right;">0.6010</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">1.212922</td>
-<td style="text-align: right;">0.957851</td>
+<td style="text-align: right;">1.2129</td>
+<td style="text-align: right;">0.9579</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">1.565548</td>
-<td style="text-align: right;">1.120036</td>
+<td style="text-align: right;">1.5655</td>
+<td style="text-align: right;">1.1200</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">1.894074</td>
-<td style="text-align: right;">1.351566</td>
+<td style="text-align: right;">1.8941</td>
+<td style="text-align: right;">1.3516</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">3.308408</td>
-<td style="text-align: right;">2.299248</td>
+<td style="text-align: right;">3.3084</td>
+<td style="text-align: right;">2.2992</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">3.602789</td>
-<td style="text-align: right;">2.473502</td>
+<td style="text-align: right;">3.6028</td>
+<td style="text-align: right;">2.4735</td>
 </tr>
 </tbody>
 </table>
@@ -1014,33 +1014,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">0.676176</td>
-<td style="text-align: right;">0.630862</td>
+<td style="text-align: right;">0.6762</td>
+<td style="text-align: right;">0.6309</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">0.743397</td>
-<td style="text-align: right;">0.742965</td>
+<td style="text-align: right;">0.7434</td>
+<td style="text-align: right;">0.7430</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.758435</td>
-<td style="text-align: right;">0.515121</td>
+<td style="text-align: right;">0.7524</td>
+<td style="text-align: right;">0.5111</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">1.127701</td>
-<td style="text-align: right;">1.204783</td>
+<td style="text-align: right;">1.1277</td>
+<td style="text-align: right;">1.2048</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">2.058642</td>
-<td style="text-align: right;">1.786717</td>
+<td style="text-align: right;">2.0586</td>
+<td style="text-align: right;">1.7867</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">2.852494</td>
-<td style="text-align: right;">2.303965</td>
+<td style="text-align: right;">2.8525</td>
+<td style="text-align: right;">2.3040</td>
 </tr>
 </tbody>
 </table>
@@ -1064,33 +1064,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.775939</td>
-<td style="text-align: right;">0.695059</td>
+<td style="text-align: right;">0.7529</td>
+<td style="text-align: right;">0.6783</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">0.839672</td>
-<td style="text-align: right;">0.711860</td>
+<td style="text-align: right;">0.8397</td>
+<td style="text-align: right;">0.7119</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">0.926087</td>
-<td style="text-align: right;">0.841312</td>
+<td style="text-align: right;">0.9261</td>
+<td style="text-align: right;">0.8413</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">1.350139</td>
-<td style="text-align: right;">1.047141</td>
+<td style="text-align: right;">1.3501</td>
+<td style="text-align: right;">1.0471</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">1.533141</td>
-<td style="text-align: right;">1.199226</td>
+<td style="text-align: right;">1.5331</td>
+<td style="text-align: right;">1.1992</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">2.691505</td>
-<td style="text-align: right;">2.047815</td>
+<td style="text-align: right;">2.6915</td>
+<td style="text-align: right;">2.0478</td>
 </tr>
 </tbody>
 </table>

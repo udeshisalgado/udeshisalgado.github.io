@@ -228,7 +228,7 @@
     "href": "slides/euro_presentation/euro_slides.html#forecasting-setup",
     "title": "Udeshi Salgado",
     "section": "Forecasting Setup",
-    "text": "Forecasting Setup\n\nForecasting methods: Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) \nForecast horizon: 12 months\nTarget: Doses Administered\nCross-sectional training across vaccines with monthly data"
+    "text": "Forecasting Setup\n\nForecasting methods: Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) \nForecast horizon: 12 months\nTarget: Doses Administered\nCross-sectional training across vaccines with monthly data, using an expanding window approach"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#performance-evaluation-metrics",
@@ -242,7 +242,7 @@
     "href": "slides/euro_presentation/euro_slides.html#performance-metrics",
     "title": "Udeshi Salgado",
     "section": "Performance Metrics",
-    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.788761\n0.737327\n\n\nLinearRegression\n0.791638\n0.725550\n\n\nAutoARIMA\n0.796465\n0.689527\n\n\nSeasonalNaive\n0.856192\n0.792913\n\n\nAutoETS\n0.906216\n0.809989\n\n\nNaive\n2.506803\n1.964830\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.667200\n0.600996\n\n\nSeasonalNaive\n1.212922\n0.957851\n\n\nAutoARIMA\n1.565548\n1.120036\n\n\nAutoETS\n1.894074\n1.351566\n\n\nLinearRegression\n3.308408\n2.299248\n\n\nNaive\n3.602789\n2.473502\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.676176\n0.630862\n\n\nAutoETS\n0.743397\n0.742965\n\n\nGBM\n0.758435\n0.515121\n\n\nSeasonalNaive\n1.127701\n1.204783\n\n\nLinearRegression\n2.058642\n1.786717\n\n\nNaive\n2.852494\n2.303965\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.775939\n0.695059\n\n\nLinearRegression\n0.839672\n0.711860\n\n\nSeasonalNaive\n0.926087\n0.841312\n\n\nAutoARIMA\n1.350139\n1.047141\n\n\nAutoETS\n1.533141\n1.199226\n\n\nNaive\n2.691505\n2.047815"
+    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.7888\n0.7373\n\n\nLinearRegression\n0.7916\n0.7256\n\n\nAutoARIMA\n0.7965\n0.6895\n\n\nSeasonalNaive\n0.8562\n0.7929\n\n\nAutoETS\n0.9062\n0.8100\n\n\nNaive\n2.5068\n1.9648\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.6672\n0.6010\n\n\nSeasonalNaive\n1.2129\n0.9579\n\n\nAutoARIMA\n1.5655\n1.1200\n\n\nAutoETS\n1.8941\n1.3516\n\n\nLinearRegression\n3.3084\n2.2992\n\n\nNaive\n3.6028\n2.4735\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.6762\n0.6309\n\n\nAutoETS\n0.7434\n0.7430\n\n\nGBM\n0.7524\n0.5111\n\n\nSeasonalNaive\n1.1277\n1.2048\n\n\nLinearRegression\n2.0586\n1.7867\n\n\nNaive\n2.8525\n2.3040\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.7529\n0.6783\n\n\nLinearRegression\n0.8397\n0.7119\n\n\nSeasonalNaive\n0.9261\n0.8413\n\n\nAutoARIMA\n1.3501\n1.0471\n\n\nAutoETS\n1.5331\n1.1992\n\n\nNaive\n2.6915\n2.0478"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#next-steps",
