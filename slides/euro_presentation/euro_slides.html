@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="euro_slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="euro_slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="euro_slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="euro_slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="euro_slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="euro_slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="euro_slides_files/libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.36">
 
-  <title>Udeshi Salgado – euro_slides</title>
+  <title>euro_slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="euro_slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="euro_slides_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,11 +28,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-fc50a1660a49e0b365f3020b91fa9cc4.css">
-  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="euro_slides_files/libs/revealjs/dist/theme/quarto-fc50a1660a49e0b365f3020b91fa9cc4.css">
+  <link href="euro_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="euro_slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="euro_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="euro_slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -120,10 +120,8 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<meta property="og:title" content="Udeshi Salgado">
-<meta property="og:site_name" content="Udeshi Salgado">
+  <script src="euro_slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="euro_slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -848,7 +846,7 @@
 <li>Forecasting methods: <span style="color: blue;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span></li>
 <li>Forecast horizon: <span style="color: blue;">12 months</span></li>
 <li>Target: Doses Administered</li>
-<li>Cross-sectional training across vaccines with monthly data</li>
+<li>Cross-sectional training across vaccines with monthly data, using an <span style="color: blue;">expanding window approach</span></li>
 </ul>
 </section>
 <section id="performance-evaluation-metrics" class="slide level2">
@@ -913,33 +911,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.788761</td>
-<td style="text-align: right;">0.737327</td>
+<td style="text-align: right;">0.7888</td>
+<td style="text-align: right;">0.7373</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">0.791638</td>
-<td style="text-align: right;">0.725550</td>
+<td style="text-align: right;">0.7916</td>
+<td style="text-align: right;">0.7256</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">0.796465</td>
-<td style="text-align: right;">0.689527</td>
+<td style="text-align: right;">0.7965</td>
+<td style="text-align: right;">0.6895</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">0.856192</td>
-<td style="text-align: right;">0.792913</td>
+<td style="text-align: right;">0.8562</td>
+<td style="text-align: right;">0.7929</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">0.906216</td>
-<td style="text-align: right;">0.809989</td>
+<td style="text-align: right;">0.9062</td>
+<td style="text-align: right;">0.8100</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">2.506803</td>
-<td style="text-align: right;">1.964830</td>
+<td style="text-align: right;">2.5068</td>
+<td style="text-align: right;">1.9648</td>
 </tr>
 </tbody>
 </table>
@@ -963,33 +961,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.667200</td>
-<td style="text-align: right;">0.600996</td>
+<td style="text-align: right;">0.6672</td>
+<td style="text-align: right;">0.6010</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">1.212922</td>
-<td style="text-align: right;">0.957851</td>
+<td style="text-align: right;">1.2129</td>
+<td style="text-align: right;">0.9579</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">1.565548</td>
-<td style="text-align: right;">1.120036</td>
+<td style="text-align: right;">1.5655</td>
+<td style="text-align: right;">1.1200</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">1.894074</td>
-<td style="text-align: right;">1.351566</td>
+<td style="text-align: right;">1.8941</td>
+<td style="text-align: right;">1.3516</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">3.308408</td>
-<td style="text-align: right;">2.299248</td>
+<td style="text-align: right;">3.3084</td>
+<td style="text-align: right;">2.2992</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">3.602789</td>
-<td style="text-align: right;">2.473502</td>
+<td style="text-align: right;">3.6028</td>
+<td style="text-align: right;">2.4735</td>
 </tr>
 </tbody>
 </table>
@@ -1014,33 +1012,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">0.676176</td>
-<td style="text-align: right;">0.630862</td>
+<td style="text-align: right;">0.6762</td>
+<td style="text-align: right;">0.6309</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">0.743397</td>
-<td style="text-align: right;">0.742965</td>
+<td style="text-align: right;">0.7434</td>
+<td style="text-align: right;">0.7430</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.758435</td>
-<td style="text-align: right;">0.515121</td>
+<td style="text-align: right;">0.7524</td>
+<td style="text-align: right;">0.5111</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">1.127701</td>
-<td style="text-align: right;">1.204783</td>
+<td style="text-align: right;">1.1277</td>
+<td style="text-align: right;">1.2048</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">2.058642</td>
-<td style="text-align: right;">1.786717</td>
+<td style="text-align: right;">2.0586</td>
+<td style="text-align: right;">1.7867</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">2.852494</td>
-<td style="text-align: right;">2.303965</td>
+<td style="text-align: right;">2.8525</td>
+<td style="text-align: right;">2.3040</td>
 </tr>
 </tbody>
 </table>
@@ -1064,33 +1062,33 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">GBM</td>
-<td style="text-align: right;">0.775939</td>
-<td style="text-align: right;">0.695059</td>
+<td style="text-align: right;">0.7529</td>
+<td style="text-align: right;">0.6783</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">LinearRegression</td>
-<td style="text-align: right;">0.839672</td>
-<td style="text-align: right;">0.711860</td>
+<td style="text-align: right;">0.8397</td>
+<td style="text-align: right;">0.7119</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">SeasonalNaive</td>
-<td style="text-align: right;">0.926087</td>
-<td style="text-align: right;">0.841312</td>
+<td style="text-align: right;">0.9261</td>
+<td style="text-align: right;">0.8413</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">AutoARIMA</td>
-<td style="text-align: right;">1.350139</td>
-<td style="text-align: right;">1.047141</td>
+<td style="text-align: right;">1.3501</td>
+<td style="text-align: right;">1.0471</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AutoETS</td>
-<td style="text-align: right;">1.533141</td>
-<td style="text-align: right;">1.199226</td>
+<td style="text-align: right;">1.5331</td>
+<td style="text-align: right;">1.1992</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Naive</td>
-<td style="text-align: right;">2.691505</td>
-<td style="text-align: right;">2.047815</td>
+<td style="text-align: right;">2.6915</td>
+<td style="text-align: right;">2.0478</td>
 </tr>
 </tbody>
 </table>
@@ -1172,7 +1170,6 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 </ol>
 </div></div>
 
-
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -1183,19 +1180,19 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="euro_slides_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="euro_slides_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1515,7 +1512,7 @@ q_j = \frac{e_j}{\frac{1}{T-m} \sum_{t=m+1}^{T} |y_t - y_{t-m}|}
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/udeshisalgado\.github\.io");
+          var filterRegex = new RegExp('/' + window.location.host + '/');
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

@@ -645,7 +645,7 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 - Forecasting methods:  <span style="color: blue;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span>
 - Forecast horizon:  <span style="color: blue;">12 months</span>
 - Target: Doses Administered
-- Cross-sectional training across vaccines with monthly data
+- Cross-sectional training across vaccines with monthly data, using an <span style="color: blue;">expanding window approach</span> 
 
 
 ## Performance Evaluation Metrics
@@ -722,14 +722,13 @@ library(knitr)
 library(kableExtra)
 bcg_table <- data.frame(
   Model = c("GBM", "LinearRegression", "AutoARIMA", "SeasonalNaive", "AutoETS", "Naive"),
-  MASE = c(0.788761, 0.791638, 0.796465, 0.856192, 0.906216, 2.506803),
-  RMSSE = c(0.737327, 0.725550, 0.689527, 0.792913, 0.809989, 1.964830)
+  MASE = c(0.7888, 0.7916, 0.7965, 0.8562, 0.9062, 2.5068),
+  RMSSE = c(0.7373, 0.7256, 0.6895, 0.7929, 0.8100, 1.9648)
 )
-kable(bcg_table, format = "html", digits = 6) %>%
+kable(bcg_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
   row_spec(0, background = "#00274D", color = "white")
 ```
-
 </div>
 
 #### Penta
@@ -738,18 +737,16 @@ kable(bcg_table, format = "html", digits = 6) %>%
 ```{r}
 penta_table <- data.frame(
   Model = c("GBM", "SeasonalNaive", "AutoARIMA", "AutoETS", "LinearRegression", "Naive"),
-  MASE = c(0.667200, 1.212922, 1.565548, 1.894074, 3.308408, 3.602789),
-  RMSSE = c(0.600996, 0.957851, 1.120036, 1.351566, 2.299248, 2.473502)
+  MASE = c(0.6672, 1.2129, 1.5655, 1.8941, 3.3084, 3.6028),
+  RMSSE = c(0.6010, 0.9579, 1.1200, 1.3516, 2.2992, 2.4735)
 )
-kable(penta_table, format = "html", digits = 6) %>%
+kable(penta_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
   row_spec(0, background = "#00274D", color = "white")
 ```
-
 </div>
 
 :::
-
 
 ::: {.column width="50%"}
 #### Measles~Rubella
@@ -759,14 +756,13 @@ kable(penta_table, format = "html", digits = 6) %>%
 ```{r}
 mr_table <- data.frame(
   Model = c("AutoARIMA", "AutoETS", "GBM", "SeasonalNaive", "LinearRegression", "Naive"),
-  MASE = c(0.676176, 0.743397, 0.758435, 1.127701, 2.058642, 2.852494),
-  RMSSE = c(0.630862, 0.742965, 0.515121, 1.204783, 1.786717, 2.303965)
+  MASE = c(0.6762, 0.7434, 0.7524, 1.1277, 2.0586, 2.8525),
+  RMSSE = c(0.6309, 0.7430, 0.5111, 1.2048, 1.7867, 2.3040)
 )
-kable(mr_table, format = "html", digits = 6) %>%
+kable(mr_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
   row_spec(0, background = "#00274D", color = "white")
 ```
-
 </div>
 
 #### OPV
@@ -776,14 +772,13 @@ kable(mr_table, format = "html", digits = 6) %>%
 ```{r}
 opv_table <- data.frame(
   Model = c("GBM", "LinearRegression", "SeasonalNaive", "AutoARIMA", "AutoETS", "Naive"),
-  MASE = c(0.775939, 0.839672, 0.926087, 1.350139, 1.533141, 2.691505),
-  RMSSE = c(0.695059, 0.711860, 0.841312, 1.047141, 1.199226, 2.047815)
+  MASE = c(0.7529, 0.8397, 0.9261, 1.3501, 1.5331, 2.6915),
+  RMSSE = c(0.6783, 0.7119, 0.8413, 1.0471, 1.1992, 2.0478)
 )
-kable(opv_table, format = "html", digits = 6) %>%
+kable(opv_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
   row_spec(0, background = "#00274D", color = "white")
 ```
-
 </div>
 :::
 
