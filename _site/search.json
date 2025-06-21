@@ -207,7 +207,14 @@
     "href": "slides/euro_presentation/euro_slides.html#research-questions",
     "title": "Udeshi Salgado",
     "section": "Research Questions",
-    "text": "Research Questions\n\n\nWhat is the most suitable consumption-based forecasting model for routine vaccine demand forecasting?\n\n\n\n\nHow can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\n\n\nHow can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
+    "text": "Research Questions\n\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?\n\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#research-questions-1",
+    "href": "slides/euro_presentation/euro_slides.html#research-questions-1",
+    "title": "Udeshi Salgado",
+    "section": "Research Questions",
+    "text": "Research Questions\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#data",
@@ -215,6 +222,20 @@
     "title": "Udeshi Salgado",
     "section": "Data",
     "text": "Data\n\nVaccine consumption data from an African country (Jan 2013 – Dec 2021)\nFour vaccines:\n\nMeasles~rubella\nBCG – for tuberculosis\nPenta – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib\nOPV – oral polio vaccine"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#data-structure",
+    "href": "slides/euro_presentation/euro_slides.html#data-structure",
+    "title": "Udeshi Salgado",
+    "section": "Data Structure",
+    "text": "Data Structure"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#doses-administrated-national-and-regional",
+    "href": "slides/euro_presentation/euro_slides.html#doses-administrated-national-and-regional",
+    "title": "Udeshi Salgado",
+    "section": "Doses administrated: National and Regional",
+    "text": "Doses administrated: National and Regional"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#doses-administrated-national",
@@ -242,13 +263,20 @@
     "href": "slides/euro_presentation/euro_slides.html#performance-metrics",
     "title": "Udeshi Salgado",
     "section": "Performance Metrics",
-    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.7888\n0.7373\n\n\nLinearRegression\n0.7916\n0.7256\n\n\nAutoARIMA\n0.7965\n0.6895\n\n\nSeasonalNaive\n0.8562\n0.7929\n\n\nAutoETS\n0.9062\n0.8100\n\n\nNaive\n2.5068\n1.9648\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.6672\n0.6010\n\n\nSeasonalNaive\n1.2129\n0.9579\n\n\nAutoARIMA\n1.5655\n1.1200\n\n\nAutoETS\n1.8941\n1.3516\n\n\nLinearRegression\n3.3084\n2.2992\n\n\nNaive\n3.6028\n2.4735\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.6762\n0.6309\n\n\nAutoETS\n0.7434\n0.7430\n\n\nGBM\n0.7524\n0.5111\n\n\nSeasonalNaive\n1.1277\n1.2048\n\n\nLinearRegression\n2.0586\n1.7867\n\n\nNaive\n2.8525\n2.3040\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.7529\n0.6783\n\n\nLinearRegression\n0.8397\n0.7119\n\n\nSeasonalNaive\n0.9261\n0.8413\n\n\nAutoARIMA\n1.3501\n1.0471\n\n\nAutoETS\n1.5331\n1.1992\n\n\nNaive\n2.6915\n2.0478"
+    "text": "Performance Metrics\n\n\nBCG\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.7479\n0.5460\n\n\nLinearRegression\n0.7649\n0.5584\n\n\nGBM\n0.7888\n0.5556\n\n\nSeasonalNaive\n0.8105\n0.5916\n\n\nAutoETS\n0.8651\n0.6315\n\n\n\n\n\n\n\n\nPenta\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.6672\n0.5046\n\n\nSeasonalNaive\n1.0888\n0.6681\n\n\nAutoARIMA\n1.4564\n0.8937\n\n\nAutoETS\n1.8076\n1.1092\n\n\nLinearRegression\n2.8568\n1.7530\n\n\n\n\n\n\n\n\n\nMeasles~Rubella\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nAutoARIMA\n0.6762\n0.5235\n\n\nAutoETS\n0.7434\n0.5756\n\n\nGBM\n0.7562\n0.4385\n\n\nSeasonalNaive\n1.1277\n0.8731\n\n\nLinearRegression\n2.0586\n1.5939\n\n\n\n\n\n\n\n\nOPV\n\n\n\n\n\n\nModel\nMASE\nRMSSE\n\n\n\n\nGBM\n0.7442\n0.5609\n\n\nLinearRegression\n0.8162\n0.5696\n\n\nSeasonalNaive\n0.8791\n0.6135\n\n\nAutoARIMA\n1.2962\n0.9046\n\n\nAutoETS\n1.4534\n1.0143"
+  },
+  {
+    "objectID": "slides/euro_presentation/euro_slides.html#model-performance-over-forecast-horizon",
+    "href": "slides/euro_presentation/euro_slides.html#model-performance-over-forecast-horizon",
+    "title": "Udeshi Salgado",
+    "section": "Model Performance Over Forecast Horizon",
+    "text": "Model Performance Over Forecast Horizon"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#next-steps",
     "href": "slides/euro_presentation/euro_slides.html#next-steps",
     "title": "Udeshi Salgado",
     "section": "Next Steps",
-    "text": "Next Steps\n\nCheck and address data quality issues for doses used.\nCombine consumption-based probabilistic forecasting with demographic features to improve vaccine demand forecasts and report evaluation results.\nIncorporate forecasting outputs into actionable inventory decisions."
+    "text": "Next Steps"
   }
 ]

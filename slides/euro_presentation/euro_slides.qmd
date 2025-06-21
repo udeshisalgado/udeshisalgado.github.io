@@ -55,7 +55,7 @@ _Cardiff Business School, Cardiff University, UK_
 
 ### <span style="color: black;">Outline</span>
 
-1. <span style="color: blue;">Immunisation Supply Chain</span>   
+1. <span style="color: #FF4500;">Immunisation Supply Chain</span>   
 2. (Forecasting) Problem 
 3. Methodology  
 4. Model Performance Evaluation 
@@ -77,10 +77,10 @@ _Cardiff Business School, Cardiff University, UK_
 
 ### Background
 
-- <span style="color: blue;">1 in 5 children</span>  worldwide lack access to lifesaving vaccines.
-- Globally, in 2023, <span style="color: blue;">14.5 million children were zero-dose.</span> 
-- An additional <span style="color: blue;">6.5 million children are partially vaccinated.</span> 
-- Annually, <span style="color: blue;">1.5 million children under five die</span>  from vaccine-preventable diseases.
+- <span style="color: #FF4500;">1 in 5 children</span>  worldwide lack access to lifesaving vaccines.
+- Globally, in 2023, <span style="color: #FF4500;">14.5 million children were zero-dose.</span> 
+- An additional <span style="color: #FF4500;">6.5 million children are partially vaccinated.</span> 
+- Annually, <span style="color: #FF4500;">1.5 million children under five die</span>  from vaccine-preventable diseases.
 
 *source: [WHO](https://www.who.int/news-room/fact-sheets/detail/immunization-coverage)*
 
@@ -101,9 +101,9 @@ _Cardiff Business School, Cardiff University, UK_
 
 ### What is Routine Immunisation?
 
-- <span style="color: blue;">Regular administration of vaccines</span>  for infants, children, and adults  
+- <span style="color: #FF4500;">Regular administration of vaccines</span>  for infants, children, and adults  
 - Builds population immunity and prevents disease  
-- <span style="color: blue;">Immunisation at birth is critical</span> 
+- <span style="color: #FF4500;">Immunisation at birth is critical</span> 
   - Newborns are highly vulnerable to severe infections  
   - Delays can lead to serious illness or death
 
@@ -137,7 +137,7 @@ _Cardiff Business School, Cardiff University, UK_
     - Fewer vaccine-preventable deaths.
     - Lower immediate and long-term costs from illness and complications.
     - Reduces future social and economic burden.
-- <span style="color: blue;">Each dollar spent on immunization saves $52</span> in low- and middle-income countries (source: [CDC](https://www.cdc.gov/global-immunization/fast-facts/index.html))
+- <span style="color: #FF4500;">Each dollar spent on immunization saves $52</span> in low- and middle-income countries (source: [CDC](https://www.cdc.gov/global-immunization/fast-facts/index.html))
 
 :::
 
@@ -148,7 +148,7 @@ _Cardiff Business School, Cardiff University, UK_
 - Vaccine hesitancy and misinformation
 - Geographic inaccessibility and conflict zones
 - Weak health infrastructure and limited cold-chain capacity
-- <span style="color: blue;">Supply chain inefficiencies</span>
+- <span style="color: #FF4500;">Supply chain inefficiencies</span>
 
 
 ## The Routine Immunisation Supply Chain
@@ -163,7 +163,7 @@ _Cardiff Business School, Cardiff University, UK_
 - Poor data management
 - Insufficient funding
 - Lack of trained personnel
-- <span style="color: blue;">Inaccurate/outdated forecasting</span> 
+- <span style="color: #FF4500;">Inaccurate/outdated forecasting</span> 
 
 
 
@@ -181,7 +181,7 @@ _Cardiff Business School, Cardiff University, UK_
 ### <span style="color: black;">Outline</span>
 
 1. Immunisation Supply Chain  
-2. <span style="color: blue;">(Forecasting) Problem</span>  
+2. <span style="color: #FF4500;">(Forecasting) Problem</span>  
 3. Methodology  
 4. Model Performance Evaluation 
 5. Way Forward  
@@ -244,7 +244,7 @@ _Cardiff Business School, Cardiff University, UK_
 ##  What we want to forecast? {auto-animate=true}
 
 
-::: {style="margin-top: 200px; font-size: 1.2em; color: blue;"}
+::: {style="margin-top: 200px; font-size: 1.2em; color: #FF4500;"}
 
 
 $$
@@ -257,8 +257,8 @@ $$
 
 ## Current Approaches in Practice
 
-- Countries use a range of forecasting tools to <span style="color: blue;">support national immunisation planning and funding requests.</span> 
-- These tools are developed by global partners including <span style="color: blue;">UNICEF, Gavi, the Vaccine Alliance, and John Snow, Inc. (JSI).</span> 
+- Countries use a range of forecasting tools to <span style="color: #FF4500;">support national immunisation planning and funding requests.</span> 
+- These tools are developed by global partners including <span style="color: #FF4500;">UNICEF, Gavi, the Vaccine Alliance, and John Snow, Inc. (JSI).</span> 
 - The most common tools include:
     1. Expanded Programme on Immunisation (EPI) Log Tool (Incorporated in the FSP Tool)
     2. Forecasting and Supply Planning (FSP) Tool
@@ -268,10 +268,10 @@ $$
 
 ### FSP Tool: Forecasting and Supply Planning 
 
-- Developed by <span style="color: blue;">UNICEF</span> to enhance national capacity in vaccine forecasting and supply planning
-- Designed for <span style="color: blue;">use by national immunisation programme managers</span>  to support multi-year vaccine planning, particularly in <span style="color: blue;">low- and middle-income countries</span> 
-- <span style="color: blue;">Incorporates the older EPI Log Tool,</span>  which relied solely on demographic methods
-- Used during <span style="color: blue;">annual forecasting exercises and for multi-year planning to align supply with projected needs</span> 
+- Developed by <span style="color: #FF4500;">UNICEF</span> to enhance national capacity in vaccine forecasting and supply planning
+- Designed for <span style="color: #FF4500;">use by national immunisation programme managers</span>  to support multi-year vaccine planning, particularly in <span style="color: #FF4500;">low- and middle-income countries</span> 
+- <span style="color: #FF4500;">Incorporates the older EPI Log Tool,</span>  which relied solely on demographic methods
+- Used during <span style="color: #FF4500;">annual forecasting exercises and for multi-year planning to align supply with projected needs</span> 
 
 ---
 
@@ -357,10 +357,10 @@ where
 
 ## Gavi Vaccine Allocation and Renewal Tool
 
-- Developed by <span style="color: blue;">Gavi, the Vaccine Alliance</span> to guide financial support for country immunisation programmes
-- Used by <span style="color: blue;">national governments and Gavi</span> to estimate routine vaccine needs and determine <span style="color: blue;">multi-year funding allocations</span>
-- Applied during <span style="color: blue;">multi-year approval (MYA) and annual renewal processes</span> for Gavi-supported vaccines
-- Focused on <span style="color: blue;">routine immunisation only</span>, using demographic forecasting to inform co-financing responsibilities and procurement planning
+- Developed by <span style="color: #FF4500;">Gavi, the Vaccine Alliance</span> to guide financial support for country immunisation programmes
+- Used by <span style="color: #FF4500;">national governments and Gavi</span> to estimate routine vaccine needs and determine <span style="color: #FF4500;">multi-year funding allocations</span>
+- Applied during <span style="color: #FF4500;">multi-year approval (MYA) and annual renewal processes</span> for Gavi-supported vaccines
+- Focused on <span style="color: #FF4500;">routine immunisation only</span>, using demographic forecasting to inform co-financing responsibilities and procurement planning
 
 ## Forecasting Equation Used in the Tool
 
@@ -441,20 +441,20 @@ kable(forecast_comparison, format = "html", escape = FALSE,
 
 ## Strengths of Current Forecasting Tools
 
-- <span style="color: blue;">Fit for national planning</span>: supports budgeting and procurement.
-- <span style="color: blue;">Simple and transparent</span>: easy to use, low technical barrier.
-- <span style="color: blue;">Globally backed</span>: aligned with funders and reporting.
-- <span style="color: blue;">Standardised assumptions</span>: enables cross-country comparison.
-- <span style="color: blue;">Evolving tools</span>: FSP integration improves accuracy.
+- <span style="color: #FF4500;">Fit for national planning</span>: supports budgeting and procurement.
+- <span style="color: #FF4500;">Simple and transparent</span>: easy to use, low technical barrier.
+- <span style="color: #FF4500;">Globally backed</span>: aligned with funders and reporting.
+- <span style="color: #FF4500;">Standardised assumptions</span>: enables cross-country comparison.
+- <span style="color: #FF4500;">Evolving tools</span>: FSP integration improves accuracy.
 
 
 ## Limitations of Current Forecasting Tools
 
-- <span style="color: blue;">Assume perfect data</span>: not realistic in low-resource settings.
-- <span style="color: blue;">Ignore uncertainty</span> in demand and supply.
-- <span style="color: blue;">National focus</span>: misses facility-level variation.
-- <span style="color: blue;">Slow updates</span>: not responsive to rapid changes.
-- <span style="color: blue;">Fixed weights</span>: not adaptive to data quality.
+- <span style="color: #FF4500;">Assume perfect data</span>: not realistic in low-resource settings.
+- <span style="color: #FF4500;">Ignore uncertainty</span> in demand and supply.
+- <span style="color: #FF4500;">National focus</span>: misses facility-level variation.
+- <span style="color: #FF4500;">Slow updates</span>: not responsive to rapid changes.
+- <span style="color: #FF4500;">Fixed weights</span>: not adaptive to data quality.
 
 
 ## Literature Review
@@ -553,11 +553,11 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 
 ## What is Missing?
 
-- Tools in practice mainly use <span style="color: blue;">population-based</span> forecasting.
-- FSP tool combines methods, but <span style="color: blue;">weighting is subjective</span>.
-- Academic models: mostly population or consumption-based, <span style="color: blue;">rarely both</span>.
-- <span style="color: blue;">No unified model</span> combining population and consumption data.
-- <span style="color: blue;">Forecasts rarely inform inventory decisions</span> in practice.
+- Tools in practice mainly use <span style="color: #FF4500;">population-based</span> forecasting.
+- FSP tool combines methods, but <span style="color: #FF4500;">weighting is subjective</span>.
+- Academic models: mostly population or consumption-based, <span style="color: #FF4500;">rarely both</span>.
+- <span style="color: #FF4500;">No unified model</span> combining population and consumption data.
+- <span style="color: #FF4500;">Forecasts rarely inform inventory decisions</span> in practice.
 
 
 ## What we want to achieve?
@@ -591,19 +591,32 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 :::
 
 
-## Research Questions
+## Research Questions {auto-animate=true}
 
-::: {.fragment .highlight-blue}
-1. What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting?
+::: {.fragment }
+<span style="color: #FF4500;">**RQ1:**</span> What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?
 :::
 
-::: {.fragment .highlight-blue}
-2. How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?
+::: {.fragment }
+<span style="color: #FF4500;">**RQ2:**</span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?
 :::
 
-::: {.fragment .highlight-blue}
-3. How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?
+::: {.fragment}
+<span style="color: #FF4500;">**RQ3:**</span> How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?
 :::
+
+
+## Research Questions {auto-animate=true}
+
+<span style="color: #FF4500;">**RQ1:**</span> What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?
+
+::: {.fragment .semi-fade-out}
+
+<span style="color: #FF4500;">**RQ2:**</span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?
+
+<span style="color: #FF4500;">**RQ3:**</span> How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?
+:::
+
 
 ---
 
@@ -620,7 +633,7 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 
 1. Immunisation Supply Chain  
 2. (Forecasting) Problem
-3. <span style="color: blue;">Methodology</span>    
+3. <span style="color: #FF4500;">Methodology</span>    
 4. Model Performance Evaluation 
 5. Way Forward  
 :::
@@ -631,10 +644,20 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 
 - Vaccine consumption data from an African country (Jan 2013 – Dec 2021)
 - Four vaccines:
-  - **Measles~rubella**
-  - **BCG** – for tuberculosis
-  - **Penta** – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib
-  - **OPV** – oral polio vaccine
+  - <span style="color: #FF4500;">Measles~rubella</span>
+  - <span style="color: #FF4500;">BCG</span> – for tuberculosis
+  - <span style="color: #FF4500;">Penta</span> – combination vaccine for diphtheria, tetanus, pertussis, hepatitis B, and Hib
+  - <span style="color: #FF4500;">OPV</span> – oral polio vaccine
+
+
+## Data Structure
+
+  ![](images/heirerachy.png){width=150% fig-align="center"}
+
+
+
+## Doses administrated: National and Regional 
+![](images/national_regional.png){width=150% fig-align="center"}
 
 
 ## Doses administrated: National
@@ -642,10 +665,10 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 
 ## Forecasting Setup
 
-- Forecasting methods:  <span style="color: blue;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span>
-- Forecast horizon:  <span style="color: blue;">12 months</span>
+- Forecasting methods:  <span style="color: #FF4500;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span>
+- Forecast horizon:  <span style="color: #FF4500;">12 months</span>
 - Target: Doses Administered
-- Cross-sectional training across vaccines with monthly data, using an <span style="color: blue;">expanding window approach</span> 
+- Cross-sectional training across vaccines with monthly data, using an <span style="color: #FF4500;">expanding window approach</span> 
 
 
 ## Performance Evaluation Metrics
@@ -704,7 +727,7 @@ $$
 1. Immunisation Supply Chain  
 2. (Forecasting) Problem
 3. Methodology    
-4. <span style="color: blue;">Model Performance Evaluation</span> 
+4. <span style="color: #FF4500;">Model Performance Evaluation</span> 
 5. Way Forward  
 :::
 
@@ -721,13 +744,14 @@ $$
 library(knitr)
 library(kableExtra)
 bcg_table <- data.frame(
-  Model = c("GBM", "LinearRegression", "AutoARIMA", "SeasonalNaive", "AutoETS", "Naive"),
-  MASE = c(0.7888, 0.7916, 0.7965, 0.8562, 0.9062, 2.5068),
-  RMSSE = c(0.7373, 0.7256, 0.6895, 0.7929, 0.8100, 1.9648)
+  Model = c("AutoARIMA", "LinearRegression", "GBM", "SeasonalNaive", "AutoETS"),
+  MASE = c(0.7479, 0.7649, 0.7888, 0.8105, 0.8651),
+  RMSSE = c(0.5460, 0.5584, 0.5556, 0.5916, 0.6315)
 )
 kable(bcg_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
-  row_spec(0, background = "#00274D", color = "white")
+  row_spec(0, background = "#00274D", color = "white") %>%
+  row_spec(3, background = "#FFF2CC") # Highlight GBM row (row 3: 1=AutoARIMA, 2=LinearRegression, 3=GBM)
 ```
 </div>
 
@@ -736,16 +760,15 @@ kable(bcg_table, format = "html", digits = 4) %>%
 <div style="max-height: 500px; overflow-y: auto; font-size: 50%;">
 ```{r}
 penta_table <- data.frame(
-  Model = c("GBM", "SeasonalNaive", "AutoARIMA", "AutoETS", "LinearRegression", "Naive"),
-  MASE = c(0.6672, 1.2129, 1.5655, 1.8941, 3.3084, 3.6028),
-  RMSSE = c(0.6010, 0.9579, 1.1200, 1.3516, 2.2992, 2.4735)
+  Model = c("GBM", "SeasonalNaive", "AutoARIMA", "AutoETS", "LinearRegression"),
+  MASE = c(0.6672, 1.0888, 1.4564, 1.8076, 2.8568),
+  RMSSE = c(0.5046, 0.6681, 0.8937, 1.1092, 1.7530)
 )
 kable(penta_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
   row_spec(0, background = "#00274D", color = "white")
 ```
 </div>
-
 :::
 
 ::: {.column width="50%"}
@@ -755,13 +778,14 @@ kable(penta_table, format = "html", digits = 4) %>%
 
 ```{r}
 mr_table <- data.frame(
-  Model = c("AutoARIMA", "AutoETS", "GBM", "SeasonalNaive", "LinearRegression", "Naive"),
-  MASE = c(0.6762, 0.7434, 0.7524, 1.1277, 2.0586, 2.8525),
-  RMSSE = c(0.6309, 0.7430, 0.5111, 1.2048, 1.7867, 2.3040)
+  Model = c("AutoARIMA", "AutoETS", "GBM", "SeasonalNaive", "LinearRegression"),
+  MASE = c(0.6762, 0.7434, 0.7562, 1.1277, 2.0586),
+  RMSSE = c(0.5235, 0.5756, 0.4385, 0.8731, 1.5939)
 )
 kable(mr_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
-  row_spec(0, background = "#00274D", color = "white")
+  row_spec(0, background = "#00274D", color = "white") %>%
+  row_spec(3, background = "#FFF2CC") # Highlight GBM row (row 3)
 ```
 </div>
 
@@ -771,9 +795,9 @@ kable(mr_table, format = "html", digits = 4) %>%
 
 ```{r}
 opv_table <- data.frame(
-  Model = c("GBM", "LinearRegression", "SeasonalNaive", "AutoARIMA", "AutoETS", "Naive"),
-  MASE = c(0.7529, 0.8397, 0.9261, 1.3501, 1.5331, 2.6915),
-  RMSSE = c(0.6783, 0.7119, 0.8413, 1.0471, 1.1992, 2.0478)
+  Model = c("GBM", "LinearRegression", "SeasonalNaive", "AutoARIMA", "AutoETS"),
+  MASE = c(0.7442, 0.8162, 0.8791, 1.2962, 1.4534),
+  RMSSE = c(0.5609, 0.5696, 0.6135, 0.9046, 1.0143)
 )
 kable(opv_table, format = "html", digits = 4) %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
@@ -783,6 +807,11 @@ kable(opv_table, format = "html", digits = 4) %>%
 :::
 
 :::
+
+
+## Model Performance Over Forecast Horizon
+
+![](images/metrics_plot.png){width=100% fig-align="center"}
 
 ---
 
@@ -801,18 +830,14 @@ kable(opv_table, format = "html", digits = 4) %>%
 2. (Forecasting) Problem
 3. Methodology  
 4. Model Performance Evaluation 
-5. <span style="color: blue;">Way Forward</span>    
+5. <span style="color: #FF4500;">Way Forward</span>    
 :::
 
 :::
 
 ## Next Steps
 
-- Check and address data quality issues for doses used.
-
-- Combine consumption-based probabilistic forecasting with demographic features to improve vaccine demand forecasts and report evaluation results.
-
-- Incorporate forecasting outputs into actionable inventory decisions.
+![](images/nextsteps.png){width=100% fig-align="center"}
 
 ---
 
