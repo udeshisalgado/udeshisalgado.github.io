@@ -144,7 +144,7 @@
     "href": "slides/euro_presentation/euro_slides.html#gavi-vaccine-allocation-and-renewal-tool",
     "title": "Udeshi Salgado",
     "section": "Gavi Vaccine Allocation and Renewal Tool",
-    "text": "Gavi Vaccine Allocation and Renewal Tool\n\nDeveloped by Gavi, the Vaccine Alliance to guide financial support for country immunisation programmes\nUsed by national governments and Gavi to estimate routine vaccine needs and determine multi-year funding allocations\nApplied during multi-year approval (MYA) and annual renewal processes for Gavi-supported vaccines\nFocused on routine immunisation only, using demographic forecasting to inform co-financing responsibilities and procurement planning"
+    "text": "Gavi Vaccine Allocation and Renewal Tool\n\nDeveloped by Gavi, the Vaccine Alliance to guide financial support for country immunisation programmes\nUsed by national governments and Gavi to estimate routine vaccine needs and determine multi-year funding allocations for Gavi-supported vaccines"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#forecasting-equation-used-in-the-tool",
@@ -159,20 +159,6 @@
     "title": "Udeshi Salgado",
     "section": "Comparison of Forecasting Tools",
     "text": "Comparison of Forecasting Tools\n\n\n\n\nTool\nOutput.Variables\nInput.Variables\nForecast.Horizon\nTime.Granularity\nForecasting.Method\nVaccines.Targeted\n\n\n\n\nFSP (Forecasting and Supply Planning) Tool\n\n\nFSP Tool – Demographic Method\nForecasted vaccine doses based on population targets\nPopulation growth, birth cohort, surviving infants, wastage rate, doses per schedule\n3–5 years\nYearly\nDemographic\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nFSP Tool – Consumption-Based Method\nForecasted vaccine doses based on historical usage adjusted for stockouts\nAverage yearly consumption, stockout days, wastage\n3–5 years\nYearly\nConsumption-based\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nFSP Tool – Session-Based Method\nForecasted vaccine doses based on planned session activity\nSession frequency, population per session, attendance rate\n3–5 years\nYearly\nSession-based\nBCG, Penta, OPV, Measles, PCV, Rotavirus\n\n\nGavi Allocation and Renewal Tool\nAnnual forecasted vaccine doses used for funding allocation\nSurviving infants, coverage (1st/last dose), wastage, buffer stock\n5 years\nYearly\nDemographic\nPenta, Measles, PCV, Rotavirus"
-  },
-  {
-    "objectID": "slides/euro_presentation/euro_slides.html#strengths-of-current-forecasting-tools",
-    "href": "slides/euro_presentation/euro_slides.html#strengths-of-current-forecasting-tools",
-    "title": "Udeshi Salgado",
-    "section": "Strengths of Current Forecasting Tools",
-    "text": "Strengths of Current Forecasting Tools\n\nFit for national planning: supports budgeting and procurement.\nSimple and transparent: easy to use, low technical barrier.\nGlobally backed: aligned with funders and reporting.\nStandardised assumptions: enables cross-country comparison.\nEvolving tools: FSP integration improves accuracy."
-  },
-  {
-    "objectID": "slides/euro_presentation/euro_slides.html#limitations-of-current-forecasting-tools",
-    "href": "slides/euro_presentation/euro_slides.html#limitations-of-current-forecasting-tools",
-    "title": "Udeshi Salgado",
-    "section": "Limitations of Current Forecasting Tools",
-    "text": "Limitations of Current Forecasting Tools\n\nAssume perfect data: not realistic in low-resource settings.\nIgnore uncertainty in demand and supply.\nNational focus: misses facility-level variation.\nSlow updates: not responsive to rapid changes.\nFixed weights: not adaptive to data quality."
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#literature-review",
@@ -207,7 +193,7 @@
     "href": "slides/euro_presentation/euro_slides.html#research-questions",
     "title": "Udeshi Salgado",
     "section": "Research Questions",
-    "text": "Research Questions\n\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?\n\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
+    "text": "Research Questions\n\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand at national level?\n\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#research-questions-1",
@@ -249,7 +235,7 @@
     "href": "slides/euro_presentation/euro_slides.html#forecasting-setup",
     "title": "Udeshi Salgado",
     "section": "Forecasting Setup",
-    "text": "Forecasting Setup\n\nForecasting methods: Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) \nForecast horizon: 12 months\nTarget: Doses Administered\nCross-sectional training across vaccines with monthly data, using an expanding window approach"
+    "text": "Forecasting Setup\n\nForecasting methods: Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) \nForecast horizon: 12 months\nTarget: Doses Administered\nCross-sectional training across vaccines with monthly data, using an expanding window approach"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#performance-evaluation-metrics",

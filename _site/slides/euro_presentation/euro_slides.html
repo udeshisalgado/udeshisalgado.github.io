@@ -338,8 +338,6 @@
 <ul>
 <li>Developed by <span style="color: #FF4500;">UNICEF</span> to enhance national capacity in vaccine forecasting and supply planning</li>
 <li>Designed for <span style="color: #FF4500;">use by national immunisation programme managers</span> to support multi-year vaccine planning, particularly in <span style="color: #FF4500;">low- and middle-income countries</span></li>
-<li><span style="color: #FF4500;">Incorporates the older EPI Log Tool,</span> which relied solely on demographic methods</li>
-<li>Used during <span style="color: #FF4500;">annual forecasting exercises and for multi-year planning to align supply with projected needs</span></li>
 </ul>
 </section>
 <section id="forecasting-methods-in-the-fsp-tool" class="slide level2">
@@ -420,9 +418,7 @@
 <h2>Gavi Vaccine Allocation and Renewal Tool</h2>
 <ul>
 <li>Developed by <span style="color: #FF4500;">Gavi, the Vaccine Alliance</span> to guide financial support for country immunisation programmes</li>
-<li>Used by <span style="color: #FF4500;">national governments and Gavi</span> to estimate routine vaccine needs and determine <span style="color: #FF4500;">multi-year funding allocations</span></li>
-<li>Applied during <span style="color: #FF4500;">multi-year approval (MYA) and annual renewal processes</span> for Gavi-supported vaccines</li>
-<li>Focused on <span style="color: #FF4500;">routine immunisation only</span>, using demographic forecasting to inform co-financing responsibilities and procurement planning</li>
+<li>Used by <span style="color: #FF4500;">national governments and Gavi</span> to estimate routine vaccine needs and determine <span style="color: #FF4500;">multi-year funding allocations for Gavi-supported vaccines</span></li>
 </ul>
 </section>
 <section id="forecasting-equation-used-in-the-tool" class="slide level2">
@@ -504,26 +500,6 @@
 
 
 </div>
-</section>
-<section id="strengths-of-current-forecasting-tools" class="slide level2">
-<h2>Strengths of Current Forecasting Tools</h2>
-<ul>
-<li><span style="color: #FF4500;">Fit for national planning</span>: supports budgeting and procurement.</li>
-<li><span style="color: #FF4500;">Simple and transparent</span>: easy to use, low technical barrier.</li>
-<li><span style="color: #FF4500;">Globally backed</span>: aligned with funders and reporting.</li>
-<li><span style="color: #FF4500;">Standardised assumptions</span>: enables cross-country comparison.</li>
-<li><span style="color: #FF4500;">Evolving tools</span>: FSP integration improves accuracy.</li>
-</ul>
-</section>
-<section id="limitations-of-current-forecasting-tools" class="slide level2">
-<h2>Limitations of Current Forecasting Tools</h2>
-<ul>
-<li><span style="color: #FF4500;">Assume perfect data</span>: not realistic in low-resource settings.</li>
-<li><span style="color: #FF4500;">Ignore uncertainty</span> in demand and supply.</li>
-<li><span style="color: #FF4500;">National focus</span>: misses facility-level variation.</li>
-<li><span style="color: #FF4500;">Slow updates</span>: not responsive to rapid changes.</li>
-<li><span style="color: #FF4500;">Fixed weights</span>: not adaptive to data quality.</li>
-</ul>
 </section>
 <section id="literature-review" class="slide level2">
 <h2>Literature Review</h2>
@@ -790,7 +766,7 @@
 <section id="research-questions" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Research Questions</h2>
 <div class="fragment">
-<p><span style="color: #FF4500;"><strong>RQ1:</strong></span> What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?</p>
+<p><span style="color: #FF4500;"><strong>RQ1:</strong></span> What is the most suitable consumption-based forecasting model for routine vaccine demand at national level?</p>
 </div>
 <div class="fragment">
 <p><span style="color: #FF4500;"><strong>RQ2:</strong></span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?</p>
@@ -855,7 +831,7 @@
 <section id="forecasting-setup" class="slide level2">
 <h2>Forecasting Setup</h2>
 <ul>
-<li>Forecasting methods: <span style="color: #FF4500;">Naive, Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span></li>
+<li>Forecasting methods: <span style="color: #FF4500;">Seasonal Naive, ARIMA, ETS, Linear Regression, Gradient Boosting (GBM, quantile regression) </span></li>
 <li>Forecast horizon: <span style="color: #FF4500;">12 months</span></li>
 <li>Target: Doses Administered</li>
 <li>Cross-sectional training across vaccines with monthly data, using an <span style="color: #FF4500;">expanding window approach</span></li>
