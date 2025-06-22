@@ -84,18 +84,18 @@
     "text": "Potential Causes\n\nVaccine hesitancy and misinformation\nGeographic inaccessibility and conflict zones\nWeak health infrastructure and limited cold-chain capacity\nSupply chain inefficiencies"
   },
   {
-    "objectID": "slides/euro_presentation/euro_slides.html#the-routine-immunisation-supply-chain",
-    "href": "slides/euro_presentation/euro_slides.html#the-routine-immunisation-supply-chain",
+    "objectID": "slides/euro_presentation/euro_slides.html#supply-chain-inefficiencies",
+    "href": "slides/euro_presentation/euro_slides.html#supply-chain-inefficiencies",
     "title": "Udeshi Salgado",
-    "section": "The Routine Immunisation Supply Chain",
-    "text": "The Routine Immunisation Supply Chain"
+    "section": "Supply Chain Inefficiencies",
+    "text": "Supply Chain Inefficiencies\n\nInadequate infrastructure\nWeak distribution systems\nPoor data management\nInsufficient funding\nLack of trained personnel\nInaccurate/outdated forecasting"
   },
   {
-    "objectID": "slides/euro_presentation/euro_slides.html#routine-supply-chain-inefficiencies",
-    "href": "slides/euro_presentation/euro_slides.html#routine-supply-chain-inefficiencies",
+    "objectID": "slides/euro_presentation/euro_slides.html#the-immunisation-supply-chain",
+    "href": "slides/euro_presentation/euro_slides.html#the-immunisation-supply-chain",
     "title": "Udeshi Salgado",
-    "section": "Routine Supply Chain Inefficiencies",
-    "text": "Routine Supply Chain Inefficiencies\n\nInadequate infrastructure\nWeak distribution systems\nPoor data management\nInsufficient funding\nLack of trained personnel\nInaccurate/outdated forecasting"
+    "section": "The Immunisation Supply Chain",
+    "text": "The Immunisation Supply Chain"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#vaccines",
@@ -137,7 +137,7 @@
     "href": "slides/euro_presentation/euro_slides.html#forecasting-methods-in-the-fsp-tool",
     "title": "Udeshi Salgado",
     "section": "Forecasting Methods in the FSP Tool",
-    "text": "Forecasting Methods in the FSP Tool\nThe FSP Tool combines three estimation methods for each vaccine \\(i\\):\n1. Demographic Method\n\\[\n\\hat{D}_{\\text{demographic},i,t} = \\frac{P_t \\cdot \\text{Coverage}_{i,t} \\cdot \\text{DosesPerChild}_i}{1 - \\text{WastageRate}_{i,t}}\n\\]\n\nwhere:\n\n\\(\\hat{D}_{\\text{demographic},i,t}\\): Forecasted annual vaccine doses used demand for vaccine \\(i\\) in year \\(t\\) using demographic approach\n\n\\(P_t\\): Target population (e.g., surviving infants) in year \\(t\\)\n\n\\(\\text{Coverage}_{i,t}\\): Coverage rate for vaccine \\(i\\) in year \\(t\\)\n\n\\(\\text{DosesPerChild}_i\\): Number of doses required per child for vaccine \\(i\\)\n\n\\(\\text{WastageRate}_{i,t}\\): Expected wastage rate for vaccine \\(i\\) in year \\(t\\)"
+    "text": "Forecasting Methods in the FSP Tool\nThe FSP Tool combines three forecasting methods for each vaccine \\(i\\):\n1. Demographic Method\n\\[\n\\hat{D}_{\\text{demographic},i,t} = \\frac{P_t \\cdot \\text{Coverage}_{i,t} \\cdot \\text{DosesPerChild}_i}{1 - \\text{WastageRate}_{i,t}}\n\\]\n\nwhere:\n\n\\(\\hat{D}_{\\text{demographic},i,t}\\): Forecasted annual vaccine doses used demand for vaccine \\(i\\) in year \\(t\\) using demographic approach\n\n\\(P_t\\): Target population (e.g., surviving infants) in year \\(t\\)\n\n\\(\\text{Coverage}_{i,t}\\): Coverage rate for vaccine \\(i\\) in year \\(t\\)\n\n\\(\\text{DosesPerChild}_i\\): Number of doses required per child for vaccine \\(i\\)\n\n\\(\\text{WastageRate}_{i,t}\\): Expected wastage rate for vaccine \\(i\\) in year \\(t\\)"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#gavi-vaccine-allocation-and-renewal-tool",

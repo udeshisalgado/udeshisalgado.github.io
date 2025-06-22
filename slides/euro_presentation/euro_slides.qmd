@@ -150,13 +150,7 @@ _Cardiff Business School, Cardiff University, UK_
 - Weak health infrastructure and limited cold-chain capacity
 - <span style="color: #FF4500;">Supply chain inefficiencies</span>
 
-
-## The Routine Immunisation Supply Chain
-
-![](images/immunisation_supply_chain.png){width=120% fig-align="right"}
-
-
-## Routine Supply Chain Inefficiencies
+## Supply Chain Inefficiencies
 
 - Inadequate infrastructure
 - Weak distribution systems
@@ -164,6 +158,11 @@ _Cardiff Business School, Cardiff University, UK_
 - Insufficient funding
 - Lack of trained personnel
 - <span style="color: #FF4500;">Inaccurate/outdated forecasting</span> 
+
+
+## The Immunisation Supply Chain
+
+![](images/immunisation_supply_chain.png){width=120% fig-align="right"}
 
 
 
@@ -270,13 +269,14 @@ $$
 
 - Developed by <span style="color: #FF4500;">UNICEF</span> to enhance national capacity in vaccine forecasting and supply planning
 - Designed for <span style="color: #FF4500;">use by national immunisation programme managers</span>  to support multi-year vaccine planning, particularly in <span style="color: #FF4500;">low- and middle-income countries</span> 
+- The FSP Tool combines three forecasting methods
 
 
 ---
 
 ## Forecasting Methods in the FSP Tool
 
-The FSP Tool combines three estimation methods for each vaccine $i$:
+The FSP Tool combines three forecasting methods for each vaccine $i$:
 
 **1. Demographic Method**  
 $$
