@@ -193,14 +193,7 @@
     "href": "slides/euro_presentation/euro_slides.html#research-questions",
     "title": "Udeshi Salgado",
     "section": "Research Questions",
-    "text": "Research Questions\n\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand at national level?\n\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
-  },
-  {
-    "objectID": "slides/euro_presentation/euro_slides.html#research-questions-1",
-    "href": "slides/euro_presentation/euro_slides.html#research-questions-1",
-    "title": "Udeshi Salgado",
-    "section": "Research Questions",
-    "text": "Research Questions\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
+    "text": "Research Questions\n\nRQ1: What is the most suitable consumption-based forecasting model for routine vaccine demand at national level?\n\n\n\nRQ2: How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?\n\n\n\n\nRQ3: How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?"
   },
   {
     "objectID": "slides/euro_presentation/euro_slides.html#data",

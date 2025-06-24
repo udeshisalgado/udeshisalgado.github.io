@@ -367,15 +367,14 @@
 
 <p><strong>2. Consumption-Based Method</strong><br>
 <span class="math display">\[
-\hat{D}_{\text{consumption},i,t} = \text{AvgYearlyIssues}_{i,t} \cdot \frac{1}{\text{StockAvailability}_{i,t}}
+\hat{D}_{\text{consumption},i,t} = \text{AvgYearlyIssues}_{i} \cdot \frac{1}{\text{StockAvailability}_{i,t}}
 \]</span></p>
 <div style="font-size: 80%; line-height: 1.2;">
 <p>where</p>
 <ul>
 <li><span class="math inline">\(\hat{D}_{\text{consumption},i,t}\)</span>: Forecasted annual vaccine doses used demand for vaccine <span class="math inline">\(i\)</span> in year <span class="math inline">\(t\)</span> based on consumption<br>
 </li>
-<li><span class="math inline">\(\text{AvgYearlyIssues}_{i,t}\)</span>: Historical average monthly vaccine issues for vaccine <span class="math inline">\(i\)</span> at year <span class="math inline">\(t\)</span><br>
-</li>
+<li><span class="math inline">\(\text{AvgYearlyIssues}_{i,t}\)</span>: Historical average yearly vaccine issues for vaccine <span class="math inline">\(i\)</span></li>
 <li><span class="math inline">\(\text{StockAvailability}_{i,t}\)</span>: Proportion of the year <span class="math inline">\(t\)</span> vaccine <span class="math inline">\(i\)</span> was available (i.e., no stockout)</li>
 </ul>
 </div>
@@ -764,24 +763,20 @@
 <p>✅ Forecasting + inventory integration</p>
 </div></div>
 </section>
-<section id="research-questions" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Research Questions</h2>
-<div class="fragment">
+<section id="research-questions" class="slide level2">
+<h2>Research Questions</h2>
+<div class="fragment" data-fragment-index="1">
 <p><span style="color: #FF4500;"><strong>RQ1:</strong></span> What is the most suitable consumption-based forecasting model for routine vaccine demand at national level?</p>
 </div>
-<div class="fragment">
+<div class="fragment semi-fade-out" data-fragment-index="4">
+<div class="fragment" data-fragment-index="2">
 <p><span style="color: #FF4500;"><strong>RQ2:</strong></span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?</p>
 </div>
-<div class="fragment">
+</div>
+<div class="fragment semi-fade-out" data-fragment-index="4">
+<div class="fragment" data-fragment-index="3">
 <p><span style="color: #FF4500;"><strong>RQ3:</strong></span> How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?</p>
 </div>
-</section>
-<section id="research-questions-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Research Questions</h2>
-<p><span style="color: #FF4500;"><strong>RQ1:</strong></span> What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?</p>
-<div class="fragment semi-fade-out">
-<p><span style="color: #FF4500;"><strong>RQ2:</strong></span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?</p>
-<p><span style="color: #FF4500;"><strong>RQ3:</strong></span> How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?</p>
 </div>
 </section>
 <section class="slide level2">

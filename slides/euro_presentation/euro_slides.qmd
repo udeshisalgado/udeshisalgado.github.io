@@ -299,7 +299,7 @@ where:
 
 **2. Consumption-Based Method**  
 $$
-\hat{D}_{\text{consumption},i,t} = \text{AvgYearlyIssues}_{i,t} \cdot \frac{1}{\text{StockAvailability}_{i,t}}
+\hat{D}_{\text{consumption},i,t} = \text{AvgYearlyIssues}_{i} \cdot \frac{1}{\text{StockAvailability}_{i,t}}
 $$  
 
 <div style="font-size: 80%; line-height: 1.2;">
@@ -307,7 +307,7 @@ $$
 where
 
 - $\hat{D}_{\text{consumption},i,t}$: Forecasted annual vaccine doses used demand for vaccine $i$ in year $t$ based on consumption  
-- $\text{AvgYearlyIssues}_{i,t}$: Historical average monthly vaccine issues for vaccine $i$ at year $t$  
+- $\text{AvgYearlyIssues}_{i,t}$: Historical average yearly vaccine issues for vaccine $i$ 
 - $\text{StockAvailability}_{i,t}$: Proportion of the year $t$ vaccine $i$ was available (i.e., no stockout)
 
 </div>
@@ -571,30 +571,25 @@ kable(forecast_table, format = "html", escape = FALSE) %>%
 :::
 
 
-## Research Questions {auto-animate=true}
+## Research Questions 
 
-::: {.fragment }
+::: {.fragment fragment-index=1}
 <span style="color: #FF4500;">**RQ1:**</span> What is the most suitable consumption-based forecasting model for routine vaccine demand at national level?
+
 :::
 
-::: {.fragment }
-<span style="color: #FF4500;">**RQ2:**</span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?
-:::
-
-::: {.fragment}
-<span style="color: #FF4500;">**RQ3:**</span> How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?
-:::
-
-
-## Research Questions {auto-animate=true}
-
-<span style="color: #FF4500;">**RQ1:**</span> What is the most suitable consumption-based forecasting model for routine vaccine demand forecasting at national level?
-
-::: {.fragment .semi-fade-out}
-
+::: {.fragment .semi-fade-out fragment-index=4}
+::: {.fragment fragment-index=2}
 <span style="color: #FF4500;">**RQ2:**</span> How can population-based features be effectively combined with consumption-based models to improve forecast accuracy and quantify uncertainty?
 
+:::
+:::
+
+::: {.fragment .semi-fade-out fragment-index=4}
+::: {.fragment fragment-index=3}
 <span style="color: #FF4500;">**RQ3:**</span> How can improved probabilistic forecasts be integrated into inventory decision-making for better vaccine supply chain management?
+
+:::
 :::
 
 
