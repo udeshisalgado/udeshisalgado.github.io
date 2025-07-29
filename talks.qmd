@@ -3,7 +3,7 @@ title: "Talks & Presentations"
 format: html
 ---
 
-## Pursuing a Fully Funded PhD in the UK: Q A Roadmap to Academic Success
+## Pursuing a Fully Funded PhD in the UK: A Roadmap to Academic Success
 *Higher Studies Webinar, USJ*  
 
 ![](slides/higher_studies_webinar/preview.png)
