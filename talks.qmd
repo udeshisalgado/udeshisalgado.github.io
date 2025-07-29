@@ -3,6 +3,21 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## Pursuing a Fully Funded PhD in the UK: Q A Roadmap to Academic Success
+*Higher Studies Webinar, USJ*  
+
+![](slides/higher_studies_webinar/preview.png)
+
+📅 **Date:** July 30, 2025   
+⏰ **Time:** 01:30 PM – 03:30 PM  
+📍 **Location:** Online 
+
+<p>
+  <a href="slides/higher_studies_webinar/higher_studies_webinar.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
 ## Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains
 *EURO Conference, Leeds*  
 
