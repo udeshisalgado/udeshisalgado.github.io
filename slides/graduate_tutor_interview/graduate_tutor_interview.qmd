@@ -1,0 +1,191 @@
+
+---
+format: 
+    revealjs:
+        toc: false
+        slideNumber: "c/t"
+        width: 1280
+        height: 720
+        controls: true
+        progress: true
+        transition: slide
+        plugins: [notes, print-pdf]
+        title-slide-attributes:
+            data-background-image: none
+            data-background-size: cover
+        theme: [default, custom.scss]
+        logo: images/cardiff_dl4sg_logo.png
+        footer: "© 2025 Udeshi Salgado – PGR Interview"
+---
+
+:::{.slide .title-slide data-background-image="images/background.png" data-background-size="cover"}
+
+
+
+## What Qualities Make a Good Tutor? 
+### Guiding students on their learning journey
+<br><br><br>
+
+**Udeshi Salgado**  
+_Data Lab for Social Good Research Group_ <br>
+_Cardiff Business School, Cardiff University, UK_  
+
+
+
+<br>
+
+2025-09-18
+
+:::
+
+
+## Knowledge & Growth
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/compass.jpeg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+#### Direction & expertise
+
+- Strong subject knowledge builds trust
+- Continuous learning keeps skills sharp
+- Reflection ensures personal growth
+
+:::
+
+:::
+
+
+## Student-Centered Learning 
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/map.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+####  Personalized routes for each student
+
+- Every learner has different starting points
+- Learning is tailored to individual pace & goals
+- Student needs define the journey
+
+:::
+
+:::
+
+## Patience & Empathy
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/path.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+####  Walking alongside the learner
+
+- Supports students at their own pace
+- Encourages without judgment
+- Builds confidence through trust
+
+:::
+
+:::
+
+
+## Flexibility & Adaptability
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/detour.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+####  Changing direction when needed
+
+- Adjusts explanations and methods
+- Uses creativity to overcome barriers
+- Flexible in response to challenges
+
+:::
+
+:::
+
+
+## Encouragement & Independence
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/destination.jpg){width=100%}
+:::
+
+::: {.column width="60%"}
+<br>
+
+####  Students reach their goals confidently
+
+- Builds resilience and confidence
+- Motivates students to keep learning
+- Goal: independent, self-reliant learners
+
+:::
+
+:::
+
+## Summary
+
+![](images/summary.png){width=100% fig-align="center"}
+
+
+
+
+---
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+<br> <br> <br>
+
+### Thank You!
+
+
+:::
+
+::: {.column width="50%"}
+
+### About me
+<br>
+
+Udeshi Salgado
+
+2nd year PhD Student
+
+DL4SG, Cardiff University, UK
+
+<br>
+
+LinkedIn: [udeshi-salgado](https://www.linkedin.com/in/udeshi-salgado/)  
+
+Slides: [udeshisalgado.github.io/talks](https://udeshisalgado.github.io/talks.html)
+
+
+:::
+
+:::
+

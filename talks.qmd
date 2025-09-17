@@ -3,6 +3,21 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## What Qualities Make a Good Tutor? 
+*PGR Interview, Cardiff University*  
+
+![](slides/graduate_tutor_interview/preview.png)
+
+📅 **Date:** September 18, 2025   
+⏰ **Time:** 11:30 AM – 11:50 AM  
+📍 **Location:** Cardiff University 
+
+<p>
+  <a href="slides/graduate_tutor_interview/graduate_tutor_interview.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
 ## Pursuing a Fully Funded PhD in the UK: A Roadmap to Academic Success
 *Higher Studies Webinar, USJ*  
 

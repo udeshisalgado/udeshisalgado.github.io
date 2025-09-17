@@ -364,34 +364,6 @@
     "text": "Next Steps"
   },
   {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "Higher Studies Webinar, USJ\n\n📅 Date: July 30, 2025\n⏰ Time: 01:30 PM – 03:30 PM\n📍 Location: Online\n\n View Slides"
-  },
-  {
-    "objectID": "talks.html#pursuing-a-fully-funded-phd-in-the-uk-a-roadmap-to-academic-success",
-    "href": "talks.html#pursuing-a-fully-funded-phd-in-the-uk-a-roadmap-to-academic-success",
-    "title": "Talks & Presentations",
-    "section": "",
-    "text": "Higher Studies Webinar, USJ\n\n📅 Date: July 30, 2025\n⏰ Time: 01:30 PM – 03:30 PM\n📍 Location: Online\n\n View Slides"
-  },
-  {
-    "objectID": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
-    "href": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
-    "title": "Talks & Presentations",
-    "section": "Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains",
-    "text": "Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains\nEURO Conference, Leeds\n\n📅 Date: June 24, 2025\n⏰ Time: 08:30 AM – 10:00 AM\n📍 Location: Leeds, UK\n\n View Slides"
-  },
-  {
-    "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
-    "href": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
-    "title": "Talks & Presentations",
-    "section": "Stochastic Modelling: CTMC and Queuing Theory",
-    "text": "Stochastic Modelling: CTMC and Queuing Theory\nDL4SG Research Seminar, Cardiff University\n\n📅 Date: May 22, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides   GitHub Repo   Lab Activity"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Udeshi Salgado",
@@ -411,6 +383,90 @@
     "title": "Udeshi Salgado",
     "section": "🔍 Research Interests",
     "text": "🔍 Research Interests\n\nVaccine supply chain forecasting\n\nHybrid intelligence (human + machine forecasting)\n\nTime series analysis & probabilistic forecasting\n\nHealth data science and informatics\n\nInventory management in LMICs\n\nEthical AI and equity in global health systems"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "PGR Interview, Cardiff University\n\n📅 Date: September 18, 2025\n⏰ Time: 11:30 AM – 11:50 AM\n📍 Location: Cardiff University\n\n View Slides"
+  },
+  {
+    "objectID": "talks.html#what-qualities-make-a-good-tutor",
+    "href": "talks.html#what-qualities-make-a-good-tutor",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "PGR Interview, Cardiff University\n\n📅 Date: September 18, 2025\n⏰ Time: 11:30 AM – 11:50 AM\n📍 Location: Cardiff University\n\n View Slides"
+  },
+  {
+    "objectID": "talks.html#pursuing-a-fully-funded-phd-in-the-uk-a-roadmap-to-academic-success",
+    "href": "talks.html#pursuing-a-fully-funded-phd-in-the-uk-a-roadmap-to-academic-success",
+    "title": "Talks & Presentations",
+    "section": "Pursuing a Fully Funded PhD in the UK: A Roadmap to Academic Success",
+    "text": "Pursuing a Fully Funded PhD in the UK: A Roadmap to Academic Success\nHigher Studies Webinar, USJ\n\n📅 Date: July 30, 2025\n⏰ Time: 01:30 PM – 03:30 PM\n📍 Location: Online\n\n View Slides"
+  },
+  {
+    "objectID": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
+    "href": "talks.html#missed-in-numbers-quantifying-demand-gaps-in-vaccine-supply-chains",
+    "title": "Talks & Presentations",
+    "section": "Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains",
+    "text": "Missed in Numbers: Quantifying Demand Gaps in Vaccine Supply Chains\nEURO Conference, Leeds\n\n📅 Date: June 24, 2025\n⏰ Time: 08:30 AM – 10:00 AM\n📍 Location: Leeds, UK\n\n View Slides"
+  },
+  {
+    "objectID": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
+    "href": "talks.html#stochastic-modelling-ctmc-and-queuing-theory",
+    "title": "Talks & Presentations",
+    "section": "Stochastic Modelling: CTMC and Queuing Theory",
+    "text": "Stochastic Modelling: CTMC and Queuing Theory\nDL4SG Research Seminar, Cardiff University\n\n📅 Date: May 22, 2025\n⏰ Time: 11:00 AM – 1:00 PM\n📍 Location: Cardiff, UK\n\n View Slides   GitHub Repo   Lab Activity"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#what-qualities-make-a-good-tutor",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#what-qualities-make-a-good-tutor",
+    "title": "Udeshi Salgado",
+    "section": "What Qualities Make a Good Tutor?",
+    "text": "What Qualities Make a Good Tutor?\nGuiding students on their learning journey\n\nUdeshi Salgado\nData Lab for Social Good Research Group  Cardiff Business School, Cardiff University, UK\n\n2025-09-18"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#knowledge-growth",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#knowledge-growth",
+    "title": "Udeshi Salgado",
+    "section": "Knowledge & Growth",
+    "text": "Knowledge & Growth\n\n\n\n\n\nDirection & expertise\n\nStrong subject knowledge builds trust\nContinuous learning keeps skills sharp\nReflection ensures personal growth"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#student-centered-learning",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#student-centered-learning",
+    "title": "Udeshi Salgado",
+    "section": "Student-Centered Learning",
+    "text": "Student-Centered Learning\n\n\n\n\n\nPersonalized routes for each student\n\nEvery learner has different starting points\nLearning is tailored to individual pace & goals\nStudent needs define the journey"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#patience-empathy",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#patience-empathy",
+    "title": "Udeshi Salgado",
+    "section": "Patience & Empathy",
+    "text": "Patience & Empathy\n\n\n\n\n\nWalking alongside the learner\n\nSupports students at their own pace\nEncourages without judgment\nBuilds confidence through trust"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#flexibility-adaptability",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#flexibility-adaptability",
+    "title": "Udeshi Salgado",
+    "section": "Flexibility & Adaptability",
+    "text": "Flexibility & Adaptability\n\n\n\n\n\nChanging direction when needed\n\nAdjusts explanations and methods\nUses creativity to overcome barriers\nFlexible in response to challenges"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#encouragement-independence",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#encouragement-independence",
+    "title": "Udeshi Salgado",
+    "section": "Encouragement & Independence",
+    "text": "Encouragement & Independence\n\n\n\n\n\nStudents reach their goals confidently\n\nBuilds resilience and confidence\nMotivates students to keep learning\nGoal: independent, self-reliant learners"
+  },
+  {
+    "objectID": "slides/graduate_tutor_interview/graduate_tutor_interview.html#summary",
+    "href": "slides/graduate_tutor_interview/graduate_tutor_interview.html#summary",
+    "title": "Udeshi Salgado",
+    "section": "Summary",
+    "text": "Summary"
   },
   {
     "objectID": "slides/stocastic_modelling/lab_r/ctmc_queueing_theory_lab_with_answers.html",
