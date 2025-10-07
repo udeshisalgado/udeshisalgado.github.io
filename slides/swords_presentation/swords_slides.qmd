@@ -1,0 +1,168 @@
+
+---
+format: 
+    revealjs:
+        toc: false
+        slideNumber: "c/t"
+        width: 1280
+        height: 720
+        controls: true
+        progress: true
+        transition: slide
+        plugins: [notes, print-pdf]
+        title-slide-attributes:
+            data-background-image: none
+            data-background-size: cover
+        theme: [default, custom.scss]
+        logo: images/cardiff_dl4sg_logo.png
+        footer: "© 2025 Udeshi Salgado – SWORD Network Event, Cardiff"
+---
+
+:::{.slide .title-slide data-background-image="images/background.png" data-background-size="cover"}
+
+
+
+## Enhancing Global Immunisation Supply Chain: 
+### Integrating Hybrid Intelligence Models into Inventory Optimisation Considering Non-Monetary Welfare Metrics
+<br><br>
+
+**Udeshi Salgado**  
+_Data Lab for Social Good Research Group_ <br>
+_Cardiff Business School, Cardiff University, UK_  
+
+<div style="font-size: 70%; line-height: 0.1;">
+<strong>Lead Supervisor:</strong> Professor Bahman Rostami-Tabar<br>
+<strong>Co-supervisors:</strong> Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang
+</div>
+
+<br>
+
+2025-10-09
+
+:::
+
+## The Problem
+
+::: {.incremental}
+
+- <span style="color: #FF4500;">1 in 5 children</span>  worldwide lack access to lifesaving vaccines. *(source: [WHO](https://www.who.int/news-room/fact-sheets/detail/immunization-coverage))*
+- Potential Cause: <span style="color: #FF4500;">Supply chain inefficiencies</span>
+- Vaccine supply chains in low- and middle-income countries (LMICs) often face:
+
+    - Inaccurate forecasts of vaccine demand
+    - Inefficient inventory decisions driven mainly by cost minimisation
+    - Wastage and stockouts
+
+:::
+
+## Our Goal
+
+<br> <br>
+
+<div style="text-align: center; vertical-align: middle; line-height: 1.6;">
+
+Make vaccine supply chains **smarter, fairer, and more resilient**: so that <span style="color: #FF4500;">no child misses a vaccine because of logistics</span>
+
+![](images/aim.png){width=50% fig-align="center"}
+
+</div>
+
+## Our Collaborators
+
+::: {.columns}
+
+::: {.column width="40%"}
+### Main Collaborator
+
+<br>
+![](images/jsi_logo.webp){width=100% fig-align="center"}
+<div style="text-align: center;"><strong>John Snow Inc.</strong></div>
+<br>
+
+
+:::
+
+::: {.column width="60%"}
+
+![](images/collaborators.png){height=100% fig-align="center"}
+
+:::
+
+:::
+
+## Methodology
+
+::: {.columns}
+
+::: {.column width="33%"}
+<div style="font-size: 60%; line-height: 0.1;">
+ <span style="color: #FF4500;">RQ1</span>: Hybrid Intelligence for Vaccine Forecasting
+</div>
+
+![](images/RQ1.png){height=70% fig-align="center"}
+
+
+:::
+
+::: {.column width="33%" .fragment}
+
+<div style="font-size: 60%; line-height: 0.1;">
+ <span style="color: #FF4500;">RQ2</span>:  Integrating Welfare Metrics into Inventory Optimisation
+</div>
+
+![](images/RQ2.png){height=70% fig-align="center"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+<div style="font-size: 60%; line-height: 0.1;">
+ <span style="color: #FF4500;">RQ3</span>:  ML Driven Prediction of Open Vial Wastage
+</div>
+
+![](images/RQ3.png){height=70% fig-align="center"}
+
+:::
+
+:::
+
+---
+
+::: {.columns}
+
+::: {.column width="50%"}
+### About me
+
+<br>
+
+Udeshi Salgado
+
+2nd year PhD Student
+
+DL4SG, Cardiff University, UK
+
+<br>
+
+LinkedIn: [udeshi-salgado](https://www.linkedin.com/in/udeshi-salgado/)  
+
+Slides: [udeshisalgado.github.io/talks](https://udeshisalgado.github.io/talks.html)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+### Outline of my talk
+<br>
+
+1. The problem 
+2. Our Goal
+3. Our Collaborators  
+4. Methodology 
+
+
+:::
+
+:::
+
