@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.36">
+
+  <title>Udeshi Salgado – iif_uk_chapter26</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-a407758fadca7621b75de5ce19345da0.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Udeshi Salgado">
+<meta property="og:site_name" content="Udeshi Salgado">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+
+<img data-src="images/logonew.png" class="quarto-figure quarto-figure-left r-stretch" style="width:20.0%"><p><br></p>
+<section id="distributional-post-processing-with-feasibility-truncation-for-vaccine-demand-forecasting" style="text-align:center; font-size: 110%">
+<h3>Distributional Post-Processing with Feasibility Truncation for Vaccine Demand Forecasting</h3>
+</section>
+<p><br> <br> <br> <br> <br> <br></p>
+<p><strong>Udeshi Salgado</strong>, <em>Cardiff University, UK</em> <br> <strong>Lead Supervisor:</strong> Professor Bahman Rostami-Tabar<br> <strong>Co-supervisors:</strong> Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang</p>
+<p>13 March 2026</p>
+</section>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li><span style="color: #FF4500;"> Problem Statement and Motivation</span></li>
+<li>Decision-Relevant Forecasting under Uncertainty</li>
+<li>Forecasting Framework</li>
+<li>Feasibility Truncation and Inventory Decision Model</li>
+<li>Results</li>
+</ol>
+</section>
+<section id="background" class="slide level2">
+<h2>Background</h2>
+<div>
+<ul>
+<li class="fragment"><p><span style="color: #FF4500;">1 in 5 children</span> worldwide lack access to lifesaving vaccines. <em>(source: <a href="https://www.who.int/news-room/fact-sheets/detail/immunization-coverage">WHO</a>)</em></p></li>
+<li class="fragment"><p>Potential Cause: <span style="color: #FF4500;">Supply chain inefficiencies</span></p></li>
+<li class="fragment"><p>Vaccine supply chains in low- and middle-income countries (LMICs) often face:</p>
+<ul>
+<li class="fragment">Inaccurate forecasts of vaccine demand</li>
+<li class="fragment">Inefficient inventory decisions driven mainly by cost minimisation</li>
+<li class="fragment">Wastage and stockouts</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="coverage-gap-in-the-study-setting" class="slide level2">
+<h2>Coverage gap in the study setting</h2>
+
+<img data-src="images/coverage_gap.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="smaller">
+<ul>
+<li>Achieved coverage remains below WHO planned coverage across years, motivating improved operational forecasting and planning.</li>
+</ul>
+</div>
+</section>
+<section id="current-forecasting-practice" class="slide level2">
+<h2>Current Forecasting Practice</h2>
+<div>
+<ul>
+<li class="fragment"><p>In practice, vaccine planning often relies on the <strong>Forecasting, Supply Planning, and Procurement (FSP) Tool</strong> and related planning workflows.</p></li>
+<li class="fragment"><p>It combines outputs from several deterministic models:</p>
+<ul>
+<li class="fragment"><span style="color:#009E73;">Demographic-based (Stratified if available)</span></li>
+<li class="fragment"><span style="color:#999999;">Facility consumption-based / Issue-based (not useful if we lack stockouts data, reporting rates, as it adjusts the previous year’s consumption and is considered a forecast)</span></li>
+<li class="fragment"><span style="color:#999999;">Session-based (100% based on expert knowledge)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="the-fsp-forecasting" class="slide level2">
+<h2>The FSP Forecasting</h2>
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fsp_forecast.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li><p>Forecast equation for doses administered:</p>
+<p><span class="math display">\[
+  \hat{D_t} = P_t * C_t
+  \]</span></p></li>
+</ul>
+<div style="font-size: 57%; line-height: 0.1;">
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\hat{D_t}\)</span>: Forecasted doses administered at time <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(P_t\)</span>: Target population at time <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(C_t\)</span>: Planned WHO coverage at time <span class="math inline">\(t\)</span></li>
+</ul>
+</div>
+</div></section>
+<section id="methodological-limitations" class="slide level2">
+<h2>Methodological Limitations</h2>
+<div class="fragment">
+<ul>
+<li>In practice, vaccine planning relies largely on <strong>deterministic demographic-based models</strong>, limiting responsiveness to real consumption patterns.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Forecasting workflows still emphasise <strong>point predictions</strong>, which fail to capture uncertainty relevant for operational planning.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Models trained on historical administered doses tend to <strong>systematically underforecast</strong>, reflecting constrained past delivery rather than true demand.</li>
+</ul>
+</div>
+</section>
+<section id="outline-1" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li>Problem Statement and Motivation</li>
+<li><span style="color: #FF4500;">Decision-Relevant Forecasting under Uncertainty</span></li>
+<li>Forecasting Framework</li>
+<li>Feasibility Truncation and Inventory Decision Model</li>
+<li>Results</li>
+</ol>
+</section>
+<section id="the-risk-of-point-forecasting" class="slide level2">
+<h2>The Risk of Point Forecasting</h2>
+
+<img data-src="images/point_forecast.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="addressing-the-uncertainty" class="slide level2">
+<h2>Addressing the Uncertainty</h2>
+
+<img data-src="images/probabilistic_forecast.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="distributional-post-processing-defining-lower-bound" class="slide level2">
+<h2>Distributional Post-Processing: Defining Lower Bound</h2>
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/lower_bound.png" class="quarto-figure quarto-figure-left" style="width:100.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li><p>We define lower bound as the FSP forecast:</p>
+<p><span class="math display">\[
+  \text{Lower Bound} =  P_t * C_t
+  \]</span></p></li>
+</ul>
+<div style="font-size: 57%; line-height: 0.1;">
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(P_t\)</span>: Target population at time <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(C_t\)</span>: Planned WHO coverage at time <span class="math inline">\(t\)</span></li>
+</ul>
+</div>
+</div></section>
+<section id="distributional-post-processing-truncation" class="slide level2">
+<h2>Distributional Post-Processing: Truncation</h2>
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/untruncated_distribution.png" class="quarto-figure quarto-figure-left" style="width:100.0%"></p>
+</figure>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/truncated_distribution.png" class="quarto-figure quarto-figure-left" style="width:120.0%"></p>
+</figure>
+</div>
+</div></section>
+<section id="outline-2" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li>Problem Statement and Motivation</li>
+<li>Decision-Relevant Forecasting under Uncertainty</li>
+<li><span style="color: #FF4500;">Forecasting Framework</span></li>
+<li>Feasibility Truncation and Inventory Decision Model</li>
+<li>Results</li>
+</ol>
+</section>
+<section id="study-design" class="slide level2">
+<h2>Study Design</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment">
+<h3 id="data-setting">Data setting</h3>
+<ul>
+<li>One LMIC country<br>
+</li>
+<li>One vaccine: <strong>BCG</strong></li>
+<li>Monthly time series</li>
+</ul>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="fragment">
+<h3 id="hierarchical-level">Hierarchical level</h3>
+<ul>
+<li>Sub-national level: <strong>47 counties</strong></li>
+<li>National aggregation used for evaluation</li>
+<li><strong>48 time series</strong> (47 counties + national)</li>
+</ul>
+</div>
+</div><div class="fragment">
+<h3 id="forecast-target">Forecast target</h3>
+<p>Let <span class="math inline">\(y_{i,t}\)</span> denote administered doses in county <span class="math inline">\(i\)</span> at month <span class="math inline">\(t\)</span>.</p>
+<p>The forecasting for 12 month horizon <span class="math inline">\(H\)</span> is given by</p>
+<p><span class="math display">\[
+\{y_{i,T+1},\dots,y_{i,T+H}\}, \qquad H = 12.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="forecasting-models" class="slide level2">
+<h2>Forecasting Models</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(gt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'gt' was built under R version 4.5.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>model_table <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb7-2"><a></a>  <span class="st">`</span><span class="at">Model class</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb7-3"><a></a>    <span class="st">"Classical statistical"</span>,</span>
+<span id="cb7-4"><a></a>    <span class="st">"Regression-based"</span>,</span>
+<span id="cb7-5"><a></a>    <span class="st">"Machine learning"</span></span>
+<span id="cb7-6"><a></a>  ),</span>
+<span id="cb7-7"><a></a>  <span class="at">Models =</span> <span class="fu">c</span>(</span>
+<span id="cb7-8"><a></a>    <span class="st">"ETS, ARIMA, Naïve, Seasonal Naïve"</span>,</span>
+<span id="cb7-9"><a></a>    <span class="st">"Linear regression, LASSO"</span>,</span>
+<span id="cb7-10"><a></a>    <span class="st">"Quantile Random Forest, XGBoost, LightGBM"</span></span>
+<span id="cb7-11"><a></a>  )</span>
+<span id="cb7-12"><a></a>)</span>
+<span id="cb7-13"><a></a></span>
+<span id="cb7-14"><a></a>model_table <span class="sc">%&gt;%</span></span>
+<span id="cb7-15"><a></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-16"><a></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"left"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-17"><a></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb7-18"><a></a>    <span class="at">table.font.size =</span> <span class="st">"large"</span>,</span>
+<span id="cb7-19"><a></a>    <span class="at">data_row.padding =</span> gt<span class="sc">::</span><span class="fu">px</span>(<span class="dv">30</span>)</span>
+<span id="cb7-20"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="mpcivwdkjh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mpcivwdkjh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mpcivwdkjh thead, #mpcivwdkjh tbody, #mpcivwdkjh tfoot, #mpcivwdkjh tr, #mpcivwdkjh td, #mpcivwdkjh th {
+  border-style: none;
+}
+
+#mpcivwdkjh p {
+  margin: 0;
+  padding: 0;
+}
+
+#mpcivwdkjh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: large;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mpcivwdkjh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mpcivwdkjh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mpcivwdkjh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mpcivwdkjh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mpcivwdkjh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mpcivwdkjh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mpcivwdkjh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mpcivwdkjh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mpcivwdkjh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mpcivwdkjh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mpcivwdkjh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mpcivwdkjh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mpcivwdkjh .gt_row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mpcivwdkjh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpcivwdkjh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mpcivwdkjh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mpcivwdkjh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mpcivwdkjh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpcivwdkjh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mpcivwdkjh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpcivwdkjh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mpcivwdkjh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpcivwdkjh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mpcivwdkjh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpcivwdkjh .gt_left {
+  text-align: left;
+}
+
+#mpcivwdkjh .gt_center {
+  text-align: center;
+}
+
+#mpcivwdkjh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mpcivwdkjh .gt_font_normal {
+  font-weight: normal;
+}
+
+#mpcivwdkjh .gt_font_bold {
+  font-weight: bold;
+}
+
+#mpcivwdkjh .gt_font_italic {
+  font-style: italic;
+}
+
+#mpcivwdkjh .gt_super {
+  font-size: 65%;
+}
+
+#mpcivwdkjh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mpcivwdkjh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mpcivwdkjh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mpcivwdkjh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mpcivwdkjh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mpcivwdkjh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mpcivwdkjh .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mpcivwdkjh .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mpcivwdkjh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Model-class" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Model class</th>
+<th id="Models" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Models</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Model class">Classical statistical</td>
+<td class="gt_row gt_left" headers="Models">ETS, ARIMA, Naïve, Seasonal Naïve</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Model class">Regression-based</td>
+<td class="gt_row gt_left" headers="Models">Linear regression, LASSO</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Model class">Machine learning</td>
+<td class="gt_row gt_left" headers="Models">Quantile Random Forest, XGBoost, LightGBM</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<ul>
+<li>Each model produces multi-step point forecasts <span class="math inline">\(\hat{y}_{i,T+h|T}\)</span>.</li>
+<li>Predictive distributions are obtained via blocked bootstrap residual simulation.</li>
+</ul>
+</section>
+<section id="outline-3" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li>Problem Statement and Motivation</li>
+<li>Decision-Relevant Forecasting under Uncertainty</li>
+<li>Forecasting Framework</li>
+<li><span style="color: #FF4500;">Feasibility Truncation and Inventory Decision Model</span></li>
+<li>Results</li>
+</ol>
+</section>
+<section id="feasibility-truncation" class="slide level2">
+<h2>Feasibility Truncation</h2>
+<div class="fragment">
+<h3 id="predictive-distribution">Predictive distribution</h3>
+<p>Let the raw predictive distribution at horizon (h) be</p>
+<p><span class="math display">\[
+p_h(y) = \Pr(Y_{T+h} = y).
+\]</span></p>
+<p>In practice, this is approximated using training residuals via blocked bootstrap.</p>
+<p><span class="math display">\[
+\{y^{(1)}_{T+h},\dots,y^{(R)}_{T+h}\}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="lower-bound-truncation">Lower-bound truncation</h3>
+<p>The monthly feasibility lower bound is defined as</p>
+<p><span class="math display">\[
+L_{T+h} = \frac{P_t C_t}{12},
+\]</span></p>
+<p>where <span class="math inline">\(T\)</span> = forecast origin (time index), <span class="math inline">\(h\)</span> = forecast horizon step <span class="math inline">\((h = 1,\dots,H)\)</span>, <span class="math inline">\(P_t\)</span> = target population in year <span class="math inline">\(t\)</span>, <span class="math inline">\(C_t\)</span> = planned WHO coverage in year <span class="math inline">\(t\)</span></p>
+<p>The truncated mass function becomes</p>
+<p><span class="math display">\[
+p_h^{\text{tr}}(y)
+=
+\begin{cases}
+p_h(y), &amp; y \ge L_{T+h}, \\\\
+0, &amp; y &lt; L_{T+h}.
+\end{cases}
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<h3 id="renormalization">Renormalization</h3>
+<p>To ensure a valid distribution,</p>
+<p><span class="math display">\[
+\tilde{p}_h(y)
+=
+\frac{p_h^{\text{tr}}(y)}
+{\sum_{z \ge L_{T+h}} p_h(z)}.
+\]</span></p>
+<div class="fragment">
+<h3 id="simulation-implementation">Simulation implementation</h3>
+<p><span class="math display">\[
+y^{(r),\text{tr}}_{T+h}
+=
+\begin{cases}
+y^{(r)}_{T+h}, &amp; y^{(r)}_{T+h} \ge L_{T+h}, \\\\
+\text{resample from feasible draws}, &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+</div>
+</section>
+<section id="inventory-decision-model" class="slide level2">
+<h2>Inventory Decision Model</h2>
+<p><strong>Policy</strong></p>
+<ul>
+<li>Periodic review <span class="math inline">\((T,S)\)</span> policy<br>
+</li>
+<li>Order-up-to level based on predictive distribution</li>
+</ul>
+<p><span class="math display">\[
+S_t = Q_{\alpha}(D^L_t)
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<p><strong>Assumptions</strong></p>
+<ul>
+<li>Lost-sales setting (no backorders)<br>
+</li>
+<li>Fixed lead time <span class="math inline">\(L\)</span><br>
+</li>
+<li>Monthly review cycle<br>
+</li>
+<li>Lead-time demand from predictive simulations</li>
+</ul>
+<p><span class="math display">\[
+D^{L,(r)}_t = \sum_{j=t}^{t+L-1} y^{(r)}_j
+\]</span></p>
+<div style="font-size: 60%; margin-top: -10px;">
+<p>where <span class="math inline">\(t\)</span> = review period (month), <span class="math inline">\(L\)</span> = lead time (months), <span class="math inline">\(r\)</span> = simulation draw <span class="math inline">\((r=1,\dots,R)\)</span>, <span class="math inline">\(y^{(r)}_j\)</span> = simulated demand in month <span class="math inline">\(j\)</span>, <span class="math inline">\(D^{L,(r)}_t\)</span> = simulated lead-time demand</p>
+</div>
+</section>
+<section id="inventory-performance-evaluation" class="slide level2">
+<h2>Inventory Performance Evaluation</h2>
+<p><strong>Service measures</strong></p>
+<ul>
+<li>Fill rate<br>
+</li>
+<li>Cycle service level (CSL)<br>
+</li>
+<li>Stockout rate</li>
+</ul>
+<p><strong>Stock measures</strong></p>
+<ul>
+<li>Average on-hand inventory<br>
+</li>
+<li>Total unmet demand</li>
+</ul>
+</section>
+<section id="outline-4" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li>Problem Statement and Motivation</li>
+<li>Decision-Relevant Forecasting under Uncertainty</li>
+<li>Forecasting Framework</li>
+<li>Feasibility Truncation and Inventory Decision Model</li>
+<li><span style="color: #FF4500;">Results</span></li>
+</ol>
+</section>
+<section id="inventory-performance-across-counties" class="slide level2">
+<h2>Inventory Performance Across Counties</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(gt)</span>
+<span id="cb8-2"><a></a><span class="fu">library</span>(tibble)</span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a><span class="co"># ------------------------------------------------------------</span></span>
+<span id="cb8-5"><a></a><span class="co"># Manual table (from your results)</span></span>
+<span id="cb8-6"><a></a><span class="co"># ------------------------------------------------------------</span></span>
+<span id="cb8-7"><a></a>slide_table <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb8-8"><a></a>  <span class="sc">~</span>Model, <span class="sc">~</span>FR_Raw, <span class="sc">~</span>FR_Trunc, <span class="sc">~</span>CSL_Raw, <span class="sc">~</span>CSL_Trunc, <span class="sc">~</span>Stock_Raw, <span class="sc">~</span>Stock_Trunc, <span class="sc">~</span>OH_Raw, <span class="sc">~</span>OH_Trunc, <span class="sc">~</span>Unmet_Raw, <span class="sc">~</span>Unmet_Trunc,</span>
+<span id="cb8-9"><a></a></span>
+<span id="cb8-10"><a></a>  <span class="st">"ARIMA"</span>, <span class="fl">0.821</span>, <span class="fl">0.833</span>, <span class="fl">0.667</span>, <span class="fl">0.833</span>, <span class="fl">0.333</span>, <span class="fl">0.167</span>, <span class="dv">373</span>, <span class="dv">811</span>, <span class="dv">4850</span>, <span class="dv">4410</span>,</span>
+<span id="cb8-11"><a></a>  <span class="st">"ETS"</span>,   <span class="fl">0.808</span>, <span class="fl">0.831</span>, <span class="fl">0.500</span>, <span class="fl">0.833</span>, <span class="fl">0.500</span>, <span class="fl">0.167</span>, <span class="dv">276</span>, <span class="dv">684</span>, <span class="dv">5534</span>, <span class="dv">4413</span>,</span>
+<span id="cb8-12"><a></a>  <span class="st">"LASSO"</span>, <span class="fl">0.783</span>, <span class="fl">0.829</span>, <span class="fl">0.417</span>, <span class="fl">0.750</span>, <span class="fl">0.583</span>, <span class="fl">0.250</span>, <span class="dv">223</span>, <span class="dv">543</span>, <span class="dv">5886</span>, <span class="dv">4442</span>,</span>
+<span id="cb8-13"><a></a>  <span class="st">"LGBM"</span>,  <span class="fl">0.791</span>, <span class="fl">0.831</span>, <span class="fl">0.500</span>, <span class="fl">0.833</span>, <span class="fl">0.500</span>, <span class="fl">0.167</span>, <span class="dv">221</span>, <span class="dv">694</span>, <span class="dv">5447</span>, <span class="dv">4410</span>,</span>
+<span id="cb8-14"><a></a>  <span class="st">"LM"</span>,    <span class="fl">0.827</span>, <span class="fl">0.835</span>, <span class="fl">0.667</span>, <span class="fl">0.833</span>, <span class="fl">0.333</span>, <span class="fl">0.167</span>, <span class="dv">406</span>, <span class="dv">749</span>, <span class="dv">4879</span>, <span class="dv">4410</span>,</span>
+<span id="cb8-15"><a></a>  <span class="st">"NAIVE"</span>, <span class="fl">0.719</span>, <span class="fl">0.835</span>, <span class="fl">0.333</span>, <span class="fl">0.833</span>, <span class="fl">0.667</span>, <span class="fl">0.167</span>, <span class="dv">191</span>, <span class="dv">984</span>, <span class="dv">6959</span>, <span class="dv">4410</span>,</span>
+<span id="cb8-16"><a></a>  <span class="st">"QRF"</span>,   <span class="fl">0.752</span>, <span class="fl">0.823</span>, <span class="fl">0.333</span>, <span class="fl">0.750</span>, <span class="fl">0.667</span>, <span class="fl">0.250</span>, <span class="dv">192</span>, <span class="dv">440</span>, <span class="dv">6826</span>, <span class="dv">4482</span>,</span>
+<span id="cb8-17"><a></a>  <span class="st">"SNAIVE"</span>,<span class="fl">0.835</span>, <span class="fl">0.836</span>, <span class="fl">0.833</span>, <span class="fl">0.833</span>, <span class="fl">0.167</span>, <span class="fl">0.167</span>, <span class="dv">613</span>, <span class="dv">1297</span>, <span class="dv">4434</span>, <span class="dv">4410</span>,</span>
+<span id="cb8-18"><a></a>  <span class="st">"XGB"</span>,   <span class="fl">0.721</span>, <span class="fl">0.805</span>, <span class="fl">0.250</span>, <span class="fl">0.500</span>, <span class="fl">0.750</span>, <span class="fl">0.500</span>, <span class="dv">177</span>, <span class="dv">298</span>, <span class="dv">7639</span>, <span class="dv">4482</span></span>
+<span id="cb8-19"><a></a>)</span>
+<span id="cb8-20"><a></a></span>
+<span id="cb8-21"><a></a><span class="co"># ------------------------------------------------------------</span></span>
+<span id="cb8-22"><a></a><span class="co"># Helper row indices for highlighting</span></span>
+<span id="cb8-23"><a></a><span class="co"># ------------------------------------------------------------</span></span>
+<span id="cb8-24"><a></a>fr_raw_rows    <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>FR_Raw    <span class="sc">&gt;=</span> slide_table<span class="sc">$</span>FR_Trunc)</span>
+<span id="cb8-25"><a></a>fr_trunc_rows  <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>FR_Trunc  <span class="sc">&gt;=</span> slide_table<span class="sc">$</span>FR_Raw)</span>
+<span id="cb8-26"><a></a></span>
+<span id="cb8-27"><a></a>csl_raw_rows   <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>CSL_Raw   <span class="sc">&gt;=</span> slide_table<span class="sc">$</span>CSL_Trunc)</span>
+<span id="cb8-28"><a></a>csl_trunc_rows <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>CSL_Trunc <span class="sc">&gt;=</span> slide_table<span class="sc">$</span>CSL_Raw)</span>
+<span id="cb8-29"><a></a></span>
+<span id="cb8-30"><a></a>stock_raw_rows   <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>Stock_Raw   <span class="sc">&lt;=</span> slide_table<span class="sc">$</span>Stock_Trunc)</span>
+<span id="cb8-31"><a></a>stock_trunc_rows <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>Stock_Trunc <span class="sc">&lt;=</span> slide_table<span class="sc">$</span>Stock_Raw)</span>
+<span id="cb8-32"><a></a></span>
+<span id="cb8-33"><a></a>oh_raw_rows   <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>OH_Raw   <span class="sc">&lt;=</span> slide_table<span class="sc">$</span>OH_Trunc)</span>
+<span id="cb8-34"><a></a>oh_trunc_rows <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>OH_Trunc <span class="sc">&lt;=</span> slide_table<span class="sc">$</span>OH_Raw)</span>
+<span id="cb8-35"><a></a></span>
+<span id="cb8-36"><a></a>unmet_raw_rows   <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>Unmet_Raw   <span class="sc">&lt;=</span> slide_table<span class="sc">$</span>Unmet_Trunc)</span>
+<span id="cb8-37"><a></a>unmet_trunc_rows <span class="ot">&lt;-</span> <span class="fu">which</span>(slide_table<span class="sc">$</span>Unmet_Trunc <span class="sc">&lt;=</span> slide_table<span class="sc">$</span>Unmet_Raw)</span>
+<span id="cb8-38"><a></a></span>
+<span id="cb8-39"><a></a><span class="co"># ------------------------------------------------------------</span></span>
+<span id="cb8-40"><a></a><span class="co"># Slide table</span></span>
+<span id="cb8-41"><a></a><span class="co"># ------------------------------------------------------------</span></span>
+<span id="cb8-42"><a></a>slide_table <span class="sc">%&gt;%</span></span>
+<span id="cb8-43"><a></a>  <span class="fu">gt</span>(<span class="at">rowname_col =</span> <span class="st">"Model"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-44"><a></a></span>
+<span id="cb8-45"><a></a>  <span class="fu">tab_spanner</span>(<span class="st">"Fill rate"</span>, <span class="fu">c</span>(FR_Raw, FR_Trunc)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-46"><a></a>  <span class="fu">tab_spanner</span>(<span class="st">"CSL"</span>, <span class="fu">c</span>(CSL_Raw, CSL_Trunc)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-47"><a></a>  <span class="fu">tab_spanner</span>(<span class="st">"Stockout"</span>, <span class="fu">c</span>(Stock_Raw, Stock_Trunc)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-48"><a></a>  <span class="fu">tab_spanner</span>(<span class="st">"Avg on-hand"</span>, <span class="fu">c</span>(OH_Raw, OH_Trunc)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-49"><a></a>  <span class="fu">tab_spanner</span>(<span class="st">"Unmet demand"</span>, <span class="fu">c</span>(Unmet_Raw, Unmet_Trunc)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-50"><a></a></span>
+<span id="cb8-51"><a></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb8-52"><a></a>    <span class="at">FR_Raw =</span> <span class="st">"Raw"</span>, <span class="at">FR_Trunc =</span> <span class="st">"Trunc"</span>,</span>
+<span id="cb8-53"><a></a>    <span class="at">CSL_Raw =</span> <span class="st">"Raw"</span>, <span class="at">CSL_Trunc =</span> <span class="st">"Trunc"</span>,</span>
+<span id="cb8-54"><a></a>    <span class="at">Stock_Raw =</span> <span class="st">"Raw"</span>, <span class="at">Stock_Trunc =</span> <span class="st">"Trunc"</span>,</span>
+<span id="cb8-55"><a></a>    <span class="at">OH_Raw =</span> <span class="st">"Raw"</span>, <span class="at">OH_Trunc =</span> <span class="st">"Trunc"</span>,</span>
+<span id="cb8-56"><a></a>    <span class="at">Unmet_Raw =</span> <span class="st">"Raw"</span>, <span class="at">Unmet_Trunc =</span> <span class="st">"Trunc"</span></span>
+<span id="cb8-57"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-58"><a></a></span>
+<span id="cb8-59"><a></a>  <span class="fu">fmt_percent</span>(</span>
+<span id="cb8-60"><a></a>    <span class="at">columns =</span> <span class="fu">c</span>(FR_Raw, FR_Trunc, CSL_Raw, CSL_Trunc, Stock_Raw, Stock_Trunc),</span>
+<span id="cb8-61"><a></a>    <span class="at">decimals =</span> <span class="dv">1</span></span>
+<span id="cb8-62"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-63"><a></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb8-64"><a></a>    <span class="at">columns =</span> <span class="fu">c</span>(OH_Raw, OH_Trunc, Unmet_Raw, Unmet_Trunc),</span>
+<span id="cb8-65"><a></a>    <span class="at">decimals =</span> <span class="dv">0</span></span>
+<span id="cb8-66"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-67"><a></a></span>
+<span id="cb8-68"><a></a>  <span class="co"># Increase overall size</span></span>
+<span id="cb8-69"><a></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb8-70"><a></a>    <span class="at">table.font.size =</span> <span class="fu">px</span>(<span class="dv">24</span>),</span>
+<span id="cb8-71"><a></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">28</span>),</span>
+<span id="cb8-72"><a></a>    <span class="at">heading.subtitle.font.size =</span> <span class="fu">px</span>(<span class="dv">20</span>),</span>
+<span id="cb8-73"><a></a>    <span class="at">column_labels.font.size =</span> <span class="fu">px</span>(<span class="dv">20</span>),</span>
+<span id="cb8-74"><a></a>    <span class="at">table_body.hlines.width =</span> <span class="fu">px</span>(<span class="fl">1.5</span>),</span>
+<span id="cb8-75"><a></a>    <span class="at">column_labels.padding =</span> <span class="fu">px</span>(<span class="dv">8</span>),</span>
+<span id="cb8-76"><a></a>    <span class="at">data_row.padding =</span> <span class="fu">px</span>(<span class="dv">8</span>)</span>
+<span id="cb8-77"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-78"><a></a></span>
+<span id="cb8-79"><a></a>  <span class="co"># Highlight best values in light green</span></span>
+<span id="cb8-80"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-81"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-82"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-83"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-84"><a></a>    ),</span>
+<span id="cb8-85"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> FR_Raw, <span class="at">rows =</span> fr_raw_rows)</span>
+<span id="cb8-86"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-87"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-88"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-89"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-90"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-91"><a></a>    ),</span>
+<span id="cb8-92"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> FR_Trunc, <span class="at">rows =</span> fr_trunc_rows)</span>
+<span id="cb8-93"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-94"><a></a></span>
+<span id="cb8-95"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-96"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-97"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-98"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-99"><a></a>    ),</span>
+<span id="cb8-100"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> CSL_Raw, <span class="at">rows =</span> csl_raw_rows)</span>
+<span id="cb8-101"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-102"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-103"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-104"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-105"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-106"><a></a>    ),</span>
+<span id="cb8-107"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> CSL_Trunc, <span class="at">rows =</span> csl_trunc_rows)</span>
+<span id="cb8-108"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-109"><a></a></span>
+<span id="cb8-110"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-111"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-112"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-113"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-114"><a></a>    ),</span>
+<span id="cb8-115"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Stock_Raw, <span class="at">rows =</span> stock_raw_rows)</span>
+<span id="cb8-116"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-117"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-118"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-119"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-120"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-121"><a></a>    ),</span>
+<span id="cb8-122"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Stock_Trunc, <span class="at">rows =</span> stock_trunc_rows)</span>
+<span id="cb8-123"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-124"><a></a></span>
+<span id="cb8-125"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-126"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-127"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-128"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-129"><a></a>    ),</span>
+<span id="cb8-130"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> OH_Raw, <span class="at">rows =</span> oh_raw_rows)</span>
+<span id="cb8-131"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-132"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-133"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-134"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-135"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-136"><a></a>    ),</span>
+<span id="cb8-137"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> OH_Trunc, <span class="at">rows =</span> oh_trunc_rows)</span>
+<span id="cb8-138"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-139"><a></a></span>
+<span id="cb8-140"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-141"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-142"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-143"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-144"><a></a>    ),</span>
+<span id="cb8-145"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Unmet_Raw, <span class="at">rows =</span> unmet_raw_rows)</span>
+<span id="cb8-146"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-147"><a></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb8-148"><a></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-149"><a></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#D9F2D9"</span>),</span>
+<span id="cb8-150"><a></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-151"><a></a>    ),</span>
+<span id="cb8-152"><a></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Unmet_Trunc, <span class="at">rows =</span> unmet_trunc_rows)</span>
+<span id="cb8-153"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-154"><a></a></span>
+<span id="cb8-155"><a></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb8-156"><a></a>    <span class="at">title =</span> <span class="st">"Inventory Performance Across Counties"</span>,</span>
+<span id="cb8-157"><a></a>    <span class="at">subtitle =</span> <span class="st">"Median across 47 counties, lead time = 2 months, service quantile = 0.90"</span></span>
+<span id="cb8-158"><a></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-159"><a></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="gxlbzcjxsr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gxlbzcjxsr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gxlbzcjxsr thead, #gxlbzcjxsr tbody, #gxlbzcjxsr tfoot, #gxlbzcjxsr tr, #gxlbzcjxsr td, #gxlbzcjxsr th {
+  border-style: none;
+}
+
+#gxlbzcjxsr p {
+  margin: 0;
+  padding: 0;
+}
+
+#gxlbzcjxsr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gxlbzcjxsr .gt_title {
+  color: #333333;
+  font-size: 28px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gxlbzcjxsr .gt_subtitle {
+  color: #333333;
+  font-size: 20px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gxlbzcjxsr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gxlbzcjxsr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gxlbzcjxsr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gxlbzcjxsr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gxlbzcjxsr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gxlbzcjxsr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gxlbzcjxsr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gxlbzcjxsr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gxlbzcjxsr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gxlbzcjxsr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gxlbzcjxsr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1.5px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gxlbzcjxsr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gxlbzcjxsr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gxlbzcjxsr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gxlbzcjxsr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gxlbzcjxsr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gxlbzcjxsr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gxlbzcjxsr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gxlbzcjxsr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gxlbzcjxsr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gxlbzcjxsr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gxlbzcjxsr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gxlbzcjxsr .gt_left {
+  text-align: left;
+}
+
+#gxlbzcjxsr .gt_center {
+  text-align: center;
+}
+
+#gxlbzcjxsr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gxlbzcjxsr .gt_font_normal {
+  font-weight: normal;
+}
+
+#gxlbzcjxsr .gt_font_bold {
+  font-weight: bold;
+}
+
+#gxlbzcjxsr .gt_font_italic {
+  font-style: italic;
+}
+
+#gxlbzcjxsr .gt_super {
+  font-size: 65%;
+}
+
+#gxlbzcjxsr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gxlbzcjxsr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gxlbzcjxsr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gxlbzcjxsr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gxlbzcjxsr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gxlbzcjxsr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gxlbzcjxsr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gxlbzcjxsr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gxlbzcjxsr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="gt_heading header">
+<th colspan="11" class="gt_heading gt_title gt_font_normal">Inventory Performance Across Counties</th>
+</tr>
+<tr class="gt_heading even">
+<th colspan="11" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Median across 47 counties, lead time = 2 months, service quantile = 0.90</th>
+</tr>
+<tr class="gt_col_headings gt_spanner_row header">
+<th rowspan="2" id="a::stub" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th colspan="2" id="Fill rate" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Fill rate
+</div></th>
+<th colspan="2" id="CSL" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+CSL
+</div></th>
+<th colspan="2" id="Stockout" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Stockout
+</div></th>
+<th colspan="2" id="Avg on-hand" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Avg on-hand
+</div></th>
+<th colspan="2" id="Unmet demand" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Unmet demand
+</div></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="FR_Raw" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Raw</th>
+<th id="FR_Trunc" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Trunc</th>
+<th id="CSL_Raw" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Raw</th>
+<th id="CSL_Trunc" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Trunc</th>
+<th id="Stock_Raw" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Raw</th>
+<th id="Stock_Trunc" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Trunc</th>
+<th id="OH_Raw" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Raw</th>
+<th id="OH_Trunc" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Trunc</th>
+<th id="Unmet_Raw" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Raw</th>
+<th id="Unmet_Trunc" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Trunc</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">ARIMA</td>
+<td class="gt_row gt_center" headers="stub_1_1 FR_Raw">82.1%</td>
+<td class="gt_row gt_center" headers="stub_1_1 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_1 CSL_Raw">66.7%</td>
+<td class="gt_row gt_center" headers="stub_1_1 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_1 Stock_Raw">33.3%</td>
+<td class="gt_row gt_center" headers="stub_1_1 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_1 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">373</td>
+<td class="gt_row gt_center" headers="stub_1_1 OH_Trunc">811</td>
+<td class="gt_row gt_center" headers="stub_1_1 Unmet_Raw">4,850</td>
+<td class="gt_row gt_center" headers="stub_1_1 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,410</td>
+</tr>
+<tr class="even">
+<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">ETS</td>
+<td class="gt_row gt_center" headers="stub_1_2 FR_Raw">80.8%</td>
+<td class="gt_row gt_center" headers="stub_1_2 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.1%</td>
+<td class="gt_row gt_center" headers="stub_1_2 CSL_Raw">50.0%</td>
+<td class="gt_row gt_center" headers="stub_1_2 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_2 Stock_Raw">50.0%</td>
+<td class="gt_row gt_center" headers="stub_1_2 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_2 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">276</td>
+<td class="gt_row gt_center" headers="stub_1_2 OH_Trunc">684</td>
+<td class="gt_row gt_center" headers="stub_1_2 Unmet_Raw">5,534</td>
+<td class="gt_row gt_center" headers="stub_1_2 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,413</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">LASSO</td>
+<td class="gt_row gt_center" headers="stub_1_3 FR_Raw">78.3%</td>
+<td class="gt_row gt_center" headers="stub_1_3 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">82.9%</td>
+<td class="gt_row gt_center" headers="stub_1_3 CSL_Raw">41.7%</td>
+<td class="gt_row gt_center" headers="stub_1_3 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">75.0%</td>
+<td class="gt_row gt_center" headers="stub_1_3 Stock_Raw">58.3%</td>
+<td class="gt_row gt_center" headers="stub_1_3 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">25.0%</td>
+<td class="gt_row gt_center" headers="stub_1_3 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">223</td>
+<td class="gt_row gt_center" headers="stub_1_3 OH_Trunc">543</td>
+<td class="gt_row gt_center" headers="stub_1_3 Unmet_Raw">5,886</td>
+<td class="gt_row gt_center" headers="stub_1_3 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,442</td>
+</tr>
+<tr class="even">
+<td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">LGBM</td>
+<td class="gt_row gt_center" headers="stub_1_4 FR_Raw">79.1%</td>
+<td class="gt_row gt_center" headers="stub_1_4 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.1%</td>
+<td class="gt_row gt_center" headers="stub_1_4 CSL_Raw">50.0%</td>
+<td class="gt_row gt_center" headers="stub_1_4 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_4 Stock_Raw">50.0%</td>
+<td class="gt_row gt_center" headers="stub_1_4 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_4 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">221</td>
+<td class="gt_row gt_center" headers="stub_1_4 OH_Trunc">694</td>
+<td class="gt_row gt_center" headers="stub_1_4 Unmet_Raw">5,447</td>
+<td class="gt_row gt_center" headers="stub_1_4 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,410</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">LM</td>
+<td class="gt_row gt_center" headers="stub_1_5 FR_Raw">82.7%</td>
+<td class="gt_row gt_center" headers="stub_1_5 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.5%</td>
+<td class="gt_row gt_center" headers="stub_1_5 CSL_Raw">66.7%</td>
+<td class="gt_row gt_center" headers="stub_1_5 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_5 Stock_Raw">33.3%</td>
+<td class="gt_row gt_center" headers="stub_1_5 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_5 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">406</td>
+<td class="gt_row gt_center" headers="stub_1_5 OH_Trunc">749</td>
+<td class="gt_row gt_center" headers="stub_1_5 Unmet_Raw">4,879</td>
+<td class="gt_row gt_center" headers="stub_1_5 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,410</td>
+</tr>
+<tr class="even">
+<td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">NAIVE</td>
+<td class="gt_row gt_center" headers="stub_1_6 FR_Raw">71.9%</td>
+<td class="gt_row gt_center" headers="stub_1_6 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.5%</td>
+<td class="gt_row gt_center" headers="stub_1_6 CSL_Raw">33.3%</td>
+<td class="gt_row gt_center" headers="stub_1_6 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_6 Stock_Raw">66.7%</td>
+<td class="gt_row gt_center" headers="stub_1_6 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_6 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">191</td>
+<td class="gt_row gt_center" headers="stub_1_6 OH_Trunc">984</td>
+<td class="gt_row gt_center" headers="stub_1_6 Unmet_Raw">6,959</td>
+<td class="gt_row gt_center" headers="stub_1_6 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,410</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">QRF</td>
+<td class="gt_row gt_center" headers="stub_1_7 FR_Raw">75.2%</td>
+<td class="gt_row gt_center" headers="stub_1_7 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">82.3%</td>
+<td class="gt_row gt_center" headers="stub_1_7 CSL_Raw">33.3%</td>
+<td class="gt_row gt_center" headers="stub_1_7 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">75.0%</td>
+<td class="gt_row gt_center" headers="stub_1_7 Stock_Raw">66.7%</td>
+<td class="gt_row gt_center" headers="stub_1_7 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">25.0%</td>
+<td class="gt_row gt_center" headers="stub_1_7 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">192</td>
+<td class="gt_row gt_center" headers="stub_1_7 OH_Trunc">440</td>
+<td class="gt_row gt_center" headers="stub_1_7 Unmet_Raw">6,826</td>
+<td class="gt_row gt_center" headers="stub_1_7 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,482</td>
+</tr>
+<tr class="even">
+<td id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">SNAIVE</td>
+<td class="gt_row gt_center" headers="stub_1_8 FR_Raw">83.5%</td>
+<td class="gt_row gt_center" headers="stub_1_8 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.6%</td>
+<td class="gt_row gt_center" headers="stub_1_8 CSL_Raw" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_8 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">83.3%</td>
+<td class="gt_row gt_center" headers="stub_1_8 Stock_Raw" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_8 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">16.7%</td>
+<td class="gt_row gt_center" headers="stub_1_8 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">613</td>
+<td class="gt_row gt_center" headers="stub_1_8 OH_Trunc">1,297</td>
+<td class="gt_row gt_center" headers="stub_1_8 Unmet_Raw">4,434</td>
+<td class="gt_row gt_center" headers="stub_1_8 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,410</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">XGB</td>
+<td class="gt_row gt_center" headers="stub_1_9 FR_Raw">72.1%</td>
+<td class="gt_row gt_center" headers="stub_1_9 FR_Trunc" style="background-color: #D9F2D9; font-weight: bold">80.5%</td>
+<td class="gt_row gt_center" headers="stub_1_9 CSL_Raw">25.0%</td>
+<td class="gt_row gt_center" headers="stub_1_9 CSL_Trunc" style="background-color: #D9F2D9; font-weight: bold">50.0%</td>
+<td class="gt_row gt_center" headers="stub_1_9 Stock_Raw">75.0%</td>
+<td class="gt_row gt_center" headers="stub_1_9 Stock_Trunc" style="background-color: #D9F2D9; font-weight: bold">50.0%</td>
+<td class="gt_row gt_center" headers="stub_1_9 OH_Raw" style="background-color: #D9F2D9; font-weight: bold">177</td>
+<td class="gt_row gt_center" headers="stub_1_9 OH_Trunc">298</td>
+<td class="gt_row gt_center" headers="stub_1_9 Unmet_Raw">7,639</td>
+<td class="gt_row gt_center" headers="stub_1_9 Unmet_Trunc" style="background-color: #D9F2D9; font-weight: bold">4,482</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/fill_rate.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
+<section class="slide level2">
+
+
+<img data-src="images/stockout_rate.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="connect">Connect</h3>
+<p>Udeshi Salgado</p>
+<p>2nd year PhD Student</p>
+<p>DL4SG, Cardiff University, UK</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/udeshi-salgado/">udeshi-salgado</a></p>
+<p>Slides: <br> <img data-src="images/udeshi_website_qr_code.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</div><div class="column" style="width:50%;">
+<h3 id="outline-of-my-talk">Outline of my talk</h3>
+<ol type="1">
+<li>Problem Statement and Motivation</li>
+<li>Decision-Relevant Forecasting under Uncertainty</li>
+<li>Forecasting Framework</li>
+<li>Feasibility Truncation and Inventory Decision Model</li>
+<li>Results</li>
+</ol>
+</div></div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>© 2025 Udeshi Salgado – IIF UK Chapter, Cardiff</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/udeshisalgado\.github\.io");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

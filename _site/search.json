@@ -235,14 +235,14 @@
     "href": "talks.html",
     "title": "Talks & Presentations",
     "section": "",
-    "text": "SWORD Network Event , Cardiff University\n\n📅 Date: October 09, 2025\n⏰ Time: 6:15 PM – 08:30 PM\n📍 Location: Abacws, Room 2.26, Cardiff University\n\n View Slides"
+    "text": "IIF UK Chapter, Cardiff University\n\n📅 Date: March 13, 2026\n⏰ Time: 12:00 PM – 17:00 PM\n📍 Location: Cardiff University, Cardiff, United Kingdom\n\n View Slides"
   },
   {
     "objectID": "talks.html#enhancing-global-immunisation-supply-chain",
     "href": "talks.html#enhancing-global-immunisation-supply-chain",
     "title": "Talks & Presentations",
-    "section": "",
-    "text": "SWORD Network Event , Cardiff University\n\n📅 Date: October 09, 2025\n⏰ Time: 6:15 PM – 08:30 PM\n📍 Location: Abacws, Room 2.26, Cardiff University\n\n View Slides"
+    "section": "Enhancing Global Immunisation Supply Chain",
+    "text": "Enhancing Global Immunisation Supply Chain\nSWORD Network Event , Cardiff University\n\n📅 Date: October 09, 2025\n⏰ Time: 6:15 PM – 08:30 PM\n📍 Location: Abacws, Room 2.26, Cardiff University\n\n View Slides"
   },
   {
     "objectID": "talks.html#what-qualities-make-a-good-tutor",
@@ -1090,5 +1090,159 @@
     "title": "Udeshi Salgado",
     "section": "Life as an Overseas Student",
     "text": "Life as an Overseas Student"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html",
+    "title": "Udeshi Salgado",
+    "section": "",
+    "text": "Udeshi Salgado, Cardiff University, UK  Lead Supervisor: Professor Bahman Rostami-Tabar Co-supervisors: Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang\n13 March 2026"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline",
+    "title": "Udeshi Salgado",
+    "section": "Outline",
+    "text": "Outline\n\n Problem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#background",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#background",
+    "title": "Udeshi Salgado",
+    "section": "Background",
+    "text": "Background\n\n\n1 in 5 children worldwide lack access to lifesaving vaccines. (source: WHO)\nPotential Cause: Supply chain inefficiencies\nVaccine supply chains in low- and middle-income countries (LMICs) often face:\n\nInaccurate forecasts of vaccine demand\nInefficient inventory decisions driven mainly by cost minimisation\nWastage and stockouts"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#coverage-gap-in-the-study-setting",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#coverage-gap-in-the-study-setting",
+    "title": "Udeshi Salgado",
+    "section": "Coverage gap in the study setting",
+    "text": "Coverage gap in the study setting\n\n\n\nAchieved coverage remains below WHO planned coverage across years, motivating improved operational forecasting and planning."
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#current-forecasting-practice",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#current-forecasting-practice",
+    "title": "Udeshi Salgado",
+    "section": "Current Forecasting Practice",
+    "text": "Current Forecasting Practice\n\n\nIn practice, vaccine planning often relies on the Forecasting, Supply Planning, and Procurement (FSP) Tool and related planning workflows.\nIt combines outputs from several deterministic models:\n\nDemographic-based (Stratified if available)\nFacility consumption-based / Issue-based (not useful if we lack stockouts data, reporting rates, as it adjusts the previous year’s consumption and is considered a forecast)\nSession-based (100% based on expert knowledge)"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
+    "title": "Udeshi Salgado",
+    "section": "The FSP Forecasting",
+    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = P_t * C_t\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at time \\(t\\)\n\\(P_t\\): Target population at time \\(t\\)\n\\(C_t\\): Planned WHO coverage at time \\(t\\)"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#methodological-limitations",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#methodological-limitations",
+    "title": "Udeshi Salgado",
+    "section": "Methodological Limitations",
+    "text": "Methodological Limitations\n\n\nIn practice, vaccine planning relies largely on deterministic demographic-based models, limiting responsiveness to real consumption patterns.\n\n\n\n\nForecasting workflows still emphasise point predictions, which fail to capture uncertainty relevant for operational planning.\n\n\n\n\nModels trained on historical administered doses tend to systematically underforecast, reflecting constrained past delivery rather than true demand."
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-1",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-1",
+    "title": "Udeshi Salgado",
+    "section": "Outline",
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-risk-of-point-forecasting",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-risk-of-point-forecasting",
+    "title": "Udeshi Salgado",
+    "section": "The Risk of Point Forecasting",
+    "text": "The Risk of Point Forecasting"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#addressing-the-uncertainty",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#addressing-the-uncertainty",
+    "title": "Udeshi Salgado",
+    "section": "Addressing the Uncertainty",
+    "text": "Addressing the Uncertainty"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-defining-lower-bound",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-defining-lower-bound",
+    "title": "Udeshi Salgado",
+    "section": "Distributional Post-Processing: Defining Lower Bound",
+    "text": "Distributional Post-Processing: Defining Lower Bound\n\n\n\n\n\n\n\n\nWe define lower bound as the FSP forecast:\n\\[\n  \\text{Lower Bound} =  P_t * C_t\n  \\]\n\n\nWhere:\n\n\\(P_t\\): Target population at time \\(t\\)\n\\(C_t\\): Planned WHO coverage at time \\(t\\)"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-truncation",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-truncation",
+    "title": "Udeshi Salgado",
+    "section": "Distributional Post-Processing: Truncation",
+    "text": "Distributional Post-Processing: Truncation"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-2",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-2",
+    "title": "Udeshi Salgado",
+    "section": "Outline",
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#study-design",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#study-design",
+    "title": "Udeshi Salgado",
+    "section": "Study Design",
+    "text": "Study Design\n\n\n\nData setting\n\nOne LMIC country\n\nOne vaccine: BCG\nMonthly time series\n\n\n\n\nHierarchical level\n\nSub-national level: 47 counties\nNational aggregation used for evaluation\n48 time series (47 counties + national)\n\n\n\nForecast target\nLet \\(y_{i,t}\\) denote administered doses in county \\(i\\) at month \\(t\\).\nThe forecasting for 12 month horizon \\(H\\) is given by\n\\[\n\\{y_{i,T+1},\\dots,y_{i,T+H}\\}, \\qquad H = 12.\n\\]"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#forecasting-models",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#forecasting-models",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Models",
+    "text": "Forecasting Models\n\nlibrary(gt)\n\nWarning: package 'gt' was built under R version 4.5.2\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nmodel_table &lt;- tibble::tibble(\n  `Model class` = c(\n    \"Classical statistical\",\n    \"Regression-based\",\n    \"Machine learning\"\n  ),\n  Models = c(\n    \"ETS, ARIMA, Naïve, Seasonal Naïve\",\n    \"Linear regression, LASSO\",\n    \"Quantile Random Forest, XGBoost, LightGBM\"\n  )\n)\n\nmodel_table %&gt;%\n  gt() %&gt;%\n  cols_align(align = \"left\") %&gt;%\n  tab_options(\n    table.font.size = \"large\",\n    data_row.padding = gt::px(30)\n  )\n\n\n\n\n\n\n\nModel class\nModels\n\n\n\n\nClassical statistical\nETS, ARIMA, Naïve, Seasonal Naïve\n\n\nRegression-based\nLinear regression, LASSO\n\n\nMachine learning\nQuantile Random Forest, XGBoost, LightGBM\n\n\n\n\n\n\n\n\nEach model produces multi-step point forecasts \\(\\hat{y}_{i,T+h|T}\\).\nPredictive distributions are obtained via blocked bootstrap residual simulation."
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-3",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-3",
+    "title": "Udeshi Salgado",
+    "section": "Outline",
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#feasibility-truncation",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#feasibility-truncation",
+    "title": "Udeshi Salgado",
+    "section": "Feasibility Truncation",
+    "text": "Feasibility Truncation\n\nPredictive distribution\nLet the raw predictive distribution at horizon (h) be\n\\[\np_h(y) = \\Pr(Y_{T+h} = y).\n\\]\nIn practice, this is approximated using training residuals via blocked bootstrap.\n\\[\n\\{y^{(1)}_{T+h},\\dots,y^{(R)}_{T+h}\\}.\n\\]"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-decision-model",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-decision-model",
+    "title": "Udeshi Salgado",
+    "section": "Inventory Decision Model",
+    "text": "Inventory Decision Model\nPolicy\n\nPeriodic review \\((T,S)\\) policy\n\nOrder-up-to level based on predictive distribution\n\n\\[\nS_t = Q_{\\alpha}(D^L_t)\n\\]"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-evaluation",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-evaluation",
+    "title": "Udeshi Salgado",
+    "section": "Inventory Performance Evaluation",
+    "text": "Inventory Performance Evaluation\nService measures\n\nFill rate\n\nCycle service level (CSL)\n\nStockout rate\n\nStock measures\n\nAverage on-hand inventory\n\nTotal unmet demand"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-4",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-4",
+    "title": "Udeshi Salgado",
+    "section": "Outline",
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-across-counties",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-across-counties",
+    "title": "Udeshi Salgado",
+    "section": "Inventory Performance Across Counties",
+    "text": "Inventory Performance Across Counties\n\nlibrary(gt)\nlibrary(tibble)\n\n# ------------------------------------------------------------\n# Manual table (from your results)\n# ------------------------------------------------------------\nslide_table &lt;- tibble::tribble(\n  ~Model, ~FR_Raw, ~FR_Trunc, ~CSL_Raw, ~CSL_Trunc, ~Stock_Raw, ~Stock_Trunc, ~OH_Raw, ~OH_Trunc, ~Unmet_Raw, ~Unmet_Trunc,\n\n  \"ARIMA\", 0.821, 0.833, 0.667, 0.833, 0.333, 0.167, 373, 811, 4850, 4410,\n  \"ETS\",   0.808, 0.831, 0.500, 0.833, 0.500, 0.167, 276, 684, 5534, 4413,\n  \"LASSO\", 0.783, 0.829, 0.417, 0.750, 0.583, 0.250, 223, 543, 5886, 4442,\n  \"LGBM\",  0.791, 0.831, 0.500, 0.833, 0.500, 0.167, 221, 694, 5447, 4410,\n  \"LM\",    0.827, 0.835, 0.667, 0.833, 0.333, 0.167, 406, 749, 4879, 4410,\n  \"NAIVE\", 0.719, 0.835, 0.333, 0.833, 0.667, 0.167, 191, 984, 6959, 4410,\n  \"QRF\",   0.752, 0.823, 0.333, 0.750, 0.667, 0.250, 192, 440, 6826, 4482,\n  \"SNAIVE\",0.835, 0.836, 0.833, 0.833, 0.167, 0.167, 613, 1297, 4434, 4410,\n  \"XGB\",   0.721, 0.805, 0.250, 0.500, 0.750, 0.500, 177, 298, 7639, 4482\n)\n\n# ------------------------------------------------------------\n# Helper row indices for highlighting\n# ------------------------------------------------------------\nfr_raw_rows    &lt;- which(slide_table$FR_Raw    &gt;= slide_table$FR_Trunc)\nfr_trunc_rows  &lt;- which(slide_table$FR_Trunc  &gt;= slide_table$FR_Raw)\n\ncsl_raw_rows   &lt;- which(slide_table$CSL_Raw   &gt;= slide_table$CSL_Trunc)\ncsl_trunc_rows &lt;- which(slide_table$CSL_Trunc &gt;= slide_table$CSL_Raw)\n\nstock_raw_rows   &lt;- which(slide_table$Stock_Raw   &lt;= slide_table$Stock_Trunc)\nstock_trunc_rows &lt;- which(slide_table$Stock_Trunc &lt;= slide_table$Stock_Raw)\n\noh_raw_rows   &lt;- which(slide_table$OH_Raw   &lt;= slide_table$OH_Trunc)\noh_trunc_rows &lt;- which(slide_table$OH_Trunc &lt;= slide_table$OH_Raw)\n\nunmet_raw_rows   &lt;- which(slide_table$Unmet_Raw   &lt;= slide_table$Unmet_Trunc)\nunmet_trunc_rows &lt;- which(slide_table$Unmet_Trunc &lt;= slide_table$Unmet_Raw)\n\n# ------------------------------------------------------------\n# Slide table\n# ------------------------------------------------------------\nslide_table %&gt;%\n  gt(rowname_col = \"Model\") %&gt;%\n\n  tab_spanner(\"Fill rate\", c(FR_Raw, FR_Trunc)) %&gt;%\n  tab_spanner(\"CSL\", c(CSL_Raw, CSL_Trunc)) %&gt;%\n  tab_spanner(\"Stockout\", c(Stock_Raw, Stock_Trunc)) %&gt;%\n  tab_spanner(\"Avg on-hand\", c(OH_Raw, OH_Trunc)) %&gt;%\n  tab_spanner(\"Unmet demand\", c(Unmet_Raw, Unmet_Trunc)) %&gt;%\n\n  cols_label(\n    FR_Raw = \"Raw\", FR_Trunc = \"Trunc\",\n    CSL_Raw = \"Raw\", CSL_Trunc = \"Trunc\",\n    Stock_Raw = \"Raw\", Stock_Trunc = \"Trunc\",\n    OH_Raw = \"Raw\", OH_Trunc = \"Trunc\",\n    Unmet_Raw = \"Raw\", Unmet_Trunc = \"Trunc\"\n  ) %&gt;%\n\n  fmt_percent(\n    columns = c(FR_Raw, FR_Trunc, CSL_Raw, CSL_Trunc, Stock_Raw, Stock_Trunc),\n    decimals = 1\n  ) %&gt;%\n  fmt_number(\n    columns = c(OH_Raw, OH_Trunc, Unmet_Raw, Unmet_Trunc),\n    decimals = 0\n  ) %&gt;%\n\n  # Increase overall size\n  tab_options(\n    table.font.size = px(24),\n    heading.title.font.size = px(28),\n    heading.subtitle.font.size = px(20),\n    column_labels.font.size = px(20),\n    table_body.hlines.width = px(1.5),\n    column_labels.padding = px(8),\n    data_row.padding = px(8)\n  ) %&gt;%\n\n  # Highlight best values in light green\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = FR_Raw, rows = fr_raw_rows)\n  ) %&gt;%\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = FR_Trunc, rows = fr_trunc_rows)\n  ) %&gt;%\n\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = CSL_Raw, rows = csl_raw_rows)\n  ) %&gt;%\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = CSL_Trunc, rows = csl_trunc_rows)\n  ) %&gt;%\n\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = Stock_Raw, rows = stock_raw_rows)\n  ) %&gt;%\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = Stock_Trunc, rows = stock_trunc_rows)\n  ) %&gt;%\n\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = OH_Raw, rows = oh_raw_rows)\n  ) %&gt;%\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = OH_Trunc, rows = oh_trunc_rows)\n  ) %&gt;%\n\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = Unmet_Raw, rows = unmet_raw_rows)\n  ) %&gt;%\n  tab_style(\n    style = list(\n      cell_fill(color = \"#D9F2D9\"),\n      cell_text(weight = \"bold\")\n    ),\n    locations = cells_body(columns = Unmet_Trunc, rows = unmet_trunc_rows)\n  ) %&gt;%\n\n  tab_header(\n    title = \"Inventory Performance Across Counties\",\n    subtitle = \"Median across 47 counties, lead time = 2 months, service quantile = 0.90\"\n  ) %&gt;%\n  cols_align(align = \"center\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInventory Performance Across Counties\n\n\nMedian across 47 counties, lead time = 2 months, service quantile = 0.90\n\n\n\n\nFill rate\n\n\nCSL\n\n\nStockout\n\n\nAvg on-hand\n\n\nUnmet demand\n\n\n\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\n\n\n\n\nARIMA\n82.1%\n83.3%\n66.7%\n83.3%\n33.3%\n16.7%\n373\n811\n4,850\n4,410\n\n\nETS\n80.8%\n83.1%\n50.0%\n83.3%\n50.0%\n16.7%\n276\n684\n5,534\n4,413\n\n\nLASSO\n78.3%\n82.9%\n41.7%\n75.0%\n58.3%\n25.0%\n223\n543\n5,886\n4,442\n\n\nLGBM\n79.1%\n83.1%\n50.0%\n83.3%\n50.0%\n16.7%\n221\n694\n5,447\n4,410\n\n\nLM\n82.7%\n83.5%\n66.7%\n83.3%\n33.3%\n16.7%\n406\n749\n4,879\n4,410\n\n\nNAIVE\n71.9%\n83.5%\n33.3%\n83.3%\n66.7%\n16.7%\n191\n984\n6,959\n4,410\n\n\nQRF\n75.2%\n82.3%\n33.3%\n75.0%\n66.7%\n25.0%\n192\n440\n6,826\n4,482\n\n\nSNAIVE\n83.5%\n83.6%\n83.3%\n83.3%\n16.7%\n16.7%\n613\n1,297\n4,434\n4,410\n\n\nXGB\n72.1%\n80.5%\n25.0%\n50.0%\n75.0%\n50.0%\n177\n298\n7,639\n4,482"
+  },
+  {
+    "objectID": "talks.html#distributional-post-processing-with-feasibility-truncation-for-vaccine-demand-forecasting",
+    "href": "talks.html#distributional-post-processing-with-feasibility-truncation-for-vaccine-demand-forecasting",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "IIF UK Chapter, Cardiff University\n\n📅 Date: March 13, 2026\n⏰ Time: 12:00 PM – 17:00 PM\n📍 Location: Cardiff University, Cardiff, United Kingdom\n\n View Slides"
   }
 ]

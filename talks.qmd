@@ -3,6 +3,22 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## Distributional Post-Processing with Feasibility Truncation for Vaccine Demand Forecasting
+*IIF UK Chapter, Cardiff University*
+
+![](slides/iif_uk_chapter_march26/preview.png)
+
+📅 **Date:** March 13, 2026   
+⏰ **Time:** 12:00 PM – 17:00 PM  
+📍 **Location:** Cardiff University, Cardiff, United Kingdom 
+
+<p>
+  <a href="slides/iif_uk_chapter_march26/iif_uk_chapter26.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
+
 
 ## Enhancing Global Immunisation Supply Chain
 *SWORD Network Event , Cardiff University*  
