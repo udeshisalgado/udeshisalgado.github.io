@@ -1131,7 +1131,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
     "title": "Udeshi Salgado",
     "section": "The FSP Forecasting",
-    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at month \\(t\\)\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO targhet coverage at year \\(y\\)"
+    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at month \\(t\\)\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO targhet coverage at year \\(y\\)"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#methodological-limitations",
@@ -1166,7 +1166,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-defining-lower-bound",
     "title": "Udeshi Salgado",
     "section": "Distributional Post-Processing: Defining Lower Bound",
-    "text": "Distributional Post-Processing: Defining Lower Bound\n\n\n\n\n\n\n\n\n\n\nWe define lower bound as the FSP forecast:\n\\[\n  \\text{Lower Bound} =  \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\n\nWhere:\n\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO target coverage at year \\(y\\)"
+    "text": "Distributional Post-Processing: Defining Lower Bound\n\n\n\n\n\n\n\n\n\nWe define lower bound as the FSP forecast:\n\\[\n  \\text{Lower Bound} =  \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\n\nWhere:\n\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO target coverage at year \\(y\\)"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-truncation",
@@ -1215,7 +1215,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-decision-model",
     "title": "Udeshi Salgado",
     "section": "Inventory Decision Model",
-    "text": "Inventory Decision Model\n\n\n\n\nPolicy\n\n\nPeriodic-review order-up-to policy\nInventory reviewed monthly\nAt each review, inventory position is raised to target level (S_t)\n\n\\[\nS_t = Q_{\\alpha}(D_t^L)\n\\]\n\n\\(Q_{\\alpha}(\\cdot)\\): \\(\\alpha\\)-quantile of predictive lead-time demand\n\nOperationally, forecasts determine the replenishment target\n\n\n\n\n\n\n\nAssumptions\n\n\nMissed vaccination opportunities (no backlog)\n\nFixed lead time (L)\n\nDecisions based on predictive simulations\n\n\n\n\n\n\nLead-time demand\n\nDemand occurring while orders are in transit:\n\\[\nD_t^{L,(r)} = \\sum_{j=t}^{t+L-1} y_j^{(r)}\n\\]\n\n\nwhere\n\n\n\\(t\\) = review period\n\n\\(L\\) = lead time (months)\n\n\n\n\n\\(r = 1,\\dots,R\\) = simulation draw\n\n\\(y_j^{(r)}\\) = simulated demand"
+    "text": "Inventory Decision Model\n\n\n\nPolicy\n\n\nPeriodic-review order-up-to policy\nInventory reviewed monthly\nAt each review, inventory position is raised to target level (S_t)\n\n\\[\nS_t = Q_{\\alpha}(D_t^L)\n\\]\n\n\\(Q_{\\alpha}(\\cdot)\\): \\(\\alpha\\)-quantile of predictive lead-time demand\n\nOperationally, forecasts determine the replenishment target\n\n\n\n\n\nAssumptions\n\n\nMissed vaccination opportunities (no backlog)\n\nFixed lead time (L)\n\nDecisions based on predictive simulations\n\n\n\n\nLead-time demand\n\nDemand occurring while orders are in transit:\n\\[\nD_t^{L,(r)} = \\sum_{j=t}^{t+L-1} y_j^{(r)}\n\\]\n\n\nwhere\n\n\n\\(t\\) = review period\n\n\\(L\\) = lead time (months)\n\n\n\n\\(r = 1,\\dots,R\\) = simulation draw\n\n\\(y_j^{(r)}\\) = simulated demand"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-evaluation",
@@ -1271,21 +1271,21 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#forecasting-framework",
     "title": "Udeshi Salgado",
     "section": "Forecasting Framework",
-    "text": "Forecasting Framework\n\n\n\n\nData Setting\n\nBCG doses administered from a LMIC country\nMonthly data from Jan 2013 - Dec 2021\nHierachical Level: County Level (47 counties)\n48 time series in total (47 counties + national)\n\n\n\n\n\n\nForecasting Setup\n\nTarget variable: monthly BCG doses administsered\nLet \\(y_{i,t}\\) denote administered doses\nin county \\(i\\) at month \\(t\\).\n\nFor forecast origin \\(T\\), predict:\n\\[\n\\{y_{i,T+1}, \\dots, y_{i,T+H}\\}, \\quad H = 12\n\\]"
+    "text": "Forecasting Framework\n\n\n\nData Setting\n\nBCG doses administered from a LMIC country\nMonthly data from Jan 2013 - Dec 2021\nHierachical Level: County Level (47 counties)\n48 time series in total (47 counties + national)\n\n\n\n\nForecasting Setup\n\nTarget variable: monthly BCG doses administsered\nLet \\(y_{i,t}\\) denote administered doses\nin county \\(i\\) at month \\(t\\).\n\nFor forecast origin \\(T\\), predict:\n\\[\n\\{y_{i,T+1}, \\dots, y_{i,T+H}\\}, \\quad H = 12\n\\]"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing",
     "title": "Udeshi Salgado",
     "section": "Distributional Post-Processing",
-    "text": "Distributional Post-Processing\n\n\n\nRaw predictive distribution\n\nLet the predictive distribution at horizon \\(h\\) be\n\\[\np_h(y) = \\Pr(Y_{T+h} = y).\n\\]\nIn practice, this is approximated using blocked bootstrap residual simulation:\n\\[\n\\{y^{(1)}_{T+h},\\dots,y^{(R)}_{T+h}\\}.\n\\]\n\n\n\n\nTarget coverage lower bound\n\nWe impose a planning-based (FSP benchmark target) lower bound:\n\\[\nL_{T+h} = \\frac{P_y \\cdot C_y}{12},\n\\]\nwhere \\(P_y\\) is the target population and \\(C_y\\) is WHO target coverage for year \\(y\\).\n\n\n\n\n\n\n\n\nConceptual truncation\n\nThe predictive distribution is truncated as:\n\\[\np_h^{\\text{tr}}(y)=\n\\begin{cases}\np_h(y), & y \\ge L_{T+h},\\\\\n0, & y &lt; L_{T+h}.\n\\end{cases}\n\\]\nand renormalized:\n\\[\n\\tilde{p}_h(y)\n=\n\\frac{p_h^{\\text{tr}}(y)}\n{\\sum_{z \\ge L_{T+h}} p_h(z)}.\n\\]\n\n\n\\(p_h(y)\\): raw predictive distribution at horizon \\(h\\)\n\n\\(L_{T+h}\\): lower bound from target population and coverage\n\n\\(\\tilde{p}_h(y)\\): adjusted predictive distribution\n\n\n\n\n\n\nImplementation (simulation)\n\nIn practice, truncation is applied to simulated draws:\n\n\\[\ny^{(r),\\text{tr}}_{T+h}\n=\n\\begin{cases}\ny^{(r)}_{T+h}, & y^{(r)}_{T+h} \\ge L_{T+h},\\\\\n\\text{resample from feasible draws}, & \\text{otherwise}.\n\\end{cases}\n\\]\n\n\n\n\\(r=1,\\dots,R\\): simulation draw\n\nRenormalization occurs implicitly through resampling."
+    "text": "Distributional Post-Processing\n\n\nRaw predictive distribution\n\nLet the predictive distribution at horizon \\(h\\) be\n\\[\np_h(y) = \\Pr(Y_{T+h} = y).\n\\]\nIn practice, this is approximated using blocked bootstrap residual simulation:\n\\[\n\\{y^{(1)}_{T+h},\\dots,y^{(R)}_{T+h}\\}.\n\\]\n\n\nTarget coverage lower bound\n\nWe impose a planning-based (FSP benchmark target) lower bound:\n\\[\nL_{T+h} = \\frac{P_y \\cdot C_y}{12},\n\\]\nwhere \\(P_y\\) is the target population and \\(C_y\\) is WHO target coverage for year \\(y\\)."
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#performance-evaluation",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#performance-evaluation",
     "title": "Udeshi Salgado",
     "section": "Performance evaluation",
-    "text": "Performance evaluation\n\n\n\nService measures\n\n\\[\n\\text{Fill Rate}\n=\n\\frac{\\sum_{t=1}^{T} FD_t}\n{\\sum_{t=1}^{T} D_t}\n\\]\n\\[\n\\text{CSL}\n=\n1 - \\frac{N_{\\text{stockout}}}{T}\n\\]\n\n\n\n\nInventory Measures\n\n\\[\n\\text{Average on-hand}\n=\n\\frac{1}{T}\\sum_{t=1}^{T} I_t\n\\]\n\\[\n\\text{Total unmet demand}\n=\n\\sum_{t=1}^{T} (D_t - FD_t)\n\\]\n\n\n\nwhere\n\n\n\\(D_t\\) = demand in period \\(t\\)\n\\(FD_t\\) = fulfilled demand in period \\(t\\)\n\\(T\\) = total number of periods (in months)\n\n\n\n\n\\(N_{\\text{stockout}}\\) = number of stockout periods (in months)\n\n\\(I_t\\) = on-hand inventory at end of period \\(t\\)"
+    "text": "Performance evaluation\n\n\nService measures\n\n\\[\n\\text{Fill Rate}\n=\n\\frac{\\sum_{t=1}^{T} FD_t}\n{\\sum_{t=1}^{T} D_t}\n\\]\n\\[\n\\text{CSL}\n=\n1 - \\frac{N_{\\text{stockout}}}{T}\n\\]\n\n\nInventory Measures\n\n\\[\n\\text{Average on-hand}\n=\n\\frac{1}{T}\\sum_{t=1}^{T} I_t\n\\]\n\\[\n\\text{Total unmet demand}\n=\n\\sum_{t=1}^{T} (D_t - FD_t)\n\\]\n\n\nwhere\n\n\n\\(D_t\\) = demand in period \\(t\\)\n\\(FD_t\\) = fulfilled demand in period \\(t\\)\n\\(T\\) = total number of periods (in months)\n\n\n\n\\(N_{\\text{stockout}}\\) = number of stockout periods (in months)\n\n\\(I_t\\) = on-hand inventory at end of period \\(t\\)"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#mean-inventory-performance-across-counties",
@@ -1299,7 +1299,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#median-inventory-performance-across-counties",
     "title": "Udeshi Salgado",
     "section": "Median Inventory Performance Across Counties",
-    "text": "Median Inventory Performance Across Counties\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInventory Performance Across Counties\n\n\nMedian across 47 counties, lead time = 2 months, service quantile = 0.90\n\n\n\n\nFill rate\n\n\nCSL\n\n\nAvg on-hand\n\n\nUnmet demand\n\n\n\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\n\n\n\n\nARIMA\n82.9%\n83.5%\n75.0%\n83.3%\n428\n977\n4,409\n4,074\n\n\nETS\n82.4%\n83.4%\n66.7%\n83.3%\n341\n762\n4,824\n4,068\n\n\nLASSO\n80.8%\n83.2%\n50.0%\n83.3%\n298\n732\n5,363\n4,198\n\n\nLGBM\n81.7%\n83.3%\n58.3%\n83.3%\n315\n798\n4,988\n3,990\n\n\nLM\n83.1%\n83.5%\n75.0%\n83.3%\n463\n932\n4,225\n3,985\n\n\nNAIVE\n81.4%\n83.5%\n58.3%\n83.3%\n303\n1,152\n5,322\n3,985\n\n\nQRF\n80.5%\n82.8%\n50.0%\n83.3%\n267\n636\n5,178\n4,447\n\n\nSNAIVE\n83.4%\n83.6%\n83.3%\n83.3%\n835\n1,369\n3,985\n3,985\n\n\nXGB\n77.7%\n82.4%\n33.3%\n66.7%\n199\n409\n6,075\n4,481\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConnect\nUdeshi Salgado\n2nd year PhD Student\nDL4SG, Cardiff University, UK\nLinkedIn: udeshi-salgado\nSlides:  \n\n\n\nOutline of my talk\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
+    "text": "Median Inventory Performance Across Counties\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInventory Performance Across Counties\n\n\nMedian across 47 counties, lead time = 2 months, service quantile = 0.90\n\n\n\n\nFill rate\n\n\nCSL\n\n\nAvg on-hand\n\n\nUnmet demand\n\n\n\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\n\n\n\n\nARIMA\n82.9%\n83.5%\n75.0%\n83.3%\n428\n977\n4,409\n4,074\n\n\nETS\n82.4%\n83.4%\n66.7%\n83.3%\n341\n762\n4,824\n4,068\n\n\nLASSO\n80.8%\n83.2%\n50.0%\n83.3%\n298\n732\n5,363\n4,198\n\n\nLGBM\n81.7%\n83.3%\n58.3%\n83.3%\n315\n798\n4,988\n3,990\n\n\nLM\n83.1%\n83.5%\n75.0%\n83.3%\n463\n932\n4,225\n3,985\n\n\nNAIVE\n81.4%\n83.5%\n58.3%\n83.3%\n303\n1,152\n5,322\n3,985\n\n\nQRF\n80.5%\n82.8%\n50.0%\n83.3%\n267\n636\n5,178\n4,447\n\n\nSNAIVE\n83.4%\n83.6%\n83.3%\n83.3%\n835\n1,369\n3,985\n3,985\n\n\nXGB\n77.7%\n82.4%\n33.3%\n66.7%\n199\n409\n6,075\n4,481"
   },
   {
     "objectID": "talks.html#distributional-post-processing-for-vaccine-demand-inventory-forecasting",
