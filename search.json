@@ -1103,14 +1103,14 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline",
     "title": "Udeshi Salgado",
     "section": "Outline",
-    "text": "Outline\n\n Problem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+    "text": "Outline\n\n Problem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#background",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#background",
     "title": "Udeshi Salgado",
     "section": "Background",
-    "text": "Background\n\n\n1 in 5 children worldwide lack access to lifesaving vaccines. (source: WHO)\nPotential Cause: Supply chain inefficiencies\nVaccine supply chains in low- and middle-income countries (LMICs) often face:\n\nInaccurate forecasts of vaccine demand\nInefficient inventory decisions driven mainly by cost minimisation\nWastage and stockouts"
+    "text": "Background\n\n\n\n\n\n\n1 in 5 children worldwide still lack access to essential vaccines.\nA key operational contributor is inefficiency in vaccine supply chains.\nIn low- and middle-income countries, these inefficiencies often involve:\n\ninaccurate demand forecasts\ninventory decisions made under limited uncertainty information\nwastage and stockouts"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#coverage-gap-in-the-study-setting",
@@ -1124,28 +1124,28 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#current-forecasting-practice",
     "title": "Udeshi Salgado",
     "section": "Current Forecasting Practice",
-    "text": "Current Forecasting Practice\n\n\nIn practice, vaccine planning often relies on the Forecasting, Supply Planning, and Procurement (FSP) Tool and related planning workflows.\nIt combines outputs from several deterministic models:\n\nDemographic-based (Stratified if available)\nFacility consumption-based / Issue-based (not useful if we lack stockouts data, reporting rates, as it adjusts the previous year’s consumption and is considered a forecast)\nSession-based (100% based on expert knowledge)"
+    "text": "Current Forecasting Practice\n\n\nIn practice, vaccine planning often relies on the Forecasting, Supply Planning, and Procurement (FSP) Tool.\nThe FSP workflow combines three point-based planning components:\n\nDemographic-based: based on demographic estimates and who static wastage and coverage rates\nConsumption / issue-based: previous year doses administred adjusted for stockout and reporting rate\nSession-based: 100% expert-driven planning for upcoming vaccination sessions\n\nThese approaches typically produce point estimates, with limited representation of uncertainty."
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
     "title": "Udeshi Salgado",
     "section": "The FSP Forecasting",
-    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = P_t * C_t\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at time \\(t\\)\n\\(P_t\\): Target population at time \\(t\\)\n\\(C_t\\): Planned WHO coverage at time \\(t\\)"
+    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at month \\(t\\)\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO targhet coverage at year \\(y\\)"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#methodological-limitations",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#methodological-limitations",
     "title": "Udeshi Salgado",
     "section": "Methodological Limitations",
-    "text": "Methodological Limitations\n\n\nIn practice, vaccine planning relies largely on deterministic demographic-based models, limiting responsiveness to real consumption patterns.\n\n\n\n\nForecasting workflows still emphasise point predictions, which fail to capture uncertainty relevant for operational planning.\n\n\n\n\nModels trained on historical administered doses tend to systematically underforecast, reflecting constrained past delivery rather than true demand."
+    "text": "Methodological Limitations\n\n\nIn practice, vaccine planning often relies on point-based demographic planning models, limiting responsiveness to observed consumption patterns.\n\n\n\n\nForecasting workflows still emphasise point predictions, which do not capture uncertainty needed for operational decision-making.\n\n\n\n\nModels trained on historical administered doses may understate true need when past delivery is supply-constrained."
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-1",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-1",
     "title": "Udeshi Salgado",
     "section": "Outline",
-    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-risk-of-point-forecasting",
@@ -1166,7 +1166,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-defining-lower-bound",
     "title": "Udeshi Salgado",
     "section": "Distributional Post-Processing: Defining Lower Bound",
-    "text": "Distributional Post-Processing: Defining Lower Bound\n\n\n\n\n\n\n\n\nWe define lower bound as the FSP forecast:\n\\[\n  \\text{Lower Bound} =  P_t * C_t\n  \\]\n\n\nWhere:\n\n\\(P_t\\): Target population at time \\(t\\)\n\\(C_t\\): Planned WHO coverage at time \\(t\\)"
+    "text": "Distributional Post-Processing: Defining Lower Bound\n\n\n\n\n\n\n\n\n\n\nWe define lower bound as the FSP forecast:\n\\[\n  \\text{Lower Bound} =  \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\n\nWhere:\n\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO target coverage at year \\(y\\)"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing-truncation",
@@ -1180,7 +1180,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-2",
     "title": "Udeshi Salgado",
     "section": "Outline",
-    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#study-design",
@@ -1194,14 +1194,14 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#forecasting-models",
     "title": "Udeshi Salgado",
     "section": "Forecasting Models",
-    "text": "Forecasting Models\n\nlibrary(gt)\n\nWarning: package 'gt' was built under R version 4.5.2\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nmodel_table &lt;- tibble::tibble(\n  `Model class` = c(\n    \"Classical statistical\",\n    \"Regression-based\",\n    \"Machine learning\"\n  ),\n  Models = c(\n    \"ETS, ARIMA, Naïve, Seasonal Naïve\",\n    \"Linear regression, LASSO\",\n    \"Quantile Random Forest, XGBoost, LightGBM\"\n  )\n)\n\nmodel_table %&gt;%\n  gt() %&gt;%\n  cols_align(align = \"left\") %&gt;%\n  tab_options(\n    table.font.size = \"large\",\n    data_row.padding = gt::px(30)\n  )\n\n\n\n\n\n\n\nModel class\nModels\n\n\n\n\nClassical statistical\nETS, ARIMA, Naïve, Seasonal Naïve\n\n\nRegression-based\nLinear regression, LASSO\n\n\nMachine learning\nQuantile Random Forest, XGBoost, LightGBM\n\n\n\n\n\n\n\n\nEach model produces multi-step point forecasts \\(\\hat{y}_{i,T+h|T}\\).\nPredictive distributions are obtained via blocked bootstrap residual simulation."
+    "text": "Forecasting Models\n\n\n\n\n\n\n\n\n\n\n\nModel class\nModels\n\n\n\n\nClassical statistical\nETS, ARIMA, Naïve, Seasonal Naïve\n\n\nRegression-based\nLinear regression, LASSO\n\n\nMachine learning\nQuantile Random Forest, XGBoost, LightGBM\n\n\n\n\n\n\n\n\n\n\n\nEach model produces multi-step point forecasts \\(\\hat{y}_{i,T+h|T}\\).\nPredictive distributions are obtained via blocked bootstrap residual simulation."
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-3",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-3",
     "title": "Udeshi Salgado",
     "section": "Outline",
-    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#feasibility-truncation",
@@ -1215,7 +1215,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-decision-model",
     "title": "Udeshi Salgado",
     "section": "Inventory Decision Model",
-    "text": "Inventory Decision Model\nPolicy\n\nPeriodic review \\((T,S)\\) policy\n\nOrder-up-to level based on predictive distribution\n\n\\[\nS_t = Q_{\\alpha}(D^L_t)\n\\]"
+    "text": "Inventory Decision Model\n\n\n\n\nPolicy\n\n\nPeriodic-review order-up-to policy\nInventory reviewed monthly\nAt each review, inventory position is raised to target level (S_t)\n\n\\[\nS_t = Q_{\\alpha}(D_t^L)\n\\]\n\n\\(Q_{\\alpha}(\\cdot)\\): \\(\\alpha\\)-quantile of predictive lead-time demand\n\nOperationally, forecasts determine the replenishment target\n\n\n\n\n\n\n\nAssumptions\n\n\nMissed vaccination opportunities (no backlog)\n\nFixed lead time (L)\n\nDecisions based on predictive simulations\n\n\n\n\n\n\nLead-time demand\n\nDemand occurring while orders are in transit:\n\\[\nD_t^{L,(r)} = \\sum_{j=t}^{t+L-1} y_j^{(r)}\n\\]\n\n\nwhere\n\n\n\\(t\\) = review period\n\n\\(L\\) = lead time (months)\n\n\n\n\n\\(r = 1,\\dots,R\\) = simulation draw\n\n\\(y_j^{(r)}\\) = simulated demand"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-evaluation",
@@ -1229,7 +1229,7 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#outline-4",
     "title": "Udeshi Salgado",
     "section": "Outline",
-    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nFeasibility Truncation and Inventory Decision Model\nResults"
+    "text": "Outline\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#inventory-performance-across-counties",
@@ -1241,6 +1241,69 @@
   {
     "objectID": "talks.html#distributional-post-processing-with-feasibility-truncation-for-vaccine-demand-forecasting",
     "href": "talks.html#distributional-post-processing-with-feasibility-truncation-for-vaccine-demand-forecasting",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "IIF UK Chapter, Cardiff University\n\n📅 Date: March 13, 2026\n⏰ Time: 12:00 PM – 17:00 PM\n📍 Location: Cardiff University, Cardiff, United Kingdom\n\n View Slides"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-immunisation-supply-chain",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-immunisation-supply-chain",
+    "title": "Udeshi Salgado",
+    "section": "The Immunisation Supply Chain",
+    "text": "The Immunisation Supply Chain"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#bcg-bacille-calmette-guérin-vaccines",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#bcg-bacille-calmette-guérin-vaccines",
+    "title": "Udeshi Salgado",
+    "section": "BCG (Bacille Calmette-Guérin) Vaccines",
+    "text": "BCG (Bacille Calmette-Guérin) Vaccines\n\n\n\n\n\nVial\n\n\n\n\n\nDose\n\n\n\n\n\nAdministered"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-problem-evidence-from-the-study-setting",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-problem-evidence-from-the-study-setting",
+    "title": "Udeshi Salgado",
+    "section": "The Problem: Evidence from the Study Setting",
+    "text": "The Problem: Evidence from the Study Setting\n\n\n\n\n\n\n\n\n\n\n\nCoverage shown here refers to BCG vaccination coverage among newborns\nBCG is a single-dose vaccine administered at birth\nCoverage is defined as:\n\n\\[\n\\text{Coverage}\n=\n\\frac{\\text{No of Clients Administered}}{\\text{Target Population}}\n\\]\n\n\n\n\n\nForecasting limitations may contribute to persistent coverage gaps."
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#forecasting-framework",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#forecasting-framework",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting Framework",
+    "text": "Forecasting Framework\n\n\n\n\nData Setting\n\nBCG doses administered from a LMIC country\nMonthly data from Jan 2013 - Dec 2021\nHierachical Level: County Level (47 counties)\n48 time series in total (47 counties + national)\n\n\n\n\n\n\nForecasting Setup\n\nTarget variable: monthly BCG doses administsered\nLet \\(y_{i,t}\\) denote administered doses\nin county \\(i\\) at month \\(t\\).\n\nFor forecast origin \\(T\\), predict:\n\\[\n\\{y_{i,T+1}, \\dots, y_{i,T+H}\\}, \\quad H = 12\n\\]"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#distributional-post-processing",
+    "title": "Udeshi Salgado",
+    "section": "Distributional Post-Processing",
+    "text": "Distributional Post-Processing\n\n\n\nRaw predictive distribution\n\nLet the predictive distribution at horizon \\(h\\) be\n\\[\np_h(y) = \\Pr(Y_{T+h} = y).\n\\]\nIn practice, this is approximated using blocked bootstrap residual simulation:\n\\[\n\\{y^{(1)}_{T+h},\\dots,y^{(R)}_{T+h}\\}.\n\\]\n\n\n\n\nTarget coverage lower bound\n\nWe impose a planning-based (FSP benchmark target) lower bound:\n\\[\nL_{T+h} = \\frac{P_y \\cdot C_y}{12},\n\\]\nwhere \\(P_y\\) is the target population and \\(C_y\\) is WHO target coverage for year \\(y\\).\n\n\n\n\n\n\n\n\nConceptual truncation\n\nThe predictive distribution is truncated as:\n\\[\np_h^{\\text{tr}}(y)=\n\\begin{cases}\np_h(y), & y \\ge L_{T+h},\\\\\n0, & y &lt; L_{T+h}.\n\\end{cases}\n\\]\nand renormalized:\n\\[\n\\tilde{p}_h(y)\n=\n\\frac{p_h^{\\text{tr}}(y)}\n{\\sum_{z \\ge L_{T+h}} p_h(z)}.\n\\]\n\n\n\\(p_h(y)\\): raw predictive distribution at horizon \\(h\\)\n\n\\(L_{T+h}\\): lower bound from target population and coverage\n\n\\(\\tilde{p}_h(y)\\): adjusted predictive distribution\n\n\n\n\n\n\nImplementation (simulation)\n\nIn practice, truncation is applied to simulated draws:\n\n\\[\ny^{(r),\\text{tr}}_{T+h}\n=\n\\begin{cases}\ny^{(r)}_{T+h}, & y^{(r)}_{T+h} \\ge L_{T+h},\\\\\n\\text{resample from feasible draws}, & \\text{otherwise}.\n\\end{cases}\n\\]\n\n\n\n\\(r=1,\\dots,R\\): simulation draw\n\nRenormalization occurs implicitly through resampling."
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#performance-evaluation",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#performance-evaluation",
+    "title": "Udeshi Salgado",
+    "section": "Performance evaluation",
+    "text": "Performance evaluation\n\n\n\nService measures\n\n\\[\n\\text{Fill Rate}\n=\n\\frac{\\sum_{t=1}^{T} FD_t}\n{\\sum_{t=1}^{T} D_t}\n\\]\n\\[\n\\text{CSL}\n=\n1 - \\frac{N_{\\text{stockout}}}{T}\n\\]\n\n\n\n\nInventory Measures\n\n\\[\n\\text{Average on-hand}\n=\n\\frac{1}{T}\\sum_{t=1}^{T} I_t\n\\]\n\\[\n\\text{Total unmet demand}\n=\n\\sum_{t=1}^{T} (D_t - FD_t)\n\\]\n\n\n\nwhere\n\n\n\\(D_t\\) = demand in period \\(t\\)\n\\(FD_t\\) = fulfilled demand in period \\(t\\)\n\\(T\\) = total number of periods (in months)\n\n\n\n\n\\(N_{\\text{stockout}}\\) = number of stockout periods (in months)\n\n\\(I_t\\) = on-hand inventory at end of period \\(t\\)"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#mean-inventory-performance-across-counties",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#mean-inventory-performance-across-counties",
+    "title": "Udeshi Salgado",
+    "section": "Mean Inventory Performance Across Counties",
+    "text": "Mean Inventory Performance Across Counties\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInventory Performance Across Counties\n\n\nMean across 47 counties, lead time = 2 months, service quantile = 0.90\n\n\n\n\nFill rate\n\n\nCSL\n\n\nAvg on-hand\n\n\nUnmet demand\n\n\n\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\n\n\n\n\nARIMA\n82.1%\n83.4%\n68.9%\n78.5%\n567\n1,036\n5,142\n4,855\n\n\nETS\n80.8%\n82.9%\n59.8%\n73.2%\n453\n838\n5,552\n5,033\n\n\nLASSO\n76.1%\n82.5%\n51.4%\n71.8%\n428\n840\n6,774\n5,212\n\n\nLGBM\n79.9%\n82.9%\n56.4%\n75.2%\n434\n909\n5,740\n5,027\n\n\nLM\n82.7%\n83.5%\n71.0%\n80.1%\n611\n1,075\n5,000\n4,814\n\n\nNAIVE\n76.1%\n83.6%\n54.2%\n80.6%\n571\n1,542\n6,685\n4,802\n\n\nQRF\n77.8%\n82.0%\n49.7%\n69.6%\n366\n748\n6,241\n5,269\n\n\nSNAIVE\n83.4%\n83.8%\n78.6%\n82.5%\n972\n1,542\n4,838\n4,730\n\n\nXGB\n74.5%\n80.0%\n42.0%\n59.4%\n291\n596\n7,080\n5,906"
+  },
+  {
+    "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#median-inventory-performance-across-counties",
+    "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#median-inventory-performance-across-counties",
+    "title": "Udeshi Salgado",
+    "section": "Median Inventory Performance Across Counties",
+    "text": "Median Inventory Performance Across Counties\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInventory Performance Across Counties\n\n\nMedian across 47 counties, lead time = 2 months, service quantile = 0.90\n\n\n\n\nFill rate\n\n\nCSL\n\n\nAvg on-hand\n\n\nUnmet demand\n\n\n\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\nRaw\nTrunc\n\n\n\n\nARIMA\n82.9%\n83.5%\n75.0%\n83.3%\n428\n977\n4,409\n4,074\n\n\nETS\n82.4%\n83.4%\n66.7%\n83.3%\n341\n762\n4,824\n4,068\n\n\nLASSO\n80.8%\n83.2%\n50.0%\n83.3%\n298\n732\n5,363\n4,198\n\n\nLGBM\n81.7%\n83.3%\n58.3%\n83.3%\n315\n798\n4,988\n3,990\n\n\nLM\n83.1%\n83.5%\n75.0%\n83.3%\n463\n932\n4,225\n3,985\n\n\nNAIVE\n81.4%\n83.5%\n58.3%\n83.3%\n303\n1,152\n5,322\n3,985\n\n\nQRF\n80.5%\n82.8%\n50.0%\n83.3%\n267\n636\n5,178\n4,447\n\n\nSNAIVE\n83.4%\n83.6%\n83.3%\n83.3%\n835\n1,369\n3,985\n3,985\n\n\nXGB\n77.7%\n82.4%\n33.3%\n66.7%\n199\n409\n6,075\n4,481\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConnect\nUdeshi Salgado\n2nd year PhD Student\nDL4SG, Cardiff University, UK\nLinkedIn: udeshi-salgado\nSlides:  \n\n\n\nOutline of my talk\n\nProblem Statement and Motivation\nDecision-Relevant Forecasting under Uncertainty\nForecasting Framework\nDistributional Post-Processing and Inventory Decision Model\nResults"
+  },
+  {
+    "objectID": "talks.html#distributional-post-processing-for-vaccine-demand-inventory-forecasting",
+    "href": "talks.html#distributional-post-processing-for-vaccine-demand-inventory-forecasting",
     "title": "Talks & Presentations",
     "section": "",
     "text": "IIF UK Chapter, Cardiff University\n\n📅 Date: March 13, 2026\n⏰ Time: 12:00 PM – 17:00 PM\n📍 Location: Cardiff University, Cardiff, United Kingdom\n\n View Slides"

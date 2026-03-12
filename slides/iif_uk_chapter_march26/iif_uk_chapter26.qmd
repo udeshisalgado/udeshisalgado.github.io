@@ -15,6 +15,9 @@ format:
             data-background-size: cover
         theme: [default, custom.scss]
         footer: "© 2025 Udeshi Salgado – IIF UK Chapter, Cardiff"
+        html-math-method:
+          method: mathjax
+          url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ---
 
 
@@ -23,9 +26,9 @@ format:
 <br> 
 
 
-<div style="text-align:center; font-size: 110%">
+<div style="text-align:center; font-size: 120%">
 
-### Distributional Post-Processing with Feasibility Truncation for Vaccine Demand Forecasting
+### Distributional Post-Processing for Vaccine Demand Inventory Forecasting
 
 </div>
 
@@ -35,15 +38,67 @@ format:
 <br>
 <br> <br>
 
-
-**Udeshi Salgado**, _Cardiff University, UK_ <br>
+<div style="text-align:left; font-size: 90%">
+**Udeshi Salgado**, _DL4SG, Cardiff University, UK_ <br>
 <strong>Lead Supervisor:</strong> Professor Bahman Rostami-Tabar<br>
 <strong>Co-supervisors:</strong> Dr Thanos E Goltsos, Dr Geraint Palmer, Dr Xun Wang
 
 13 March 2026
+</div>
 
 
 
+## Background
+
+::: {.columns}
+
+::: {.column width="40%"}
+![](images/intro.png){width=80%}
+:::
+
+::: {.column width="60%"}
+
+::: {.incremental}
+
+- <span style="color:#FF4500;">1 in 5 children</span> worldwide still lack access to essential vaccines.
+- A key operational contributor is <span style="color:#FF4500;">inefficiency in vaccine supply chains</span>.
+- In low- and middle-income countries, these inefficiencies often involve:
+
+  - inaccurate demand forecasts
+  - inventory decisions made under limited uncertainty information
+  - wastage and stockouts
+
+:::
+
+:::
+
+:::
+
+## The Immunisation Supply Chain
+
+![](images/immunisation_supply_chain.png){width=120% fig-align="right"}
+
+
+## BCG (Bacille Calmette-Guérin) Vaccines
+
+::: {.columns}
+
+::: {.column width="33%" }
+![](images/vial.jpg){width=100%}  
+<div style="text-align: center;"><strong>Vial</strong></div>
+:::
+
+::: {.column width="33%" .fragment}
+![](images/dose.png){width=100%}  
+<div style="text-align: center;"><strong>Dose</strong></div>
+:::
+
+::: {.column width="33%" .fragment}
+![](images/administrated.png){width=100%}  
+<div style="text-align: center;"><strong>Administered</strong></div>
+:::
+
+:::
 
 
 ## Outline
@@ -51,44 +106,64 @@ format:
 1. <span style="color: #FF4500;"> Problem Statement and Motivation</span> 
 2. Decision-Relevant Forecasting under Uncertainty
 3. Forecasting Framework
-4. Feasibility Truncation and Inventory Decision Model
+4. Distributional Post-Processing and Inventory Decision Model
 5. Results
 
-## Background
 
-::: {.incremental}
 
-- <span style="color: #FF4500;">1 in 5 children</span>  worldwide lack access to lifesaving vaccines. *(source: [WHO](https://www.who.int/news-room/fact-sheets/detail/immunization-coverage))*
-- Potential Cause: <span style="color: #FF4500;">Supply chain inefficiencies</span>
-- Vaccine supply chains in low- and middle-income countries (LMICs) often face:
+## The Problem: Evidence from the Study Setting
 
-    - Inaccurate forecasts of vaccine demand
-    - Inefficient inventory decisions driven mainly by cost minimisation
-    - Wastage and stockouts
+::: {.columns}
+
+::: {.column width="65%"}
+
+![](images/coverage_gap.png){width=100% fig-align="left"}
 
 :::
 
-## Coverage gap in the study setting
+::: {.column width="35%"}
 
-![](images/coverage_gap.png){width=100% fig-align="center"}
+::: {.fragment}
+<div style="font-size: 65%;">
+- Coverage shown here refers to **BCG vaccination coverage among newborns**
+- BCG is a **single-dose vaccine administered at birth**
+- Coverage is defined as:
 
-::: {.smaller}
-- Achieved coverage remains below WHO planned coverage across years, motivating improved operational forecasting and planning.
+$$
+\text{Coverage}
+=
+\frac{\text{No of Clients Administered}}{\text{Target Population}}
+$$
+
+</div>
+
+:::
+
+::: {.fragment}
+<div style="font-size: 80%;">
+- <span style="color:#FF4500;"><strong>Forecasting limitations may contribute to persistent coverage gaps.</strong></span>
+</div>
+:::
+
+:::
+
 :::
 
 
 ## Current Forecasting Practice
 
 ::: {.incremental}
-- In practice, vaccine planning often relies on the **Forecasting, Supply Planning, and Procurement (FSP) Tool** and related planning workflows.
-- It combines outputs from several deterministic models:
 
-    - <span style="color:#009E73;">Demographic-based (Stratified if available)</span>
-    - <span style="color:#999999;">Facility consumption-based / Issue-based (not useful if we lack stockouts data, reporting rates, as it adjusts the previous year's consumption and is considered a forecast)</span>
-    - <span style="color:#999999;">Session-based (100% based on expert knowledge)</span>
+- In practice, vaccine planning often relies on the **Forecasting, Supply Planning, and Procurement (FSP) Tool**.
+- The FSP workflow combines three point-based planning components:
+
+  - <span style="color:#009E73;">Demographic-based</span>: based on demographic estimates and who static wastage and coverage rates
+  - <span style="color:#999999;">Consumption / issue-based</span>: previous year doses administred adjusted for stockout and reporting rate
+  - <span style="color:#999999;">Session-based</span>: 100% expert-driven planning for upcoming vaccination sessions  
+
+- These approaches typically produce **point estimates**, with limited representation of uncertainty.
 
 :::
-
 ## The FSP Forecasting
 
 ::: {.column width="70%"}
@@ -104,7 +179,7 @@ format:
 - Forecast equation for doses administered:
 
     $$
-    \hat{D_t} = P_t * C_t
+    \hat{D_t} = \frac{P_y \cdot C_y}{12}
     $$
 
 
@@ -112,9 +187,9 @@ format:
 
 Where:
 
-- $\hat{D_t}$: Forecasted doses administered at time $t$
-- $P_t$: Target population at time $t$
-- $C_t$: Planned WHO coverage at time $t$
+- $\hat{D_t}$: Forecasted doses administered at month $t$
+- $P_t$: Target population at year $y$
+- $C_t$: WHO targhet coverage at year $y$
 
 </div>
 
@@ -126,15 +201,15 @@ Where:
 ## Methodological Limitations
 
 ::: {.fragment}
-- In practice, vaccine planning relies largely on **deterministic demographic-based models**, limiting responsiveness to real consumption patterns.
+- In practice, vaccine planning often relies on **point-based demographic planning models**, limiting responsiveness to observed consumption patterns.
 :::
 
 ::: {.fragment}
-- Forecasting workflows still emphasise **point predictions**, which fail to capture uncertainty relevant for operational planning.
+- Forecasting workflows still emphasise **point predictions**, which do not capture uncertainty needed for operational decision-making.
 :::
 
 ::: {.fragment}
-- Models trained on historical administered doses tend to **systematically underforecast**, reflecting constrained past delivery rather than true demand.
+- Models trained on historical administered doses may understate true need when past delivery is supply-constrained.
 :::
 
 
@@ -143,7 +218,7 @@ Where:
 1. Problem Statement and Motivation
 2. <span style="color: #FF4500;">Decision-Relevant Forecasting under Uncertainty</span> 
 3. Forecasting Framework
-4. Feasibility Truncation and Inventory Decision Model
+4. Distributional Post-Processing and Inventory Decision Model
 5. Results
 
 ## The Risk of Point Forecasting
@@ -167,19 +242,23 @@ Where:
 
 ::: {.column width="30%"}
 
+<div style="font-size: 80%;">
+
 - We define lower bound as the FSP forecast: 
 
     $$
-    \text{Lower Bound} =  P_t * C_t
+    \text{Lower Bound} =  \frac{P_y \cdot C_y}{12}
     $$
+
+</div>
 
 
 <div style="font-size: 57%; line-height: 0.1;">
 
 Where:
 
-- $P_t$: Target population at time $t$
-- $C_t$: Planned WHO coverage at time $t$
+- $P_t$: Target population at year $y$
+- $C_t$: WHO target coverage at year $y$
 
 </div>
 
@@ -191,14 +270,14 @@ Where:
 
 ::: {.column width="50%"}
 
-![](images/untruncated_distribution.png){width=100% fig-align="left"}
+![](images/untruncated_distribution.png){width=120% fig-align="center"}
 
 
 :::
 
 ::: {.column width="50%" .fragment}
 
-![](images/truncated_distribution.png){width=120% fig-align="left"}
+![](images/truncated_distribution.png){width=120% fig-align="center"}
 
 
 :::
@@ -208,55 +287,67 @@ Where:
 1. Problem Statement and Motivation
 2. Decision-Relevant Forecasting under Uncertainty 
 3. <span style="color: #FF4500;">Forecasting Framework</span>
-4. Feasibility Truncation and Inventory Decision Model
+4. Distributional Post-Processing and Inventory Decision Model
 5. Results
 
 
-## Study Design
+## Forecasting Framework
 
-::: columns
+::: {.columns}
 
-:::: {.column width="40%"}
+::: {.column width="45%"}
 
 ::: {.fragment}
-### Data setting
-- One LMIC country  
-- One vaccine: **BCG**
-- Monthly time series
+
+### Data Setting
+- BCG doses administered from a LMIC country
+- Monthly data from Jan 2013 - Dec 2021
+- Hierachical Level: County Level (47 counties)
+- **48 time series** in total (47 counties + national)
+
 :::
 
-::::
-
-:::: {.column width="60%"}
-
-::: {.fragment}
-### Hierarchical level
-- Sub-national level: **47 counties**
-- National aggregation used for evaluation
-- **48 time series** (47 counties + national)
 :::
-::::
+
+::: {.column width="55%"}
+
+
 
 ::: {.fragment}
-### Forecast target
+### Forecasting Setup
 
-Let $y_{i,t}$ denote administered doses in county $i$ at month $t$.
+- Target variable: monthly BCG doses administsered
 
-The forecasting for 12 month horizon $H$ is given by
+- Let $y_{i,t}$ denote administered doses  
+in county $i$ at month $t$.
+
+For forecast origin $T$, predict:
 
 $$
-\{y_{i,T+1},\dots,y_{i,T+H}\}, \qquad H = 12.
+\{y_{i,T+1}, \dots, y_{i,T+H}\}, \quad H = 12
 $$
 
 :::
 
+
 :::
 
+:::
 
 
 ## Forecasting Models
 
+::: {.columns}
+
+::: {.column width="55%"}
+
+::: {.fragment}
+
+
 ```{r}
+#| echo: false
+#| warning: false
+
 library(gt)
 library(dplyr)
 
@@ -283,8 +374,24 @@ model_table %>%
 
 ```
 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+
+
+::: {.fragment}
+
 - Each model produces multi-step point forecasts $\hat{y}_{i,T+h|T}$.
 - Predictive distributions are obtained via blocked bootstrap residual simulation.
+
+:::
+
+:::
+
+:::
 
 
 ## Outline
@@ -292,62 +399,79 @@ model_table %>%
 1. Problem Statement and Motivation
 2. Decision-Relevant Forecasting under Uncertainty 
 3. Forecasting Framework
-4. <span style="color: #FF4500;">Feasibility Truncation and Inventory Decision Model</span>
+4. <span style="color: #FF4500;">Distributional Post-Processing and Inventory Decision Model</span>
 5. Results
 
 
-## Feasibility Truncation
+## Distributional Post-Processing
 
-::: {.fragment}
+::: {.columns}
 
-### Predictive distribution
+::: {.column width="55%"}
 
-Let the raw predictive distribution at horizon \(h\) be
+
+
+### Raw predictive distribution
+
+<div style="font-size:82%;">
+
+Let the predictive distribution at horizon $h$ be
 
 $$
 p_h(y) = \Pr(Y_{T+h} = y).
 $$
 
-In practice, this is approximated using training residuals via blocked bootstrap.
+In practice, this is approximated using blocked bootstrap residual simulation:
 
 $$
 \{y^{(1)}_{T+h},\dots,y^{(R)}_{T+h}\}.
 $$
 
+</div>
+
+::: 
+
+::: {.column width="45%" .fragment}
+
+### Target coverage lower bound
+
+<div style="font-size:82%;">
+
+We impose a planning-based (FSP benchmark target) lower bound:
+
+$$
+L_{T+h} = \frac{P_y \cdot C_y}{12},
+$$
+
+where $P_y$ is the target population and $C_y$ is WHO target coverage for year $y$.
+
+</div>
+
+:::
+
 :::
 
 ----
 
+::: {.columns}
 
+::: {.column width="55%"}
 
-### Lower-bound truncation
+### Conceptual truncation
 
+<div style="font-size:82%;">
 
-The monthly feasibility lower bound is defined as
-
-$$
-L_{T+h} = \frac{P_t C_t}{12},
-$$
-
-where $T$ = forecast origin (time index), $h$ = forecast horizon step $(h = 1,\dots,H)$, $P_t$ = target population in year $t$, $C_t$ = planned WHO coverage in year $t$
-
-
-The truncated mass function becomes
+The predictive distribution is truncated as:
 
 $$
-p_h^{\text{tr}}(y)
-=
+p_h^{\text{tr}}(y)=
 \begin{cases}
-p_h(y), & y \ge L_{T+h}, \\\\
+p_h(y), & y \ge L_{T+h},\\
 0, & y < L_{T+h}.
 \end{cases}
 $$
 
----
-
-### Renormalization
-
-To ensure a valid distribution,
+and renormalized:
 
 $$
 \tilde{p}_h(y)
@@ -356,64 +480,220 @@ $$
 {\sum_{z \ge L_{T+h}} p_h(z)}.
 $$
 
+<div style="font-size:72%; line-height:1.2; margin-top:8px;">
 
-::: {.fragment}
+- $p_h(y)$: raw predictive distribution at horizon $h$  
+- $L_{T+h}$: lower bound from target population and coverage  
+- $\tilde{p}_h(y)$: adjusted predictive distribution  
 
-### Simulation implementation
+</div>
+
+</div>
+
+::: 
+
+::: {.column width="45%" .fragment}
+
+### Implementation (simulation)
+
+<div style="font-size:82%;">
+
+In practice, truncation is applied to simulated draws:
+
+<div style="font-size:72%;">
 
 $$
 y^{(r),\text{tr}}_{T+h}
 =
 \begin{cases}
-y^{(r)}_{T+h}, & y^{(r)}_{T+h} \ge L_{T+h}, \\\\
-\text{resample from feasible draws}, & \text{otherwise.}
+y^{(r)}_{T+h}, & y^{(r)}_{T+h} \ge L_{T+h},\\
+\text{resample from feasible draws}, & \text{otherwise}.
 \end{cases}
 $$
 
-:::
+</div>
 
-## Inventory Decision Model
+<div style="font-size:72%; line-height:1.2; margin-top:8px;">
 
-**Policy**
-
-- Periodic review $(T,S)$ policy  
-- Order-up-to level based on predictive distribution  
-
-$$
-S_t = Q_{\alpha}(D^L_t)
-$$
-
----
-
-**Assumptions**
-
-- Lost-sales setting (no backorders)  
-- Fixed lead time $L$  
-- Monthly review cycle  
-- Lead-time demand from predictive simulations  
-
-$$
-D^{L,(r)}_t = \sum_{j=t}^{t+L-1} y^{(r)}_j
-$$
-
-<div style="font-size: 60%; margin-top: -10px;">
-
-where $t$ = review period (month), $L$ = lead time (months), $r$ = simulation draw $(r=1,\dots,R)$, $y^{(r)}_j$ = simulated demand in month $j$, $D^{L,(r)}_t$ = simulated lead-time demand
+- $r=1,\dots,R$: simulation draw  
+-  Renormalization occurs implicitly through resampling.
 
 </div>
 
-## Inventory Performance Evaluation
+</div>
 
-**Service measures**
+:::
 
-- Fill rate  
-- Cycle service level (CSL)  
-- Stockout rate  
+:::
 
-**Stock measures**
+## Inventory Decision Model 
 
-- Average on-hand inventory  
-- Total unmet demand
+::: {.columns}
+
+::: {.column width="50%" }
+
+
+::: {.fragment}
+
+### Policy
+
+
+<div style="font-size:70%;">
+
+- **Periodic-review order-up-to policy**
+- Inventory reviewed **monthly**
+- At each review, inventory position is raised to target level \(S_t\)
+
+$$
+S_t = Q_{\alpha}(D_t^L)
+$$
+
+- $Q_{\alpha}(\cdot)$: $\alpha$-quantile of predictive lead-time demand  
+- Operationally, forecasts determine the replenishment target  
+
+</div>
+
+:::
+
+
+:::
+
+::: {.column width="50%"}
+
+
+::: {.fragment}
+
+### Assumptions
+
+<div style="font-size:70%;">
+
+- **Missed vaccination opportunities** (no backlog)  
+- Fixed lead time \(L\)  
+- Decisions based on predictive simulations  
+
+</div>
+
+:::
+
+::: {.fragment}
+
+### Lead-time demand
+
+<div style="font-size:70%;">
+
+Demand occurring while orders are in transit:
+
+$$
+D_t^{L,(r)} = \sum_{j=t}^{t+L-1} y_j^{(r)}
+$$
+
+</div>
+
+<div style="font-size:50%;">
+
+where
+
+::: {.column width="50%"}
+
+- $t$ = review period  
+- $L$ = lead time (months)  
+
+:::
+
+::: {.column width="50%"}
+- $r = 1,\dots,R$ = simulation draw  
+- $y_j^{(r)}$ = simulated demand  
+
+:::
+
+</div>
+
+:::
+
+:::
+
+:::
+
+
+## Performance evaluation
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+
+### Service measures
+
+<div style="font-size:90%;">
+
+$$
+\text{Fill Rate}
+=
+\frac{\sum_{t=1}^{T} FD_t}
+{\sum_{t=1}^{T} D_t}
+$$
+
+$$
+\text{CSL}
+=
+1 - \frac{N_{\text{stockout}}}{T}
+$$
+
+</div>
+
+
+:::
+
+::: {.column width="50%" }
+
+
+
+### Inventory Measures
+
+
+<div style="font-size:90%;">
+
+$$
+\text{Average on-hand}
+=
+\frac{1}{T}\sum_{t=1}^{T} I_t
+$$
+
+$$
+\text{Total unmet demand}
+=
+\sum_{t=1}^{T} (D_t - FD_t)
+$$
+
+</div>
+
+
+:::
+
+<div style="font-size:60%; line-height:1.2;">
+
+where
+
+::: {.column width="50%"}
+
+  - $D_t$ = demand in period $t$ 
+  - $FD_t$ = fulfilled demand in period $t$ 
+  - $T$ = total number of periods (in months)  
+
+:::
+
+::: {.column width="50%"}
+
+  - $N_{\text{stockout}}$ = number of stockout periods (in months)  
+  - $I_t$ = on-hand inventory at end of period $t$
+
+:::
+
+
+
+</div>
+
+:::
 
 
 
@@ -422,31 +702,158 @@ where $t$ = review period (month), $L$ = lead time (months), $r$ = simulation dr
 1. Problem Statement and Motivation
 2. Decision-Relevant Forecasting under Uncertainty 
 3. Forecasting Framework
-4. Feasibility Truncation and Inventory Decision Model
+4. Distributional Post-Processing and Inventory Decision Model
 5. <span style="color: #FF4500;">Results</span>
 
-
-## Inventory Performance Across Counties
+## Mean Inventory Performance Across Counties
 
 ```{r}
+#| echo: false
+#| warning: false
+
+
 library(gt)
 library(tibble)
 
 # ------------------------------------------------------------
-# Manual table (from your results)
+# MEAN table (UPDATED VALUES)
+# ------------------------------------------------------------
+slide_table_mean <- tibble::tribble(
+  ~Model, ~FR_Raw, ~FR_Trunc, ~CSL_Raw, ~CSL_Trunc, ~OH_Raw, ~OH_Trunc, ~Unmet_Raw, ~Unmet_Trunc,
+
+  "ARIMA", 0.821, 0.834, 0.689, 0.785, 567, 1036, 5142, 4855,
+  "ETS",   0.808, 0.829, 0.598, 0.732, 453, 838, 5552, 5033,
+  "LASSO", 0.761, 0.825, 0.514, 0.718, 428, 840, 6774, 5212,
+  "LGBM",  0.799, 0.829, 0.564, 0.752, 434, 909, 5740, 5027,
+  "LM",    0.827, 0.835, 0.710, 0.801, 611, 1075, 5000, 4814,
+  "NAIVE", 0.761, 0.836, 0.542, 0.806, 571, 1542, 6685, 4802,
+  "QRF",   0.778, 0.820, 0.497, 0.696, 366, 748, 6241, 5269,
+  "SNAIVE",0.834, 0.838, 0.786, 0.825, 972, 1542, 4838, 4730,
+  "XGB",   0.745, 0.800, 0.420, 0.594, 291, 596, 7080, 5906
+)
+
+# ------------------------------------------------------------
+# Highlight logic (same as median)
+# ------------------------------------------------------------
+fr_raw_rows    <- which(slide_table_mean$FR_Raw    >= slide_table_mean$FR_Trunc)
+fr_trunc_rows  <- which(slide_table_mean$FR_Trunc  >= slide_table_mean$FR_Raw)
+
+csl_raw_rows   <- which(slide_table_mean$CSL_Raw   >= slide_table_mean$CSL_Trunc)
+csl_trunc_rows <- which(slide_table_mean$CSL_Trunc >= slide_table_mean$CSL_Raw)
+
+oh_raw_rows   <- which(slide_table_mean$OH_Raw   <= slide_table_mean$OH_Trunc)
+oh_trunc_rows <- which(slide_table_mean$OH_Trunc <= slide_table_mean$OH_Raw)
+
+unmet_raw_rows   <- which(slide_table_mean$Unmet_Raw   <= slide_table_mean$Unmet_Trunc)
+unmet_trunc_rows <- which(slide_table_mean$Unmet_Trunc <= slide_table_mean$Unmet_Raw)
+
+# ------------------------------------------------------------
+# FINAL TABLE (MEAN)
+# ------------------------------------------------------------
+slide_table_mean %>%
+  gt(rowname_col = "Model") %>%
+
+  tab_spanner("Fill rate", c(FR_Raw, FR_Trunc)) %>%
+  tab_spanner("CSL", c(CSL_Raw, CSL_Trunc)) %>%
+  tab_spanner("Avg on-hand", c(OH_Raw, OH_Trunc)) %>%
+  tab_spanner("Unmet demand", c(Unmet_Raw, Unmet_Trunc)) %>%
+
+  cols_label(
+    FR_Raw = "Raw", FR_Trunc = "Trunc",
+    CSL_Raw = "Raw", CSL_Trunc = "Trunc",
+    OH_Raw = "Raw", OH_Trunc = "Trunc",
+    Unmet_Raw = "Raw", Unmet_Trunc = "Trunc"
+  ) %>%
+
+  fmt_percent(
+    columns = c(FR_Raw, FR_Trunc, CSL_Raw, CSL_Trunc),
+    decimals = 1
+  ) %>%
+  fmt_number(
+    columns = c(OH_Raw, OH_Trunc, Unmet_Raw, Unmet_Trunc),
+    decimals = 0
+  ) %>%
+
+  tab_options(
+    table.font.size = px(24),
+    heading.title.font.size = px(28),
+    heading.subtitle.font.size = px(20),
+    column_labels.font.size = px(20),
+    table_body.hlines.width = px(1.5),
+    column_labels.padding = px(8),
+    data_row.padding = px(8)
+  ) %>%
+
+  # Highlight best values
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = FR_Raw, rows = fr_raw_rows)
+  ) %>%
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = FR_Trunc, rows = fr_trunc_rows)
+  ) %>%
+
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = CSL_Raw, rows = csl_raw_rows)
+  ) %>%
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = CSL_Trunc, rows = csl_trunc_rows)
+  ) %>%
+
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = OH_Raw, rows = oh_raw_rows)
+  ) %>%
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = OH_Trunc, rows = oh_trunc_rows)
+  ) %>%
+
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = Unmet_Raw, rows = unmet_raw_rows)
+  ) %>%
+  tab_style(
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
+    locations = cells_body(columns = Unmet_Trunc, rows = unmet_trunc_rows)
+  ) %>%
+
+  tab_header(
+    title = "Inventory Performance Across Counties",
+    subtitle = "Mean across 47 counties, lead time = 2 months, service quantile = 0.90"
+  ) %>%
+  cols_align(align = "center")
+
+```
+
+
+## Median Inventory Performance Across Counties {.smaller}
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(gt)
+library(tibble)
+
+# ------------------------------------------------------------
+# UPDATED manual table (NEW VALUES)
 # ------------------------------------------------------------
 slide_table <- tibble::tribble(
-  ~Model, ~FR_Raw, ~FR_Trunc, ~CSL_Raw, ~CSL_Trunc, ~Stock_Raw, ~Stock_Trunc, ~OH_Raw, ~OH_Trunc, ~Unmet_Raw, ~Unmet_Trunc,
+  ~Model, ~FR_Raw, ~FR_Trunc, ~CSL_Raw, ~CSL_Trunc, ~OH_Raw, ~OH_Trunc, ~Unmet_Raw, ~Unmet_Trunc,
 
-  "ARIMA", 0.821, 0.833, 0.667, 0.833, 0.333, 0.167, 373, 811, 4850, 4410,
-  "ETS",   0.808, 0.831, 0.500, 0.833, 0.500, 0.167, 276, 684, 5534, 4413,
-  "LASSO", 0.783, 0.829, 0.417, 0.750, 0.583, 0.250, 223, 543, 5886, 4442,
-  "LGBM",  0.791, 0.831, 0.500, 0.833, 0.500, 0.167, 221, 694, 5447, 4410,
-  "LM",    0.827, 0.835, 0.667, 0.833, 0.333, 0.167, 406, 749, 4879, 4410,
-  "NAIVE", 0.719, 0.835, 0.333, 0.833, 0.667, 0.167, 191, 984, 6959, 4410,
-  "QRF",   0.752, 0.823, 0.333, 0.750, 0.667, 0.250, 192, 440, 6826, 4482,
-  "SNAIVE",0.835, 0.836, 0.833, 0.833, 0.167, 0.167, 613, 1297, 4434, 4410,
-  "XGB",   0.721, 0.805, 0.250, 0.500, 0.750, 0.500, 177, 298, 7639, 4482
+  "ARIMA", 0.829, 0.835, 0.750, 0.833, 428, 977, 4409, 4074,
+  "ETS",   0.824, 0.834, 0.667, 0.833, 341, 762, 4824, 4068,
+  "LASSO", 0.808, 0.832, 0.500, 0.833, 298, 732, 5363, 4198,
+  "LGBM",  0.817, 0.833, 0.583, 0.833, 315, 798, 4988, 3990,
+  "LM",    0.831, 0.835, 0.750, 0.833, 463, 932, 4225, 3985,
+  "NAIVE", 0.814, 0.835, 0.583, 0.833, 303, 1152, 5322, 3985,
+  "QRF",   0.805, 0.828, 0.500, 0.833, 267, 636, 5178, 4447,
+  "SNAIVE",0.834, 0.836, 0.833, 0.833, 835, 1369, 3985, 3985,
+  "XGB",   0.777, 0.824, 0.333, 0.667, 199, 409, 6075, 4481
 )
 
 # ------------------------------------------------------------
@@ -458,9 +865,6 @@ fr_trunc_rows  <- which(slide_table$FR_Trunc  >= slide_table$FR_Raw)
 csl_raw_rows   <- which(slide_table$CSL_Raw   >= slide_table$CSL_Trunc)
 csl_trunc_rows <- which(slide_table$CSL_Trunc >= slide_table$CSL_Raw)
 
-stock_raw_rows   <- which(slide_table$Stock_Raw   <= slide_table$Stock_Trunc)
-stock_trunc_rows <- which(slide_table$Stock_Trunc <= slide_table$Stock_Raw)
-
 oh_raw_rows   <- which(slide_table$OH_Raw   <= slide_table$OH_Trunc)
 oh_trunc_rows <- which(slide_table$OH_Trunc <= slide_table$OH_Raw)
 
@@ -468,27 +872,25 @@ unmet_raw_rows   <- which(slide_table$Unmet_Raw   <= slide_table$Unmet_Trunc)
 unmet_trunc_rows <- which(slide_table$Unmet_Trunc <= slide_table$Unmet_Raw)
 
 # ------------------------------------------------------------
-# Slide table
+# FINAL SLIDE TABLE
 # ------------------------------------------------------------
 slide_table %>%
   gt(rowname_col = "Model") %>%
 
   tab_spanner("Fill rate", c(FR_Raw, FR_Trunc)) %>%
   tab_spanner("CSL", c(CSL_Raw, CSL_Trunc)) %>%
-  tab_spanner("Stockout", c(Stock_Raw, Stock_Trunc)) %>%
   tab_spanner("Avg on-hand", c(OH_Raw, OH_Trunc)) %>%
   tab_spanner("Unmet demand", c(Unmet_Raw, Unmet_Trunc)) %>%
 
   cols_label(
     FR_Raw = "Raw", FR_Trunc = "Trunc",
     CSL_Raw = "Raw", CSL_Trunc = "Trunc",
-    Stock_Raw = "Raw", Stock_Trunc = "Trunc",
     OH_Raw = "Raw", OH_Trunc = "Trunc",
     Unmet_Raw = "Raw", Unmet_Trunc = "Trunc"
   ) %>%
 
   fmt_percent(
-    columns = c(FR_Raw, FR_Trunc, CSL_Raw, CSL_Trunc, Stock_Raw, Stock_Trunc),
+    columns = c(FR_Raw, FR_Trunc, CSL_Raw, CSL_Trunc),
     decimals = 1
   ) %>%
   fmt_number(
@@ -496,7 +898,6 @@ slide_table %>%
     decimals = 0
   ) %>%
 
-  # Increase overall size
   tab_options(
     table.font.size = px(24),
     heading.title.font.size = px(28),
@@ -507,79 +908,40 @@ slide_table %>%
     data_row.padding = px(8)
   ) %>%
 
-  # Highlight best values in light green
+  # Highlight best values
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = FR_Raw, rows = fr_raw_rows)
   ) %>%
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = FR_Trunc, rows = fr_trunc_rows)
   ) %>%
 
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = CSL_Raw, rows = csl_raw_rows)
   ) %>%
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = CSL_Trunc, rows = csl_trunc_rows)
   ) %>%
 
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
-    locations = cells_body(columns = Stock_Raw, rows = stock_raw_rows)
-  ) %>%
-  tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
-    locations = cells_body(columns = Stock_Trunc, rows = stock_trunc_rows)
-  ) %>%
-
-  tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = OH_Raw, rows = oh_raw_rows)
   ) %>%
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = OH_Trunc, rows = oh_trunc_rows)
   ) %>%
 
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = Unmet_Raw, rows = unmet_raw_rows)
   ) %>%
   tab_style(
-    style = list(
-      cell_fill(color = "#D9F2D9"),
-      cell_text(weight = "bold")
-    ),
+    style = list(cell_fill(color = "#D9F2D9"), cell_text(weight = "bold")),
     locations = cells_body(columns = Unmet_Trunc, rows = unmet_trunc_rows)
   ) %>%
 
@@ -600,7 +962,7 @@ slide_table %>%
 ---
 
 
-![](images/stockout_rate.png){width=120% fig-align="center"}
+![](images/csl.png){width=120% fig-align="center"}
 
 ---
 
@@ -634,7 +996,7 @@ Slides: <br>
 1. Problem Statement and Motivation
 2. Decision-Relevant Forecasting under Uncertainty 
 3. Forecasting Framework
-4. Feasibility Truncation and Inventory Decision Model
+4. Distributional Post-Processing and Inventory Decision Model
 5. Results
 
 

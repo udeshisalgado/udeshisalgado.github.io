@@ -3,7 +3,7 @@ title: "Talks & Presentations"
 format: html
 ---
 
-## Distributional Post-Processing with Feasibility Truncation for Vaccine Demand Forecasting
+## Distributional Post-Processing for Vaccine Demand Inventory Forecasting
 *IIF UK Chapter, Cardiff University*
 
 ![](slides/iif_uk_chapter_march26/preview.png)
