@@ -154,7 +154,7 @@ $$
 
 ::: {.incremental}
 
-- In practice, vaccine planning often relies on the **Forecasting, Supply Planning, and Procurement (FSP) Tool**.
+- In practice, vaccine planning often relies on the **Forecasting, Supply planning, and Procurement (FSP) Tool**.
 - The FSP workflow combines three point-based planning components:
 
   - <span style="color:#009E73;">Demographic-based</span>: based on demographic estimates and who static wastage and coverage rates
@@ -189,7 +189,7 @@ Where:
 
 - $\hat{D_t}$: Forecasted doses administered at month $t$
 - $P_t$: Target population at year $y$
-- $C_t$: WHO targhet coverage at year $y$
+- $C_t$: WHO target coverage at year $y$
 
 </div>
 

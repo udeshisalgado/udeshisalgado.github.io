@@ -1124,14 +1124,14 @@
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#current-forecasting-practice",
     "title": "Udeshi Salgado",
     "section": "Current Forecasting Practice",
-    "text": "Current Forecasting Practice\n\n\nIn practice, vaccine planning often relies on the Forecasting, Supply Planning, and Procurement (FSP) Tool.\nThe FSP workflow combines three point-based planning components:\n\nDemographic-based: based on demographic estimates and who static wastage and coverage rates\nConsumption / issue-based: previous year doses administred adjusted for stockout and reporting rate\nSession-based: 100% expert-driven planning for upcoming vaccination sessions\n\nThese approaches typically produce point estimates, with limited representation of uncertainty."
+    "text": "Current Forecasting Practice\n\n\nIn practice, vaccine planning often relies on the Forecasting, Supply planning, and Procurement (FSP) Tool.\nThe FSP workflow combines three point-based planning components:\n\nDemographic-based: based on demographic estimates and who static wastage and coverage rates\nConsumption / issue-based: previous year doses administred adjusted for stockout and reporting rate\nSession-based: 100% expert-driven planning for upcoming vaccination sessions\n\nThese approaches typically produce point estimates, with limited representation of uncertainty."
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
     "href": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#the-fsp-forecasting",
     "title": "Udeshi Salgado",
     "section": "The FSP Forecasting",
-    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at month \\(t\\)\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO targhet coverage at year \\(y\\)"
+    "text": "The FSP Forecasting\n\n\n\n\n\n\n\n\nForecast equation for doses administered:\n\\[\n  \\hat{D_t} = \\frac{P_y \\cdot C_y}{12}\n  \\]\n\n\nWhere:\n\n\\(\\hat{D_t}\\): Forecasted doses administered at month \\(t\\)\n\\(P_t\\): Target population at year \\(y\\)\n\\(C_t\\): WHO target coverage at year \\(y\\)"
   },
   {
     "objectID": "slides/iif_uk_chapter_march26/iif_uk_chapter26.html#methodological-limitations",
