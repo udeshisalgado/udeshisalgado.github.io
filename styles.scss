@@ -46,3 +46,108 @@ img[alt="Udeshi Salgado"] {
   display: block;
   margin: 0 auto 1rem auto;
 }
+
+/* ======================================================
+   Blog Enhancements (ADD ONLY — do not modify above)
+   ====================================================== */
+
+/* Blog cards (for blog.qmd grid view) */
+.quarto-listing-container-grid .card {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.quarto-listing-container-grid .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.quarto-listing-container-grid .card-title {
+  font-weight: 700;
+}
+
+/* Images and video styling */
+img, video {
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+/* Callout box (Key Dates) */
+.callout {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #f8fafc;
+}
+
+/* OR68 two-column layout */
+.or68-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  align-items: start;
+  margin-bottom: 1.8rem;
+}
+
+/* QR + steps layout */
+.apply-grid {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Team photos */
+.team-photo {
+  width: 70%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Better spacing for blog content */
+h2 {
+  margin-top: 2rem;
+}
+
+h3 {
+  margin-top: 1.2rem;
+}
+
+/* Responsive fix (VERY IMPORTANT) */
+@media (max-width: 900px) {
+  .or68-grid,
+  .apply-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Team Section Styling ===== */
+
+.team-photo {
+  width: 70%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 0.6rem auto;  /* keeps image centered only */
+}
+
+/* Name styling */
+.columns .column h3 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+/* Affiliation text (smaller + neat) */
+.columns .column p {
+  font-size: 0.92rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+/* Email */
+.columns .column a {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,162 @@
+---
+title: "Forecasting at OR68"
+subtitle: "A Welcoming Space for Forecasting Research that Connects Methods with Real Decisions"
+author: "Udeshi Salgado"
+date: 2026-03-23
+description: "OR68 takes place 8–10 September 2026 at the University of Nottingham. Submit your work to the Forecasting Stream."
+categories: [Forecasting, OR68, Conference, Operational Research]
+image: university_of_nottingham.avif
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+::: {.callout-important appearance="simple"}
+## Key Dates
+
+- **Call for Abstracts Closes:** 1 May 2026
+- **Early Bird Closes:** 7 May 2026
+- **Registrations Close:** 6 September 2026
+:::
+
+## OR68 at a Glance
+
+<video autoplay muted loop playsinline style="width:100%; border-radius:12px; margin-bottom:1.2rem;">
+  <source src="OR68_Abstracts_Video.mp4" type="video/mp4">
+</video>
+
+The **OR Society Annual Conference (OR68)**, the flagship annual event of the Operational Research Society, will be held from **8–10 September 2026** at the **Monica Partridge Building, University of Nottingham (NG7 2BF, United Kingdom)**. The conference brings together a global community of researchers, practitioners, and decision-makers to exchange ideas, present new work, and explore how analytical methods translate into real-world impact. 
+
+Under this year’s theme, **_From Data to Decisions_**, OR68 emphasises the growing importance of connecting advanced modelling, forecasting, and data-driven approaches with practical decision-making across sectors. The event provides a unique opportunity to engage with cutting-edge research while building meaningful academic and professional collaborations.
+
+## Forecasting Stream
+
+The **Forecasting Stream** at the OR Society Annual Conference (**OR68**), taking place at the **University of Nottingham from 8–10 September 2026**, showcases a broad spectrum of forecasting methodologies, combining real-world applications with emerging techniques that support informed decision-making across sectors such as **Supply Chains & Logistics, Healthcare & Public Health, Finance, Economics, Agriculture & Food, and Water, Energy & Environment**.
+
+The stream aims to inspire researchers and practitioners through thought-provoking talks and a diverse set of sessions that foreground practical relevance. Contributions are encouraged on **Forecasting Principles, Machine Learning Approaches, Judgemental Forecasting, and Sector-Specific Applications**. Submissions from the **Public Sector, Private Organisations, and Academia** are welcome, reinforcing the collaborative spirit of the event and encouraging cross-sector exchange of ideas, methods, and best practice.
+
+By taking part in the **OR68 Forecasting Stream**, attendees will strengthen their understanding of the rapidly evolving forecasting landscape and its close connection to operational research. They will gain exposure to state-of-the-art techniques, innovative machine-learning applications, and applied case studies from multiple domains, while expanding their professional networks and identifying opportunities for future collaboration.
+
+## Why Apply?
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### Decision Relevance
+
+Present your work to an audience interested not only in predictive accuracy, but also in how forecasting supports planning, operations, and policy.
+
+### Methodological Breadth
+
+The stream welcomes classical forecasting, probabilistic methods, judgemental approaches, machine learning, and hybrid frameworks.
+
+:::
+
+::: {.column width="50%"}
+
+### Practical Impact
+
+Share forecasting research that matters in real settings such as healthcare, supply chains, finance, energy, and public services.
+
+### Strong Visibility
+
+OR68 provides an excellent platform to connect with researchers and practitioners across the wider operational research and analytics community.
+
+:::
+::::
+
+## Who Should Apply?
+
+We warmly encourage submissions from:
+
+- Researchers
+- Practitioners
+- PhD Students
+- Early-Career Researchers
+- Interdisciplinary Teams
+- Contributors from Academia, Industry, Government, and the Public Sector
+
+Whether your work is methodological, applied, or decision-focused, the Forecasting Stream would be pleased to receive your submission.
+
+## Topics Include, but Are Not Limited to
+
+- Time Series Forecasting Methods
+- Machine Learning and AI in Forecasting
+- Probabilistic and Distributional Forecasting
+- Forecast Evaluation and Accuracy
+- Judgemental Forecasting
+- Forecasting in Supply Chains and Logistics
+- Forecasting in Healthcare and Public Health
+- Forecasting in Finance and Economics
+- Forecasting in Agriculture and Food Systems
+- Forecasting in Water, Energy, and Environment
+
+## How to Apply
+
+:::: {.columns}
+::: {.column width="30%"}
+
+![](or68_qr_code.png){width="85%" fig-alt="OR68 QR Code"}
+
+
+:::
+
+::: {.column width="70%"}
+
+Submitting your abstract is straightforward:
+
+1. Create an account on the abstract submission portal
+2. Enter your contact details
+3. Add your abstract title and select **“FORECASTING”** as your stream
+4. Add the author details
+5. Upload your abstract or synopsis
+6. Review and submit
+
+:::
+
+**Scan the QR Code or Use the Submission Link:** [Submit Your Abstract Here](https://www-eur.cvent.com/c/abstracts/46a99aa8-e4c1-4ab7-aac8-3858f85ad06c)
+::::
+
+## Connect with the Forecasting Stream Team
+
+:::: {.columns}
+::: {.column width="33%"}
+
+![](bahman.png){.team-photo fig-alt="Prof. Bahman Rostami-Tabar"}
+
+### Prof. Bahman Rostami-Tabar
+
+Professor of Analytics and Decision Sciences, Director of the Data Lab for Social Good, and Theme Lead for Uncertainty & the Future at Cardiff University; Associate Editor, Journal of the Operational Research Society  
+[Rostami-TabarB@cardiff.ac.uk](mailto:Rostami-TabarB@cardiff.ac.uk)
+
+:::
+
+::: {.column width="33%"}
+
+![](Udeshi.jpg){.team-photo fig-alt="Udeshi Salgado"}
+
+### Udeshi Salgado
+
+PhD Candidate, DL4SG Research Group, Cardiff Business School, Cardiff University  [salgadomu@cardiff.ac.uk](mailto:salgadomu@cardiff.ac.uk)
+
+:::
+
+::: {.column width="33%"}
+
+![](rui.png){.team-photo fig-alt="Rui Xu"}
+
+### Rui Xu
+
+PhD Candidate, DL4SG Research Group, Cardiff Business School, Cardiff University  
+[XuR25@cardiff.ac.uk](mailto:XuR25@cardiff.ac.uk)
+
+:::
+::::
+
+## Join Us in Nottingham
+
+If your work contributes to forecasting theory, practice, or decision-making under uncertainty, we would be delighted to welcome your submission to the **Forecasting Stream at OR68**.
+
+We look forward to seeing you in Nottingham in September 2026.

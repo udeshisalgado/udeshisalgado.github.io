@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://udeshisalgado.github.io/cv.html</loc>
-    <lastmod>2025-06-22T02:17:57.790Z</lastmod>
+    <loc>https://udeshisalgado.github.io/blog.html</loc>
+    <lastmod>2026-03-24T01:09:32.430Z</lastmod>
   </url>
   <url>
-    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/course_description.html</loc>
-    <lastmod>2025-05-12T11:13:24.542Z</lastmod>
+    <loc>https://udeshisalgado.github.io/slides/higher_studies_webinar/higher_studies_webinar.html</loc>
+    <lastmod>2025-07-29T19:59:59.238Z</lastmod>
   </url>
   <url>
-    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/Lab/ctmc_queueing_theory_lab.html</loc>
-    <lastmod>2025-05-21T18:15:28.609Z</lastmod>
+    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/dl4sg_slides.html</loc>
+    <lastmod>2025-05-22T00:38:10.315Z</lastmod>
   </url>
   <url>
-    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/lab_r/ctmc_queueing_theory_lab.html</loc>
-    <lastmod>2025-05-21T18:15:28.609Z</lastmod>
+    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/Lab/ctmc_queueing_theory_lab_with_answers.html</loc>
+    <lastmod>2025-05-20T03:44:45.899Z</lastmod>
   </url>
   <url>
-    <loc>https://udeshisalgado.github.io/slides/swords_presentation/swords_slides.html</loc>
-    <lastmod>2025-10-07T09:58:41.505Z</lastmod>
+    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/lab_r/ctmc_queueing_theory_lab_with_answers.html</loc>
+    <lastmod>2025-05-20T03:44:45.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://udeshisalgado.github.io/slides/euro_presentation/euro_slides.html</loc>
+    <lastmod>2025-06-24T00:03:32.168Z</lastmod>
   </url>
   <url>
     <loc>https://udeshisalgado.github.io/slides/graduate_tutor_interview/graduate_tutor_interview.html</loc>
@@ -29,31 +33,35 @@
     <lastmod>2026-03-12T20:32:59.470Z</lastmod>
   </url>
   <url>
+    <loc>https://udeshisalgado.github.io/posts/or68-forecasting-stream/index.html</loc>
+    <lastmod>2026-03-24T01:20:24.215Z</lastmod>
+  </url>
+  <url>
     <loc>https://udeshisalgado.github.io/index.html</loc>
     <lastmod>2025-06-22T02:17:57.791Z</lastmod>
   </url>
   <url>
-    <loc>https://udeshisalgado.github.io/slides/euro_presentation/euro_slides.html</loc>
-    <lastmod>2025-06-24T00:03:32.168Z</lastmod>
-  </url>
-  <url>
-    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/lab_r/ctmc_queueing_theory_lab_with_answers.html</loc>
-    <lastmod>2025-05-20T03:44:45.899Z</lastmod>
-  </url>
-  <url>
-    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/Lab/ctmc_queueing_theory_lab_with_answers.html</loc>
-    <lastmod>2025-05-20T03:44:45.899Z</lastmod>
-  </url>
-  <url>
-    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/dl4sg_slides.html</loc>
-    <lastmod>2025-05-22T00:38:10.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://udeshisalgado.github.io/slides/higher_studies_webinar/higher_studies_webinar.html</loc>
-    <lastmod>2025-07-29T19:59:59.238Z</lastmod>
-  </url>
-  <url>
     <loc>https://udeshisalgado.github.io/slides/iif_uk_chapter_march26/iif_uk_chapter26.html</loc>
     <lastmod>2026-03-13T00:00:29.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://udeshisalgado.github.io/slides/swords_presentation/swords_slides.html</loc>
+    <lastmod>2025-10-07T09:58:41.505Z</lastmod>
+  </url>
+  <url>
+    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/lab_r/ctmc_queueing_theory_lab.html</loc>
+    <lastmod>2025-05-21T18:15:28.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/Lab/ctmc_queueing_theory_lab.html</loc>
+    <lastmod>2025-05-21T18:15:28.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://udeshisalgado.github.io/slides/stocastic_modelling/course_description.html</loc>
+    <lastmod>2025-05-12T11:13:24.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://udeshisalgado.github.io/cv.html</loc>
+    <lastmod>2025-06-22T02:17:57.790Z</lastmod>
   </url>
 </urlset>

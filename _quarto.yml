@@ -14,6 +14,8 @@ website:
         href: cv.qmd
       - text: Talks
         href: talks.qmd
+      - text: Blog
+        href: blog.qmd
       - icon: github
         href: https://github.com/udeshisalgado
       - icon: linkedin
@@ -27,5 +29,5 @@ format:
     mainfont: "monospace"
     fontsize: 20px
     backgroundcolor: "#eeffee"
-    fontcolor: "darkgreen"
+    fontcolor: "darkblue"
     linkcolor: "black"
