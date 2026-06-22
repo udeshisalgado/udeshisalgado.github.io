@@ -3,6 +3,21 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## Forecasting Routine Vaccine Administration Under Uncertainty: A Comparative Evaluation
+*46th International Symposium on Forecasting | Montreal, Canada*
+
+![](slides/isf_slides/preview.png)
+
+📅 **Date:** June 30, 2026   
+⏰ **Time:** 16:50 – 17:10  
+📍 **Location:** SH-2420, University of Quebec in Montreal, Canada
+
+<p>
+  <a href="slides/isf_slides/isf_slides.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
 
 ## Distributional Post-Processing for Vaccine Demand Forecasting at the Operational Level in Low- and Middle-Income Countries
 *University Visit, University of Exeter*
