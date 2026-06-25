@@ -123,8 +123,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <meta property="og:title" content="Udeshi Salgado">
 <meta property="og:site_name" content="Udeshi Salgado">
 </head>
@@ -345,6 +343,413 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <p><strong>The missed opportunity.</strong> FSP4All already holds both the demographic estimate and years of doses-administered history. Yet it only averages them, using simple or expert-assigned weights. No forecasting model is ever fitted to the historical data.</p>
 </div>
 </section>
+<section id="vaccine-demand-forecasting-in-the-literature" class="slide level2">
+<h2>Vaccine demand forecasting in the literature</h2>
+<table class="littable-full">
+<colgroup>
+<col style="width:10%">
+<col style="width:16%">
+<col style="width:12%">
+<col style="width:9%">
+<col style="width:7%">
+<col style="width:10%">
+<col style="width:6%">
+<col style="width:5.5%">
+<col style="width:5.5%">
+<col style="width:5.5%">
+<col style="width:8%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Reference
+</th>
+<th>
+Approach / method
+</th>
+<th>
+Target variable
+</th>
+<th>
+Level
+</th>
+<th>
+Horizon
+</th>
+<th>
+Evaluation focus
+</th>
+<th class="flag">
+Probabilistic forecasting
+</th>
+<th class="flag">
+Benchmark
+</th>
+<th class="flag">
+Wastage component
+</th>
+<th class="flag">
+Inventory integration
+</th>
+<th class="flag">
+Distributional post-processing
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ref">
+Chiu et al.&nbsp;(2008)
+</td>
+<td>
+ARIMA, BPNN
+</td>
+<td>
+Annual demand
+</td>
+<td>
+Regional
+</td>
+<td>
+1 year
+</td>
+<td>
+Average error
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Kotagiri et al.&nbsp;(2011)
+</td>
+<td>
+Birth-cohort model
+</td>
+<td>
+Inventory requirements
+</td>
+<td>
+Local inventory
+</td>
+<td>
+1 year
+</td>
+<td>
+Inventory impact
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag yes">
+Yes
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Mueller et al.&nbsp;(2016)
+</td>
+<td>
+Simulation
+</td>
+<td>
+Vaccine quantity
+</td>
+<td>
+Multi-level
+</td>
+<td>
+12 months
+</td>
+<td>
+Availability, cost
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag yes">
+Yes
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Azadi et al.&nbsp;(2018)
+</td>
+<td>
+Regression
+</td>
+<td>
+Childhood demand
+</td>
+<td>
+Regional
+</td>
+<td>
+n.s.
+</td>
+<td>
+Not reported
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Cernuschi et al.&nbsp;(2018)
+</td>
+<td>
+Demand-supply assessment
+</td>
+<td>
+BCG demand, supply
+</td>
+<td>
+National, global
+</td>
+<td>
+14 years
+</td>
+<td>
+Procurement
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Alegado &amp; Tumibay (2020)
+</td>
+<td>
+ARIMA, MLP
+</td>
+<td>
+Monthly demand
+</td>
+<td>
+Local
+</td>
+<td>
+12 months
+</td>
+<td>
+RMSE, MAE
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Hariharan et al.&nbsp;(2020)
+</td>
+<td>
+Random forest
+</td>
+<td>
+Utilisation
+</td>
+<td>
+Facility
+</td>
+<td>
+Biweekly
+</td>
+<td>
+RMSE
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag yes">
+Yes
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Sahisnu et al.&nbsp;(2020)
+</td>
+<td>
+ARIMA
+</td>
+<td>
+Stock levels
+</td>
+<td>
+Local
+</td>
+<td>
+10 months
+</td>
+<td>
+MAPE
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag yes">
+Yes
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr>
+<td class="ref">
+Vinitha et al.&nbsp;(2024)
+</td>
+<td>
+Regression, trees, LSTM, ANN
+</td>
+<td>
+Infant demand
+</td>
+<td>
+Local
+</td>
+<td>
+n.s.
+</td>
+<td>
+RMSE, R²
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+</tr>
+<tr class="ours">
+<td class="ref">
+Current study
+</td>
+<td>
+FSP, statistical, ML, DL, foundation, ensemble
+</td>
+<td>
+Administered doses, monthly
+</td>
+<td>
+Sub-county
+</td>
+<td>
+6 months
+</td>
+<td>
+CRPS, MASE, RMSSE
+</td>
+<td class="flag yes">
+Yes
+</td>
+<td class="flag yes">
+Yes
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag yes">
+Yes
+</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="section-3" class="slide level2">
 <h2></h2>
 <p><br> <br></p>
@@ -470,25 +875,26 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 </section>
 <section id="distributional-post-processing-defining-bounds" class="slide level2 eqn-slide">
 <h2>Distributional post-processing: defining bounds</h2>
+<p><span class="fsp-lead" style="display:block; text-align:center;">We bound each forecast with the <em>administered</em> FSP demographic: the eligible cohort × dose schedule at full (100%) coverage. The lower bound is structural; the upper bound is calibrated from history.</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span style="display:block; text-align:center; font-size:1.4em; color:#A04B2F;"><strong>Lower bound</strong></span></p>
+<p><span style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"><strong>Lower bound</strong></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/bound_lower.png" class="quarto-figure quarto-figure-center" style="width:82.0%"></p>
+<p><img data-src="images/bound_lower.png" class="quarto-figure quarto-figure-center" style="width:56.0%"></p>
 </figure>
 </div>
 <p><span class="math display">\[L = 0\]</span></p>
 <p><span class="fsp-lead">A structural constraint. Monthly doses administered cannot be negative.</span></p>
 </div><div class="column" style="width:50%;">
-<p><span style="display:block; text-align:center; font-size:1.4em; color:#A04B2F;"><strong>Upper bound</strong></span></p>
+<p><span style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"><strong>Upper bound</strong></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/bound_upper.png" class="quarto-figure quarto-figure-center" style="width:82.0%"></p>
+<p><img data-src="images/bound_upper.png" class="quarto-figure quarto-figure-center" style="width:56.0%"></p>
 </figure>
 </div>
-<p><span class="math display">\[U_{i,v,t} = k_{i,v}\,E_{i,v,t}, \quad E_{i,v,t} = \tfrac{P_{i,v,y}\,\tau_{v,y}\,d_v}{12}\]</span></p>
-<p><span class="fsp-lead">FSP expected monthly doses <span class="math inline">\(E\)</span> (<span class="math inline">\(P\)</span> = target population, <span class="math inline">\(\tau\)</span> = WHO coverage, <span class="math inline">\(d\)</span> = doses per child), scaled by <span class="math inline">\(k_{i,v} = Q_{0.975}\!\left(\tfrac{y}{E}\,\big|\,\mathcal{C}\right)\)</span> calibrated on 2018 to 2019.</span></p>
+<p><span class="math display">\[U_{i,v,t} = k_{i,v}\,E^{\uparrow}_{i,v,t}\]</span></p>
+<p><span class="fsp-lead"><strong>Calibrate</strong> <span class="math inline">\(k_{i,v} = Q_{0.975}\!\left(\tfrac{y}{E}\,\big|\,2018\text{–}19\right)\)</span> on the administered FSP point forecast, where the central capacity is <span class="math inline">\(E = \text{Target Population} \times \,\text{No of doses} \times \,\text{100% coverage} /12\)</span>. <br> <strong>Apply</strong> to the upper capacity <span class="math inline">\(E^{\uparrow} = \text{Target Population Upper} \times \,\text{No of doses} \times \,\text{100% coverage}/12\)</span> (the upper cohort at 100% coverage) to set the feasibility ceiling.</span></p>
 </div></div>
 </section>
 <section id="from-bounds-to-truncated-distribution" class="slide level2 eqn-slide">
@@ -541,176 +947,45 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 </ul>
 </div>
 </section>
-<section id="results-before-truncation" class="slide level2">
-<h2>Results: before truncation</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-striped table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 28px; width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">Method</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">MASE</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">RMSSE</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Scaled CRPS</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Runtime (s)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Elastic Net</td>
-<td style="text-align: right;">0.002</td>
-<td style="text-align: right;">0.003</td>
-<td style="text-align: right;">0.002</td>
-<td style="text-align: right;">0.53</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Linear comb.</td>
-<td style="text-align: right;">0.002</td>
-<td style="text-align: right;">0.003</td>
-<td style="text-align: right;">0.003</td>
-<td style="text-align: right;">1.09</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Lasso</td>
-<td style="text-align: right;">0.003</td>
-<td style="text-align: right;">0.004</td>
-<td style="text-align: right;">0.004</td>
-<td style="text-align: right;">0.62</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">XGBoost</td>
-<td style="text-align: right;">0.063</td>
-<td style="text-align: right;">0.091</td>
-<td style="text-align: right;">0.059</td>
-<td style="text-align: right;">1.17</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Random Forest</td>
-<td style="text-align: right;">0.021</td>
-<td style="text-align: right;">0.042</td>
-<td style="text-align: right;">0.059</td>
-<td style="text-align: right;">60.49</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ML comb.</td>
-<td style="text-align: right;">0.045</td>
-<td style="text-align: right;">0.067</td>
-<td style="text-align: right;">0.060</td>
-<td style="text-align: right;">63.30</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">LightGBM</td>
-<td style="text-align: right;">0.079</td>
-<td style="text-align: right;">0.111</td>
-<td style="text-align: right;">0.079</td>
-<td style="text-align: right;">2.28</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ANN</td>
-<td style="text-align: right;">0.113</td>
-<td style="text-align: right;">0.228</td>
-<td style="text-align: right;">0.116</td>
-<td style="text-align: right;">20.03</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hybrid weighted</td>
-<td style="text-align: right;">0.204</td>
-<td style="text-align: right;">0.370</td>
-<td style="text-align: right;">0.182</td>
-<td style="text-align: right;">4165.58</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">LSTM</td>
-<td style="text-align: right;">0.292</td>
-<td style="text-align: right;">0.654</td>
-<td style="text-align: right;">0.271</td>
-<td style="text-align: right;">25.18</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">ETS</td>
-<td style="text-align: right;">0.417</td>
-<td style="text-align: right;">0.689</td>
-<td style="text-align: right;">0.348</td>
-<td style="text-align: right;">4.18</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Chronos</td>
-<td style="text-align: right;">0.415</td>
-<td style="text-align: right;">0.554</td>
-<td style="text-align: right;">0.350</td>
-<td style="text-align: right;">23.21</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">ARIMA</td>
-<td style="text-align: right;">0.436</td>
-<td style="text-align: right;">0.569</td>
-<td style="text-align: right;">0.366</td>
-<td style="text-align: right;">10.84</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Statistical comb.</td>
-<td style="text-align: right;">0.404</td>
-<td style="text-align: right;">0.526</td>
-<td style="text-align: right;">0.372</td>
-<td style="text-align: right;">4134.03</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hybrid bias</td>
-<td style="text-align: right;">0.420</td>
-<td style="text-align: right;">0.481</td>
-<td style="text-align: right;">0.412</td>
-<td style="text-align: right;">4165.58</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">sNaive</td>
-<td style="text-align: right;">0.510</td>
-<td style="text-align: right;">0.666</td>
-<td style="text-align: right;">0.433</td>
-<td style="text-align: right;">2.07</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Naive</td>
-<td style="text-align: right;">0.591</td>
-<td style="text-align: right;">0.776</td>
-<td style="text-align: right;">0.575</td>
-<td style="text-align: right;">2.01</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">FSP benchmark</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">0.87</td>
-</tr>
-</tbody>
-</table>
+<section id="before-truncation-point-accuracy" class="slide level2">
+<h2>Before truncation: point accuracy</h2>
+<p><span class="fsp-lead">Nemenyi average ranks for RMSSE, with mean MASE and RMSSE alongside. Lower rank is better; bars within one critical difference are not significantly different.</span></p>
 
+<img data-src="images/res_nemenyi_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="before-truncation-distributional-accuracy" class="slide level2">
+<h2>Before truncation: distributional accuracy</h2>
+<p><span class="fsp-lead">Nemenyi average ranks for scaled CRPS, with the mean scaled CRPS alongside. The FSP benchmark ranks last on both point and distributional accuracy.</span></p>
 
-</div>
-</div>
-</section>
-<section id="who-wins-before-truncation" class="slide level2">
-<h2>Who wins before truncation</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span style="display:block; text-align:center; font-size:1.25em; color:#A04B2F;"><strong>RMSSE</strong> (point accuracy)</span> <img data-src="images/res_nemenyi_rmsse.png" style="width:100.0%"></p>
-</div><div class="column" style="width:50%;">
-<p><span style="display:block; text-align:center; font-size:1.25em; color:#A04B2F;"><strong>Scaled CRPS</strong> (distribution)</span> <img data-src="images/res_nemenyi_scrps.png" style="width:100.0%"></p>
-</div></div>
-</section>
+<img data-src="images/res_nemenyi_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:72.0%"></section>
 <section id="accuracy-vs-computational-cost" class="slide level2">
 <h2>Accuracy vs computational cost</h2>
 
-<img data-src="images/res_efficiency.png" class="quarto-figure quarto-figure-center r-stretch" style="width:64.0%"></section>
-<section id="after-truncation-scaled-crps" class="slide level2">
-<h2>After truncation: scaled CRPS</h2>
-
-<img data-src="images/res_cleveland_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Truncation moves every method to the left (better). Gains are largest for the most diffuse forecasters, such as LSTM, sNaive and ETS.</span></p>
-</section>
+<img data-src="images/res_efficiency.png" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"></section>
 <section id="after-truncation-rmsse" class="slide level2">
 <h2>After truncation: RMSSE</h2>
 
-<img data-src="images/res_cleveland_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"></section>
+<img data-src="images/res_cleveland_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Point accuracy. Truncation moves every method to the left (better); the largest gains are for the most diffuse forecasters, such as sNaive and ETS.</span></p>
+</section>
+<section id="after-truncation-scaled-crps" class="slide level2">
+<h2>After truncation: scaled CRPS</h2>
+
+<img data-src="images/res_cleveland_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Distributional accuracy. Every method improves; gains are largest for LSTM, sNaive and ETS.</span></p>
+</section>
+<section id="distribution-of-errors-across-horizons" class="slide level2">
+<h2>Distribution of errors across horizons</h2>
+
+<img data-src="images/res_dist_horizons.png" class="quarto-figure quarto-figure-center r-stretch" style="width:46.0%"><p><span class="fsp-lead">Densities of scaled CRPS, untruncated (left) vs FSP-truncated (right), by horizon. The five worst forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons.</span></p>
+</section>
+<section id="where-truncation-helps-most" class="slide level2">
+<h2>Where truncation helps most</h2>
+
+<img data-src="images/res_dist_models.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p><span class="fsp-lead">The three models that gain most from truncation (LSTM, Naive, sNaive). Untruncated (blue) and FSP-truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, clearest for Naive at longer horizons.</span></p>
+</section>
+<section id="truncation-tightens-the-dispersed-forecasters-at-longer-horizons" class="slide level2">
+<h2>Truncation tightens the dispersed forecasters at longer horizons</h2>
+
+<img data-src="images/res_horizon_truncation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><span class="fsp-lead">Every model as a horizontal boxplot of scaled CRPS, untruncated (grey) vs FSP-truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (Naive, sNaive, Hybrid weighted, LSTM), and the effect grows with the horizon.</span></p>
+</section>
 <section id="the-road-ahead" class="slide level2">
 <h2>The road ahead</h2>
 <p><span class="fsp-lead">Where this work goes next.</span></p>
@@ -965,44 +1240,6 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

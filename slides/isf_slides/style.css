@@ -320,19 +320,21 @@ img {
 .reveal section.eqn-slide mjx-container[display="true"] { margin: 0.55em 0 !important; }
 
 /* --- forecasting framework flow diagram --- */
-.reveal .fw-wrap { font-size: 0.6em; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+/* Larger base font for lecture-room legibility; vertical padding/gaps are
+   tightened to compensate so the pipeline still fills one slide. */
+.reveal .fw-wrap { font-size: 0.74em; display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .reveal .fw-row { display: flex; gap: 16px; justify-content: center; align-items: stretch; width: 100%; }
-.reveal .fw-box { border-radius: 12px; padding: 12px 16px; flex: 1; text-align: center; }
-.reveal .fw-box .fw-t { display: block; font-weight: 600; margin-bottom: 4px; }
-.reveal .fw-box .fw-s { display: block; font-size: 0.78em; opacity: 0.9; line-height: 1.3; }
-.reveal .fw-arrow { text-align: center; color: #D97757; font-size: 1.5em; line-height: 0.7; margin: 0; }
+.reveal .fw-box { border-radius: 12px; padding: 8px 16px; flex: 1; text-align: center; }
+.reveal .fw-box .fw-t { display: block; font-weight: 600; margin-bottom: 3px; }
+.reveal .fw-box .fw-s { display: block; font-size: 0.9em; opacity: 0.9; line-height: 1.28; }
+.reveal .fw-arrow { text-align: center; color: #D97757; font-size: 1.15em; line-height: 0.7; margin: 0; }
 .reveal .fw-data { background: #F1EFE8; color: #2C2C2A; }
 .reveal .fw-fsp  { background: #F2DFD3; color: #7A3A1E; }
 .reveal .fw-stat { background: #E6F1FB; color: #042C53; }
 .reveal .fw-ml   { background: #EEEDFE; color: #26215C; }
 .reveal .fw-dl   { background: #E1F5EE; color: #04342C; }
-.reveal .fw-bar  { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.12); border-radius: 10px; padding: 8px 16px; text-align: center; font-style: italic; color: #5F5E5A; width: 70%; }
-.reveal .fw-final { background: #D97757; color: #FFFFFF; border-radius: 12px; padding: 14px 22px; text-align: center; font-weight: 500; width: 82%; }
+.reveal .fw-bar  { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.12); border-radius: 10px; padding: 6px 16px; text-align: center; font-style: italic; color: #5F5E5A; width: 70%; }
+.reveal .fw-final { background: #D97757; color: #FFFFFF; border-radius: 12px; padding: 10px 22px; text-align: center; font-weight: 500; width: 82%; }
 
 /* --- data setup stat cards --- */
 .reveal .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 0.7em; }
@@ -364,7 +366,34 @@ img {
 .reveal .ol-off::before { content: "\25B8  "; color: transparent; }
 
 /* --- methodology pipeline flow --- */
-.reveal .flow-label { display: block; width: 100%; font-weight: 600; color: #A04B2F; text-align: left; margin: 6px 0 2px; }
-.reveal .flow-steps { display: flex; align-items: stretch; justify-content: center; gap: 10px; width: 100%; }
+.reveal .flow-label { display: block; width: 100%; font-weight: 600; color: #A04B2F; text-align: left; margin: 2px 0 1px; }
+.reveal .flow-steps { display: flex; align-items: stretch; justify-content: center; gap: 8px; width: 100%; }
 .reveal .flow-steps > .fw-box { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .reveal .flow-hstep-arrow { display: flex; align-items: center; color: #D97757; font-size: 1.5em; }
+
+/* --- literature positioning table --- */
+.reveal table.littable { border-collapse: collapse; width: 94%; margin: 0.4em auto 0; font-size: 0.62em; }
+.reveal table.littable th, .reveal table.littable td { padding: 0.55em 0.6em; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.10); vertical-align: middle; }
+.reveal table.littable thead th { background: #D97757; color: #fff; font-weight: 700; border-bottom: none; line-height: 1.2; }
+.reveal table.littable td.strand { text-align: left; font-weight: 600; color: #141413; }
+.reveal table.littable td.strand .ref { display: block; font-weight: 400; font-size: 0.82em; color: #5F5E5A; }
+.reveal table.littable tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.littable tr.ours { background: #E6F1FB !important; }
+.reveal table.littable tr.ours td { border-top: 2px solid #185FA5; border-bottom: 2px solid #185FA5; }
+.reveal table.littable tr.ours td.strand { color: #042C53; }
+.reveal .lt-yes  { color: #1E8449; font-weight: 700; font-size: 1.15em; }
+.reveal .lt-no   { color: #C0392B; }
+.reveal .lt-part { color: #B9770E; font-weight: 700; }
+.reveal .lt-na   { color: #AEACA4; }
+
+/* --- full literature survey table (reproduces the paper's table) --- */
+.reveal table.littable-full { border-collapse: collapse; width: 100%; margin: 0.2em auto 0; font-size: 0.56em; table-layout: fixed; }
+.reveal table.littable-full th, .reveal table.littable-full td { padding: 0.45em 0.45em; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(0,0,0,0.10); word-wrap: break-word; overflow-wrap: anywhere; line-height: 1.25; }
+.reveal table.littable-full th.flag, .reveal table.littable-full td.flag { text-align: center; }
+.reveal table.littable-full thead th { background: #D97757; color: #fff; font-weight: 700; border-bottom: none; }
+.reveal table.littable-full tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.littable-full td.ref { font-weight: 600; color: #141413; }
+.reveal table.littable-full tr.ours { background: #E6F1FB !important; }
+.reveal table.littable-full tr.ours td { font-weight: 600; color: #042C53; border-top: 2px solid #185FA5; border-bottom: 2px solid #185FA5; }
+.reveal table.littable-full .yes { color: #1E8449; font-weight: 700; }
+.reveal table.littable-full .no  { color: #B0AEA6; }

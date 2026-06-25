@@ -70,6 +70,13 @@
     "text": "The data is there, but the method isn’t\nTwo methods have no inputs; the third ignores the history sitting right beside it.\n\n\n Session   No data\n\nNo session plans kept\nNo attendance records\nThe method cannot run\n\n\n\n Consumption   No data\n\nOnly administered doses recorded\nNo wastage or reporting rates\nConsumption cannot be computed\n\n\n\n Demographic   Data, but…\n\nA fixed estimate, not a forecast\nNeeds a rarely-measured wastage rate\nUncertainty stays hidden\n\n\n\n\nThe missed opportunity. FSP4All already holds both the demographic estimate and years of doses-administered history. Yet it only averages them, using simple or expert-assigned weights. No forecasting model is ever fitted to the historical data."
   },
   {
+    "objectID": "slides/isf_slides/isf_slides.html#vaccine-demand-forecasting-in-the-literature",
+    "href": "slides/isf_slides/isf_slides.html#vaccine-demand-forecasting-in-the-literature",
+    "title": "Udeshi Salgado",
+    "section": "Vaccine demand forecasting in the literature",
+    "text": "Vaccine demand forecasting in the literature\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReference\n\n\nApproach / method\n\n\nTarget variable\n\n\nLevel\n\n\nHorizon\n\n\nEvaluation focus\n\n\nProbabilistic forecasting\n\n\nBenchmark\n\n\nWastage component\n\n\nInventory integration\n\n\nDistributional post-processing\n\n\n\n\n\n\nChiu et al. (2008)\n\n\nARIMA, BPNN\n\n\nAnnual demand\n\n\nRegional\n\n\n1 year\n\n\nAverage error\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nKotagiri et al. (2011)\n\n\nBirth-cohort model\n\n\nInventory requirements\n\n\nLocal inventory\n\n\n1 year\n\n\nInventory impact\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nMueller et al. (2016)\n\n\nSimulation\n\n\nVaccine quantity\n\n\nMulti-level\n\n\n12 months\n\n\nAvailability, cost\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nAzadi et al. (2018)\n\n\nRegression\n\n\nChildhood demand\n\n\nRegional\n\n\nn.s.\n\n\nNot reported\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCernuschi et al. (2018)\n\n\nDemand-supply assessment\n\n\nBCG demand, supply\n\n\nNational, global\n\n\n14 years\n\n\nProcurement\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nAlegado & Tumibay (2020)\n\n\nARIMA, MLP\n\n\nMonthly demand\n\n\nLocal\n\n\n12 months\n\n\nRMSE, MAE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nHariharan et al. (2020)\n\n\nRandom forest\n\n\nUtilisation\n\n\nFacility\n\n\nBiweekly\n\n\nRMSE\n\n\nNo\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nSahisnu et al. (2020)\n\n\nARIMA\n\n\nStock levels\n\n\nLocal\n\n\n10 months\n\n\nMAPE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nVinitha et al. (2024)\n\n\nRegression, trees, LSTM, ANN\n\n\nInfant demand\n\n\nLocal\n\n\nn.s.\n\n\nRMSE, R²\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCurrent study\n\n\nFSP, statistical, ML, DL, foundation, ensemble\n\n\nAdministered doses, monthly\n\n\nSub-county\n\n\n6 months\n\n\nCRPS, MASE, RMSSE\n\n\nYes\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nYes"
+  },
+  {
     "objectID": "slides/isf_slides/isf_slides.html#section-3",
     "href": "slides/isf_slides/isf_slides.html#section-3",
     "title": "Udeshi Salgado",
@@ -116,7 +123,7 @@
     "href": "slides/isf_slides/isf_slides.html#distributional-post-processing-defining-bounds",
     "title": "Udeshi Salgado",
     "section": "Distributional post-processing: defining bounds",
-    "text": "Distributional post-processing: defining bounds\n\n\nLower bound\n\n\n\n\n\n\\[L = 0\\]\nA structural constraint. Monthly doses administered cannot be negative.\n\nUpper bound\n\n\n\n\n\n\\[U_{i,v,t} = k_{i,v}\\,E_{i,v,t}, \\quad E_{i,v,t} = \\tfrac{P_{i,v,y}\\,\\tau_{v,y}\\,d_v}{12}\\]\nFSP expected monthly doses \\(E\\) (\\(P\\) = target population, \\(\\tau\\) = WHO coverage, \\(d\\) = doses per child), scaled by \\(k_{i,v} = Q_{0.975}\\!\\left(\\tfrac{y}{E}\\,\\big|\\,\\mathcal{C}\\right)\\) calibrated on 2018 to 2019."
+    "text": "Distributional post-processing: defining bounds\nWe bound each forecast with the administered FSP demographic: the eligible cohort × dose schedule at full (100%) coverage. The lower bound is structural; the upper bound is calibrated from history.\n\n\nLower bound\n\n\n\n\n\n\\[L = 0\\]\nA structural constraint. Monthly doses administered cannot be negative.\n\nUpper bound\n\n\n\n\n\n\\[U_{i,v,t} = k_{i,v}\\,E^{\\uparrow}_{i,v,t}\\]\nCalibrate \\(k_{i,v} = Q_{0.975}\\!\\left(\\tfrac{y}{E}\\,\\big|\\,2018\\text{–}19\\right)\\) on the administered FSP point forecast, where the central capacity is \\(E = \\text{Target Population} \\times \\,\\text{No of doses} \\times \\,\\text{100% coverage} /12\\).  Apply to the upper capacity \\(E^{\\uparrow} = \\text{Target Population Upper} \\times \\,\\text{No of doses} \\times \\,\\text{100% coverage}/12\\) (the upper cohort at 100% coverage) to set the feasibility ceiling."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#from-bounds-to-truncated-distribution",
@@ -147,18 +154,18 @@
     "text": "Outline\n\n\nBackground and motivation\nCurrent practice: the FSP tool\nData and Methodology\nResults"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#results-before-truncation",
-    "href": "slides/isf_slides/isf_slides.html#results-before-truncation",
+    "objectID": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
+    "href": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
     "title": "Udeshi Salgado",
-    "section": "Results: before truncation",
-    "text": "Results: before truncation\n\n\n\n\n\nMethod\nMASE\nRMSSE\nScaled CRPS\nRuntime (s)\n\n\n\n\nElastic Net\n0.002\n0.003\n0.002\n0.53\n\n\nLinear comb.\n0.002\n0.003\n0.003\n1.09\n\n\nLasso\n0.003\n0.004\n0.004\n0.62\n\n\nXGBoost\n0.063\n0.091\n0.059\n1.17\n\n\nRandom Forest\n0.021\n0.042\n0.059\n60.49\n\n\nML comb.\n0.045\n0.067\n0.060\n63.30\n\n\nLightGBM\n0.079\n0.111\n0.079\n2.28\n\n\nANN\n0.113\n0.228\n0.116\n20.03\n\n\nHybrid weighted\n0.204\n0.370\n0.182\n4165.58\n\n\nLSTM\n0.292\n0.654\n0.271\n25.18\n\n\nETS\n0.417\n0.689\n0.348\n4.18\n\n\nChronos\n0.415\n0.554\n0.350\n23.21\n\n\nARIMA\n0.436\n0.569\n0.366\n10.84\n\n\nStatistical comb.\n0.404\n0.526\n0.372\n4134.03\n\n\nHybrid bias\n0.420\n0.481\n0.412\n4165.58\n\n\nsNaive\n0.510\n0.666\n0.433\n2.07\n\n\nNaive\n0.591\n0.776\n0.575\n2.01\n\n\nFSP benchmark\n1.000\n1.000\n1.000\n0.87"
+    "section": "Before truncation: point accuracy",
+    "text": "Before truncation: point accuracy\nNemenyi average ranks for RMSSE, with mean MASE and RMSSE alongside. Lower rank is better; bars within one critical difference are not significantly different."
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#who-wins-before-truncation",
-    "href": "slides/isf_slides/isf_slides.html#who-wins-before-truncation",
+    "objectID": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
+    "href": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
     "title": "Udeshi Salgado",
-    "section": "Who wins before truncation",
-    "text": "Who wins before truncation\n\n\nRMSSE (point accuracy) \n\nScaled CRPS (distribution)"
+    "section": "Before truncation: distributional accuracy",
+    "text": "Before truncation: distributional accuracy\nNemenyi average ranks for scaled CRPS, with the mean scaled CRPS alongside. The FSP benchmark ranks last on both point and distributional accuracy."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#accuracy-vs-computational-cost",
@@ -168,18 +175,39 @@
     "text": "Accuracy vs computational cost"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-scaled-crps",
-    "href": "slides/isf_slides/isf_slides.html#after-truncation-scaled-crps",
-    "title": "Udeshi Salgado",
-    "section": "After truncation: scaled CRPS",
-    "text": "After truncation: scaled CRPS\n\nTruncation moves every method to the left (better). Gains are largest for the most diffuse forecasters, such as LSTM, sNaive and ETS."
-  },
-  {
     "objectID": "slides/isf_slides/isf_slides.html#after-truncation-rmsse",
     "href": "slides/isf_slides/isf_slides.html#after-truncation-rmsse",
     "title": "Udeshi Salgado",
     "section": "After truncation: RMSSE",
-    "text": "After truncation: RMSSE"
+    "text": "After truncation: RMSSE\n\nPoint accuracy. Truncation moves every method to the left (better); the largest gains are for the most diffuse forecasters, such as sNaive and ETS."
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-scaled-crps",
+    "href": "slides/isf_slides/isf_slides.html#after-truncation-scaled-crps",
+    "title": "Udeshi Salgado",
+    "section": "After truncation: scaled CRPS",
+    "text": "After truncation: scaled CRPS\n\nDistributional accuracy. Every method improves; gains are largest for LSTM, sNaive and ETS."
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#distribution-of-errors-across-horizons",
+    "href": "slides/isf_slides/isf_slides.html#distribution-of-errors-across-horizons",
+    "title": "Udeshi Salgado",
+    "section": "Distribution of errors across horizons",
+    "text": "Distribution of errors across horizons\n\nDensities of scaled CRPS, untruncated (left) vs FSP-truncated (right), by horizon. The five worst forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons."
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#where-truncation-helps-most",
+    "href": "slides/isf_slides/isf_slides.html#where-truncation-helps-most",
+    "title": "Udeshi Salgado",
+    "section": "Where truncation helps most",
+    "text": "Where truncation helps most\n\nThe three models that gain most from truncation (LSTM, Naive, sNaive). Untruncated (blue) and FSP-truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, clearest for Naive at longer horizons."
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
+    "href": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
+    "title": "Udeshi Salgado",
+    "section": "Truncation tightens the dispersed forecasters at longer horizons",
+    "text": "Truncation tightens the dispersed forecasters at longer horizons\n\nEvery model as a horizontal boxplot of scaled CRPS, untruncated (grey) vs FSP-truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (Naive, sNaive, Hybrid weighted, LSTM), and the effect grows with the horizon."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#the-road-ahead",
