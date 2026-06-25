@@ -11,14 +11,14 @@
     "href": "slides/isf_slides/isf_slides.html#section",
     "title": "Udeshi Salgado",
     "section": "",
-    "text": "Outline\n\nBackground and motivation\nCurrent practice: the FSP tool\nData and Methodology\nResults"
+    "text": "Outline\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#section-1",
     "href": "slides/isf_slides/isf_slides.html#section-1",
     "title": "Udeshi Salgado",
     "section": "",
-    "text": "Outline\n\n\nBackground and motivation\nCurrent practice: the FSP tool\nData and Methodology\nResults"
+    "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#background",
@@ -42,18 +42,11 @@
     "text": "The immunisation supply chain"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#demand-across-administrative-levels",
-    "href": "slides/isf_slides/isf_slides.html#demand-across-administrative-levels",
-    "title": "Udeshi Salgado",
-    "section": "Demand across administrative levels",
-    "text": "Demand across administrative levels"
-  },
-  {
     "objectID": "slides/isf_slides/isf_slides.html#section-2",
     "href": "slides/isf_slides/isf_slides.html#section-2",
     "title": "Udeshi Salgado",
     "section": "",
-    "text": "Outline\n\n\nBackground and motivation\nCurrent practice: the FSP tool\nData and Methodology\nResults"
+    "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#one-question-three-answers",
@@ -67,7 +60,7 @@
     "href": "slides/isf_slides/isf_slides.html#the-data-is-there-but-the-method-isnt",
     "title": "Udeshi Salgado",
     "section": "The data is there, but the method isn’t",
-    "text": "The data is there, but the method isn’t\nTwo methods have no inputs; the third ignores the history sitting right beside it.\n\n\n Session   No data\n\nNo session plans kept\nNo attendance records\nThe method cannot run\n\n\n\n Consumption   No data\n\nOnly administered doses recorded\nNo wastage or reporting rates\nConsumption cannot be computed\n\n\n\n Demographic   Data, but…\n\nA fixed estimate, not a forecast\nNeeds a rarely-measured wastage rate\nUncertainty stays hidden\n\n\n\n\nThe missed opportunity. FSP4All already holds both the demographic estimate and years of doses-administered history. Yet it only averages them, using simple or expert-assigned weights. No forecasting model is ever fitted to the historical data."
+    "text": "The data is there, but the method isn’t\nTwo methods have no inputs; the third ignores the history sitting right beside it.\n\n\n Session   No data\n\nNo session plans kept\nNo attendance records\nThe method cannot run\n\n\n\n Consumption   Partial data\n\nOnly administered doses recorded\nNo wastage or reporting rates\nConsumption cannot be computed\n\n\n\n Demographic   Data, but…\n\nA fixed projection\nNeeds a rarely-measured wastage rate\nUncertainty stays hidden\n\n\n\n\nThe missed opportunity. FSP4All already holds both the demographic estimate and years of doses-administered history. Yet it only averages them, using simple or expert-assigned weights. No forecasting model is ever fitted to the historical data."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#vaccine-demand-forecasting-in-the-literature",
@@ -77,11 +70,18 @@
     "text": "Vaccine demand forecasting in the literature\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReference\n\n\nApproach / method\n\n\nTarget variable\n\n\nLevel\n\n\nHorizon\n\n\nEvaluation focus\n\n\nProbabilistic forecasting\n\n\nBenchmark\n\n\nWastage component\n\n\nInventory integration\n\n\nDistributional post-processing\n\n\n\n\n\n\nChiu et al. (2008)\n\n\nARIMA, BPNN\n\n\nAnnual demand\n\n\nRegional\n\n\n1 year\n\n\nAverage error\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nKotagiri et al. (2011)\n\n\nBirth-cohort model\n\n\nInventory requirements\n\n\nLocal inventory\n\n\n1 year\n\n\nInventory impact\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nMueller et al. (2016)\n\n\nSimulation\n\n\nVaccine quantity\n\n\nMulti-level\n\n\n12 months\n\n\nAvailability, cost\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nAzadi et al. (2018)\n\n\nRegression\n\n\nChildhood demand\n\n\nRegional\n\n\nn.s.\n\n\nNot reported\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCernuschi et al. (2018)\n\n\nDemand-supply assessment\n\n\nBCG demand, supply\n\n\nNational, global\n\n\n14 years\n\n\nProcurement\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nAlegado & Tumibay (2020)\n\n\nARIMA, MLP\n\n\nMonthly demand\n\n\nLocal\n\n\n12 months\n\n\nRMSE, MAE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nHariharan et al. (2020)\n\n\nRandom forest\n\n\nUtilisation\n\n\nFacility\n\n\nBiweekly\n\n\nRMSE\n\n\nNo\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nSahisnu et al. (2020)\n\n\nARIMA\n\n\nStock levels\n\n\nLocal\n\n\n10 months\n\n\nMAPE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nVinitha et al. (2024)\n\n\nRegression, trees, LSTM, ANN\n\n\nInfant demand\n\n\nLocal\n\n\nn.s.\n\n\nRMSE, R²\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCurrent study\n\n\nFSP, statistical, ML, DL, foundation, ensemble\n\n\nAdministered doses, monthly\n\n\nSub-county\n\n\n6 months\n\n\nCRPS, MASE, RMSSE\n\n\nYes\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nYes"
   },
   {
+    "objectID": "slides/isf_slides/isf_slides.html#forecast-the-history-bound-with-the-plan",
+    "href": "slides/isf_slides/isf_slides.html#forecast-the-history-bound-with-the-plan",
+    "title": "Udeshi Salgado",
+    "section": "Forecast the history, bound with the plan",
+    "text": "Forecast the history, bound with the plan\nWe hold administered doses, not consumption. So we forecast administered demand with uncertainty and bound it with the administered demographic, without guessing wastage.\n\n\n1 · Forecast with uncertainty\n\nAdministered demand, modelled directly\nStatistical · ML · DL · foundational methods\n\\(\\rightarrow \\mathcal{N}(\\mu, \\sigma)\\), a full predictive distribution\n\n\n\n2 · Bound, no wastage assumed\n\nThe administered FSP demographic sets the ceiling\n\\(U = k\\cdot E\\), calibrated from history\n\\(\\rightarrow \\mathrm{TN}(\\mu, \\sigma, 0, U)\\), truncated to feasible demand\n\n\n\n\nData-driven uncertainty and domain feasibility: the combination FSP4All never makes.\n\nResearch Question Can data-driven probabilistic forecasting, combined with FSP-informed distributional truncation, improve routine childhood vaccine administrative demand forecasting at the most garnular operational level, relative to the FSP approach used in practice?"
+  },
+  {
     "objectID": "slides/isf_slides/isf_slides.html#section-3",
     "href": "slides/isf_slides/isf_slides.html#section-3",
     "title": "Udeshi Salgado",
     "section": "",
-    "text": "Outline\n\n\nBackground and motivation\nCurrent practice: the FSP tool\nData and Methodology\nResults"
+    "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#data",
@@ -91,25 +91,25 @@
     "text": "Data\n\n\n 5 vaccines BCG · Pentavalent · Measles-Rubella · OPV birth · OPV routine\n\n\n 306 sub-counties the most granular operational level\n\n\n 1,530 series one per vaccine and sub-county\n\n\n Monthly, 2013 to 2021 doses administered, calendar-normalised\n\n\n Demographic and coverage FSP target population · WHO coverage targets\n\n\n External drivers floods · drought · epidemics · CPI · holidays"
   },
   {
+    "objectID": "slides/isf_slides/isf_slides.html#demand-across-administrative-levels",
+    "href": "slides/isf_slides/isf_slides.html#demand-across-administrative-levels",
+    "title": "Udeshi Salgado",
+    "section": "Demand across administrative levels",
+    "text": "Demand across administrative levels"
+  },
+  {
     "objectID": "slides/isf_slides/isf_slides.html#weak-trend-and-seasonality",
     "href": "slides/isf_slides/isf_slides.html#weak-trend-and-seasonality",
     "title": "Udeshi Salgado",
     "section": "Weak trend and seasonality",
-    "text": "Weak trend and seasonality\nAcross the 1,530 series, most show low trend strength and weak, inconsistent seasonality. Sub-county series (circles) are the noisiest and least predictable, so historical patterns alone explain only part of demand."
+    "text": "Weak trend and seasonality"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#trend-seasonality-and-noise",
     "href": "slides/isf_slides/isf_slides.html#trend-seasonality-and-noise",
     "title": "Udeshi Salgado",
     "section": "Trend, seasonality and noise",
-    "text": "Trend, seasonality and noise\nDecomposing the administered series: a smooth local trend and a modest seasonal cycle sit beneath a large, irregular remainder. At the operational level the noise component dominates."
-  },
-  {
-    "objectID": "slides/isf_slides/isf_slides.html#forecast-the-history-bound-with-the-plan",
-    "href": "slides/isf_slides/isf_slides.html#forecast-the-history-bound-with-the-plan",
-    "title": "Udeshi Salgado",
-    "section": "Forecast the history, bound with the plan",
-    "text": "Forecast the history, bound with the plan\nWe hold administered doses, not consumption. So we forecast administered demand with uncertainty and bound it with the administered demographic, without guessing wastage.\n\n\n1 · Forecast with uncertainty\n\nAdministered demand, modelled directly\nStatistical · ML · DL · foundational methods\n\\(\\rightarrow \\mathcal{N}(\\mu, \\sigma)\\), a full predictive distribution\n\n\n\n2 · Bound, no wastage assumed\n\nThe administered FSP demographic sets the ceiling\n\\(U = k\\cdot E\\), calibrated from history\n\\(\\rightarrow \\mathrm{TN}(\\mu, \\sigma, 0, U)\\), truncated to feasible demand\n\n\n\n\nData-driven uncertainty and domain feasibility: the combination FSP4All never makes.\n\nResearch Question Can data-driven probabilistic forecasting, combined with FSP-informed distributional truncation, improve routine childhood vaccine administrative demand forecasting at the sub-county operational level, relative to the FSP approach used in practice?"
+    "text": "Trend, seasonality and noise"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#methodology",
@@ -123,7 +123,7 @@
     "href": "slides/isf_slides/isf_slides.html#distributional-post-processing-defining-bounds",
     "title": "Udeshi Salgado",
     "section": "Distributional post-processing: defining bounds",
-    "text": "Distributional post-processing: defining bounds\nWe bound each forecast with the administered FSP demographic: the eligible cohort × dose schedule at full (100%) coverage. The lower bound is structural; the upper bound is calibrated from history.\n\n\nLower bound\n\n\n\n\n\n\\[L = 0\\]\nA structural constraint. Monthly doses administered cannot be negative.\n\nUpper bound\n\n\n\n\n\n\\[U_{i,v,t} = k_{i,v}\\,E^{\\uparrow}_{i,v,t}\\]\nCalibrate \\(k_{i,v} = Q_{0.975}\\!\\left(\\tfrac{y}{E}\\,\\big|\\,2018\\text{–}19\\right)\\) on the administered FSP point forecast, where the central capacity is \\(E = \\text{Target Population} \\times \\,\\text{No of doses} \\times \\,\\text{100% coverage} /12\\).  Apply to the upper capacity \\(E^{\\uparrow} = \\text{Target Population Upper} \\times \\,\\text{No of doses} \\times \\,\\text{100% coverage}/12\\) (the upper cohort at 100% coverage) to set the feasibility ceiling."
+    "text": "Distributional post-processing: defining bounds\n\n\nLower bound\n\n\n\n\n\n\\[L = 0\\]\nA structural constraint. Monthly doses administered cannot be negative.\n\nUpper bound\n\n\n\n\n\n\\[U_{i,v,t} = k_{i,v}\\,E^{\\uparrow}_{i,v,t}\\]\nCalibrate \\(k_{i,v} = Q_{0.975}\\!\\left(\\tfrac{y}{E}\\,\\big|\\,2018\\text{–}19\\right)\\) on the administered FSP point forecast, where the central capacity is \\(E = \\text{Target Population} \\times \\,\\text{No of doses}/12\\).  Apply to the upper capacity \\(E^{\\uparrow} = \\text{Target Population Upper} \\times \\,\\text{No of doses} /12\\) (the upper target population at 100% coverage) to set the feasibility ceiling."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#from-bounds-to-truncated-distribution",
@@ -151,7 +151,7 @@
     "href": "slides/isf_slides/isf_slides.html#section-4",
     "title": "Udeshi Salgado",
     "section": "",
-    "text": "Outline\n\n\nBackground and motivation\nCurrent practice: the FSP tool\nData and Methodology\nResults"
+    "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",

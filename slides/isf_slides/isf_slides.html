@@ -199,7 +199,7 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <p><span class="mimic-h2">Outline</span></p>
 <ul>
 <li><span style="font-size: 1.2em; color: #A04B2F;"><strong>Background and motivation</strong></span></li>
-<li><span style="font-size: 1.2em; color: #A04B2F;"><strong>Current practice: the FSP tool</strong></span></li>
+<li><span style="font-size: 1.2em; color: #A04B2F;"><strong>Current practice and literature</strong></span></li>
 <li><span style="font-size: 1.2em; color: #A04B2F;"><strong>Data and Methodology</strong></span></li>
 <li><span style="font-size: 1.2em; color: #A04B2F;"><strong>Results</strong></span></li>
 </ul>
@@ -211,7 +211,7 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <div class="agenda">
 <ul>
 <li><span class="ol-on"><strong>Background and motivation</strong></span></li>
-<li><span class="ol-off">Current practice: the FSP tool</span></li>
+<li><span class="ol-off">Current practice and literature</span></li>
 <li><span class="ol-off">Data and Methodology</span></li>
 <li><span class="ol-off">Results</span></li>
 </ul>
@@ -251,10 +251,6 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <h2>The immunisation supply chain</h2>
 
 <img data-src="images/bg_immunisation_supply_chain.png" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"></section>
-<section id="demand-across-administrative-levels" class="slide level2">
-<h2>Demand across administrative levels</h2>
-
-<img data-src="images/bg_vaccine_admin_levels.png" class="quarto-figure quarto-figure-center r-stretch" style="width:86.0%"></section>
 <section id="section-2" class="slide level2">
 <h2></h2>
 <p><br> <br></p>
@@ -262,7 +258,7 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <div class="agenda">
 <ul>
 <li><span class="ol-off">Background and motivation</span></li>
-<li><span class="ol-on"><strong>Current practice: the FSP tool</strong></span></li>
+<li><span class="ol-on"><strong>Current practice and literature</strong></span></li>
 <li><span class="ol-off">Data and Methodology</span></li>
 <li><span class="ol-off">Results</span></li>
 </ul>
@@ -323,7 +319,7 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 </ul>
 </div>
 <div class="fsp-box fsp-muted fragment">
-<p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> <strong>Consumption</strong> &nbsp; <span class="fsp-pill-gray">No data</span></p>
+<p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> <strong>Consumption</strong> &nbsp; <span class="fsp-pill-gray">Partial data</span></p>
 <ul>
 <li>Only administered doses recorded</li>
 <li>No wastage or reporting rates</li>
@@ -333,7 +329,7 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <div class="fsp-box fsp-dem fragment">
 <p><i class="fa-solid fa-users" aria-label="users"></i> <strong>Demographic</strong> &nbsp; <span class="fsp-pill-blue">Data, but…</span></p>
 <ul>
-<li>A fixed estimate, not a forecast</li>
+<li>A fixed projection</li>
 <li>Needs a rarely-measured wastage rate</li>
 <li>Uncertainty stays hidden</li>
 </ul>
@@ -750,6 +746,33 @@ Yes
 </tbody>
 </table>
 </section>
+<section id="forecast-the-history-bound-with-the-plan" class="slide level2">
+<h2>Forecast the history, bound with the plan</h2>
+<p><span class="fsp-lead">We hold administered doses, not consumption. So we forecast administered demand <em>with uncertainty</em> and bound it with the administered demographic, without guessing wastage.</span></p>
+<div class="fsp-two">
+<div class="fsp-step-orange fragment">
+<p><strong>1 · Forecast with uncertainty</strong></p>
+<ul>
+<li>Administered demand, modelled directly</li>
+<li>Statistical · ML · DL · foundational methods</li>
+<li><span class="math inline">\(\rightarrow \mathcal{N}(\mu, \sigma)\)</span>, a full predictive distribution</li>
+</ul>
+</div>
+<div class="fsp-step-blue fragment">
+<p><strong>2 · Bound, no wastage assumed</strong></p>
+<ul>
+<li>The <em>administered</em> FSP demographic sets the ceiling</li>
+<li><span class="math inline">\(U = k\cdot E\)</span>, calibrated from history</li>
+<li><span class="math inline">\(\rightarrow \mathrm{TN}(\mu, \sigma, 0, U)\)</span>, truncated to feasible demand</li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<p><span class="fsp-lead fragment">Data-driven uncertainty <strong>and</strong> domain feasibility: the combination FSP4All never makes.</span></p>
+<div class="fsp-rq fragment">
+<p><span class="fsp-rq-label">Research Question</span> Can data-driven probabilistic forecasting, combined with FSP-informed distributional truncation, improve routine childhood vaccine administrative demand forecasting at the most garnular operational level, relative to the FSP approach used in practice?</p>
+</div>
+</section>
 <section id="section-3" class="slide level2">
 <h2></h2>
 <p><br> <br></p>
@@ -757,7 +780,7 @@ Yes
 <div class="agenda">
 <ul>
 <li><span class="ol-off">Background and motivation</span></li>
-<li><span class="ol-off">Current practice: the FSP tool</span></li>
+<li><span class="ol-off">Current practice and literature</span></li>
 <li><span class="ol-on"><strong>Data and Methodology</strong></span></li>
 <li><span class="ol-off">Results</span></li>
 </ul>
@@ -786,43 +809,18 @@ Yes
 </div>
 </div>
 </section>
+<section id="demand-across-administrative-levels" class="slide level2">
+<h2>Demand across administrative levels</h2>
+
+<img data-src="images/bg_vaccine_admin_levels.png" class="quarto-figure quarto-figure-center r-stretch" style="width:86.0%"></section>
 <section id="weak-trend-and-seasonality" class="slide level2">
 <h2>Weak trend and seasonality</h2>
-<p><span class="fsp-lead">Across the 1,530 series, most show low trend strength and weak, inconsistent seasonality. Sub-county series (circles) are the noisiest and least predictable, so historical patterns alone explain only part of demand.</span></p>
 
 <img data-src="images/data_trend_seasonality.png" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"></section>
 <section id="trend-seasonality-and-noise" class="slide level2">
 <h2>Trend, seasonality and noise</h2>
-<p><span class="fsp-lead">Decomposing the administered series: a smooth local trend and a modest seasonal cycle sit beneath a large, irregular remainder. At the operational level the noise component dominates.</span></p>
 
 <img data-src="images/data_stl_decomposition.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"></section>
-<section id="forecast-the-history-bound-with-the-plan" class="slide level2">
-<h2>Forecast the history, bound with the plan</h2>
-<p><span class="fsp-lead">We hold administered doses, not consumption. So we forecast administered demand <em>with uncertainty</em> and bound it with the administered demographic, without guessing wastage.</span></p>
-<div class="fsp-two">
-<div class="fsp-step-orange fragment">
-<p><strong>1 · Forecast with uncertainty</strong></p>
-<ul>
-<li>Administered demand, modelled directly</li>
-<li>Statistical · ML · DL · foundational methods</li>
-<li><span class="math inline">\(\rightarrow \mathcal{N}(\mu, \sigma)\)</span>, a full predictive distribution</li>
-</ul>
-</div>
-<div class="fsp-step-blue fragment">
-<p><strong>2 · Bound, no wastage assumed</strong></p>
-<ul>
-<li>The <em>administered</em> FSP demographic sets the ceiling</li>
-<li><span class="math inline">\(U = k\cdot E\)</span>, calibrated from history</li>
-<li><span class="math inline">\(\rightarrow \mathrm{TN}(\mu, \sigma, 0, U)\)</span>, truncated to feasible demand</li>
-</ul>
-</div>
-</div>
-<p><br></p>
-<p><span class="fsp-lead fragment">Data-driven uncertainty <strong>and</strong> domain feasibility: the combination FSP4All never makes.</span></p>
-<div class="fsp-rq fragment">
-<p><span class="fsp-rq-label">Research Question</span> Can data-driven probabilistic forecasting, combined with FSP-informed distributional truncation, improve routine childhood vaccine administrative demand forecasting at the sub-county operational level, relative to the FSP approach used in practice?</p>
-</div>
-</section>
 <section id="methodology" class="slide level2">
 <h2>Methodology</h2>
 <div class="fw-wrap">
@@ -875,7 +873,6 @@ Yes
 </section>
 <section id="distributional-post-processing-defining-bounds" class="slide level2 eqn-slide">
 <h2>Distributional post-processing: defining bounds</h2>
-<p><span class="fsp-lead" style="display:block; text-align:center;">We bound each forecast with the <em>administered</em> FSP demographic: the eligible cohort × dose schedule at full (100%) coverage. The lower bound is structural; the upper bound is calibrated from history.</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"><strong>Lower bound</strong></span></p>
@@ -894,7 +891,7 @@ Yes
 </figure>
 </div>
 <p><span class="math display">\[U_{i,v,t} = k_{i,v}\,E^{\uparrow}_{i,v,t}\]</span></p>
-<p><span class="fsp-lead"><strong>Calibrate</strong> <span class="math inline">\(k_{i,v} = Q_{0.975}\!\left(\tfrac{y}{E}\,\big|\,2018\text{–}19\right)\)</span> on the administered FSP point forecast, where the central capacity is <span class="math inline">\(E = \text{Target Population} \times \,\text{No of doses} \times \,\text{100% coverage} /12\)</span>. <br> <strong>Apply</strong> to the upper capacity <span class="math inline">\(E^{\uparrow} = \text{Target Population Upper} \times \,\text{No of doses} \times \,\text{100% coverage}/12\)</span> (the upper cohort at 100% coverage) to set the feasibility ceiling.</span></p>
+<p><span class="fsp-lead"><strong>Calibrate</strong> <span class="math inline">\(k_{i,v} = Q_{0.975}\!\left(\tfrac{y}{E}\,\big|\,2018\text{–}19\right)\)</span> on the administered FSP point forecast, where the central capacity is <span class="math inline">\(E = \text{Target Population} \times \,\text{No of doses}/12\)</span>. <br> <strong>Apply</strong> to the upper capacity <span class="math inline">\(E^{\uparrow} = \text{Target Population Upper} \times \,\text{No of doses} /12\)</span> (the upper target population at 100% coverage) to set the feasibility ceiling.</span></p>
 </div></div>
 </section>
 <section id="from-bounds-to-truncated-distribution" class="slide level2 eqn-slide">
@@ -941,7 +938,7 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 <div class="agenda">
 <ul>
 <li><span class="ol-off">Background and motivation</span></li>
-<li><span class="ol-off">Current practice: the FSP tool</span></li>
+<li><span class="ol-off">Current practice and literature</span></li>
 <li><span class="ol-off">Data and Methodology</span></li>
 <li><span class="ol-on"><strong>Results</strong></span></li>
 </ul>
