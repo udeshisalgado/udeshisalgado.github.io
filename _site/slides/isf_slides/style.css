@@ -315,8 +315,8 @@ img {
 .reveal .fsp-step-orange > p:first-child, .reveal .fsp-step-blue > p:first-child { font-size: 1.08em; margin: 0 0 0.1em 0; }
 
 /* equation-heavy methodology slides */
-.reveal section.eqn-slide { font-size: 0.92em; }
-.reveal section.eqn-slide .fsp-lead { font-size: 0.85em; margin: 0.35em 0; }
+.reveal section.eqn-slide { font-size: 1.05em; }
+.reveal section.eqn-slide .fsp-lead { font-size: 0.9em; margin: 0.35em 0; }
 .reveal section.eqn-slide mjx-container[display="true"] { margin: 0.55em 0 !important; }
 
 /* --- forecasting framework flow diagram --- */

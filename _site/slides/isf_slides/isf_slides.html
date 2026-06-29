@@ -264,32 +264,48 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 </ul>
 </div>
 </section>
-<section id="one-question-three-answers" class="slide level2">
-<h2>One question, three answers</h2>
-<p><span class="fsp-lead">How many doses to procure next year? FSP4All forecasts <em>consumption</em> (administered doses plus wastage) three ways, then blends them.</span></p>
+<section id="fsp4all-the-standard-planning-tool" class="slide level2">
+<h2>FSP4All: the standard planning tool</h2>
+<div style="font-size:1.05em; line-height:1.5;">
+<ul>
+<li><span style="color:#A04B2F; font-weight:700;"><strong>What it is</strong></span>: FSP4All, UNICEF’s <em>Forecasting and Supply Planning</em> tool for vaccine quantification</li>
+<li><span style="color:#A04B2F; font-weight:700;"><strong>Who built it</strong></span>: developed by UNICEF, in collaboration with WHO</li>
+<li><span style="color:#A04B2F; font-weight:700;"><strong>For what</strong></span>: to support national forecasting and supply planning, mitigating stockouts, overstocking and zero-dose children</li>
+<li><span style="color:#A04B2F; font-weight:700;"><strong>Who uses it</strong></span>: adopted by national immunisation programmes across 25+ countries</li>
+<li><span style="color:#A04B2F; font-weight:700;"><strong>What it forecasts</strong></span>: <em>consumption</em>, the annual quantity a country must procure</li>
+</ul>
+</div>
+<p><br></p>
+<div style="border:2px solid #D97757; border-radius:14px; padding:0.85em 1.2em; background:#FBF3EE; width:86%; margin:0 auto;">
+<p><span style="display:block; text-align:center; font-size:1.25em; font-weight:700; color:#7A3A1E; margin:0.1em 0;">Consumption&nbsp; = &nbsp;Doses administered&nbsp; + &nbsp;Wastage</span></p>
+</div>
+</section>
+<section id="projecting-consumption-demand-three-ways" class="slide level2">
+<h2>Projecting consumption demand, three ways</h2>
+<p><span class="fsp-lead">FSP4All projects <em>consumption</em> three ways, then blends them into one annual figure.</span></p>
 <div class="fsp-main">
 <div class="fsp-stack">
 <div class="fsp-box fsp-dem fragment">
 <p><i class="fa-solid fa-users" aria-label="users"></i> <strong>Demographic</strong></p>
 <ul>
-<li>Counts the eligible child population</li>
-<li>Coverage target × dose schedule</li>
-<li><span class="math inline">\(Q_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d\)</span></li>
+<li>Multiplies the eligible child population by a coverage target and the dose schedule</li>
+<li>Converted to a procurement quantity with an assumed wastage rate</li>
+<li><span class="math inline">\(Q_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d \cdot \frac{100}{100 - w}\)</span></li>
 </ul>
 </div>
 <div class="fsp-box fsp-orange fragment">
 <p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> <strong>Consumption</strong></p>
 <ul>
 <li>Averages the last 12 months of issues into one flat mean</li>
-<li>Projects it forward by assumed growth, even when the data are years old</li>
-<li><span class="math inline">\(Q_{\mathrm{cons}} = \bar{C} \cdot 12 \cdot (1+g)^{t} \cdot \frac{100-w_{\mathrm{old}}}{100-w_{\mathrm{new}}} \cdot (1+r)\)</span></li>
+<li>Adjusts for stockout days, then projects forward with an assumed growth rate</li>
+<li><span class="math inline">\(Q_{\mathrm{cons}} = \bar{C} \cdot \frac{D}{D - D_{\mathrm{so}}} \cdot 12 \cdot (1+g)^{t} \cdot \frac{100-w_{\mathrm{old}}}{100-w_{\mathrm{new}}} \cdot (1+r)\)</span></li>
 </ul>
 </div>
 <div class="fsp-box fsp-sess fragment">
 <p><i class="fa-solid fa-calendar-days" aria-label="calendar-days"></i> <strong>Session</strong></p>
 <ul>
-<li>Built bottom-up from the session plan</li>
-<li>Sessions × average attendance × doses</li>
+<li>Adds up every planned session’s expected attendance</li>
+<li>Built bottom-up from the session plan and attendance</li>
 <li><span class="math inline">\(Q_{\mathrm{sess}} = \sum_{s} n_{s} \cdot \bar{a}_{s} \cdot d\)</span></li>
 </ul>
 </div>
@@ -302,41 +318,8 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 </div>
 </div>
 <div class="fsp-notation">
-<p><span class="fsp-note-title">Notation</span> <span class="math inline">\(P\)</span>: target population<br> <span class="math inline">\(c\)</span>: coverage (%)<br> <span class="math inline">\(d\)</span>: doses per child<br> <span class="math inline">\(\bar{C}\)</span>: avg. monthly consumption<br> <span class="math inline">\(g\)</span>: population growth<br> <span class="math inline">\(t\)</span>: years from data to plan year<br> <span class="math inline">\(r\)</span>: planner’s manual % adjustment, e.g.&nbsp;for a campaign<br> <span class="math inline">\(w\)</span>: wastage (%)<br> <span class="math inline">\(n_s\)</span>: sessions<br> <span class="math inline">\(\bar{a}_s\)</span>: attendance<br> <span class="math inline">\(\omega_m\)</span>: method weights</p>
+<p><span class="fsp-note-title">Notation</span> <span class="math inline">\(P\)</span>: target population<br> <span class="math inline">\(c\)</span>: coverage (%)<br> <span class="math inline">\(d\)</span>: doses per child<br> <span class="math inline">\(\bar{C}\)</span>: avg. monthly consumption<br> <span class="math inline">\(D,\ D_{\mathrm{so}}\)</span>: days in period, stockout days<br> <span class="math inline">\(g\)</span>: population growth<br> <span class="math inline">\(t\)</span>: years from data to plan year<br> <span class="math inline">\(r\)</span>: planner’s manual % adjustment, e.g.&nbsp;for a campaign<br> <span class="math inline">\(w\)</span>: wastage (%)<br> <span class="math inline">\(n_s\)</span>: sessions<br> <span class="math inline">\(\bar{a}_s\)</span>: attendance<br> <span class="math inline">\(\omega_m\)</span>: method weights</p>
 </div>
-</div>
-</section>
-<section id="the-data-is-there-but-the-method-isnt" class="slide level2">
-<h2>The data is there, but the method isn’t</h2>
-<p><span class="fsp-lead">Two methods have no inputs; the third ignores the history sitting right beside it.</span></p>
-<div class="fsp-row3">
-<div class="fsp-box fsp-muted fragment">
-<p><i class="fa-solid fa-calendar-days" aria-label="calendar-days"></i> <strong>Session</strong> &nbsp; <span class="fsp-pill-gray">No data</span></p>
-<ul>
-<li>No session plans kept</li>
-<li>No attendance records</li>
-<li>The method cannot run</li>
-</ul>
-</div>
-<div class="fsp-box fsp-muted fragment">
-<p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> <strong>Consumption</strong> &nbsp; <span class="fsp-pill-gray">Partial data</span></p>
-<ul>
-<li>Only administered doses recorded</li>
-<li>No wastage or reporting rates</li>
-<li>Consumption cannot be computed</li>
-</ul>
-</div>
-<div class="fsp-box fsp-dem fragment">
-<p><i class="fa-solid fa-users" aria-label="users"></i> <strong>Demographic</strong> &nbsp; <span class="fsp-pill-blue">Data, but…</span></p>
-<ul>
-<li>A fixed projection</li>
-<li>Needs a rarely-measured wastage rate</li>
-<li>Uncertainty stays hidden</li>
-</ul>
-</div>
-</div>
-<div class="fsp-info fsp-missed fragment">
-<p><strong>The missed opportunity.</strong> FSP4All already holds both the demographic estimate and years of doses-administered history. Yet it only averages them, using simple or expert-assigned weights. No forecasting model is ever fitted to the historical data.</p>
 </div>
 </section>
 <section id="vaccine-demand-forecasting-in-the-literature" class="slide level2">
@@ -349,11 +332,11 @@ Udeshi Salgado, Cardiff University, UK <br> Lead supervisor: Prof.&nbsp;Bahman R
 <col style="width:9%">
 <col style="width:7%">
 <col style="width:10%">
+<col style="width:5.5%">
+<col style="width:5.5%">
 <col style="width:6%">
-<col style="width:5.5%">
-<col style="width:5.5%">
-<col style="width:5.5%">
 <col style="width:8%">
+<col style="width:5.5%">
 </colgroup>
 <thead>
 <tr>
@@ -376,19 +359,19 @@ Horizon
 Evaluation focus
 </th>
 <th class="flag">
-Probabilistic forecasting
+Inventory integration
 </th>
 <th class="flag">
 Benchmark
 </th>
 <th class="flag">
-Wastage component
-</th>
-<th class="flag">
-Inventory integration
+Probabilistic forecasting
 </th>
 <th class="flag">
 Distributional post-processing
+</th>
+<th class="flag">
+Reproducibility
 </th>
 </tr>
 </thead>
@@ -447,17 +430,17 @@ Local inventory
 <td>
 Inventory impact
 </td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
-</td>
 <td class="flag yes">
 Yes
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
 </td>
 <td class="flag no">
 No
@@ -482,17 +465,17 @@ Multi-level
 <td>
 Availability, cost
 </td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
-</td>
 <td class="flag yes">
 Yes
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
 </td>
 <td class="flag no">
 No
@@ -657,17 +640,17 @@ Local
 <td>
 MAPE
 </td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
-</td>
 <td class="flag yes">
 Yes
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
+</td>
+<td class="flag no">
+No
 </td>
 <td class="flag no">
 No
@@ -713,7 +696,7 @@ No
 Current study
 </td>
 <td>
-FSP, statistical, ML, DL, foundation, ensemble
+FSP-informed administered benchmark, statistical, ML, DL, foundation, ensemble
 </td>
 <td>
 Administered doses, monthly
@@ -725,7 +708,10 @@ Sub-county
 6 months
 </td>
 <td>
-CRPS, MASE, RMSSE
+CRPS, rMAE, rRMSE
+</td>
+<td class="flag no">
+No
 </td>
 <td class="flag yes">
 Yes
@@ -733,11 +719,8 @@ Yes
 <td class="flag yes">
 Yes
 </td>
-<td class="flag no">
-No
-</td>
-<td class="flag no">
-No
+<td class="flag yes">
+Yes
 </td>
 <td class="flag yes">
 Yes
@@ -746,31 +729,31 @@ Yes
 </tbody>
 </table>
 </section>
-<section id="forecast-the-history-bound-with-the-plan" class="slide level2">
-<h2>Forecast the history, bound with the plan</h2>
-<p><span class="fsp-lead">We hold administered doses, not consumption. So we forecast administered demand <em>with uncertainty</em> and bound it with the administered demographic, without guessing wastage.</span></p>
+<section id="from-practice-and-literature-to-our-contribution" class="slide level2">
+<h2>From practice and literature to our contribution</h2>
+<p><span class="fsp-lead">We combine the domain knowledge built into FSP4All with the open gaps in the forecasting literature, and use the data we do have, doses administered, to build a feasibility-aware probabilistic forecast.</span></p>
 <div class="fsp-two">
 <div class="fsp-step-orange fragment">
-<p><strong>1 · Forecast with uncertainty</strong></p>
+<p><strong>From the tools</strong> · domain knowledge</p>
 <ul>
-<li>Administered demand, modelled directly</li>
-<li>Statistical · ML · DL · foundational methods</li>
-<li><span class="math inline">\(\rightarrow \mathcal{N}(\mu, \sigma)\)</span>, a full predictive distribution</li>
+<li>FSP4All’s demographic feasibility logic</li>
+<li>Population, coverage and capacity structure</li>
+<li>A principled ceiling for plausible demand</li>
 </ul>
 </div>
 <div class="fsp-step-blue fragment">
-<p><strong>2 · Bound, no wastage assumed</strong></p>
+<p><strong>From the literature</strong> · the open gaps</p>
 <ul>
-<li>The <em>administered</em> FSP demographic sets the ceiling</li>
-<li><span class="math inline">\(U = k\cdot E\)</span>, calibrated from history</li>
-<li><span class="math inline">\(\rightarrow \mathrm{TN}(\mu, \sigma, 0, U)\)</span>, truncated to feasible demand</li>
+<li>Forecasts are rarely probabilistic</li>
+<li>Reproducible benchmarks are scarce</li>
+<li>Distributions ignore physical feasibility</li>
 </ul>
 </div>
 </div>
 <p><br></p>
-<p><span class="fsp-lead fragment">Data-driven uncertainty <strong>and</strong> domain feasibility: the combination FSP4All never makes.</span></p>
+<p><span class="fsp-lead fragment">Our contribution: model the administered history <em>probabilistically</em>, then make the distribution feasibility-aware with FSP-informed bounds.</span></p>
 <div class="fsp-rq fragment">
-<p><span class="fsp-rq-label">Research Question</span> Can data-driven probabilistic forecasting, combined with FSP-informed distributional truncation, improve routine childhood vaccine administrative demand forecasting at the most garnular operational level, relative to the FSP approach used in practice?</p>
+<p><span class="fsp-rq-label">Research Question</span> How can data-driven probabilistic forecasting, combined with FSP-informed demographic-consumption truncation, advance routine childhood vaccine administered-demand forecasting at the most granular operational level, where the supply decisions are actually made?</p>
 </div>
 </section>
 <section id="section-3" class="slide level2">
@@ -813,10 +796,6 @@ Yes
 <h2>Demand across administrative levels</h2>
 
 <img data-src="images/bg_vaccine_admin_levels.png" class="quarto-figure quarto-figure-center r-stretch" style="width:86.0%"></section>
-<section id="weak-trend-and-seasonality" class="slide level2">
-<h2>Weak trend and seasonality</h2>
-
-<img data-src="images/data_trend_seasonality.png" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"></section>
 <section id="trend-seasonality-and-noise" class="slide level2">
 <h2>Trend, seasonality and noise</h2>
 
@@ -837,7 +816,7 @@ Yes
 <p><span class="flow-label">Forecasting setup</span></p>
 <div class="flow-steps">
 <div class="fw-box fw-fsp">
-<p><span class="fw-t">FSP benchmark</span> <span class="fw-s">demographic</span></p>
+<p><span class="fw-t">FSP-informed administered benchmark</span> <span class="fw-s">capacity-adjusted demographic</span></p>
 </div>
 <div class="fw-box fw-stat">
 <p><span class="fw-t">Statistical</span> <span class="fw-s">ARIMA · ETS · Naive · sNaive</span></p>
@@ -859,7 +838,7 @@ Yes
 <p><span class="fw-t">1 · Calibration</span> <span class="fw-s">2018 to 2019 hold-out · per vaccine and sub-county · <span class="math inline">\(k = Q_{0.975}(y / E)\)</span></span></p>
 </div>
 <div class="fw-box fw-stat">
-<p><span class="fw-t">2 · Define bounds</span> <span class="fw-s"><span class="math inline">\(L = 0\)</span> (non-negativity) · <span class="math inline">\(U = k\,E\)</span> (FSP-informed ceiling)</span></p>
+<p><span class="fw-t">2 · Define bounds</span> <span class="fw-s"><span class="math inline">\(L = 0\)</span> (non-negativity) · <span class="math inline">\(U = k\,E\)</span> (demographic-consumption ceiling)</span></p>
 </div>
 <div class="fw-box fw-ml">
 <p><span class="fw-t">3 · Truncated distribution</span> <span class="fw-s">recast <span class="math inline">\(\mathcal{N}(\mu,\sigma)\)</span> as <span class="math inline">\(\mathrm{TN}(\mu, \sigma, 0, U)\)</span> · scored with exact TN CRPS</span></p>
@@ -871,27 +850,86 @@ Yes
 </div>
 </div>
 </section>
+<section id="forecasting-setup-defining-the-fsp-informed-administered-benchmark" class="slide level2 eqn-slide">
+<h2>Forecasting setup: defining the FSP-informed administered benchmark</h2>
+<div class="fsp-rq" style="margin:0.15em 0 0.4em;">
+<p><span class="fsp-rq-label">Why a variation of FSP?</span></p>
+<ul>
+<li>We only have <strong>doses-administered</strong> data, not consumption or wastage</li>
+<li>So we use the <em>administered</em> version of FSP’s demographic method, computed directly from the available data, with no wastage assumption</li>
+</ul>
+</div>
+<p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.15em;"><strong>FSP4ALL demographic tool for procurement</strong></span></p>
+<p><span class="math display">\[Q^{\mathrm{proc}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d \cdot \frac{100}{100 - w}\]</span></p>
+<p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.2em;"><strong>Set wastage <span class="math inline">\(w = 0\)</span></strong></span></p>
+<p><span class="math display">\[Q^{\mathrm{adm}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d
+\qquad\Longrightarrow\qquad
+\text{FSP informed admin} = \tfrac{1}{12}\, P \cdot \frac{c}{100} \cdot d\]</span></p>
+</section>
+<section id="forecasting-setup-data-driven-forecasting-models" class="slide level2">
+<h2>Forecasting setup: data-driven forecasting models</h2>
+<p><span class="fsp-lead">Statistical, ML, DL and foundation models learn directly from the historical administered doses and external drivers. Whatever the family, each is turned into a <em>probabilistic</em> forecast the same way.</span></p>
+<div class="fw-wrap">
+<p><span class="flow-label">Model families</span></p>
+<div class="flow-steps">
+<div class="fw-box fw-stat">
+<p><span class="fw-t">Statistical</span> <span class="fw-s">ARIMA · ETS · Naive · sNaive</span></p>
+</div>
+<div class="fw-box fw-ml">
+<p><span class="fw-t">Machine learning</span> <span class="fw-s">Lasso · Elastic Net · RF · XGBoost · LightGBM</span></p>
+</div>
+<div class="fw-box fw-dl">
+<p><span class="fw-t">Deep learning &amp; foundation</span> <span class="fw-s">ANN · LSTM · Chronos</span></p>
+</div>
+</div>
+<p><span class="fw-arrow">▼</span></p>
+<p><span class="flow-label">Turning each model into a predictive distribution</span></p>
+<div class="flow-steps">
+<div class="fw-box fw-data">
+<p><span class="fw-t">1 · Point forecast</span> <span class="fw-s">fit on history and features, predict the mean <span class="math inline">\(\hat{\mu} = \hat{y}_{i,v,t+h}\)</span></span></p>
+</div>
+<div class="fw-box fw-data">
+<p><span class="fw-t">2 · Error spread</span> <span class="fw-s"><span class="math inline">\(\hat{\sigma}_h\)</span> from rolling-origin forecast errors, widening with horizon <span class="math inline">\(h\)</span></span></p>
+</div>
+<div class="fw-box fw-data">
+<p><span class="fw-t">3 · Gaussian forecast</span> <span class="fw-s">combine into <span class="math inline">\(Y_{i,v,t+h} \sim \mathcal{N}(\hat{\mu}, \hat{\sigma}_h)\)</span>, for <span class="math inline">\(h = 1\)</span> to <span class="math inline">\(6\)</span></span></p>
+</div>
+</div>
+<div class="fw-bar">
+<p>The Gaussian fits the near-Normal body of the forecast errors; the heavier tails are corrected downstream by feasibility truncation</p>
+</div>
+</div>
+</section>
+<section id="calibration-defining-the-scaling-factor-k" class="slide level2 eqn-slide">
+<h2>Calibration: defining the scaling factor k</h2>
+<p><span class="fsp-lead">The benchmark <span class="math inline">\(E\)</span> is a <em>theoretical</em> plan; what clinics actually administer departs from it. We learn one empirical factor <span class="math inline">\(k\)</span> from history to tie the two together.</span></p>
+<p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.25em;"><strong>1 · Administered benchmark</strong>, at 100% coverage</span></p>
+<p><span class="math display">\[E = \tfrac{1}{12}\, P \cdot \tfrac{c}{100} \cdot d \qquad\xrightarrow{\;c\,=\,100\;}\qquad E = \tfrac{1}{12}\, P \cdot d\]</span></p>
+<p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.4em;"><strong>2 · Scaling factor</strong> <span class="math inline">\(k\)</span>, the 97.5th percentile of realised demand against the plan, on a 2018–2019 hold-out</span></p>
+<p><span class="math display">\[k_{i,v} = Q_{0.975}\!\left(\frac{y}{E} \;\Big|\; 2018\text{–}2019\right)\]</span></p>
+<p><span class="fsp-lead"><span class="math inline">\(k&gt;1\)</span>: administered demand routinely exceeds the raw demographic, so <span class="math inline">\(k\)</span> grounds the ceiling in operational reality while trimming the impossible.</span></p>
+</section>
 <section id="distributional-post-processing-defining-bounds" class="slide level2 eqn-slide">
 <h2>Distributional post-processing: defining bounds</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"><strong>Lower bound</strong></span></p>
+<p><span style="display:block; text-align:center; color:#A04B2F; font-weight:700;"><strong>Lower bound</strong></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/bound_lower.png" class="quarto-figure quarto-figure-center" style="width:56.0%"></p>
+<p><img data-src="images/bound_lower.png" class="quarto-figure quarto-figure-center" style="width:52.0%"></p>
 </figure>
 </div>
 <p><span class="math display">\[L = 0\]</span></p>
-<p><span class="fsp-lead">A structural constraint. Monthly doses administered cannot be negative.</span></p>
+<p><span class="fsp-lead" style="text-align:center; display:block;">A structural constraint: monthly doses administered cannot be negative.</span></p>
 </div><div class="column" style="width:50%;">
-<p><span style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"><strong>Upper bound</strong></span></p>
+<p><span style="display:block; text-align:center; color:#A04B2F; font-weight:700;"><strong>Upper bound</strong></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/bound_upper.png" class="quarto-figure quarto-figure-center" style="width:56.0%"></p>
+<p><img data-src="images/bound_upper.png" class="quarto-figure quarto-figure-center" style="width:52.0%"></p>
 </figure>
 </div>
-<p><span class="math display">\[U_{i,v,t} = k_{i,v}\,E^{\uparrow}_{i,v,t}\]</span></p>
-<p><span class="fsp-lead"><strong>Calibrate</strong> <span class="math inline">\(k_{i,v} = Q_{0.975}\!\left(\tfrac{y}{E}\,\big|\,2018\text{–}19\right)\)</span> on the administered FSP point forecast, where the central capacity is <span class="math inline">\(E = \text{Target Population} \times \,\text{No of doses}/12\)</span>. <br> <strong>Apply</strong> to the upper capacity <span class="math inline">\(E^{\uparrow} = \text{Target Population Upper} \times \,\text{No of doses} /12\)</span> (the upper target population at 100% coverage) to set the feasibility ceiling.</span></p>
+<p><span class="math display">\[U_{i,v,t} = k_{i,v}\,E^{\uparrow}_{i,v,t}, \quad E^{\uparrow}_{i,v,t} = \tfrac{1}{12}\, P^{\uparrow} d\]</span></p>
+<p><span class="fsp-lead" style="text-align:center; display:block;"><span class="math inline">\(E^{\uparrow}\)</span> uses the <strong>upper</strong> population <span class="math inline">\(P^{\uparrow}\)</span> at <strong>100% coverage</strong>, so the ceiling never cuts legitimate surges; <span class="math inline">\(k\)</span> sets it at the 97.5th percentile of observed demand.</span></p>
 </div></div>
 </section>
 <section id="from-bounds-to-truncated-distribution" class="slide level2 eqn-slide">
@@ -914,22 +952,28 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 </section>
 <section id="evaluation-metrics" class="slide level2 eqn-slide">
 <h2>Evaluation metrics</h2>
-<p><span class="fsp-lead">Errors are scaled by the FSP benchmark, so a value below 1 beats current practice.</span></p>
+<p><span class="fsp-lead">Every error is scaled by the FSP-informed administered benchmark: below 1 beats it, above 1 is worse.</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span style="display:block; text-align:center; font-size:1.2em; color:#A04B2F;"><strong>Point accuracy</strong></span></p>
-<p><span class="math display">\[\mathrm{MSE} = \tfrac{1}{n}\sum_t (y_t-\hat{y}_t)^2 \qquad \mathrm{MAE} = \tfrac{1}{n}\sum_t |y_t-\hat{y}_t|\]</span></p>
-<p><span class="math display">\[\mathrm{RMSSE} = \sqrt{\tfrac{\mathrm{MSE}}{\mathrm{MSE}_{\mathrm{FSP}}}} \qquad \mathrm{MASE} = \tfrac{\mathrm{MAE}}{\mathrm{MAE}_{\mathrm{FSP}}}\]</span></p>
-<p><span class="metric-hl">Pooled across series: <span class="math inline">\(\;\mathrm{RMSSE}_{\text{pooled}} = \sqrt{\tfrac{1}{N}\textstyle\sum_i \mathrm{RMSSE}_i^{2}}\)</span></span></p>
+<p><span class="math display">\[\mathrm{MSE} = \tfrac{1}{n}\sum_t (y_t-\hat{y}_t)^2\]</span></p>
+<p><span class="math display">\[\mathrm{MAE} = \tfrac{1}{n}\sum_t |y_t-\hat{y}_t|\]</span></p>
+<div style="border:2px solid #D97757; border-radius:14px; padding:0.2em 1em; background:#FBF3EE; margin-top:0.5em; min-height:290px; display:flex; flex-direction:column; justify-content:center;">
+<p><span class="math display">\[\mathrm{rRMSE} = \sqrt{\tfrac{\mathrm{MSE}}{\mathrm{MSE}_{\text{FSP-informed admin.}}}}\]</span></p>
+<p><span class="math display">\[\mathrm{rMAE} = \tfrac{\mathrm{MAE}}{\mathrm{MAE}_{\text{FSP-informed admin.}}}\]</span></p>
+</div>
 </div><div class="column" style="width:50%;">
 <p><span style="display:block; text-align:center; font-size:1.2em; color:#A04B2F;"><strong>Distributional accuracy</strong></span></p>
 <p><span class="math display">\[\mathrm{CRPS}(F,y) = \int_{-\infty}^{\infty}\big(F(x)-\mathbf{1}\{x\ge y\}\big)^2\,dx\]</span></p>
-<p><span class="math display">\[\text{scaled CRPS} = \tfrac{\mathrm{CRPS}}{\mathrm{CRPS}_{\mathrm{FSP}}}\]</span></p>
-<p><span class="metric-hl">Truncated forecasts are scored with the closed-form CRPS of <span class="math inline">\(\mathrm{TN}(\mu,\sigma,0,U)\)</span>, not the raw Gaussian.</span></p>
-</div></div>
-<div class="fsp-rq">
-<p><span class="fsp-rq-label">How to read the scale</span> Below 1 beats the FSP tool, 1 ties, above 1 is worse. Ranking via the Nemenyi test, <span class="math inline">\(\mathrm{CD} = q_\alpha\sqrt{k(k+1)/6N}\)</span>; methods whose bars overlap are not significantly different.</p>
+<div style="height: 95px;">
+
 </div>
+<div style="border:2px solid #D97757; border-radius:14px; padding:0.2em 1em; background:#FBF3EE; margin-top:0.5em; min-height:290px; display:flex; flex-direction:column; justify-content:center;">
+<p><span class="math display">\[\mathrm{rCRPS} = \tfrac{\mathrm{CRPS}}{\mathrm{CRPS}_{\text{FSP-informed admin.}}}\]</span></p>
+</div>
+</div></div>
+<p><br></p>
+<p><span class="fsp-lead" style="text-align:center; display:block;">Truncated forecasts are scored with the exact closed-form CRPS of the truncated Normal, not the raw Gaussian.</span></p>
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
@@ -944,45 +988,25 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 </ul>
 </div>
 </section>
-<section id="before-truncation-point-accuracy" class="slide level2">
-<h2>Before truncation: point accuracy</h2>
-<p><span class="fsp-lead">Nemenyi average ranks for RMSSE, with mean MASE and RMSSE alongside. Lower rank is better; bars within one critical difference are not significantly different.</span></p>
+<section id="after-truncation-rrmse" class="slide level2">
+<h2>After truncation: rRMSE</h2>
 
-<img data-src="images/res_nemenyi_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="before-truncation-distributional-accuracy" class="slide level2">
-<h2>Before truncation: distributional accuracy</h2>
-<p><span class="fsp-lead">Nemenyi average ranks for scaled CRPS, with the mean scaled CRPS alongside. The FSP benchmark ranks last on both point and distributional accuracy.</span></p>
-
-<img data-src="images/res_nemenyi_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:72.0%"></section>
-<section id="accuracy-vs-computational-cost" class="slide level2">
-<h2>Accuracy vs computational cost</h2>
-
-<img data-src="images/res_efficiency.png" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"></section>
-<section id="after-truncation-rmsse" class="slide level2">
-<h2>After truncation: RMSSE</h2>
-
-<img data-src="images/res_cleveland_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Point accuracy. Truncation moves every method to the left (better); the largest gains are for the most diffuse forecasters, such as sNaive and ETS.</span></p>
+<img data-src="images/res_cleveland_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Point accuracy. The effect divides: truncation sharpens the over-dispersed deep learning and naive methods, but slightly worsens the already-feasible tree-based and ensemble methods.</span></p>
 </section>
-<section id="after-truncation-scaled-crps" class="slide level2">
-<h2>After truncation: scaled CRPS</h2>
+<section id="after-truncation-rcrps" class="slide level2">
+<h2>After truncation: rCRPS</h2>
 
-<img data-src="images/res_cleveland_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Distributional accuracy. Every method improves; gains are largest for LSTM, sNaive and ETS.</span></p>
-</section>
-<section id="distribution-of-errors-across-horizons" class="slide level2">
-<h2>Distribution of errors across horizons</h2>
-
-<img data-src="images/res_dist_horizons.png" class="quarto-figure quarto-figure-center r-stretch" style="width:46.0%"><p><span class="fsp-lead">Densities of scaled CRPS, untruncated (left) vs FSP-truncated (right), by horizon. The five worst forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons.</span></p>
-</section>
-<section id="where-truncation-helps-most" class="slide level2">
-<h2>Where truncation helps most</h2>
-
-<img data-src="images/res_dist_models.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p><span class="fsp-lead">The three models that gain most from truncation (LSTM, Naive, sNaive). Untruncated (blue) and FSP-truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, clearest for Naive at longer horizons.</span></p>
+<img data-src="images/res_cleveland_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Distributional accuracy. Every method improves; gains are largest for the regularised linear, naive, and deep learning methods.</span></p>
 </section>
 <section id="truncation-tightens-the-dispersed-forecasters-at-longer-horizons" class="slide level2">
 <h2>Truncation tightens the dispersed forecasters at longer horizons</h2>
 
-<img data-src="images/res_horizon_truncation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><span class="fsp-lead">Every model as a horizontal boxplot of scaled CRPS, untruncated (grey) vs FSP-truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (Naive, sNaive, Hybrid weighted, LSTM), and the effect grows with the horizon.</span></p>
+<img data-src="images/res_horizon_truncation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><span class="fsp-lead">Every model as a horizontal boxplot of rCRPS, untruncated (grey) vs demographic-consumption truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (the regularised linear, naive, and deep learning methods), and the effect grows with the horizon.</span></p>
 </section>
+<section id="accuracy-vs-computational-cost" class="slide level2">
+<h2>Accuracy vs computational cost</h2>
+
+<img data-src="images/res_efficiency.png" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"></section>
 <section id="the-road-ahead" class="slide level2">
 <h2>The road ahead</h2>
 <p><span class="fsp-lead">Where this work goes next.</span></p>
@@ -1019,9 +1043,39 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 <p><img data-src="images/udeshi_website_qr_code.png" width="150"></p>
 <p><span class="qr-cap">Visit my website for slides</span></p>
 </div>
+</section>
 
+<section>
+<section id="appendix" class="title-slide slide level1 center">
+<h1>Appendix</h1>
 
 </section>
+<section id="weak-trend-and-seasonality" class="slide level2">
+<h2>Weak trend and seasonality</h2>
+
+<img data-src="images/data_trend_seasonality.png" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"></section>
+<section id="before-truncation-point-accuracy" class="slide level2">
+<h2>Before truncation: point accuracy</h2>
+<p><span class="fsp-lead">Nemenyi average ranks for rRMSE, with mean rMAE and rRMSE alongside. Lower rank is better; bars within one critical difference are not significantly different.</span></p>
+
+<img data-src="images/res_nemenyi_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="before-truncation-distributional-accuracy" class="slide level2">
+<h2>Before truncation: distributional accuracy</h2>
+<p><span class="fsp-lead">Nemenyi average ranks for rCRPS, with the mean rCRPS alongside. The FSP-informed administered benchmark provides the reference, and the statistical, ML and DL methods achieve stronger average ranks.</span></p>
+
+<img data-src="images/res_nemenyi_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:72.0%"></section>
+<section id="distribution-of-errors-across-horizons" class="slide level2">
+<h2>Distribution of errors across horizons</h2>
+
+<img data-src="images/res_dist_horizons.png" class="quarto-figure quarto-figure-center r-stretch" style="width:46.0%"><p><span class="fsp-lead">Densities of rCRPS, untruncated (left) vs demographic-consumption truncated (right), by horizon. The five most dispersed forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons.</span></p>
+</section>
+<section id="where-truncation-helps-most" class="slide level2">
+<h2>Where truncation helps most</h2>
+
+<img data-src="images/res_dist_models.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p><span class="fsp-lead">The three models that gain most from truncation (Elastic Net, Linear comb., Lasso). Untruncated (blue) and demographic-consumption truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, with the largest gains at longer horizons.</span></p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

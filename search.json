@@ -49,32 +49,32 @@
     "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#one-question-three-answers",
-    "href": "slides/isf_slides/isf_slides.html#one-question-three-answers",
+    "objectID": "slides/isf_slides/isf_slides.html#fsp4all-the-standard-planning-tool",
+    "href": "slides/isf_slides/isf_slides.html#fsp4all-the-standard-planning-tool",
     "title": "Udeshi Salgado",
-    "section": "One question, three answers",
-    "text": "One question, three answers\nHow many doses to procure next year? FSP4All forecasts consumption (administered doses plus wastage) three ways, then blends them.\n\n\n\n Demographic\n\nCounts the eligible child population\nCoverage target × dose schedule\n\\(Q_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d\\)\n\n\n\n Consumption\n\nAverages the last 12 months of issues into one flat mean\nProjects it forward by assumed growth, even when the data are years old\n\\(Q_{\\mathrm{cons}} = \\bar{C} \\cdot 12 \\cdot (1+g)^{t} \\cdot \\frac{100-w_{\\mathrm{old}}}{100-w_{\\mathrm{new}}} \\cdot (1+r)\\)\n\n\n\n Session\n\nBuilt bottom-up from the session plan\nSessions × average attendance × doses\n\\(Q_{\\mathrm{sess}} = \\sum_{s} n_{s} \\cdot \\bar{a}_{s} \\cdot d\\)\n\n\n\n Then combine\n\n\\(Q_{\\mathrm{FSP}} = \\sum_{m} \\omega_{m}\\, Q_{m}\\)\nWeights are decided by the experts in the immunisation supply chain. Default weights are equal\n\n\n\n\nNotation \\(P\\): target population \\(c\\): coverage (%) \\(d\\): doses per child \\(\\bar{C}\\): avg. monthly consumption \\(g\\): population growth \\(t\\): years from data to plan year \\(r\\): planner’s manual % adjustment, e.g. for a campaign \\(w\\): wastage (%) \\(n_s\\): sessions \\(\\bar{a}_s\\): attendance \\(\\omega_m\\): method weights"
+    "section": "FSP4All: the standard planning tool",
+    "text": "FSP4All: the standard planning tool\n\n\nWhat it is: FSP4All, UNICEF’s Forecasting and Supply Planning tool for vaccine quantification\nWho built it: developed by UNICEF, in collaboration with WHO\nFor what: to support national forecasting and supply planning, mitigating stockouts, overstocking and zero-dose children\nWho uses it: adopted by national immunisation programmes across 25+ countries\nWhat it forecasts: consumption, the annual quantity a country must procure\n\n\n\n\nConsumption  =  Doses administered  +  Wastage"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#the-data-is-there-but-the-method-isnt",
-    "href": "slides/isf_slides/isf_slides.html#the-data-is-there-but-the-method-isnt",
+    "objectID": "slides/isf_slides/isf_slides.html#projecting-consumption-demand-three-ways",
+    "href": "slides/isf_slides/isf_slides.html#projecting-consumption-demand-three-ways",
     "title": "Udeshi Salgado",
-    "section": "The data is there, but the method isn’t",
-    "text": "The data is there, but the method isn’t\nTwo methods have no inputs; the third ignores the history sitting right beside it.\n\n\n Session   No data\n\nNo session plans kept\nNo attendance records\nThe method cannot run\n\n\n\n Consumption   Partial data\n\nOnly administered doses recorded\nNo wastage or reporting rates\nConsumption cannot be computed\n\n\n\n Demographic   Data, but…\n\nA fixed projection\nNeeds a rarely-measured wastage rate\nUncertainty stays hidden\n\n\n\n\nThe missed opportunity. FSP4All already holds both the demographic estimate and years of doses-administered history. Yet it only averages them, using simple or expert-assigned weights. No forecasting model is ever fitted to the historical data."
+    "section": "Projecting consumption demand, three ways",
+    "text": "Projecting consumption demand, three ways\nFSP4All projects consumption three ways, then blends them into one annual figure.\n\n\n\n Demographic\n\nMultiplies the eligible child population by a coverage target and the dose schedule\nConverted to a procurement quantity with an assumed wastage rate\n\\(Q_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d \\cdot \\frac{100}{100 - w}\\)\n\n\n\n Consumption\n\nAverages the last 12 months of issues into one flat mean\nAdjusts for stockout days, then projects forward with an assumed growth rate\n\\(Q_{\\mathrm{cons}} = \\bar{C} \\cdot \\frac{D}{D - D_{\\mathrm{so}}} \\cdot 12 \\cdot (1+g)^{t} \\cdot \\frac{100-w_{\\mathrm{old}}}{100-w_{\\mathrm{new}}} \\cdot (1+r)\\)\n\n\n\n Session\n\nAdds up every planned session’s expected attendance\nBuilt bottom-up from the session plan and attendance\n\\(Q_{\\mathrm{sess}} = \\sum_{s} n_{s} \\cdot \\bar{a}_{s} \\cdot d\\)\n\n\n\n Then combine\n\n\\(Q_{\\mathrm{FSP}} = \\sum_{m} \\omega_{m}\\, Q_{m}\\)\nWeights are decided by the experts in the immunisation supply chain. Default weights are equal\n\n\n\n\nNotation \\(P\\): target population \\(c\\): coverage (%) \\(d\\): doses per child \\(\\bar{C}\\): avg. monthly consumption \\(D,\\ D_{\\mathrm{so}}\\): days in period, stockout days \\(g\\): population growth \\(t\\): years from data to plan year \\(r\\): planner’s manual % adjustment, e.g. for a campaign \\(w\\): wastage (%) \\(n_s\\): sessions \\(\\bar{a}_s\\): attendance \\(\\omega_m\\): method weights"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#vaccine-demand-forecasting-in-the-literature",
     "href": "slides/isf_slides/isf_slides.html#vaccine-demand-forecasting-in-the-literature",
     "title": "Udeshi Salgado",
     "section": "Vaccine demand forecasting in the literature",
-    "text": "Vaccine demand forecasting in the literature\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReference\n\n\nApproach / method\n\n\nTarget variable\n\n\nLevel\n\n\nHorizon\n\n\nEvaluation focus\n\n\nProbabilistic forecasting\n\n\nBenchmark\n\n\nWastage component\n\n\nInventory integration\n\n\nDistributional post-processing\n\n\n\n\n\n\nChiu et al. (2008)\n\n\nARIMA, BPNN\n\n\nAnnual demand\n\n\nRegional\n\n\n1 year\n\n\nAverage error\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nKotagiri et al. (2011)\n\n\nBirth-cohort model\n\n\nInventory requirements\n\n\nLocal inventory\n\n\n1 year\n\n\nInventory impact\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nMueller et al. (2016)\n\n\nSimulation\n\n\nVaccine quantity\n\n\nMulti-level\n\n\n12 months\n\n\nAvailability, cost\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nAzadi et al. (2018)\n\n\nRegression\n\n\nChildhood demand\n\n\nRegional\n\n\nn.s.\n\n\nNot reported\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCernuschi et al. (2018)\n\n\nDemand-supply assessment\n\n\nBCG demand, supply\n\n\nNational, global\n\n\n14 years\n\n\nProcurement\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nAlegado & Tumibay (2020)\n\n\nARIMA, MLP\n\n\nMonthly demand\n\n\nLocal\n\n\n12 months\n\n\nRMSE, MAE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nHariharan et al. (2020)\n\n\nRandom forest\n\n\nUtilisation\n\n\nFacility\n\n\nBiweekly\n\n\nRMSE\n\n\nNo\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nSahisnu et al. (2020)\n\n\nARIMA\n\n\nStock levels\n\n\nLocal\n\n\n10 months\n\n\nMAPE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nYes\n\n\nNo\n\n\n\n\nVinitha et al. (2024)\n\n\nRegression, trees, LSTM, ANN\n\n\nInfant demand\n\n\nLocal\n\n\nn.s.\n\n\nRMSE, R²\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCurrent study\n\n\nFSP, statistical, ML, DL, foundation, ensemble\n\n\nAdministered doses, monthly\n\n\nSub-county\n\n\n6 months\n\n\nCRPS, MASE, RMSSE\n\n\nYes\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nYes"
+    "text": "Vaccine demand forecasting in the literature\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReference\n\n\nApproach / method\n\n\nTarget variable\n\n\nLevel\n\n\nHorizon\n\n\nEvaluation focus\n\n\nInventory integration\n\n\nBenchmark\n\n\nProbabilistic forecasting\n\n\nDistributional post-processing\n\n\nReproducibility\n\n\n\n\n\n\nChiu et al. (2008)\n\n\nARIMA, BPNN\n\n\nAnnual demand\n\n\nRegional\n\n\n1 year\n\n\nAverage error\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nKotagiri et al. (2011)\n\n\nBirth-cohort model\n\n\nInventory requirements\n\n\nLocal inventory\n\n\n1 year\n\n\nInventory impact\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nMueller et al. (2016)\n\n\nSimulation\n\n\nVaccine quantity\n\n\nMulti-level\n\n\n12 months\n\n\nAvailability, cost\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nAzadi et al. (2018)\n\n\nRegression\n\n\nChildhood demand\n\n\nRegional\n\n\nn.s.\n\n\nNot reported\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCernuschi et al. (2018)\n\n\nDemand-supply assessment\n\n\nBCG demand, supply\n\n\nNational, global\n\n\n14 years\n\n\nProcurement\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nAlegado & Tumibay (2020)\n\n\nARIMA, MLP\n\n\nMonthly demand\n\n\nLocal\n\n\n12 months\n\n\nRMSE, MAE\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nHariharan et al. (2020)\n\n\nRandom forest\n\n\nUtilisation\n\n\nFacility\n\n\nBiweekly\n\n\nRMSE\n\n\nNo\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nSahisnu et al. (2020)\n\n\nARIMA\n\n\nStock levels\n\n\nLocal\n\n\n10 months\n\n\nMAPE\n\n\nYes\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nVinitha et al. (2024)\n\n\nRegression, trees, LSTM, ANN\n\n\nInfant demand\n\n\nLocal\n\n\nn.s.\n\n\nRMSE, R²\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\nNo\n\n\n\n\nCurrent study\n\n\nFSP-informed administered benchmark, statistical, ML, DL, foundation, ensemble\n\n\nAdministered doses, monthly\n\n\nSub-county\n\n\n6 months\n\n\nCRPS, rMAE, rRMSE\n\n\nNo\n\n\nYes\n\n\nYes\n\n\nYes\n\n\nYes"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#forecast-the-history-bound-with-the-plan",
-    "href": "slides/isf_slides/isf_slides.html#forecast-the-history-bound-with-the-plan",
+    "objectID": "slides/isf_slides/isf_slides.html#from-practice-and-literature-to-our-contribution",
+    "href": "slides/isf_slides/isf_slides.html#from-practice-and-literature-to-our-contribution",
     "title": "Udeshi Salgado",
-    "section": "Forecast the history, bound with the plan",
-    "text": "Forecast the history, bound with the plan\nWe hold administered doses, not consumption. So we forecast administered demand with uncertainty and bound it with the administered demographic, without guessing wastage.\n\n\n1 · Forecast with uncertainty\n\nAdministered demand, modelled directly\nStatistical · ML · DL · foundational methods\n\\(\\rightarrow \\mathcal{N}(\\mu, \\sigma)\\), a full predictive distribution\n\n\n\n2 · Bound, no wastage assumed\n\nThe administered FSP demographic sets the ceiling\n\\(U = k\\cdot E\\), calibrated from history\n\\(\\rightarrow \\mathrm{TN}(\\mu, \\sigma, 0, U)\\), truncated to feasible demand\n\n\n\n\nData-driven uncertainty and domain feasibility: the combination FSP4All never makes.\n\nResearch Question Can data-driven probabilistic forecasting, combined with FSP-informed distributional truncation, improve routine childhood vaccine administrative demand forecasting at the most garnular operational level, relative to the FSP approach used in practice?"
+    "section": "From practice and literature to our contribution",
+    "text": "From practice and literature to our contribution\nWe combine the domain knowledge built into FSP4All with the open gaps in the forecasting literature, and use the data we do have, doses administered, to build a feasibility-aware probabilistic forecast.\n\n\nFrom the tools · domain knowledge\n\nFSP4All’s demographic feasibility logic\nPopulation, coverage and capacity structure\nA principled ceiling for plausible demand\n\n\n\nFrom the literature · the open gaps\n\nForecasts are rarely probabilistic\nReproducible benchmarks are scarce\nDistributions ignore physical feasibility\n\n\n\n\nOur contribution: model the administered history probabilistically, then make the distribution feasibility-aware with FSP-informed bounds.\n\nResearch Question How can data-driven probabilistic forecasting, combined with FSP-informed demographic-consumption truncation, advance routine childhood vaccine administered-demand forecasting at the most granular operational level, where the supply decisions are actually made?"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#section-3",
@@ -98,13 +98,6 @@
     "text": "Demand across administrative levels"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#weak-trend-and-seasonality",
-    "href": "slides/isf_slides/isf_slides.html#weak-trend-and-seasonality",
-    "title": "Udeshi Salgado",
-    "section": "Weak trend and seasonality",
-    "text": "Weak trend and seasonality"
-  },
-  {
     "objectID": "slides/isf_slides/isf_slides.html#trend-seasonality-and-noise",
     "href": "slides/isf_slides/isf_slides.html#trend-seasonality-and-noise",
     "title": "Udeshi Salgado",
@@ -116,14 +109,35 @@
     "href": "slides/isf_slides/isf_slides.html#methodology",
     "title": "Udeshi Salgado",
     "section": "Methodology",
-    "text": "Methodology\n\nData sources\n\n\nAdministered doses African country, sub-county · 2013 to 2021 · monthly · BCG, DPT-HepB-Hib, Measles-Rubella, OPV birth, OPV routine\n\n\nDemographic and external FSP target population (sub-county level), WHO coverage · floods, drought, epidemics · Consumer Price Index (CPI) · working days, holidays, lags\n\n\n▼\nForecasting setup\n\n\nFSP benchmark demographic\n\n\nStatistical ARIMA · ETS · Naive · sNaive\n\n\nMachine learning Lasso · Elastic Net · RF · XGBoost · LightGBM\n\n\nDeep learning and foundation ANN · LSTM · Chronos\n\n\n\nRolling-origin cross-validation · 6-month horizon (h = 1 to 6) · raw output \\(\\mathcal{N}(\\mu, \\sigma)\\)\n\n▼\nDistributional post-processing\n\n\n1 · Calibration 2018 to 2019 hold-out · per vaccine and sub-county · \\(k = Q_{0.975}(y / E)\\)\n\n\n2 · Define bounds \\(L = 0\\) (non-negativity) · \\(U = k\\,E\\) (FSP-informed ceiling)\n\n\n3 · Truncated distribution recast \\(\\mathcal{N}(\\mu,\\sigma)\\) as \\(\\mathrm{TN}(\\mu, \\sigma, 0, U)\\) · scored with exact TN CRPS\n\n\n▼\n\nFeasibility-aware probabilistic forecast: bounded support, calibrated tails, decision-relevant CRPS"
+    "text": "Methodology\n\nData sources\n\n\nAdministered doses African country, sub-county · 2013 to 2021 · monthly · BCG, DPT-HepB-Hib, Measles-Rubella, OPV birth, OPV routine\n\n\nDemographic and external FSP target population (sub-county level), WHO coverage · floods, drought, epidemics · Consumer Price Index (CPI) · working days, holidays, lags\n\n\n▼\nForecasting setup\n\n\nFSP-informed administered benchmark capacity-adjusted demographic\n\n\nStatistical ARIMA · ETS · Naive · sNaive\n\n\nMachine learning Lasso · Elastic Net · RF · XGBoost · LightGBM\n\n\nDeep learning and foundation ANN · LSTM · Chronos\n\n\n\nRolling-origin cross-validation · 6-month horizon (h = 1 to 6) · raw output \\(\\mathcal{N}(\\mu, \\sigma)\\)\n\n▼\nDistributional post-processing\n\n\n1 · Calibration 2018 to 2019 hold-out · per vaccine and sub-county · \\(k = Q_{0.975}(y / E)\\)\n\n\n2 · Define bounds \\(L = 0\\) (non-negativity) · \\(U = k\\,E\\) (demographic-consumption ceiling)\n\n\n3 · Truncated distribution recast \\(\\mathcal{N}(\\mu,\\sigma)\\) as \\(\\mathrm{TN}(\\mu, \\sigma, 0, U)\\) · scored with exact TN CRPS\n\n\n▼\n\nFeasibility-aware probabilistic forecast: bounded support, calibrated tails, decision-relevant CRPS"
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#forecasting-setup-defining-the-fsp-informed-administered-benchmark",
+    "href": "slides/isf_slides/isf_slides.html#forecasting-setup-defining-the-fsp-informed-administered-benchmark",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting setup: defining the FSP-informed administered benchmark",
+    "text": "Forecasting setup: defining the FSP-informed administered benchmark\n\nWhy a variation of FSP?\n\nWe only have doses-administered data, not consumption or wastage\nSo we use the administered version of FSP’s demographic method, computed directly from the available data, with no wastage assumption\n\n\nFSP4ALL demographic tool for procurement\n\\[Q^{\\mathrm{proc}}_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d \\cdot \\frac{100}{100 - w}\\]\nSet wastage \\(w = 0\\)\n\\[Q^{\\mathrm{adm}}_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d\n\\qquad\\Longrightarrow\\qquad\n\\text{FSP informed admin} = \\tfrac{1}{12}\\, P \\cdot \\frac{c}{100} \\cdot d\\]"
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#forecasting-setup-data-driven-forecasting-models",
+    "href": "slides/isf_slides/isf_slides.html#forecasting-setup-data-driven-forecasting-models",
+    "title": "Udeshi Salgado",
+    "section": "Forecasting setup: data-driven forecasting models",
+    "text": "Forecasting setup: data-driven forecasting models\nStatistical, ML, DL and foundation models learn directly from the historical administered doses and external drivers. Whatever the family, each is turned into a probabilistic forecast the same way.\n\nModel families\n\n\nStatistical ARIMA · ETS · Naive · sNaive\n\n\nMachine learning Lasso · Elastic Net · RF · XGBoost · LightGBM\n\n\nDeep learning & foundation ANN · LSTM · Chronos\n\n\n▼\nTurning each model into a predictive distribution\n\n\n1 · Point forecast fit on history and features, predict the mean \\(\\hat{\\mu} = \\hat{y}_{i,v,t+h}\\)\n\n\n2 · Error spread \\(\\hat{\\sigma}_h\\) from rolling-origin forecast errors, widening with horizon \\(h\\)\n\n\n3 · Gaussian forecast combine into \\(Y_{i,v,t+h} \\sim \\mathcal{N}(\\hat{\\mu}, \\hat{\\sigma}_h)\\), for \\(h = 1\\) to \\(6\\)\n\n\n\nThe Gaussian fits the near-Normal body of the forecast errors; the heavier tails are corrected downstream by feasibility truncation"
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#calibration-defining-the-scaling-factor-k",
+    "href": "slides/isf_slides/isf_slides.html#calibration-defining-the-scaling-factor-k",
+    "title": "Udeshi Salgado",
+    "section": "Calibration: defining the scaling factor k",
+    "text": "Calibration: defining the scaling factor k\nThe benchmark \\(E\\) is a theoretical plan; what clinics actually administer departs from it. We learn one empirical factor \\(k\\) from history to tie the two together.\n1 · Administered benchmark, at 100% coverage\n\\[E = \\tfrac{1}{12}\\, P \\cdot \\tfrac{c}{100} \\cdot d \\qquad\\xrightarrow{\\;c\\,=\\,100\\;}\\qquad E = \\tfrac{1}{12}\\, P \\cdot d\\]\n2 · Scaling factor \\(k\\), the 97.5th percentile of realised demand against the plan, on a 2018–2019 hold-out\n\\[k_{i,v} = Q_{0.975}\\!\\left(\\frac{y}{E} \\;\\Big|\\; 2018\\text{–}2019\\right)\\]\n\\(k&gt;1\\): administered demand routinely exceeds the raw demographic, so \\(k\\) grounds the ceiling in operational reality while trimming the impossible."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#distributional-post-processing-defining-bounds",
     "href": "slides/isf_slides/isf_slides.html#distributional-post-processing-defining-bounds",
     "title": "Udeshi Salgado",
     "section": "Distributional post-processing: defining bounds",
-    "text": "Distributional post-processing: defining bounds\n\n\nLower bound\n\n\n\n\n\n\\[L = 0\\]\nA structural constraint. Monthly doses administered cannot be negative.\n\nUpper bound\n\n\n\n\n\n\\[U_{i,v,t} = k_{i,v}\\,E^{\\uparrow}_{i,v,t}\\]\nCalibrate \\(k_{i,v} = Q_{0.975}\\!\\left(\\tfrac{y}{E}\\,\\big|\\,2018\\text{–}19\\right)\\) on the administered FSP point forecast, where the central capacity is \\(E = \\text{Target Population} \\times \\,\\text{No of doses}/12\\).  Apply to the upper capacity \\(E^{\\uparrow} = \\text{Target Population Upper} \\times \\,\\text{No of doses} /12\\) (the upper target population at 100% coverage) to set the feasibility ceiling."
+    "text": "Distributional post-processing: defining bounds\n\n\nLower bound\n\n\n\n\n\n\\[L = 0\\]\nA structural constraint: monthly doses administered cannot be negative.\n\nUpper bound\n\n\n\n\n\n\\[U_{i,v,t} = k_{i,v}\\,E^{\\uparrow}_{i,v,t}, \\quad E^{\\uparrow}_{i,v,t} = \\tfrac{1}{12}\\, P^{\\uparrow} d\\]\n\\(E^{\\uparrow}\\) uses the upper population \\(P^{\\uparrow}\\) at 100% coverage, so the ceiling never cuts legitimate surges; \\(k\\) sets it at the 97.5th percentile of observed demand."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#from-bounds-to-truncated-distribution",
@@ -144,7 +158,7 @@
     "href": "slides/isf_slides/isf_slides.html#evaluation-metrics",
     "title": "Udeshi Salgado",
     "section": "Evaluation metrics",
-    "text": "Evaluation metrics\nErrors are scaled by the FSP benchmark, so a value below 1 beats current practice.\n\n\nPoint accuracy\n\\[\\mathrm{MSE} = \\tfrac{1}{n}\\sum_t (y_t-\\hat{y}_t)^2 \\qquad \\mathrm{MAE} = \\tfrac{1}{n}\\sum_t |y_t-\\hat{y}_t|\\]\n\\[\\mathrm{RMSSE} = \\sqrt{\\tfrac{\\mathrm{MSE}}{\\mathrm{MSE}_{\\mathrm{FSP}}}} \\qquad \\mathrm{MASE} = \\tfrac{\\mathrm{MAE}}{\\mathrm{MAE}_{\\mathrm{FSP}}}\\]\nPooled across series: \\(\\;\\mathrm{RMSSE}_{\\text{pooled}} = \\sqrt{\\tfrac{1}{N}\\textstyle\\sum_i \\mathrm{RMSSE}_i^{2}}\\)\n\nDistributional accuracy\n\\[\\mathrm{CRPS}(F,y) = \\int_{-\\infty}^{\\infty}\\big(F(x)-\\mathbf{1}\\{x\\ge y\\}\\big)^2\\,dx\\]\n\\[\\text{scaled CRPS} = \\tfrac{\\mathrm{CRPS}}{\\mathrm{CRPS}_{\\mathrm{FSP}}}\\]\nTruncated forecasts are scored with the closed-form CRPS of \\(\\mathrm{TN}(\\mu,\\sigma,0,U)\\), not the raw Gaussian.\n\n\nHow to read the scale Below 1 beats the FSP tool, 1 ties, above 1 is worse. Ranking via the Nemenyi test, \\(\\mathrm{CD} = q_\\alpha\\sqrt{k(k+1)/6N}\\); methods whose bars overlap are not significantly different."
+    "text": "Evaluation metrics\nEvery error is scaled by the FSP-informed administered benchmark: below 1 beats it, above 1 is worse.\n\n\nPoint accuracy\n\\[\\mathrm{MSE} = \\tfrac{1}{n}\\sum_t (y_t-\\hat{y}_t)^2\\]\n\\[\\mathrm{MAE} = \\tfrac{1}{n}\\sum_t |y_t-\\hat{y}_t|\\]\n\n\\[\\mathrm{rRMSE} = \\sqrt{\\tfrac{\\mathrm{MSE}}{\\mathrm{MSE}_{\\text{FSP-informed admin.}}}}\\]\n\\[\\mathrm{rMAE} = \\tfrac{\\mathrm{MAE}}{\\mathrm{MAE}_{\\text{FSP-informed admin.}}}\\]\n\n\nDistributional accuracy\n\\[\\mathrm{CRPS}(F,y) = \\int_{-\\infty}^{\\infty}\\big(F(x)-\\mathbf{1}\\{x\\ge y\\}\\big)^2\\,dx\\]\n\n\n\n\n\\[\\mathrm{rCRPS} = \\tfrac{\\mathrm{CRPS}}{\\mathrm{CRPS}_{\\text{FSP-informed admin.}}}\\]\n\n\n\nTruncated forecasts are scored with the exact closed-form CRPS of the truncated Normal, not the raw Gaussian."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#section-4",
@@ -154,18 +168,25 @@
     "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
-    "href": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
+    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-rrmse",
+    "href": "slides/isf_slides/isf_slides.html#after-truncation-rrmse",
     "title": "Udeshi Salgado",
-    "section": "Before truncation: point accuracy",
-    "text": "Before truncation: point accuracy\nNemenyi average ranks for RMSSE, with mean MASE and RMSSE alongside. Lower rank is better; bars within one critical difference are not significantly different."
+    "section": "After truncation: rRMSE",
+    "text": "After truncation: rRMSE\n\nPoint accuracy. The effect divides: truncation sharpens the over-dispersed deep learning and naive methods, but slightly worsens the already-feasible tree-based and ensemble methods."
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
-    "href": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
+    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-rcrps",
+    "href": "slides/isf_slides/isf_slides.html#after-truncation-rcrps",
     "title": "Udeshi Salgado",
-    "section": "Before truncation: distributional accuracy",
-    "text": "Before truncation: distributional accuracy\nNemenyi average ranks for scaled CRPS, with the mean scaled CRPS alongside. The FSP benchmark ranks last on both point and distributional accuracy."
+    "section": "After truncation: rCRPS",
+    "text": "After truncation: rCRPS\n\nDistributional accuracy. Every method improves; gains are largest for the regularised linear, naive, and deep learning methods."
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
+    "href": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
+    "title": "Udeshi Salgado",
+    "section": "Truncation tightens the dispersed forecasters at longer horizons",
+    "text": "Truncation tightens the dispersed forecasters at longer horizons\n\nEvery model as a horizontal boxplot of rCRPS, untruncated (grey) vs demographic-consumption truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (the regularised linear, naive, and deep learning methods), and the effect grows with the horizon."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#accuracy-vs-computational-cost",
@@ -175,46 +196,46 @@
     "text": "Accuracy vs computational cost"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-rmsse",
-    "href": "slides/isf_slides/isf_slides.html#after-truncation-rmsse",
+    "objectID": "slides/isf_slides/isf_slides.html#the-road-ahead",
+    "href": "slides/isf_slides/isf_slides.html#the-road-ahead",
     "title": "Udeshi Salgado",
-    "section": "After truncation: RMSSE",
-    "text": "After truncation: RMSSE\n\nPoint accuracy. Truncation moves every method to the left (better); the largest gains are for the most diffuse forecasters, such as sNaive and ETS."
+    "section": "The road ahead",
+    "text": "The road ahead\nWhere this work goes next.\n\n\n Add the wastage component\n\nExtend administered forecasts to total consumption\nSupports end-to-end procurement quantification\n\n\n\n Link to inventory simulation\n\nTranslate forecast distributions into stockouts, wastage, and service levels\n\n\n\n Hierarchical reconciliation\n\nKeep forecasts coherent across national → sub-county levels"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-scaled-crps",
-    "href": "slides/isf_slides/isf_slides.html#after-truncation-scaled-crps",
+    "objectID": "slides/isf_slides/isf_slides.html#weak-trend-and-seasonality",
+    "href": "slides/isf_slides/isf_slides.html#weak-trend-and-seasonality",
     "title": "Udeshi Salgado",
-    "section": "After truncation: scaled CRPS",
-    "text": "After truncation: scaled CRPS\n\nDistributional accuracy. Every method improves; gains are largest for LSTM, sNaive and ETS."
+    "section": "Weak trend and seasonality",
+    "text": "Weak trend and seasonality"
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
+    "href": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
+    "title": "Udeshi Salgado",
+    "section": "Before truncation: point accuracy",
+    "text": "Before truncation: point accuracy\nNemenyi average ranks for rRMSE, with mean rMAE and rRMSE alongside. Lower rank is better; bars within one critical difference are not significantly different."
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
+    "href": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
+    "title": "Udeshi Salgado",
+    "section": "Before truncation: distributional accuracy",
+    "text": "Before truncation: distributional accuracy\nNemenyi average ranks for rCRPS, with the mean rCRPS alongside. The FSP-informed administered benchmark provides the reference, and the statistical, ML and DL methods achieve stronger average ranks."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#distribution-of-errors-across-horizons",
     "href": "slides/isf_slides/isf_slides.html#distribution-of-errors-across-horizons",
     "title": "Udeshi Salgado",
     "section": "Distribution of errors across horizons",
-    "text": "Distribution of errors across horizons\n\nDensities of scaled CRPS, untruncated (left) vs FSP-truncated (right), by horizon. The five worst forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons."
+    "text": "Distribution of errors across horizons\n\nDensities of rCRPS, untruncated (left) vs demographic-consumption truncated (right), by horizon. The five most dispersed forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#where-truncation-helps-most",
     "href": "slides/isf_slides/isf_slides.html#where-truncation-helps-most",
     "title": "Udeshi Salgado",
     "section": "Where truncation helps most",
-    "text": "Where truncation helps most\n\nThe three models that gain most from truncation (LSTM, Naive, sNaive). Untruncated (blue) and FSP-truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, clearest for Naive at longer horizons."
-  },
-  {
-    "objectID": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
-    "href": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
-    "title": "Udeshi Salgado",
-    "section": "Truncation tightens the dispersed forecasters at longer horizons",
-    "text": "Truncation tightens the dispersed forecasters at longer horizons\n\nEvery model as a horizontal boxplot of scaled CRPS, untruncated (grey) vs FSP-truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (Naive, sNaive, Hybrid weighted, LSTM), and the effect grows with the horizon."
-  },
-  {
-    "objectID": "slides/isf_slides/isf_slides.html#the-road-ahead",
-    "href": "slides/isf_slides/isf_slides.html#the-road-ahead",
-    "title": "Udeshi Salgado",
-    "section": "The road ahead",
-    "text": "The road ahead\nWhere this work goes next.\n\n\n Add the wastage component\n\nExtend administered forecasts to total consumption\nSupports end-to-end procurement quantification\n\n\n\n Link to inventory simulation\n\nTranslate forecast distributions into stockouts, wastage, and service levels\n\n\n\n Hierarchical reconciliation\n\nKeep forecasts coherent across national → sub-county levels"
+    "text": "Where truncation helps most\n\nThe three models that gain most from truncation (Elastic Net, Linear comb., Lasso). Untruncated (blue) and demographic-consumption truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, with the largest gains at longer horizons."
   },
   {
     "objectID": "slides/exeter/exeter.html#background",
