@@ -860,11 +860,13 @@ Yes
 </ul>
 </div>
 <p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.15em;"><strong>FSP4ALL demographic tool for procurement</strong></span></p>
-<p><span class="math display">\[Q^{\mathrm{proc}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d \cdot \frac{100}{100 - w}\]</span></p>
+<p><span class="math display">\[
+\text{Annual } Q^{\mathrm{proc}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d \cdot \frac{100}{100 - w}
+\]</span></p>
 <p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.2em;"><strong>Set wastage <span class="math inline">\(w = 0\)</span></strong></span></p>
-<p><span class="math display">\[Q^{\mathrm{adm}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d
+<p><span class="math display">\[\text{Annual } Q^{\mathrm{adm}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d
 \qquad\Longrightarrow\qquad
-\text{FSP informed admin} = \tfrac{1}{12}\, P \cdot \frac{c}{100} \cdot d\]</span></p>
+\text{Monthly FSP informed admin} = \tfrac{1}{12}\, P \cdot \frac{c}{100} \cdot d\]</span></p>
 </section>
 <section id="forecasting-setup-data-driven-forecasting-models" class="slide level2">
 <h2>Forecasting setup: data-driven forecasting models</h2>
@@ -900,8 +902,8 @@ Yes
 </div>
 </div>
 </section>
-<section id="calibration-defining-the-scaling-factor-k" class="slide level2 eqn-slide">
-<h2>Calibration: defining the scaling factor k</h2>
+<section id="distributional-post-processing-calibration" class="slide level2 eqn-slide">
+<h2>Distributional post-processing: Calibration</h2>
 <p><span class="fsp-lead">The benchmark <span class="math inline">\(E\)</span> is a <em>theoretical</em> plan; what clinics actually administer departs from it. We learn one empirical factor <span class="math inline">\(k\)</span> from history to tie the two together.</span></p>
 <p><span style="display:block; color:#A04B2F; font-weight:700; margin-top:0.25em;"><strong>1 · Administered benchmark</strong>, at 100% coverage</span></p>
 <p><span class="math display">\[E = \tfrac{1}{12}\, P \cdot \tfrac{c}{100} \cdot d \qquad\xrightarrow{\;c\,=\,100\;}\qquad E = \tfrac{1}{12}\, P \cdot d\]</span></p>
@@ -988,23 +990,24 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 </ul>
 </div>
 </section>
-<section id="after-truncation-rrmse" class="slide level2">
-<h2>After truncation: rRMSE</h2>
+<section id="truncation-effect-rrmse" class="slide level2">
+<h2>Truncation Effect: rRMSE</h2>
 
-<img data-src="images/res_cleveland_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Point accuracy. The effect divides: truncation sharpens the over-dispersed deep learning and naive methods, but slightly worsens the already-feasible tree-based and ensemble methods.</span></p>
-</section>
-<section id="after-truncation-rcrps" class="slide level2">
-<h2>After truncation: rCRPS</h2>
+<img data-src="images/res_cleveland_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"></section>
+<section id="distribution-of-rrmse" class="slide level2">
+<h2>Distribution of rRMSE</h2>
 
-<img data-src="images/res_cleveland_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><p><span class="fsp-lead">Distributional accuracy. Every method improves; gains are largest for the regularised linear, naive, and deep learning methods.</span></p>
-</section>
+<img data-src="images/res_box_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:52.0%"></section>
+<section id="truncation-effect-rcrps" class="slide level2">
+<h2>Truncation Effect: rCRPS</h2>
+
+<img data-src="images/res_cleveland_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"></section>
 <section id="truncation-tightens-the-dispersed-forecasters-at-longer-horizons" class="slide level2">
 <h2>Truncation tightens the dispersed forecasters at longer horizons</h2>
 
-<img data-src="images/res_horizon_truncation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><span class="fsp-lead">Every model as a horizontal boxplot of rCRPS, untruncated (grey) vs demographic-consumption truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (the regularised linear, naive, and deep learning methods), and the effect grows with the horizon.</span></p>
-</section>
-<section id="accuracy-vs-computational-cost" class="slide level2">
-<h2>Accuracy vs computational cost</h2>
+<img data-src="images/res_horizon_truncation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="accuracy-and-computational-efficiency" class="slide level2">
+<h2>Accuracy and computational efficiency</h2>
 
 <img data-src="images/res_efficiency.png" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"></section>
 <section id="the-road-ahead" class="slide level2">
@@ -1056,26 +1059,22 @@ Y_{i,v,t+h} \sim \mathrm{TN}(\mu, \sigma, L, U)\]</span></p>
 <img data-src="images/data_trend_seasonality.png" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"></section>
 <section id="before-truncation-point-accuracy" class="slide level2">
 <h2>Before truncation: point accuracy</h2>
-<p><span class="fsp-lead">Nemenyi average ranks for rRMSE, with mean rMAE and rRMSE alongside. Lower rank is better; bars within one critical difference are not significantly different.</span></p>
 
 <img data-src="images/res_nemenyi_rmsse.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
 <section id="before-truncation-distributional-accuracy" class="slide level2">
 <h2>Before truncation: distributional accuracy</h2>
-<p><span class="fsp-lead">Nemenyi average ranks for rCRPS, with the mean rCRPS alongside. The FSP-informed administered benchmark provides the reference, and the statistical, ML and DL methods achieve stronger average ranks.</span></p>
 
 <img data-src="images/res_nemenyi_scrps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:72.0%"></section>
 <section id="distribution-of-errors-across-horizons" class="slide level2">
 <h2>Distribution of errors across horizons</h2>
 
-<img data-src="images/res_dist_horizons.png" class="quarto-figure quarto-figure-center r-stretch" style="width:46.0%"><p><span class="fsp-lead">Densities of rCRPS, untruncated (left) vs demographic-consumption truncated (right), by horizon. The five most dispersed forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons.</span></p>
-</section>
+<img data-src="images/res_dist_horizons.png" class="quarto-figure quarto-figure-center r-stretch" style="width:46.0%"></section>
 <section id="where-truncation-helps-most" class="slide level2">
 <h2>Where truncation helps most</h2>
 
-<img data-src="images/res_dist_models.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p><span class="fsp-lead">The three models that gain most from truncation (Elastic Net, Linear comb., Lasso). Untruncated (blue) and demographic-consumption truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, with the largest gains at longer horizons.</span></p>
 
 
-</section></section>
+<img data-src="images/res_dist_models.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

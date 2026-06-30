@@ -24,7 +24,6 @@ format:
 
 [Outline]{.mimic-h2}
 
-
 - [**Background and motivation**]{style="font-size: 1.2em; color: #A04B2F;"}
 - [**Current practice and literature**]{style="font-size: 1.2em; color: #A04B2F;"}
 - [**Data and Methodology**]{style="font-size: 1.2em; color: #A04B2F;"}
@@ -84,9 +83,6 @@ format:
 ## The immunisation supply chain
 
 ![](images/bg_immunisation_supply_chain.png){width=88% fig-align="center"}
-
-
-
 
 ##
 
@@ -259,14 +255,12 @@ How can data-driven probabilistic forecasting, combined with FSP-informed demogr
 
 [Outline]{.mimic-h2}
 
-
 ::: {.agenda}
 - [Background and motivation]{.ol-off}
 - [Current practice and literature]{.ol-off}
 - [**Data and Methodology**]{.ol-on}
 - [Results]{.ol-off}
 :::
-
 
 ## Data
 
@@ -314,11 +308,9 @@ How can data-driven probabilistic forecasting, combined with FSP-informed demogr
 
 ![](images/bg_vaccine_admin_levels.png){width=86% fig-align="center"}
 
-
 ## Trend, seasonality and noise
 
 ![](images/data_stl_decomposition.png){width=66% fig-align="center"}
-
 
 ## Methodology
 
@@ -402,13 +394,15 @@ Feasibility-aware probabilistic forecast: bounded support, calibrated tails, dec
 
 [**FSP4ALL demographic tool for procurement**]{style="display:block; color:#A04B2F; font-weight:700; margin-top:0.15em;"}
 
-$$Q^{\mathrm{proc}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d \cdot \frac{100}{100 - w}$$
+$$
+\text{Annual } Q^{\mathrm{proc}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d \cdot \frac{100}{100 - w}
+$$
 
 [**Set wastage $w = 0$**]{style="display:block; color:#A04B2F; font-weight:700; margin-top:0.2em;"}
 
-$$Q^{\mathrm{adm}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d
+$$\text{Annual } Q^{\mathrm{adm}}_{\mathrm{dem}} = P \cdot \frac{c}{100} \cdot d
 \qquad\Longrightarrow\qquad
-\text{FSP informed admin} = \tfrac{1}{12}\, P \cdot \frac{c}{100} \cdot d$$
+\text{Monthly FSP informed admin} = \tfrac{1}{12}\, P \cdot \frac{c}{100} \cdot d$$
 
 ## Forecasting setup: data-driven forecasting models
 
@@ -458,7 +452,7 @@ The Gaussian fits the near-Normal body of the forecast errors; the heavier tails
 
 :::::::::
 
-## Calibration: defining the scaling factor k {.eqn-slide}
+## Distributional post-processing: Calibration {.eqn-slide}
 
 [The benchmark $E$ is a *theoretical* plan; what clinics actually administer departs from it. We learn one empirical factor $k$ from history to tie the two together.]{.fsp-lead}
 
@@ -520,7 +514,6 @@ $$\mu^{\mathrm{tr}} = \mu + \sigma\,\frac{\phi(\alpha) - \phi(\beta)}{Z}, \qquad
 
 [The untruncated raw Gaussian wastes mass below 0 and above $U$. Truncation concentrates it into the feasible range, improving the CRPS.]{.fsp-lead}
 
-
 ## Evaluation metrics {.eqn-slide}
 
 [Every error is scaled by the FSP-informed administered benchmark: below 1 beats it, above 1 is worse.]{.fsp-lead}
@@ -574,25 +567,23 @@ $$\mathrm{rCRPS} = \tfrac{\mathrm{CRPS}}{\mathrm{CRPS}_{\text{FSP-informed admin
 - [**Results**]{.ol-on}
 :::
 
-## After truncation: rRMSE
+## Truncation Effect: rRMSE
 
 ![](images/res_cleveland_rmsse.png){width=66% fig-align="center"}
 
-[Point accuracy. The effect divides: truncation sharpens the over-dispersed deep learning and naive methods, but slightly worsens the already-feasible tree-based and ensemble methods.]{.fsp-lead}
+## Distribution of rRMSE
 
-## After truncation: rCRPS
+![](images/res_box_rmsse.png){width=52% fig-align="center"}
+
+## Truncation Effect: rCRPS
 
 ![](images/res_cleveland_scrps.png){width=66% fig-align="center"}
-
-[Distributional accuracy. Every method improves; gains are largest for the regularised linear, naive, and deep learning methods.]{.fsp-lead}
 
 ## Truncation tightens the dispersed forecasters at longer horizons
 
 ![](images/res_horizon_truncation.png){width=80% fig-align="center"}
 
-[Every model as a horizontal boxplot of rCRPS, untruncated (grey) vs demographic-consumption truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (the regularised linear, naive, and deep learning methods), and the effect grows with the horizon.]{.fsp-lead}
-
-## Accuracy vs computational cost
+## Accuracy and computational efficiency
 
 ![](images/res_efficiency.png){width=82% fig-align="center"}
 
@@ -641,13 +632,9 @@ $$\mathrm{rCRPS} = \tfrac{\mathrm{CRPS}}{\mathrm{CRPS}_{\text{FSP-informed admin
 
 ## Before truncation: point accuracy
 
-[Nemenyi average ranks for rRMSE, with mean rMAE and rRMSE alongside. Lower rank is better; bars within one critical difference are not significantly different.]{.fsp-lead}
-
 ![](images/res_nemenyi_rmsse.png){width=80% fig-align="center"}
 
 ## Before truncation: distributional accuracy
-
-[Nemenyi average ranks for rCRPS, with the mean rCRPS alongside. The FSP-informed administered benchmark provides the reference, and the statistical, ML and DL methods achieve stronger average ranks.]{.fsp-lead}
 
 ![](images/res_nemenyi_scrps.png){width=72% fig-align="center"}
 
@@ -655,10 +642,7 @@ $$\mathrm{rCRPS} = \tfrac{\mathrm{CRPS}}{\mathrm{CRPS}_{\text{FSP-informed admin
 
 ![](images/res_dist_horizons.png){width=46% fig-align="center"}
 
-[Densities of rCRPS, untruncated (left) vs demographic-consumption truncated (right), by horizon. The five most dispersed forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons.]{.fsp-lead}
-
 ## Where truncation helps most
 
 ![](images/res_dist_models.png){width=60% fig-align="center"}
 
-[The three models that gain most from truncation (Elastic Net, Linear comb., Lasso). Untruncated (blue) and demographic-consumption truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, with the largest gains at longer horizons.]{.fsp-lead}

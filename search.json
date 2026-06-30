@@ -116,7 +116,7 @@
     "href": "slides/isf_slides/isf_slides.html#forecasting-setup-defining-the-fsp-informed-administered-benchmark",
     "title": "Udeshi Salgado",
     "section": "Forecasting setup: defining the FSP-informed administered benchmark",
-    "text": "Forecasting setup: defining the FSP-informed administered benchmark\n\nWhy a variation of FSP?\n\nWe only have doses-administered data, not consumption or wastage\nSo we use the administered version of FSP’s demographic method, computed directly from the available data, with no wastage assumption\n\n\nFSP4ALL demographic tool for procurement\n\\[Q^{\\mathrm{proc}}_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d \\cdot \\frac{100}{100 - w}\\]\nSet wastage \\(w = 0\\)\n\\[Q^{\\mathrm{adm}}_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d\n\\qquad\\Longrightarrow\\qquad\n\\text{FSP informed admin} = \\tfrac{1}{12}\\, P \\cdot \\frac{c}{100} \\cdot d\\]"
+    "text": "Forecasting setup: defining the FSP-informed administered benchmark\n\nWhy a variation of FSP?\n\nWe only have doses-administered data, not consumption or wastage\nSo we use the administered version of FSP’s demographic method, computed directly from the available data, with no wastage assumption\n\n\nFSP4ALL demographic tool for procurement\n\\[\n\\text{Annual } Q^{\\mathrm{proc}}_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d \\cdot \\frac{100}{100 - w}\n\\]\nSet wastage \\(w = 0\\)\n\\[\\text{Annual } Q^{\\mathrm{adm}}_{\\mathrm{dem}} = P \\cdot \\frac{c}{100} \\cdot d\n\\qquad\\Longrightarrow\\qquad\n\\text{Monthly FSP informed admin} = \\tfrac{1}{12}\\, P \\cdot \\frac{c}{100} \\cdot d\\]"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#forecasting-setup-data-driven-forecasting-models",
@@ -126,11 +126,11 @@
     "text": "Forecasting setup: data-driven forecasting models\nStatistical, ML, DL and foundation models learn directly from the historical administered doses and external drivers. Whatever the family, each is turned into a probabilistic forecast the same way.\n\nModel families\n\n\nStatistical ARIMA · ETS · Naive · sNaive\n\n\nMachine learning Lasso · Elastic Net · RF · XGBoost · LightGBM\n\n\nDeep learning & foundation ANN · LSTM · Chronos\n\n\n▼\nTurning each model into a predictive distribution\n\n\n1 · Point forecast fit on history and features, predict the mean \\(\\hat{\\mu} = \\hat{y}_{i,v,t+h}\\)\n\n\n2 · Error spread \\(\\hat{\\sigma}_h\\) from rolling-origin forecast errors, widening with horizon \\(h\\)\n\n\n3 · Gaussian forecast combine into \\(Y_{i,v,t+h} \\sim \\mathcal{N}(\\hat{\\mu}, \\hat{\\sigma}_h)\\), for \\(h = 1\\) to \\(6\\)\n\n\n\nThe Gaussian fits the near-Normal body of the forecast errors; the heavier tails are corrected downstream by feasibility truncation"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#calibration-defining-the-scaling-factor-k",
-    "href": "slides/isf_slides/isf_slides.html#calibration-defining-the-scaling-factor-k",
+    "objectID": "slides/isf_slides/isf_slides.html#distributional-post-processing-calibration",
+    "href": "slides/isf_slides/isf_slides.html#distributional-post-processing-calibration",
     "title": "Udeshi Salgado",
-    "section": "Calibration: defining the scaling factor k",
-    "text": "Calibration: defining the scaling factor k\nThe benchmark \\(E\\) is a theoretical plan; what clinics actually administer departs from it. We learn one empirical factor \\(k\\) from history to tie the two together.\n1 · Administered benchmark, at 100% coverage\n\\[E = \\tfrac{1}{12}\\, P \\cdot \\tfrac{c}{100} \\cdot d \\qquad\\xrightarrow{\\;c\\,=\\,100\\;}\\qquad E = \\tfrac{1}{12}\\, P \\cdot d\\]\n2 · Scaling factor \\(k\\), the 97.5th percentile of realised demand against the plan, on a 2018–2019 hold-out\n\\[k_{i,v} = Q_{0.975}\\!\\left(\\frac{y}{E} \\;\\Big|\\; 2018\\text{–}2019\\right)\\]\n\\(k&gt;1\\): administered demand routinely exceeds the raw demographic, so \\(k\\) grounds the ceiling in operational reality while trimming the impossible."
+    "section": "Distributional post-processing: Calibration",
+    "text": "Distributional post-processing: Calibration\nThe benchmark \\(E\\) is a theoretical plan; what clinics actually administer departs from it. We learn one empirical factor \\(k\\) from history to tie the two together.\n1 · Administered benchmark, at 100% coverage\n\\[E = \\tfrac{1}{12}\\, P \\cdot \\tfrac{c}{100} \\cdot d \\qquad\\xrightarrow{\\;c\\,=\\,100\\;}\\qquad E = \\tfrac{1}{12}\\, P \\cdot d\\]\n2 · Scaling factor \\(k\\), the 97.5th percentile of realised demand against the plan, on a 2018–2019 hold-out\n\\[k_{i,v} = Q_{0.975}\\!\\left(\\frac{y}{E} \\;\\Big|\\; 2018\\text{–}2019\\right)\\]\n\\(k&gt;1\\): administered demand routinely exceeds the raw demographic, so \\(k\\) grounds the ceiling in operational reality while trimming the impossible."
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#distributional-post-processing-defining-bounds",
@@ -168,32 +168,39 @@
     "text": "Outline\n\n\nBackground and motivation\nCurrent practice and literature\nData and Methodology\nResults"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-rrmse",
-    "href": "slides/isf_slides/isf_slides.html#after-truncation-rrmse",
+    "objectID": "slides/isf_slides/isf_slides.html#truncation-effect-rrmse",
+    "href": "slides/isf_slides/isf_slides.html#truncation-effect-rrmse",
     "title": "Udeshi Salgado",
-    "section": "After truncation: rRMSE",
-    "text": "After truncation: rRMSE\n\nPoint accuracy. The effect divides: truncation sharpens the over-dispersed deep learning and naive methods, but slightly worsens the already-feasible tree-based and ensemble methods."
+    "section": "Truncation Effect: rRMSE",
+    "text": "Truncation Effect: rRMSE"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#after-truncation-rcrps",
-    "href": "slides/isf_slides/isf_slides.html#after-truncation-rcrps",
+    "objectID": "slides/isf_slides/isf_slides.html#distribution-of-rrmse",
+    "href": "slides/isf_slides/isf_slides.html#distribution-of-rrmse",
     "title": "Udeshi Salgado",
-    "section": "After truncation: rCRPS",
-    "text": "After truncation: rCRPS\n\nDistributional accuracy. Every method improves; gains are largest for the regularised linear, naive, and deep learning methods."
+    "section": "Distribution of rRMSE",
+    "text": "Distribution of rRMSE"
+  },
+  {
+    "objectID": "slides/isf_slides/isf_slides.html#truncation-effect-rcrps",
+    "href": "slides/isf_slides/isf_slides.html#truncation-effect-rcrps",
+    "title": "Udeshi Salgado",
+    "section": "Truncation Effect: rCRPS",
+    "text": "Truncation Effect: rCRPS"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
     "href": "slides/isf_slides/isf_slides.html#truncation-tightens-the-dispersed-forecasters-at-longer-horizons",
     "title": "Udeshi Salgado",
     "section": "Truncation tightens the dispersed forecasters at longer horizons",
-    "text": "Truncation tightens the dispersed forecasters at longer horizons\n\nEvery model as a horizontal boxplot of rCRPS, untruncated (grey) vs demographic-consumption truncated (orange), by horizon. Truncation pulls in the upper tail of the diffuse forecasters (the regularised linear, naive, and deep learning methods), and the effect grows with the horizon."
+    "text": "Truncation tightens the dispersed forecasters at longer horizons"
   },
   {
-    "objectID": "slides/isf_slides/isf_slides.html#accuracy-vs-computational-cost",
-    "href": "slides/isf_slides/isf_slides.html#accuracy-vs-computational-cost",
+    "objectID": "slides/isf_slides/isf_slides.html#accuracy-and-computational-efficiency",
+    "href": "slides/isf_slides/isf_slides.html#accuracy-and-computational-efficiency",
     "title": "Udeshi Salgado",
-    "section": "Accuracy vs computational cost",
-    "text": "Accuracy vs computational cost"
+    "section": "Accuracy and computational efficiency",
+    "text": "Accuracy and computational efficiency"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#the-road-ahead",
@@ -214,28 +221,28 @@
     "href": "slides/isf_slides/isf_slides.html#before-truncation-point-accuracy",
     "title": "Udeshi Salgado",
     "section": "Before truncation: point accuracy",
-    "text": "Before truncation: point accuracy\nNemenyi average ranks for rRMSE, with mean rMAE and rRMSE alongside. Lower rank is better; bars within one critical difference are not significantly different."
+    "text": "Before truncation: point accuracy"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
     "href": "slides/isf_slides/isf_slides.html#before-truncation-distributional-accuracy",
     "title": "Udeshi Salgado",
     "section": "Before truncation: distributional accuracy",
-    "text": "Before truncation: distributional accuracy\nNemenyi average ranks for rCRPS, with the mean rCRPS alongside. The FSP-informed administered benchmark provides the reference, and the statistical, ML and DL methods achieve stronger average ranks."
+    "text": "Before truncation: distributional accuracy"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#distribution-of-errors-across-horizons",
     "href": "slides/isf_slides/isf_slides.html#distribution-of-errors-across-horizons",
     "title": "Udeshi Salgado",
     "section": "Distribution of errors across horizons",
-    "text": "Distribution of errors across horizons\n\nDensities of rCRPS, untruncated (left) vs demographic-consumption truncated (right), by horizon. The five most dispersed forecasters are highlighted, the rest in grey. Truncation pulls their error mass towards zero, most visibly at longer horizons."
+    "text": "Distribution of errors across horizons"
   },
   {
     "objectID": "slides/isf_slides/isf_slides.html#where-truncation-helps-most",
     "href": "slides/isf_slides/isf_slides.html#where-truncation-helps-most",
     "title": "Udeshi Salgado",
     "section": "Where truncation helps most",
-    "text": "Where truncation helps most\n\nThe three models that gain most from truncation (Elastic Net, Linear comb., Lasso). Untruncated (blue) and demographic-consumption truncated (orange) densities overlaid, by horizon. Truncation concentrates the distribution and trims the right tail, with the largest gains at longer horizons."
+    "text": "Where truncation helps most"
   },
   {
     "objectID": "slides/exeter/exeter.html#background",
