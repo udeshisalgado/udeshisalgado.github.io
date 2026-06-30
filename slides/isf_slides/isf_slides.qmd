@@ -61,25 +61,6 @@ format:
 :::
 :::
 
-## Vaccines {.vaccines}
-
-[A vial holds several doses; each dose is what reaches a child. We forecast the doses actually *administered*.]{.fsp-lead style="display:block; text-align:center;"}
-
-::: {.columns}
-::: {.column width="33%"}
-![](images/vial.jpg){width=100%}
-[**Vial**]{style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"}
-:::
-::: {.column width="33%" .fragment}
-![](images/dose.png){width=100%}
-[**Dose**]{style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"}
-:::
-::: {.column width="33%" .fragment}
-![](images/administrated.png){width=100%}
-[**Administered**]{style="display:block; text-align:center; font-size:1.3em; color:#A04B2F;"}
-:::
-:::
-
 ## The immunisation supply chain
 
 ![](images/bg_immunisation_supply_chain.png){width=88% fig-align="center"}
