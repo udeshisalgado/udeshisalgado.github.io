@@ -1,0 +1,912 @@
+.smaller-font {
+  font-size: 0.9em;
+}
+
+.smallerx-font {
+  font-size: 0.35em;
+}
+
+.long-title1 {
+  font-size: 0.8em;
+}
+
+.long-title2 {
+  font-size: 0.7em;
+}
+
+
+#title-slide .quarto-title-author-name {
+  text-align: left !important;
+  font-size: 0.89em;
+}
+
+#title-slide .quarto-title-affiliation {
+  text-align: left !important;
+  font-size: 0.6em;
+}
+
+#title-slide .date {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* .reveal h1.title {
+  text-align: left !important;
+  font-size: 1.8em !important;
+} */
+
+
+
+.reveal .subtitle {
+  text-align: left !important;
+}
+.reveal {
+    background-color: #FAF9F5; /* Claude cream background */
+}
+
+
+
+/* Change callout background and sidebar color */
+div.callout {
+  border-left: 8px solid #D97757 !important; /* Sidebar color */
+}
+
+div.callout .callout-title {
+  background-color: #F2DFD3 !important;
+  /* color: #fff !important;
+  /* border-radius: 0.5em 0.5em 0 0 */
+}
+
+
+.reveal .slide-menu-button .fa-bars::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23D97757" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>') !important;
+}
+
+/* Change the color of the progress bar itself */
+.reveal .progress span {
+  background: #D97757 !important; /* Your chosen color */
+  height: 100% !important;
+}
+.reveal .progress {
+  height: 4px !important;
+}
+
+/* Set background color for all images */
+img {
+    background-color: #FAF9F5; /* Claude cream background */
+}
+
+/* Custom class for left border only */
+
+.left-border {
+  border-left: 2px solid rgba(0,0,0,0.12);  /* Only the left */
+  border-radius: 0;                         /* Remove any edge rounding */
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  padding-left: 14px;                       /* Optional, or reduce/increase */
+  background: none;                         /* Ensure background hasn't changed */
+}
+
+/* Footer color overrides */
+.reveal .footer {
+  color: #D97757 !important;
+}
+
+.reveal .footer a {
+  color: #D97757 !important;
+  text-decoration: none;
+}
+
+.reveal .footer a:hover,
+.reveal .footer a:focus {
+  color: #C2613F !important; /* slightly darker on hover */
+}
+
+
+
+/* List styles for positive and negative lists */
+
+/* POSITIVE */
+.reveal .positive ul,
+.reveal ul.positive {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.reveal .positive li,
+.reveal ul.positive li {
+  margin-left: 0;
+}
+
+.reveal .positive li::before,
+.reveal ul.positive li::before {
+  content: "✓";
+  color: #D97757;
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+}
+
+/* NEGATIVE */
+.reveal .negative ul,
+.reveal ul.negative {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.reveal .negative li,
+.reveal ul.negative li {
+  margin-left: 0;
+}
+
+.reveal .negative li::before,
+.reveal ul.negative li::before {
+  content: "✗";
+  color: #A93226;
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+}
+
+/* Spaced lists - for both positive and negative */
+.spaced li {
+  margin-bottom: 1.5em !important;
+}
+
+
+.border-box {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #FBFAF4;
+}
+
+.cust_title {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  color: inherit;
+  display: block;
+}
+
+.reveal .slide-number {
+  color: #D97757;
+}
+
+.reveal h1 {
+  color: #141413;
+  font-size: 2em !important;
+  /* padding-left: 20px; */
+}
+.reveal h2 {
+  color: #141413;
+  /* font-size: 1.3em !important; */
+}
+.reveal h3 {
+  color: #141413;
+  /* font-size: 1.1em !important; */
+}
+/* Custom class to mimic Revealjs H2 styling */
+.mimic-h2 {
+  display: block;                  /* Makes it sit on its own line like a header */
+  font-family: var(--heading-font);
+  font-weight: 600;               /* Match Revealjs H2 weight */
+  color: #141413;
+  text-transform: var(--heading-text-transform);
+  letter-spacing: var(--heading-letter-spacing);
+  font-size: 1.6em;                /* This is the standard Revealjs H2 size */
+  line-height: var(--heading-line-height);
+  margin-bottom: var(--heading-margin-bottom);
+}
+
+
+/* 1. Global Link Color (Standard Hyperlinks) */
+.reveal a {
+  color: #A04B2F; /* Replace with your color */
+  text-decoration: none;
+}
+
+/* 2. Citations (e.g., @knuth1984) */
+.reveal a.citation {
+  color: #A04B2F; /* Same color as standard links, or choose a different one */
+}
+
+/* 3. Quarto Cross-References (e.g., @fig-1, @tbl-1) */
+.reveal a.quarto-xref {
+  color: #A04B2F; /* A distinct color for internal refs */
+}
+
+/* 4. Equation References (e.g., (1)) */
+/* Quarto often tags equation links with .no-external */
+.reveal a.no-external {
+  color: #A04B2F;
+}
+
+/* 5. Hover Effects for all the above */
+.reveal a:hover, 
+.reveal a.quarto-xref:hover,
+.reveal a.no-external:hover {
+  color: #E0A488; 
+  text-decoration: underline;
+}
+
+
+/* Table styling for full-slide tables
+*/
+
+.reveal .slides section.tables-full-slide .columns {
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.reveal .slides section.tables-full-slide .column {
+  min-width: 0; /* prevents overflow squeeze issues */
+}
+
+.reveal .slides section.tables-full-slide .gt_table {
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+.reveal .slides section.tables-full-slide .gt_col_heading {
+  white-space: nowrap;
+}
+
+
+/* ===== FSP (vaccine forecasting) slides ===== */
+.reveal .fsp-lead { color: #5F5E5A; font-size: 0.82em; margin-bottom: 0.5em; }
+.reveal .fsp-box { border-radius: 12px; padding: 0.35em 0.7em; margin-bottom: 0.35em; font-size: 0.66em; }
+.reveal .fsp-box p { margin: 0.1em 0; }
+
+/* blue = demographic (kept) · orange = consumption/forecast (was green, now Claude orange) */
+/* amber = session (kept) · gray = muted (kept) */
+.reveal .fsp-dem    { background: #E6F1FB; color: #042C53; }
+.reveal .fsp-orange { background: #F2DFD3; color: #7A3A1E; border-left: 6px solid #D97757; border-radius: 12px; }
+.reveal .fsp-sess   { background: #FAEEDA; color: #412402; }
+.reveal .fsp-muted  { background: #F1EFE8; color: #444441; }
+
+.reveal .fsp-combine { border: 2px solid #185FA5; border-radius: 12px; padding: 0.35em 0.7em; font-size: 0.66em; margin-bottom: 0.35em; }
+.reveal .fsp-info    { border: 2px solid #185FA5; border-radius: 12px; padding: 0.45em 0.8em; font-size: 0.8em; margin-top: 0.4em; }
+
+.reveal .fsp-sub  { color: #5F5E5A; font-size: 0.8em; }
+.reveal .fsp-foot { color: #888780; font-size: 0.62em; margin-top: 0.45em; }
+.reveal .fsp-eq-sm { font-size: 0.82em; }
+
+.reveal .fsp-pill-gray { background: #D3D1C7; color: #2C2C2A; border-radius: 6px; padding: 0.04em 0.45em; font-size: 0.62em; vertical-align: 0.12em; }
+.reveal .fsp-pill-blue { background: #B5D4F4; color: #042C53; border-radius: 6px; padding: 0.04em 0.45em; font-size: 0.62em; vertical-align: 0.12em; }
+
+.reveal .fsp-rq { border: 2px solid #185FA5; border-left: 12px solid #185FA5; background: #E6F1FB; color: #042C53; border-radius: 8px; padding: 0.7em 1.1em; font-size: 0.98em; font-weight: 500; margin-top: 0.5em; box-shadow: 0 8px 28px rgba(24,95,165,0.22); }
+.reveal .fsp-rq .fsp-rq-label { color: #185FA5; font-size: 0.78em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 0.25em; }
+
+.reveal .fsp-step-orange { background: #F2DFD3; color: #7A3A1E; border-radius: 12px; padding: 0.5em 0.85em; height: 100%; font-size: 0.72em; border-top: 6px solid #D97757; }
+.reveal .fsp-step-blue   { background: #E6F1FB; color: #042C53; border-radius: 12px; padding: 0.5em 0.85em; height: 100%; font-size: 0.72em; border-top: 6px solid #185FA5; }
+.reveal .fsp-step-orange .fsp-eq, .reveal .fsp-step-blue .fsp-eq { font-size: 1.05em; }
+
+.reveal .fsp-notation { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; padding: 0.5em 0.7em; font-size: 0.6em; color: #444441; line-height: 1.6; }
+.reveal .fsp-notation .fsp-note-title { display: block; color: #141413; font-weight: 600; font-size: 1.15em; margin-bottom: 0.35em; }
+.reveal .fsp-notation p { margin: 0; }
+.reveal .fsp-fill { height: 100%; box-sizing: border-box; }
+
+/* --- FSP: fill the slide, equal-size boxes, bulleted --- */
+.reveal .fsp-main { display: flex; gap: 20px; align-items: stretch; height: 740px; margin-top: 0.3em; }
+.reveal .fsp-main > .fsp-notation { flex: 1; align-self: stretch; }
+.reveal .fsp-stack { display: flex; flex-direction: column; gap: 14px; height: 740px; }
+.reveal .fsp-main > .fsp-stack { flex: 3; min-height: 0; }
+.reveal .fsp-stack > .fsp-box,
+.reveal .fsp-stack > .fsp-combine { flex: 1 1 0; margin: 0 !important; display: flex; flex-direction: column; justify-content: center; }
+
+.reveal .fsp-row3 { display: flex; gap: 18px; align-items: stretch; height: 430px; margin: 0.3em 0 18px 0; }
+.reveal .fsp-row3 > .fsp-box { flex: 1 1 0; margin: 0 !important; display: flex; flex-direction: column; justify-content: center; }
+.reveal .fsp-missed { min-height: 330px; display: flex; flex-direction: column; justify-content: center; }
+
+.reveal .fsp-two { display: flex; gap: 22px; align-items: stretch; height: 300px; margin: 0.3em 0; }
+.reveal .fsp-two > .fsp-step-orange,
+.reveal .fsp-two > .fsp-step-blue { flex: 1 1 0; margin: 0 !important; display: flex; flex-direction: column; justify-content: center; }
+
+.reveal .fsp-box ul, .reveal .fsp-combine ul,
+.reveal .fsp-step-orange ul, .reveal .fsp-step-blue ul { margin: 0.35em 0 0 0; padding-left: 1.05em; list-style: disc; }
+.reveal .fsp-box li, .reveal .fsp-combine li,
+.reveal .fsp-step-orange li, .reveal .fsp-step-blue li { margin: 0.16em 0; line-height: 1.3; }
+.reveal .fsp-box > p:first-child, .reveal .fsp-combine > p:first-child,
+.reveal .fsp-step-orange > p:first-child, .reveal .fsp-step-blue > p:first-child { font-size: 1.08em; margin: 0 0 0.1em 0; }
+
+/* equation-heavy methodology slides */
+.reveal section.eqn-slide { font-size: 1.05em; }
+.reveal section.eqn-slide .fsp-lead { font-size: 0.9em; margin: 0.35em 0; }
+.reveal section.eqn-slide mjx-container[display="true"] { margin: 0.55em 0 !important; }
+
+/* --- forecasting framework flow diagram --- */
+/* Larger base font for lecture-room legibility; vertical padding/gaps are
+   tightened to compensate so the pipeline still fills one slide. */
+.reveal .fw-wrap { font-size: 0.74em; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.reveal .fw-row { display: flex; gap: 16px; justify-content: center; align-items: stretch; width: 100%; }
+.reveal .fw-box { border-radius: 12px; padding: 8px 16px; flex: 1; text-align: center; }
+.reveal .fw-box .fw-t { display: block; font-weight: 600; margin-bottom: 3px; }
+.reveal .fw-box .fw-s { display: block; font-size: 0.9em; opacity: 0.9; line-height: 1.28; }
+.reveal .fw-arrow { text-align: center; color: #D97757; font-size: 1.15em; line-height: 0.7; margin: 0; }
+.reveal .fw-data { background: #F1EFE8; color: #2C2C2A; }
+.reveal .fw-fsp  { background: #F2DFD3; color: #7A3A1E; }
+.reveal .fw-stat { background: #E6F1FB; color: #042C53; }
+.reveal .fw-ml   { background: #EEEDFE; color: #26215C; }
+.reveal .fw-dl   { background: #E1F5EE; color: #04342C; }
+.reveal .fw-bar  { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.12); border-radius: 10px; padding: 6px 16px; text-align: center; font-style: italic; color: #5F5E5A; width: 70%; }
+.reveal .fw-final { background: #D97757; color: #FFFFFF; border-radius: 12px; padding: 10px 22px; text-align: center; font-weight: 500; width: 82%; }
+
+/* --- data setup stat cards --- */
+.reveal .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 0.7em; }
+.reveal .stat-card { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px 20px; text-align: center; }
+.reveal .stat-card .si { display: block; color: #D97757; font-size: 2em; margin-bottom: 10px; }
+.reveal .stat-card .st { display: block; font-size: 1.35em; font-weight: 600; color: #141413; line-height: 1.15; }
+.reveal .stat-card .ss { display: block; font-size: 0.82em; color: #5F5E5A; margin-top: 8px; line-height: 1.3; }
+
+/* --- vaccines slide: column-filling, equal, centered images --- */
+.reveal section.vaccines .columns { display: flex; align-items: stretch; justify-content: center; gap: 24px; margin-top: 0.4em; }
+.reveal section.vaccines .column { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+.reveal section.vaccines .column img { width: 100%; height: 720px; object-fit: contain; margin: 0 0 0.25em 0; display: block; background: transparent; }
+
+/* --- highlighted metric note (evaluation slide) --- */
+.reveal .metric-hl { display: block; background: #F2DFD3; color: #7A3A1E; border-left: 6px solid #D97757; border-radius: 6px; padding: 0.35em 0.7em; margin-top: 0.5em; font-size: 0.9em; text-align: center; }
+
+/* --- website QR in last-slide corner --- */
+.reveal .qr-corner { position: absolute; right: 40px; bottom: 70px; text-align: center; margin: 0; }
+.reveal .qr-corner img { background: #fff; padding: 6px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); margin: 0; }
+.reveal .qr-corner .qr-cap { display: block; margin-top: 6px; font-size: 0.5em; color: #5F5E5A; }
+
+/* --- section-divider agenda (recap before each section) --- */
+.reveal .agenda { list-style: none; margin-left: 0; padding-left: 0; }
+.reveal .agenda ul { list-style: none; margin-left: 0; padding-left: 0; }
+.reveal .agenda li { font-size: 1.4em; margin: 0.6em 0; line-height: 1.3; }
+.reveal .ol-on  { font-weight: 700; color: #A04B2F; }
+.reveal .ol-on::before  { content: "\25B8  "; color: #D97757; }
+.reveal .ol-off { color: #C2BDB2; }
+.reveal .ol-off::before { content: "\25B8  "; color: transparent; }
+
+/* --- methodology pipeline flow --- */
+.reveal .flow-label { display: block; width: 100%; font-weight: 600; color: #A04B2F; text-align: left; margin: 2px 0 1px; }
+.reveal .flow-steps { display: flex; align-items: stretch; justify-content: center; gap: 8px; width: 100%; }
+.reveal .flow-steps > .fw-box { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.reveal .flow-hstep-arrow { display: flex; align-items: center; color: #D97757; font-size: 1.5em; }
+
+/* --- literature positioning table --- */
+.reveal table.littable { border-collapse: collapse; width: 94%; margin: 0.4em auto 0; font-size: 0.62em; }
+.reveal table.littable th, .reveal table.littable td { padding: 0.55em 0.6em; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.10); vertical-align: middle; }
+.reveal table.littable thead th { background: #D97757; color: #fff; font-weight: 700; border-bottom: none; line-height: 1.2; }
+.reveal table.littable td.strand { text-align: left; font-weight: 600; color: #141413; }
+.reveal table.littable td.strand .ref { display: block; font-weight: 400; font-size: 0.82em; color: #5F5E5A; }
+.reveal table.littable tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.littable tr.ours { background: #E6F1FB !important; }
+.reveal table.littable tr.ours td { border-top: 2px solid #185FA5; border-bottom: 2px solid #185FA5; }
+.reveal table.littable tr.ours td.strand { color: #042C53; }
+.reveal .lt-yes  { color: #1E8449; font-weight: 700; font-size: 1.15em; }
+.reveal .lt-no   { color: #C0392B; }
+.reveal .lt-part { color: #B9770E; font-weight: 700; }
+.reveal .lt-na   { color: #AEACA4; }
+
+/* --- full literature survey table (reproduces the paper's table) --- */
+.reveal table.littable-full { border-collapse: collapse; width: 100%; margin: 0.2em auto 0; font-size: 0.56em; table-layout: fixed; }
+.reveal table.littable-full th, .reveal table.littable-full td { padding: 0.45em 0.45em; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(0,0,0,0.10); word-wrap: break-word; overflow-wrap: anywhere; line-height: 1.25; }
+.reveal table.littable-full th.flag, .reveal table.littable-full td.flag { text-align: center; }
+.reveal table.littable-full thead th { background: #D97757; color: #fff; font-weight: 700; border-bottom: none; }
+.reveal table.littable-full tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.littable-full td.ref { font-weight: 600; color: #141413; }
+.reveal table.littable-full tr.ours { background: #E6F1FB !important; }
+.reveal table.littable-full tr.ours td { font-weight: 600; color: #042C53; border-top: 2px solid #185FA5; border-bottom: 2px solid #185FA5; }
+.reveal table.littable-full .yes { color: #1E8449; font-weight: 700; }
+.reveal table.littable-full .no  { color: #B0AEA6; }
+
+/* ===================================================================== */
+/* ===== Maputo workshop deck: practitioner-facing additions      ====== */
+/* ===================================================================== */
+
+/* --- five method cards in a row --- */
+.reveal .mcard-row { display: flex; gap: 16px; align-items: stretch; height: 700px; margin-top: 0.5em; }
+.reveal .mcard { flex: 1 1 0; border-radius: 14px; padding: 22px 18px; display: flex;
+                 flex-direction: column; font-size: 0.62em; }
+.reveal .mcard .mc-icon { display: block; font-size: 2.4em; margin-bottom: 12px; }
+.reveal .mcard .mc-name { display: block; font-size: 1.5em; font-weight: 700; line-height: 1.15;
+                          margin-bottom: 14px; }
+.reveal .mcard .mc-how  { display: block; font-size: 1.12em; line-height: 1.4; }
+.reveal .mcard .mc-tag  { display: block; margin-top: auto; padding-top: 16px; font-size: 0.98em;
+                          font-style: italic; opacity: 0.85; line-height: 1.35; }
+
+.reveal .mc-grey   { background: #F1EFE8; color: #3A3936; }
+.reveal .mc-grey   .mc-icon, .reveal .mc-grey .mc-name { color: #5F5E5A; }
+.reveal .mc-blue   { background: #E6F1FB; color: #0B3A67; }
+.reveal .mc-blue   .mc-icon, .reveal .mc-blue .mc-name { color: #185FA5; }
+.reveal .mc-amber  { background: #FAEEDA; color: #5A3403; }
+.reveal .mc-amber  .mc-icon, .reveal .mc-amber .mc-name { color: #B9770E; }
+.reveal .mc-terra  { background: #F2DFD3; color: #7A3A1E; }
+.reveal .mc-terra  .mc-icon, .reveal .mc-terra .mc-name { color: #A04B2F; }
+.reveal .mc-purple { background: #EEEDFE; color: #2F2A6B; }
+.reveal .mc-purple .mc-icon, .reveal .mc-purple .mc-name { color: #6B5FBF; }
+.reveal .mc-green  { background: #E1F5EE; color: #0A4237; }
+.reveal .mc-green  .mc-icon, .reveal .mc-green .mc-name { color: #1E8449; }
+
+/* --- the big statement slide --- */
+.reveal .big-idea { display: flex; flex-direction: column; justify-content: center;
+                    align-items: center; height: 720px; text-align: center; }
+.reveal .big-idea .bi-strike { font-size: 1.5em; color: #B0AEA6; text-decoration: line-through;
+                               font-weight: 600; margin-bottom: 0.5em; }
+.reveal .big-idea .bi-main { font-size: 2.5em; font-weight: 700; color: #A04B2F; line-height: 1.2;
+                             max-width: 88%; }
+.reveal .big-idea .bi-sub { font-size: 1.15em; color: #5F5E5A; margin-top: 0.9em; max-width: 72%;
+                            line-height: 1.45; }
+
+/* --- the two rules --- */
+.reveal .rule-row { display: flex; gap: 26px; align-items: stretch; margin-top: 0.5em; }
+.reveal .rule-box { flex: 1 1 0; border-radius: 14px; padding: 26px 28px; font-size: 0.72em; }
+.reveal .rule-box .rb-num { display: inline-block; width: 1.9em; height: 1.9em; line-height: 1.9em;
+                            border-radius: 50%; text-align: center; font-weight: 700;
+                            font-size: 1.1em; margin-bottom: 12px; }
+.reveal .rule-box .rb-title { display: block; font-size: 1.45em; font-weight: 700; margin-bottom: 10px; }
+.reveal .rule-box .rb-body { display: block; font-size: 1.05em; line-height: 1.45; }
+.reveal .rb-floor   { background: #E6F1FB; color: #0B3A67; border-top: 8px solid #185FA5; }
+.reveal .rb-floor   .rb-num { background: #185FA5; color: #fff; }
+.reveal .rb-ceiling { background: #F2DFD3; color: #7A3A1E; border-top: 8px solid #D97757; }
+.reveal .rb-ceiling .rb-num { background: #D97757; color: #fff; }
+
+/* --- numbered takeaways --- */
+.reveal .takeaways { list-style: none; margin: 0.4em 0 0 0; padding: 0; }
+.reveal .takeaways li { display: flex; align-items: flex-start; gap: 20px; margin: 0.55em 0;
+                        font-size: 0.82em; line-height: 1.35; }
+.reveal .takeaways li::before {
+  content: counter(tk); counter-increment: tk;
+  flex: 0 0 auto; width: 1.7em; height: 1.7em; line-height: 1.7em; text-align: center;
+  border-radius: 50%; background: #D97757; color: #fff; font-weight: 700; font-size: 0.92em;
+}
+.reveal .takeaways { counter-reset: tk; }
+.reveal .takeaways b { color: #A04B2F; }
+
+/* --- method comparison table --- */
+.reveal table.mtable { border-collapse: collapse; width: 100%; margin: 0.15em auto 0;
+                       font-size: 0.5em; table-layout: fixed; }
+.reveal table.mtable th, .reveal table.mtable td {
+  padding: 0.5em 0.55em; text-align: left; vertical-align: top;
+  border-bottom: 1px solid rgba(0,0,0,0.10); word-wrap: break-word;
+  overflow-wrap: anywhere; line-height: 1.3; }
+.reveal table.mtable thead th { background: #D97757; color: #fff; font-weight: 700; border-bottom: none; }
+.reveal table.mtable tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.mtable td.mname { font-weight: 700; color: #141413; }
+.reveal table.mtable td.mid { text-align: center; }
+.reveal table.mtable .grp-a td.mname { color: #5F5E5A; }
+.reveal table.mtable .grp-b td.mname { color: #A04B2F; }
+.reveal table.mtable .grp-c td.mname { color: #6B5FBF; }
+.reveal table.mtable .m-yes  { color: #1E8449; font-weight: 700; font-size: 1.2em; }
+.reveal table.mtable .m-no   { color: #C0392B; font-size: 1.2em; }
+.reveal table.mtable .m-part { color: #B9770E; font-weight: 700; }
+
+/* --- context-you-already-have cards --- */
+.reveal .ctx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 0.6em; }
+.reveal .ctx-card { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.08); border-left: 7px solid #D97757;
+                    border-radius: 12px; padding: 20px 22px; }
+.reveal .ctx-card .cx-t { display: block; font-size: 1.02em; font-weight: 700; color: #141413;
+                          line-height: 1.2; }
+.reveal .ctx-card .cx-s { display: block; font-size: 0.72em; color: #5F5E5A; margin-top: 7px;
+                          line-height: 1.35; }
+
+/* --- three-part definition row --- */
+.reveal .def-row { display: flex; gap: 20px; align-items: stretch; margin-top: 0.6em; }
+.reveal .def-box { flex: 1 1 0; border-radius: 14px; padding: 24px 24px; font-size: 0.66em; }
+.reveal .def-box .df-t { display: block; font-size: 1.5em; font-weight: 700; margin-bottom: 10px; }
+.reveal .def-box .df-b { display: block; line-height: 1.45; font-size: 1.08em; }
+.reveal .def-box .df-d { display: block; margin-top: 14px; font-size: 0.95em; font-style: italic; opacity: 0.85; }
+
+/* --- highlighted single-line message --- */
+.reveal .msg-bar { display: block; background: #D97757; color: #fff; border-radius: 12px;
+                   padding: 18px 30px; text-align: center; font-size: 0.85em; font-weight: 500;
+                   margin-top: 0.7em; line-height: 1.35; }
+.reveal .msg-soft { display: block; background: #FBF3EE; border: 2px solid #D97757; color: #7A3A1E;
+                    border-radius: 12px; padding: 16px 28px; text-align: center; font-size: 0.8em;
+                    margin-top: 0.6em; line-height: 1.4; }
+
+
+/* ===================================================================== */
+/* ===== Workshop deck: fill the 1080px slide, larger projected type === */
+/* ===================================================================== */
+
+/* takeaways: `display:flex` on the li turned <b> and the trailing text into
+   two separate flex columns, so the counter is absolutely positioned instead */
+.reveal .takeaways li {
+  display: block;
+  position: relative;
+  padding-left: 3.1em;
+  gap: 0;
+  font-size: 0.98em;
+  line-height: 1.4;
+  margin: 0.72em 0;
+}
+.reveal .takeaways li::before {
+  position: absolute;
+  left: 0;
+  top: 0.04em;
+  width: 1.75em;
+  height: 1.75em;
+  line-height: 1.75em;
+  font-size: 0.95em;
+}
+
+/* five method cards: fill the usable slide height */
+.reveal .mcard-row { height: 815px; }
+.reveal .mcard { font-size: 0.72em; padding: 30px 24px; }
+
+/* three-part definition row */
+.reveal .def-row { min-height: 470px; }
+.reveal .def-box { font-size: 0.86em; padding: 34px 32px; display: flex;
+                   flex-direction: column; justify-content: center; }
+
+/* context cards */
+.reveal .ctx-grid { gap: 28px; }
+.reveal .ctx-card { padding: 34px 32px; min-height: 210px; display: flex;
+                    flex-direction: column; justify-content: center; }
+.reveal .ctx-card .cx-t { font-size: 1.26em; }
+.reveal .ctx-card .cx-s { font-size: 0.9em; margin-top: 11px; }
+
+/* the two rules */
+.reveal .rule-row { min-height: 430px; }
+.reveal .rule-box { font-size: 0.92em; padding: 38px 40px; display: flex;
+                    flex-direction: column; justify-content: center; }
+
+/* highlighted message bars */
+.reveal .msg-bar  { font-size: 0.95em; padding: 24px 36px; }
+.reveal .msg-soft { font-size: 0.9em; padding: 22px 34px; }
+
+/* two-column comparison boxes carry more text here than in the ISF deck */
+.reveal .fsp-two { height: auto; min-height: 500px; }
+.reveal .fsp-step-orange, .reveal .fsp-step-blue { font-size: 0.9em; padding: 30px 34px; }
+
+/* pipeline flow diagram */
+.reveal .fw-wrap { font-size: 0.9em; gap: 7px; }
+.reveal .fw-box { padding: 14px 20px; }
+.reveal .fw-bar { padding: 12px 22px; }
+.reveal .fw-final { padding: 16px 26px; }
+
+/* stat cards */
+.reveal .stat-card { padding: 40px 26px; }
+
+/* plain bullet slides: readable from the back of a workshop room */
+.reveal .big-bullets { font-size: 1.42em; line-height: 1.55; }
+.reveal .big-bullets li { margin-bottom: 0.62em; }
+
+
+/* Quarto wraps each bracketed span in its own <p>, so the flex items are the
+   paragraphs, not the spans. These rules target the paragraphs instead. */
+
+/* big statement slide */
+.reveal .big-idea > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45em;
+  margin: 0;
+  width: 100%;
+}
+.reveal .big-idea .bi-strike,
+.reveal .big-idea .bi-main,
+.reveal .big-idea .bi-sub { display: block; text-align: center; }
+.reveal .big-idea .bi-strike { margin-bottom: 0.2em; }
+
+/* method cards: push the family tag to the bottom of the card */
+.reveal .mcard > p { margin: 0; }
+.reveal .mcard > p:not(:last-child) { margin-bottom: 0.55em; }
+.reveal .mcard > p:last-child { padding-top: 14px; }
+.reveal .mcard { justify-content: center; }
+
+
+/* ===================================================================== */
+/* ===== Method-family tables (the manuscript's candidate-methods)  ==== */
+/* ===================================================================== */
+
+/* only two or three rows per slide, so the type can be much larger */
+.reveal table.mtable-big { font-size: 0.66em; }
+.reveal table.mtable-big th, .reveal table.mtable-big td { padding: 0.85em 0.8em; }
+.reveal table.mtable-big thead th { font-size: 1.02em; }
+.reveal table.mtable-big td.mid { font-weight: 600; }
+
+.reveal table.mtable .msub { display: block; font-weight: 400; font-size: 0.86em;
+                             color: #5F5E5A; margin-top: 5px; line-height: 1.3; }
+.reveal table.mtable .grp-d td.mname { color: #1E8449; }
+.reveal table.mtable .grp-e td.mname { color: #0F7B8A; }
+.reveal table.mtable .grp-a td.mname { color: #5F5E5A; }
+
+/* the family tables carry their own row tinting */
+.reveal table.mtable-big tbody tr { background: transparent; }
+.reveal table.mtable-big tbody tr:nth-child(even) { background: #FBFAF4; }
+
+/* icon rather than a digit in a rule-box badge */
+.reveal .rule-box .rb-num { font-size: 0.95em; }
+
+
+/* ===================================================================== */
+/* ===== Family cards: one method family per slide, with model rows ==== */
+/* ===================================================================== */
+
+.reveal .fam { display: flex; flex-direction: column; gap: 18px; margin-top: 0.3em; }
+
+.reveal .fam-hero { display: grid; grid-template-columns: 86px 392px 1fr; gap: 24px;
+                    align-items: center; border-radius: 14px; padding: 22px 28px; }
+.reveal .fam-ico  { font-size: 2.7em; text-align: center; line-height: 1; }
+.reveal .fam-name { display: block; font-size: 1.55em; font-weight: 700; line-height: 1.08; }
+.reveal .fam-chips { display: block; margin-top: 10px; }
+.reveal .fam-chips em { display: inline-block; font-style: normal; font-size: 0.6em;
+                        background: rgba(255,255,255,0.78); border-radius: 6px;
+                        padding: 3px 10px; margin: 4px 6px 0 0; font-weight: 600; }
+.reveal .fam-assume { font-size: 0.74em; line-height: 1.45; }
+.reveal .fam-assume .fa-lab { display: block; font-size: 0.78em; font-weight: 700;
+                              text-transform: uppercase; letter-spacing: 0.08em;
+                              opacity: 0.72; margin-bottom: 6px; }
+
+.reveal .fh-stat { background: #F2DFD3; color: #7A3A1E; }
+.reveal .fh-stat .fam-ico, .reveal .fh-stat .fam-name { color: #A04B2F; }
+.reveal .fh-ml   { background: #EEEDFE; color: #2F2A6B; }
+.reveal .fh-ml   .fam-ico, .reveal .fh-ml .fam-name { color: #6B5FBF; }
+.reveal .fh-dl   { background: #E1F5EE; color: #0A4237; }
+.reveal .fh-dl   .fam-ico, .reveal .fh-dl .fam-name { color: #1E8449; }
+.reveal .fh-fm   { background: #DCF0F3; color: #08414A; }
+.reveal .fh-fm   .fam-ico, .reveal .fh-fm .fam-name { color: #0F7B8A; }
+.reveal .fh-ens  { background: #F1EFE8; color: #3A3936; }
+.reveal .fh-ens  .fam-ico, .reveal .fh-ens .fam-name { color: #5F5E5A; }
+
+.reveal .fam-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.reveal .fam-cell { border-radius: 12px; padding: 20px 22px; font-size: 0.64em;
+                    line-height: 1.45; background: #FBFAF4;
+                    border-top: 6px solid #D8D5CB; }
+.reveal .fam-cell .fc-lab { display: block; font-weight: 700; font-size: 1.05em;
+                            margin-bottom: 9px; }
+.reveal .fc-good { border-top-color: #1E8449; }
+.reveal .fc-good .fc-lab { color: #1E8449; }
+.reveal .fc-bad  { border-top-color: #C0392B; }
+.reveal .fc-bad  .fc-lab { color: #C0392B; }
+.reveal .fc-when { border-top-color: #185FA5; }
+.reveal .fc-when .fc-lab { color: #185FA5; }
+
+.reveal table.fam-models { width: 100%; border-collapse: collapse; font-size: 0.6em; }
+.reveal table.fam-models td { padding: 0.62em 0.85em; vertical-align: middle;
+                              line-height: 1.38; border-bottom: 1px solid rgba(0,0,0,0.07); }
+.reveal table.fam-models tr:last-child td { border-bottom: none; }
+.reveal table.fam-models tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.fam-models .fm-name { font-weight: 700; width: 17%; color: #141413; }
+.reveal table.fam-models .fm-time { text-align: right; width: 13%; color: #5F5E5A;
+                                    white-space: nowrap; font-weight: 600; }
+
+/* compact variant: three families on one slide */
+.reveal .fam-compact .fam-hero { grid-template-columns: 74px 312px 1fr 1fr;
+                                 padding: 18px 24px; gap: 20px; }
+.reveal .fam-compact .fam-ico { font-size: 2.1em; }
+.reveal .fam-compact .fam-name { font-size: 1.25em; }
+.reveal .fam-compact .fam-assume { font-size: 0.66em; }
+
+/* ===================================================================== */
+/* ===== "The context you already hold" diagram                    ==== */
+/* ===================================================================== */
+
+.reveal .smart { display: grid; grid-template-columns: 1.15fr 92px 1fr;
+                 gap: 18px 0; align-items: stretch; margin-top: 0.45em; }
+.reveal .smart-head { font-size: 0.62em; font-weight: 700; text-transform: uppercase;
+                      letter-spacing: 0.09em; color: #A04B2F; padding-bottom: 4px; }
+.reveal .smart-head.sh-right { grid-column: 3; }
+.reveal .smart-head.sh-left  { grid-column: 1; }
+
+.reveal .smart-src { background: #FBFAF4; border: 1px solid rgba(0,0,0,0.08);
+                     border-left: 8px solid #185FA5; border-radius: 12px;
+                     padding: 18px 24px; display: flex; flex-direction: column;
+                     justify-content: center; }
+.reveal .smart-src .ss-where { display: block; font-size: 0.64em; font-weight: 700;
+                               color: #185FA5; text-transform: uppercase;
+                               letter-spacing: 0.05em; margin-bottom: 9px; }
+.reveal .smart-src .ss-item { display: block; font-size: 0.74em; line-height: 1.55;
+                              color: #141413; }
+.reveal .smart-src .ss-item b { font-weight: 600; }
+
+.reveal .smart-arrow { display: flex; align-items: center; justify-content: center;
+                       color: #D97757; font-size: 1.5em; }
+
+.reveal .smart-out { background: #F2DFD3; border-radius: 12px; padding: 18px 24px;
+                     color: #7A3A1E; display: flex; flex-direction: column;
+                     justify-content: center; }
+.reveal .smart-out .so-t { display: block; font-size: 0.88em; font-weight: 700;
+                           line-height: 1.15; }
+.reveal .smart-out .so-s { display: block; font-size: 0.66em; margin-top: 8px;
+                           line-height: 1.45; }
+.reveal .smart-out.so-blue { background: #E6F1FB; color: #0B3A67; }
+
+
+/* ===================================================================== */
+/* ===== Uniform model comparison table (one row per model)        ==== */
+/* ===================================================================== */
+
+.reveal table.modtable { border-collapse: collapse; width: 100%; margin: 0.1em auto 0;
+                         font-size: 0.46em; table-layout: fixed; }
+.reveal table.modtable th, .reveal table.modtable td {
+  padding: 0.58em 0.7em; text-align: left; vertical-align: top;
+  border-bottom: 1px solid rgba(0,0,0,0.09); line-height: 1.38;
+  word-wrap: break-word; overflow-wrap: anywhere; }
+.reveal table.modtable thead th { background: #D97757; color: #fff; font-weight: 700;
+                                  border-bottom: none; font-size: 1.06em;
+                                  vertical-align: middle; }
+.reveal table.modtable tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.modtable tr:last-child td { border-bottom: none; }
+
+.reveal table.modtable td.mt-model { vertical-align: middle; }
+.reveal table.modtable td.mt-model img { display: block; width: 100%; max-width: 170px;
+                                         margin: 0 0 7px 0; background: transparent;
+                                         border-radius: 4px; }
+.reveal table.modtable .mt-name { display: block; font-weight: 700; font-size: 1.22em;
+                                  line-height: 1.15; color: #141413; }
+.reveal table.modtable .mt-fam  { display: block; font-size: 0.94em; color: #5F5E5A;
+                                  margin-top: 2px; }
+
+.reveal table.modtable td.mt-ex { text-align: center; vertical-align: middle; }
+.reveal table.modtable .ex-dots { display: block; font-size: 1.5em; letter-spacing: 0.1em;
+                                  line-height: 1; }
+.reveal table.modtable .ex-word { display: block; font-size: 0.94em; margin-top: 5px;
+                                  font-weight: 600; }
+.reveal table.modtable .ex-hi .ex-dots, .reveal table.modtable .ex-hi .ex-word { color: #1E8449; }
+.reveal table.modtable .ex-md .ex-dots, .reveal table.modtable .ex-md .ex-word { color: #B9770E; }
+.reveal table.modtable .ex-lo .ex-dots, .reveal table.modtable .ex-lo .ex-word { color: #C0392B; }
+.reveal table.modtable .dim { color: #C7C4BA; }
+
+
+/* ===================================================================== */
+/* ===== FSP4All: three components, and which of them can run      ==== */
+/* ===================================================================== */
+
+.reveal .fsp3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+                margin-top: 0.35em; }
+.reveal .fsp3-card { border-radius: 14px; padding: 22px 24px; display: flex;
+                     flex-direction: column; min-height: 380px; }
+.reveal .fsp3-card .f3-ico  { font-size: 2.1em; line-height: 1; margin-bottom: 12px; }
+.reveal .fsp3-card .f3-name { display: block; font-size: 1.28em; font-weight: 700;
+                              line-height: 1.1; }
+.reveal .fsp3-card .f3-how  { display: block; font-size: 0.68em; margin-top: 10px;
+                              line-height: 1.4; font-style: italic; }
+.reveal .fsp3-card .f3-needs{ display: block; font-size: 0.66em; margin-top: 14px;
+                              line-height: 1.45; }
+.reveal .fsp3-card .f3-needs b { font-weight: 700; }
+.reveal .fsp3-card .f3-status { display: block; margin-top: auto; padding-top: 16px;
+                                font-size: 0.72em; font-weight: 700; }
+.reveal .fsp3-card .f3-status .pill { display: inline-block; border-radius: 20px;
+                                      padding: 5px 15px; font-size: 0.94em; }
+
+/* the one component that actually has data behind it */
+.reveal .f3-on   { background: #E6F1FB; color: #0B3A67; border: 2px solid #185FA5; }
+.reveal .f3-on   .f3-ico, .reveal .f3-on .f3-name { color: #185FA5; }
+.reveal .f3-on   .pill { background: #1E8449; color: #fff; }
+
+/* the two that usually cannot run: deliberately drained of colour */
+.reveal .f3-off  { background: #F1EFE8; color: #6E6B62; border: 2px dashed #C7C4BA; }
+.reveal .f3-off  .f3-ico, .reveal .f3-off .f3-name { color: #8F8B82; }
+.reveal .f3-off  .pill { background: #C0392B; color: #fff; }
+.reveal .f3-off  .f3-how, .reveal .f3-off .f3-needs { opacity: 0.9; }
+
+.reveal .fsp3-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+                     margin: 6px 0 2px; }
+.reveal .fsp3-flow span { text-align: center; font-size: 1.15em; line-height: 1; }
+.reveal .fsp3-flow .on  { color: #185FA5; }
+.reveal .fsp3-flow .off { color: #D3D1C7; }
+
+.reveal .fsp3-combine { background: #F2DFD3; color: #7A3A1E; border-radius: 12px;
+                        padding: 16px 26px; text-align: center; font-size: 0.8em;
+                        font-weight: 600; }
+.reveal .fsp3-combine .sub { display: block; font-weight: 400; font-size: 0.86em;
+                             margin-top: 6px; opacity: 0.9; }
+
+/* Pandoc wraps the three flow markers in one <p>; let its children be the grid
+   items so each marker sits under its own card. */
+.reveal .fsp3-flow > p { display: contents; }
+
+/* keep the whole diagram inside one slide */
+.reveal .fsp3-card { min-height: 300px; padding: 20px 22px; }
+.reveal .fsp3-card .f3-ico  { font-size: 1.9em; margin-bottom: 10px; }
+.reveal .fsp3-card .f3-name { font-size: 1.2em; }
+.reveal .fsp3-card .f3-how  { font-size: 0.63em; margin-top: 9px; }
+.reveal .fsp3-card .f3-needs{ font-size: 0.61em; margin-top: 12px; }
+.reveal .fsp3-card .f3-status { padding-top: 14px; font-size: 0.68em; }
+.reveal .fsp3-combine { padding: 14px 24px; font-size: 0.76em; }
+
+/* --- FSP components: data dependency, not a verdict on anyone's records --- */
+/* All three keep their colour and equal standing. The pill says what the
+   component depends on; only the study-specific note says what we could run. */
+.reveal .f3-dem  { background: #E6F1FB; color: #0B3A67; border: 2px solid #185FA5; }
+.reveal .f3-dem  .f3-ico, .reveal .f3-dem .f3-name { color: #185FA5; }
+.reveal .f3-dem  .pill { background: #1E8449; color: #fff; }
+.reveal .f3-cons { background: #F2DFD3; color: #7A3A1E; border: 2px solid #D97757; }
+.reveal .f3-cons .f3-ico, .reveal .f3-cons .f3-name { color: #A04B2F; }
+.reveal .f3-cons .pill { background: #B9770E; color: #fff; }
+.reveal .f3-sess { background: #FAEEDA; color: #5A3403; border: 2px solid #E0A93C; }
+.reveal .f3-sess .f3-ico, .reveal .f3-sess .f3-name { color: #B9770E; }
+.reveal .f3-sess .pill { background: #B9770E; color: #fff; }
+
+.reveal .fsp3-card .f3-tag { display: inline-block; margin-top: 10px; font-size: 0.58em;
+                             font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+                             color: #185FA5; border: 1.5px solid #185FA5; border-radius: 6px;
+                             padding: 3px 10px; }
+.reveal .fsp3-flow .dem  { color: #185FA5; }
+.reveal .fsp3-flow .cons { color: #D97757; }
+.reveal .fsp3-flow .sess { color: #E0A93C; }
+
+.reveal .fsp3-ask { display: block; background: #FBFAF4; border: 2px dashed #C7C4BA;
+                    border-radius: 12px; padding: 16px 26px; text-align: center;
+                    font-size: 0.72em; color: #4A483F; margin-top: 12px; line-height: 1.45; }
+.reveal .fsp3-ask b { color: #A04B2F; }
+
+/* --- FSP components, final wording ---------------------------------- */
+/* The two components we could not compute are dimmed, but the pill is neutral
+   grey and says only that the data was not in THIS dataset. No red, no verdict
+   on anyone's record keeping. */
+.reveal .f3-off .pill { background: #8F8B82; color: #fff; font-weight: 600; }
+.reveal .fsp3-flow .muted { color: #D3D1C7; }
+
+/* ===================================================================== */
+/* ===== Manuscript result tables (sCRPS, RMSSE/MASE)              ==== */
+/* ===================================================================== */
+.reveal table.restable { border-collapse: collapse; width: 94%; margin: 0.2em auto 0;
+                         font-size: 0.58em; }
+.reveal table.restable th, .reveal table.restable td {
+  padding: 0.52em 0.7em; text-align: right; border-bottom: 1px solid rgba(0,0,0,0.09); }
+.reveal table.restable thead th { background: #D97757; color: #fff; font-weight: 700;
+                                  border-bottom: none; text-align: center; }
+.reveal table.restable thead th[rowspan] { text-align: left; vertical-align: middle; }
+.reveal table.restable td.mn { text-align: left; font-weight: 700; color: #141413; }
+.reveal table.restable td.tr { font-weight: 700; color: #0B3A67; }
+.reveal table.restable td.gain { color: #1E8449; font-weight: 700; }
+.reveal table.restable td.loss { color: #B0AEA6; }
+.reveal table.restable tbody tr:nth-child(even) { background: #FBFAF4; }
+.reveal table.restable tbody tr:last-child td { border-bottom: none; }
+
+/* ===================================================================== */
+/* ===== Bridge slide: where Session 2 sits in the scoping stages   ==== */
+/* ===================================================================== */
+.reveal .stagegrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+                     margin-top: 0.5em; }
+.reveal .stage { border-radius: 12px; padding: 24px 24px; min-height: 288px;
+                 display: flex; flex-direction: column; }
+.reveal .stage .sg-n { display: block; font-size: 0.62em; font-weight: 700;
+                       letter-spacing: 0.08em; text-transform: uppercase; }
+.reveal .stage .sg-t { display: block; font-size: 0.92em; font-weight: 700;
+                       line-height: 1.15; margin-top: 6px; }
+.reveal .stage .sg-s { display: block; font-size: 0.62em; line-height: 1.4;
+                       margin-top: 10px; }
+.reveal .sg-on  { background: #F2DFD3; color: #7A3A1E; border: 2px solid #D97757; }
+.reveal .sg-on  .sg-n { color: #A04B2F; }
+.reveal .sg-part{ background: #E6F1FB; color: #0B3A67; border: 2px solid #9CC4E8; }
+.reveal .sg-part .sg-n { color: #185FA5; }
+.reveal .sg-off { background: #F1EFE8; color: #85827A; border: 2px dashed #C7C4BA; }
+.reveal .sg-off .sg-n { color: #A5A199; }
+
+
+/* the closing box on the "what good looks like" slide sat too low */
+.reveal .big-bullets + p .msg-soft, .reveal .big-bullets ~ p > .msg-soft { margin-top: 0.25em; }
+.reveal .big-bullets { margin-bottom: 0.2em; }
+
+/* stage 5: where this session adds to the framework, not a gap */
+.reveal .sg-add { background: #FBF3EE; color: #7A3A1E; border: 3px dashed #D97757; }
+.reveal .sg-add .sg-n { color: #A04B2F; }
+.reveal .sg-add .sg-t { color: #A04B2F; }
+.reveal .sg-badge { display: inline-block; background: #D97757; color: #fff;
+                    border-radius: 20px; padding: 2px 10px; font-size: 0.55em;
+                    font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+                    margin-bottom: 6px; }
+.reveal .sg-key { display: flex; justify-content: center; gap: 34px; margin-top: 20px;
+                  font-size: 0.62em; color: #5F5E5A; }
+.reveal .sg-key span { display: inline-flex; align-items: center; gap: 9px; }
+.reveal .sg-key i { width: 26px; height: 14px; border-radius: 4px; display: inline-block; }
+.reveal .sg-key .k1 { background: #F2DFD3; border: 2px solid #D97757; }
+.reveal .sg-key .k2 { background: #E6F1FB; border: 2px solid #9CC4E8; }
+.reveal .sg-key .k3 { background: #FBF3EE; border: 3px dashed #D97757; }
+
+/* slide 4 final: a neutral summary of the process, one stage quietly marked */
+.reveal .stage.sg-plain { background: #FBFAF4; color: #3A3936;
+                          border: 1px solid rgba(0,0,0,0.10); border-top: 5px solid #D8D5CB; }
+.reveal .stage.sg-plain .sg-n { color: #8F8B82; }
+.reveal .stage.sg-plain .sg-t { color: #141413; }
+.reveal .stage.sg-here { background: #FBF3EE; color: #7A3A1E;
+                         border: 1px solid rgba(0,0,0,0.10); border-top: 5px solid #D97757; }
+.reveal .stage.sg-here .sg-n { color: #A04B2F; }
+.reveal .stage.sg-here .sg-t { color: #A04B2F; }
+.reveal .stage .sg-here-note { display: block; margin-top: auto; padding-top: 10px;
+                               font-size: 0.58em; font-style: italic; color: #A04B2F;
+                               line-height: 1.4; }

@@ -3,6 +3,22 @@ title: "Talks & Presentations"
 format: html
 ---
 
+## Getting the Forecasting Methods Right: Vaccine Demand Forecasting
+*Better Vaccine Demand Forecasting Workshop | Maputo, Mozambique*
+
+![](slides/moz_workshop_slides/preview.png)
+
+📅 **Date:** September 02, 2026   
+⏰ **Time:** 13:00 – 14:30  
+📍 **Location:** Maputo, Mozambique
+
+<p>
+  <a href="slides/moz_workshop_slides/moz_workshop_slides.html" target="_blank">
+    <button style="background-color:#003366; color:white; padding:6px 12px; font-size:13px; margin:4px; border:none; border-radius:4px;">View Slides</button>
+  </a>
+</p>
+
+
 ## Forecasting Routine Vaccine Administration Under Uncertainty: A Comparative Evaluation
 *46th International Symposium on Forecasting | Montreal, Canada*
 
